@@ -1,0 +1,41 @@
+footer {
+    height: 20%;
+    width: 100%;
+    display: block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    bottom: 0;
+    background-color: #F6F6F6;
+    margin-top: 50%;
+}
+
+#copyRight {
+    display: block;
+    align-self: center;
+    text-align: center;
+    margin-top: 3vw;
+    font-size: 1vw;
+    padding-bottom: 2vw;
+}
+
+#leftFooter,#rightFooter {
+    width: 50%;
+    height: 15vw;
+    text-align: center;
+    margin: 2vw auto 10vw;
+    font-size: 1.5vw;
+}
+
+#leftFooter {
+    display: block;
+    float: left;
+}
+
+#rightFooter {
+    display: flex;
+    float: right;
+    justify-content: center;
+}
+
+#rightFooter table {
+    padding: 1vw;
+}
