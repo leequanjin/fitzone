@@ -17,6 +17,7 @@ header {
     background-color: #FFFFFF;
     color: #2D3031;
     font-size: 1.5vw;
+    font-weight: bold;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -42,34 +43,40 @@ nav a {
     padding: 2vw;
 }
 
+nav a:hover {
+    color: #ffc371;
+}
+
+nav a::after {
+    color: #6C757D;
+}
+
 #mJoin {
     display: flex;
     float: right;
-    margin-top: -9.7vw;
-    width: 15vw;
-    height: 13vw;
+    margin: -5.3vw 3vw 0vw 0vw;
+    width: 4.5vw;
+    height: 4.2vw;
 }
 
 footer {
-    height: 15%;
+    height: 12%;
     width: 100%;
     background-color: #FFFFFF;
     bottom: 0;
     position: absolute;
-    font-size: 1vw;
+    font-size: 0.9vw;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 footer table {
     display: flex;
     justify-content: center;
-    margin-top: 2vw;
+    margin-top: 1.5vw;
     text-align: center;
     color: #6C757D;
 }
 
-footer img {
-    width: 3vw;
-    height: 3vw;
-    padding: 0vw 0.5vw;
+footer i {
+    padding: 0vw 1vw 0.5vw;
 }
