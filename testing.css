@@ -72,11 +72,15 @@ footer {
 footer table {
     display: flex;
     justify-content: center;
-    margin-top: 1.5vw;
+    margin-top: 2vw;
     text-align: center;
     color: #6C757D;
 }
 
 footer i {
     padding: 0vw 1vw 0.5vw;
+}
+
+footer i {
+    padding: 0vw 0vw 1vw ;
 }
