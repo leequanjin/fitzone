@@ -8,9 +8,11 @@
     <script src="https://kit.fontawesome.com/465be9f5fc.js"></script>
     <style>
         .Portals{
-            display: flex;
+            display: inline-grid;
+            grid-template-columns: auto auto;
         }
         .Portals video{
+            object-fit: cover;
             width: 100%;
             height: 100%;
         }
@@ -35,8 +37,6 @@
     <div class="Portals">
         <a href="testing.html"><video src="TestVideo.mp4" type="video/mp4" loop class="vid" muted></a>
         <a href="testing.html"><video src="TestVideo.mp4" type="video/mp4" loop class="vid2" muted></a>
-    </div>
-    <div class="Portals">
         <a href="testing.css"><video src="TestVideo.mp4" type="video/mp4" loop class="vid3" muted></a>
         <a href="testing.css"><video src="TestVideo.mp4" type="video/mp4" loop class="vid4" muted></a>
     </div>
@@ -49,7 +49,7 @@
         })
         /* Applying the mouse out event to pause the video */
         video.addEventListener("mouseout", function (f) {
-        video.currentTime=1;
+        video.currentTime=0;
         video.pause();
         })
         let video2 = document.querySelector(".vid2" ) 
@@ -59,7 +59,7 @@
         })
         /* Applying the mouse out event to pause the video */
         video2.addEventListener("mouseout", function (e) {
-        video2.currentTime=1;
+        video2.currentTime=0.5;
         video2.pause();
         })
         // Listening to the video element
