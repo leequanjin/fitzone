@@ -6,6 +6,15 @@
     <title>Document</title>
     <link rel="stylesheet" href="testing.css">
     <script src="https://kit.fontawesome.com/465be9f5fc.js"></script>
+    <style>
+        .Portals{
+            display: flex;
+        }
+        .Portals video{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -14,15 +23,68 @@
             <a href="testing.html">Home</a>
             <a href="testing.html">About</a>
             <a href="testing.html">News</a>
-            <a href="">Lessons</a>
-            <a href="">Facilities</a>
-            <a href="">Help</a>
+            <a href="testing.html">Lessons</a>
+            <a href="testing.html">Facilities</a>
+            <a href="testing.html">Help</a>
         </nav>
         <a href="testing.html">
             <img src="images/profile-icon.png" alt="Join_Now" id="mJoin">
             <!-- <i class="fa-solid fa-square-user fa-2x" style="color: #ffc371;"></i> -->
         </a>
     </header>
+    <div class="Portals">
+        <a href="testing.html"><video src="TestVideo.mp4" type="video/mp4" loop class="vid" muted></a>
+        <a href="testing.html"><video src="TestVideo.mp4" type="video/mp4" loop class="vid2" muted></a>
+    </div>
+    <div class="Portals">
+        <a href="testing.css"><video src="TestVideo.mp4" type="video/mp4" loop class="vid3" muted></a>
+        <a href="testing.css"><video src="TestVideo.mp4" type="video/mp4" loop class="vid4" muted></a>
+    </div>
+    <script>
+        // Listening to the video element
+        let video = document.querySelector(".vid" ) //vid is class
+        /* Adding the event listeners on the video to play/pause the video. */
+        video.addEventListener("mouseover", function (f) {
+        video.play();
+        })
+        /* Applying the mouse out event to pause the video */
+        video.addEventListener("mouseout", function (f) {
+        video.currentTime=1;
+        video.pause();
+        })
+        let video2 = document.querySelector(".vid2" ) 
+        /* Adding the event listeners on the video to play/pause the video. */
+        video2.addEventListener("mouseover", function (e) {
+        video2.play();
+        })
+        /* Applying the mouse out event to pause the video */
+        video2.addEventListener("mouseout", function (e) {
+        video2.currentTime=1;
+        video2.pause();
+        })
+        // Listening to the video element
+        let video3 = document.querySelector(".vid3" ) //vid is class
+        /* Adding the event listeners on the video to play/pause the video. */
+        video3.addEventListener("mouseover", function (f) {
+        video3.play();
+        })
+        /* Applying the mouse out event to pause the video */
+        video3.addEventListener("mouseout", function (f) {
+        video3.currentTime=1;
+        video3.pause();
+        })
+        
+        let video4 = document.querySelector(".vid4" ) 
+        /* Adding the event listeners on the video to play/pause the video. */
+        video4.addEventListener("mouseover", function (e) {
+        video4.play();
+        })
+        /* Applying the mouse out event to pause the video */
+        video4.addEventListener("mouseout", function (e) {
+        video4.currentTime=1;
+        video4.pause();
+        })
+    </script>
     <footer>
         <table>
             <tr>

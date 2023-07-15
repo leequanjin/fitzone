@@ -63,8 +63,8 @@ footer {
     height: 12%;
     width: 100%;
     background-color: #FFFFFF;
-    bottom: 0;
-    position: absolute;
+    /* bottom: 0; */
+    position: relative;
     font-size: 0.9vw;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -72,15 +72,11 @@ footer {
 footer table {
     display: flex;
     justify-content: center;
-    margin-top: 2vw;
+    margin-top: 1vw;
     text-align: center;
     color: #6C757D;
 }
 
 footer i {
-    padding: 0vw 1vw 0.5vw;
-}
-
-footer i {
-    padding: 0vw 0vw 1vw ;
+    padding: 0.7vw 0.5vw 0.2vw;
 }
