@@ -1,12 +1,14 @@
-.color {
+.color-template {
     color: #2D3031;
     color: #6C757D;
-    color: #d6dadb;
+    color: #D6DADB;
     color: #FFC371;
-    color: #ffca80;
+    color: #FFCA80;
     color: #EBE7DB;
+    color: #F2F2F2;
     color: #FFFFFF;
-    color: #0087ca;
+    color: #0087CA;
+    color: #0099E6;
 }
 
 html {
@@ -20,7 +22,6 @@ html {
     align-items: center;
     justify-content: center;
     background-color: #EBE7DB;
-    column-gap: 30px;
 }
 
 .form {
@@ -30,6 +31,8 @@ html {
     padding: 30px;
     border-radius: 6px;
     background-color: #FFFFFF;
+    /* https://getcssscan.com/css-box-shadow-examples (#1) */
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .form.sign-up {
@@ -78,7 +81,7 @@ form .field {
     font-weight: 400;
     height: 100%;
     width: 100%;
-    border: 1px solid #d6dadb;
+    border: 1px solid #D6DADB;
     border-radius: 4px;
     padding: 0 15px;
     outline: none;
@@ -101,7 +104,7 @@ form .field {
 }
 
 .field button:hover {
-    background-color: #ffca80;
+    background-color: #FFCA80;
     transition: 0.3s;
 }
 
@@ -167,7 +170,7 @@ form a {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #d6dadb;
+    border: 1px solid #D6DADB;
     border-radius: 6px;
     padding: 0 15px;
 }
