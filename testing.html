@@ -1,125 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="testing.css">
-    <script src="https://kit.fontawesome.com/465be9f5fc.js"></script>
-    <style>
-        .Portals{
-            display: inline-grid;
-            grid-template-columns: auto auto;
-        }
-        .Portals video{
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="testing.css">
+  <script src="https://kit.fontawesome.com/465be9f5fc.js"></script>
+  <style>
+    body {
+        display: flex; /*Turn elements flexible to control items inside */
+        flex-wrap: wrap; /*Allow the elements within body to wrap to next line, allow adjustments correctly*/
+    }
+
+    .video-link {
+        width: 50%; /*link will only occupy half of the screen*/
+        margin: 0;
+        padding: 0;
+    }
+
+    .video-container {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%; /* Maintain aspect ratio (16:9) */
+        /* creates a space within the container so that the video with position absolute can be placed within */
+    }
+
+    .video-container video {
+        position: absolute; 
+        /*positions the video element absolutely to its closest positioned ancestor, in this case is the .video-container*/
+        top: 0; 
+        /*position the video element at the top-left corner of the video container element*/
+        left: 0;
+        width: 100%; /*allow video to grow accordingly to screen size*/
+        height: 100%;
+        object-fit: cover; /*ensures that the video scales properly*/
+    }
+
+    .overlay1, .overlay2, .overlay3, .overlay4 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 1;
+      transition: opacity 0.5s ease;
+    }
+
+    /* Setting overlay color */
+    .overlay1 {
+      background-color: rgba(255, 0, 0, 0.3);
+    }
+
+    .overlay2 {
+      background-color: rgba(255, 255, 0, 0.3);
+    }
+
+    .overlay3 {
+      background-color: rgba(0, 0, 255, 0.3);
+    }
+
+    .overlay4 {
+      background-color: rgba(0, 255, 255, 0.3);
+    }
+
+    .video-container:hover .overlay1,
+    .video-container:hover .overlay2,
+    .video-container:hover .overlay3,
+    .video-container:hover .overlay4 {
+      opacity: 0; /*on hover, cause the overlay to disappear*/
+    }
+
+    /* helps unfloats all previous element and secure their position */
+    .clearfix::after {
+      content: ""; /*insert and invisible content which is :after*/
+      display: table; /*trigger a new block formatting context*/
+      clear: both; /*clears any floated elements that appear before :after*/
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <a href="testing.html"><img src="images/fitzone_logo.png" alt="Logo" id="hLogo"></a>
-        <nav>
-            <a href="testing.html">Home</a>
-            <a href="testing.html">About</a>
-            <a href="testing.html">News</a>
-            <a href="testing.html">Lessons</a>
-            <a href="testing.html">Facilities</a>
-            <a href="testing.html">Help</a>
-        </nav>
-        <a href="testing.html">
-            <img src="images/profile-icon.png" alt="Join_Now" id="mJoin">
-            <!-- <i class="fa-solid fa-square-user fa-2x" style="color: #ffc371;"></i> -->
-        </a>
-    </header>
-    <div class="Portals">
-        <a href="testing.html"><video src="TestVideo.mp4" type="video/mp4" loop class="vid" muted></a>
-        <a href="testing.html"><video src="TestVideo.mp4" type="video/mp4" loop class="vid2" muted></a>
-        <a href="testing.css"><video src="TestVideo.mp4" type="video/mp4" loop class="vid3" muted></a>
-        <a href="testing.css"><video src="TestVideo.mp4" type="video/mp4" loop class="vid4" muted></a>
+  <header>
+    <a href="testing.html"><img src="images/fitzone_logo.png" alt="Logo" id="hLogo"></a>
+    <nav>
+      <a href="testing.html">Home</a>
+      <a href="testing.html">About</a>
+      <a href="testing.html">News</a>
+      <a href="testing.html">Lessons</a>
+      <a href="testing.html">Facilities</a>
+      <a href="testing.html">Help</a>
+    </nav>
+    <a href="testing.html">
+      <img src="images/profile-icon.png" alt="Join_Now" id="mJoin">
+      <!-- <i class="fa-solid fa-square-user fa-2x" style="color: #ffc371;"></i> -->
+    </a>
+  </header>
+
+  <a href="index.html" class="video-link">
+    <div class="video-container">
+      <video src="TestVideo.mp4" loop muted></video>
+      <div class="overlay1">
+        <p>Facilities</p>
+      </div>
     </div>
-    <script>
-        // Listening to the video element
-        let video = document.querySelector(".vid" ) //vid is class
-        /* Adding the event listeners on the video to play/pause the video. */
-        video.addEventListener("mouseover", function (f) {
-        video.play();
-        })
-        /* Applying the mouse out event to pause the video */
-        video.addEventListener("mouseout", function (f) {
-        video.currentTime=0;
-        video.pause();
-        })
-        let video2 = document.querySelector(".vid2" ) 
-        /* Adding the event listeners on the video to play/pause the video. */
-        video2.addEventListener("mouseover", function (e) {
-        video2.play();
-        })
-        /* Applying the mouse out event to pause the video */
-        video2.addEventListener("mouseout", function (e) {
-        video2.currentTime=0.5;
-        video2.pause();
-        })
-        // Listening to the video element
-        let video3 = document.querySelector(".vid3" ) //vid is class
-        /* Adding the event listeners on the video to play/pause the video. */
-        video3.addEventListener("mouseover", function (f) {
-        video3.play();
-        })
-        /* Applying the mouse out event to pause the video */
-        video3.addEventListener("mouseout", function (f) {
-        video3.currentTime=1;
-        video3.pause();
-        })
-        
-        let video4 = document.querySelector(".vid4" ) 
-        /* Adding the event listeners on the video to play/pause the video. */
-        video4.addEventListener("mouseover", function (e) {
-        video4.play();
-        })
-        /* Applying the mouse out event to pause the video */
-        video4.addEventListener("mouseout", function (e) {
-        video4.currentTime=1;
-        video4.pause();
-        })
-    </script>
-    <footer>
-        <table>
-            <tr>
-                <td>
-                    <a href="https://www.instagram.com/accounts/login/">
-                        <i class="fa-brands fa-instagram fa-2x" style="color: #FFC371;" ></i>
-                    </a>
-                </td>
-                <td>
-                    <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Flogin%3Flang%3Den">
-                        <i class="fa-brands fa-square-twitter fa-2x" style="color: #ffc371;"></i>
-                    </a>
-                </td>
-                <td>
-                    <a href="https://www.facebook.com/login/">
-                        <i class="fa-brands fa-facebook fa-2x" style="color: #ffc371;"></i>
-                    </a>
-                </td>
-                <td>
-                    <a href="mailto:fitZone@health.my">
-                        <i class="fa-regular fa-envelope fa-2x" style="color: #fcc371;"></i>
-                    </a>
-                </td>
-                <td>
-                    <a href="tel:+60175314092">
-                        <i class="fa-solid fa-phone fa-2x" style="color: #ffc371;"></i>
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="5">
-                    &#169; 2023 Fit Zone All right reserved.
-                </td>
-            </tr>
-        </table>
-    </footer>
+  </a>
+
+  <a href="your-link-2.html" class="video-link">
+    <div class="video-container">
+      <video src="TestVideo.mp4" loop muted></video>
+      <div class="overlay2">
+        <p>Lessons</p>
+      </div>
+    </div>
+  </a>
+
+  <a href="your-link-3.html" class="video-link">
+    <div class="video-container">
+      <video src="TestVideo.mp4" loop muted></video>
+      <div class="overlay3">
+        <p>Products</p>
+      </div>
+    </div>
+  </a>
+
+  <a href="your-link-4.html" class="video-link">
+    <div class="video-container">
+      <video src="TestVideo.mp4" loop muted></video>
+      <div class="overlay4">
+        <p>About Us</p>
+      </div>
+    </div>
+  </a>
+
+  <div class="clearfix"></div>
+
+  <div>
+    <article>
+        lorem ipsum ipsum lorem
+    </article>
+  </div>
+
+  <!-- handles the functionality of playing and pausing the video when mouse enters or leave -->
+  <script>
+    var links = document.querySelectorAll('.video-link'); //selects all the elements within the class ('.video-link')
+  
+    links.forEach(function (link) { // allows you to perform actions on each individual element.
+      link.addEventListener('mouseenter', function () { 
+        //adds a callback function that receives the current element as a parameter and executes the code within
+        this.querySelector('video').play();
+      });
+  
+      link.addEventListener('mouseleave', function () {
+        this.querySelector('video').pause();
+      });
+    });
+  </script>
+  <footer>
+    <table>
+      <tr>
+        <td>
+          <a href="https://www.instagram.com/accounts/login/">
+            <i class="fa-brands fa-instagram fa-2x" style="color: #FFC371;"></i>
+          </a>
+        </td>
+        <td>
+          <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Flogin%3Flang%3Den">
+            <i class="fa-brands fa-square-twitter fa-2x" style="color: #ffc371;"></i>
+          </a>
+        </td>
+        <td>
+          <a href="https://www.facebook.com/login/">
+            <i class="fa-brands fa-facebook fa-2x" style="color: #ffc371;"></i>
+          </a>
+        </td>
+        <td>
+          <a href="mailto:fitZone@health.my">
+            <i class="fa-regular fa-envelope fa-2x" style="color: #fcc371;"></i>
+          </a>
+        </td>
+        <td>
+          <a href="tel:+60175314092">
+            <i class="fa-solid fa-phone fa-2x" style="color: #ffc371;"></i>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="5">
+          &#169; 2023 Fit Zone All right reserved.
+        </td>
+      </tr>
+    </table>
+  </footer>
 </body>
 </html>
