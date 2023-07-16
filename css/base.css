@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* 10px => 1rem */
+html {
+    font-size: 62.5%;
+}
+
+.color-template {
+    color: #2D3031;
+    color: #6C757D;
+    color: #D6DADB;
+    color: #FFC371;
+    color: #FFCA80;
+    color: #EBE7DB;
+    color: #F2F2F2;
+    color: #FFFFFF;
+    color: #0087CA;
+    color: #0099E6;
+}
