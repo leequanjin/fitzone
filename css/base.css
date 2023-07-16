@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.color{
+    color: #2D3031;
+    color: #6C757D;
+    color: #FFC371;
+    color: #EBE7DB;
+    color: #FFFFFF;
+}

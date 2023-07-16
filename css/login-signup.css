@@ -1,0 +1,192 @@
+.color {
+    color: #2D3031;
+    color: #6C757D;
+    color: #d6dadb;
+    color: #FFC371;
+    color: #ffca80;
+    color: #EBE7DB;
+    color: #FFFFFF;
+    color: #0087ca;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EBE7DB;
+    column-gap: 30px;
+}
+
+.form {
+    position: absolute;
+    max-width: 430px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+}
+
+.form.sign-up {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.forms.show-sign-up .form.sign-up {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.forms.show-sign-up .form.login {
+    opacity: 0;
+    pointer-events: none;
+}
+
+header {
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: #2D3031;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #6C757D;
+    text-align: center;
+    margin-top: 15px;
+}
+
+form {
+    margin-top: 30px;
+}
+
+form .field {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.field input {
+    font-size: 1.6rem;
+    font-weight: 400;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #d6dadb;
+    border-radius: 4px;
+    padding: 0 15px;
+    outline: none;
+}
+
+.field input:focus {
+    border: 1px solid #6C757D;
+}
+
+.field button {
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-radius: 6px;
+    background-color: #FFC371;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.field button:hover {
+    background-color: #ffca80;
+    transition: 0.3s;
+}
+
+.form-link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.form-link a {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.form-link span {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+form a {
+    text-decoration: none;
+    color: #0087ca;
+}
+
+.form-link a:hover {
+    text-decoration: underline;
+    color: #0099e6;
+    transition: 0.3s;
+}
+
+.fa-eye,
+.fa-eye-slash {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    font-size: 1.8rem;
+    color: #6C757D;
+    cursor: pointer;
+}
+
+.line {
+    position: relative;
+    height: 1px;
+    width: 100%;
+    margin: 36px 0;
+    background-color: #6C757D;
+
+}
+
+.line::before {
+    content: 'Or';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFFFFF;
+    color: #6C757D;
+    padding: 0 15px;
+    font-size: 1.4rem;
+}
+
+.media-options a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d6dadb;
+    border-radius: 6px;
+    padding: 0 15px;
+}
+
+a.google {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #2D3031;
+}
+
+a.google:hover {
+    background-color: #F2F2F2;
+    transition: 0.3s;
+}
+
+a.google .google-icon {
+    position: absolute;
+    left: 15px;
+    border-radius: 18px;
+    height: 36px;
+    width: 36px;
+}
