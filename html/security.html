@@ -23,7 +23,7 @@
 
         <nav>
             <ul>
-                <li><a href="/html/home.html">Home</a></li>
+                <li><a href="/html/home.html" class="active">Home</a></li>
                 <li><a href="/html/about.html">About</a></li>
                 <li><a href="/html/news.html">News</a></li>
                 <li><a href="/html/.html">Facilities +</a>
@@ -62,8 +62,8 @@
                 </div>
                 <div class="nav-menu">
                     <ul>
-                        <li><a href="#" class="active">Your Profile</a></li>
-                        <li><a href="/html/security.html">Security</a></li>
+                        <li><a href="/html/profile.html">Your Profile</a></li>
+                        <li><a href="#" class="active">Security</a></li>
                         <li><a href="/html/application.html">Application</a></li>
                         <li><a href="/html/rewards.html">Point Rewards</a></li>
                         <li><a href="/html/login-signup.html">Log Out</a></li>
@@ -76,24 +76,26 @@
                     <div class="table">
                         <div class="row">
                             <div class="col">
-                                <h3>Last Name</h3>
-                                <input type="text" value="Smith">
-                            </div>
-                            <div class="col">
-                                <h3>First Name</h3>
-                                <input type="text" value="John">
+                                <h3>Old Password</h3>
+                                <input type="text">
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                <h3>Email</h3>
-                                <input type="text" value="JohnSmith@gmail.com">
-                            </div>
-                            <div class="col">
-                                <h3>Phone Number</h3>
-                                <input type="text" value="012-548-9531">
+                                <h3>New Password</h3>
+                                <input type="text">
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col">
+                                <h3>Confirm Password</h3>
+                                <input type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkbox">
+                        <input class="box" type="checkbox" value="enable" name="enable" />
+                        <label for="enable">Enable Two-Factor Authentication</label>
                     </div>
                     <div class="buttons">
                         <button class="update">Update</button>
@@ -103,7 +105,6 @@
             </div>
         </div>
     </main>
-    
     <footer>
         <ul>
             <li><a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>

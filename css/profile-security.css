@@ -1,0 +1,58 @@
+.content-view .table {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-view .table .row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.content-view .table .row {
+    display: flex;
+    column-gap: 20px;
+
+    justify-content: space-between;
+    
+}
+
+.content-view .table .row .col {
+    flex-grow: 1;
+}
+
+.content-view .table .row .col h3 {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.content-view .table .row .col input {
+    margin-top: 5px;
+    padding: 10px 15px;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #D6DADB;
+    border-radius: 4px;
+    outline: none;
+}
+
+.content-view .table .row .col input:focus {
+    border: 1px solid #6C757D
+}
+
+.content-view .checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+.content-view .checkbox input {
+    margin: 0 10px 0 5px;
+}
+
+.content-view .checkbox label {
+    color: #6C757D;
+    font-size: 1.0rem;
+}
