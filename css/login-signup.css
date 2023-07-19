@@ -104,6 +104,25 @@ form .field {
     transition: 0.3s;
 }
 
+.field a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-radius: 6px;
+    background-color: #FFC371;
+    color: #FFFFFF;
+}
+
+.field a:hover {
+    background-color: #FFCA80;
+    transition: 0.3s;
+}
+
 .form-link {
     text-align: center;
     margin-top: 10px;

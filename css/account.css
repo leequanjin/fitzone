@@ -121,7 +121,7 @@ main {
 }
 
 .content-view .table {
-    margin-top: 40px;
+    margin-top: 10px;
     display: flex;
 }
 
@@ -133,15 +133,13 @@ main {
 .content-view .table .row {
     display: flex;
     flex-direction: row;
-    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .content-view .table .row {
     display: flex;
     column-gap: 20px;
-
     justify-content: space-between;
-    
 }
 
 .content-view .table .row .col {
@@ -172,7 +170,7 @@ main {
     align-items: center;
     justify-content: flex-start;
     width: auto;
-    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .content-view .checkbox input {
@@ -186,7 +184,7 @@ main {
 
 .buttons button {
     cursor: pointer;
-    margin: 10px 20px 0 0;
+    margin: 30px 20px 0 0;
     padding: 12px;
     min-width: 100px;
     border-radius: 8px;
@@ -206,13 +204,64 @@ main {
     transition: 0.3s;
 }
 
-.buttons button.cancel {
+.buttons button.cancel, .add {
     background: #FFFFFF;
     color: #2D3031;
     border: 1px solid #D6DADB;
 }
 
-.buttons button.cancel:hover {
-    background: #F2F2F2;
+.buttons button.cancel:hover , .add:hover {
+    background: #EBE7DB;
     transition: 0.3s;
+}
+
+.schedule table {
+    margin-top: 30px;
+    border-collapse: collapse;
+    background: rgba(0, 0, 0, 0.01);
+    width: 100%;
+}
+
+.schedule table caption {
+    text-align: start;
+    padding-left: 1rem;
+    background: #c9be9c;
+    font-size: 1.6rem;
+}
+
+.schedule table th {
+    background: #EBE7DB;
+    font-size: 1.6rem;
+}
+
+.schedule table td {
+    font-size: 1.3rem;
+}
+
+.schedule table th, td, caption{
+    border: rgba(0, 0, 0, 0.1) 1px solid;
+    height: 30px;
+    text-align: center;
+    padding: 0.5rem
+}
+
+.schedule table tr td.remove:hover{
+    transition: 0.3s;
+    color: #FFC371;
+    cursor: pointer;
+}
+
+.application{
+    display: flex;
+    justify-content: space-between;
+}
+
+.application .page {
+    display: flex;
+    justify-content: space-between;
+}
+
+.application .page button{
+    margin-right: 0;
+    margin-left: 20px;
 }
