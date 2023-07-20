@@ -107,6 +107,10 @@ main {
     cursor: pointer;
 }
 
+.nav-menu a.logout:hover {
+    border-bottom-left-radius: 8px;
+}
+
 .content {
     width: 70%;
     min-width: 400px;
@@ -131,6 +135,8 @@ main {
 }
 
 .content-view .table .row {
+    height: 185px;
+    background-color: #0087CA;
     display: flex;
     flex-direction: row;
     margin-top: 20px;
@@ -147,8 +153,7 @@ main {
 }
 
 .content-view .table .row .col h3 {
-    font-size: 1.6rem;
-    font-weight: 400;
+    font-size: 1.4rem;
 }
 
 .content-view .table .row .col input {
@@ -264,4 +269,44 @@ main {
 .application .page button{
     margin-right: 0;
     margin-left: 20px;
+}
+
+.content-view .table .row a:hover {
+    transition: 0.3s;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.content-view .table .row .col.reward {
+    border: rgba(0, 0, 0, 0.2) solid 1px;
+    width: 140px;
+    padding: 8px;
+}
+
+.content-view .table .row .col .reward-container {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 5px;
+    height: 130px;
+    width: 120px;
+}
+
+.content-view .table .row .col .reward-container img {
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.content-view .table .row .col.reward h3, h2{
+    text-align: center;
+}
+
+.content-view .table .row .col.reward h3 {
+    color: #2D3031;
+}
+
+.content-view .table .row .col.reward h2 {
+    font-size: 1.3rem;
+    font-weight: 200;
+    color: #6C757D;
 }
