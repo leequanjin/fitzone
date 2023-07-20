@@ -9,6 +9,8 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/account.css">
+    <link rel="stylesheet" href="/css/profile-security.css">
 
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/465be9f5fc.js" crossorigin="anonymous"></script>
@@ -40,16 +42,68 @@
                     </ul>
                 </li>
                 <li><a href="/html/merch.html">Merchandise</a></li>
-                <li><a href="#" class="active">Help</a></li>
+                <li><a href="/html/help.html">Help</a></li>
 
             </ul>
         </nav>
 
-        <a href="/html/account/profile.html" class="login-link">
+        <a href="/html/account/profile.html" class="login-link active">
             <i class="fa-solid fa-circle-user"></i>
         </a>
     </header>
+    
     <main>
+        <div class="container">
+            <div class="menu">
+                <div class="personal-details">
+                    <img src="/images/user2.jpg" alt="">
+                    <h2>Gold Member</h2>
+                    <h3>ID 2307595</h3>
+                </div>
+                <div class="nav-menu">
+                    <ul>
+                        <li><a href="/html/account/profile.html">Your Profile</a></li>
+                        <li><a href="/html/account/security.html">Security</a></li>
+                        <li><a href="/html/account/application.html">Applications</a></li>
+                        <li><a href="#" class="active">Point Rewards</a></li>
+                        <li><a href="/html/login-signup/login-signup.html">Log Out</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                <div class="content-view">
+                    <h1>Your Profile</h1>
+                    <div class="table">
+                        <div class="row">
+                            <div class="col">
+                                <h3>Old Password</h3>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <h3>New Password</h3>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <h3>Confirm Password</h3>
+                                <input type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkbox">
+                        <input class="box" type="checkbox" value="enable" name="enable" />
+                        <label for="enable">Enable Two-Factor Authentication</label>
+                    </div>
+                    <div class="buttons">
+                        <button class="update">Update</button>
+                        <button class="cancel">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <ul>

@@ -9,7 +9,8 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="/css/base.css">
-
+    <link rel="stylesheet" href="/css/account.css">
+    
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/465be9f5fc.js" crossorigin="anonymous"></script>
 
@@ -40,17 +41,68 @@
                     </ul>
                 </li>
                 <li><a href="/html/merch.html">Merchandise</a></li>
-                <li><a href="#" class="active">Help</a></li>
+                <li><a href="/html/help.html">Help</a></li>
 
             </ul>
         </nav>
 
-        <a href="/html/account/profile.html" class="login-link">
+        <a href="/html/account/profile.html" class="login-link active">
             <i class="fa-solid fa-circle-user"></i>
         </a>
     </header>
+    
     <main>
+        <div class="container">
+            <div class="menu">
+                <div class="personal-details">
+                    <img src="/images/user2.jpg" alt="">
+                    <h2>Gold Member</h2>
+                    <h3>ID 2307595</h3>
+                </div>
+                <div class="nav-menu">
+                    <ul>
+                        <li><a href="#" class="active">Your Profile</a></li>
+                        <li><a href="/html/account/security.html">Security</a></li>
+                        <li><a href="/html/account/application.html">Applications</a></li>
+                        <li><a href="/html/account/rewards.html">Point Rewards</a></li>
+                        <li><a href="/html/login-signup/login-signup.html">Log Out</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                <div class="content-view">
+                    <h1>Your Profile</h1>
+                    <div class="table">
+                        <div class="row">
+                            <div class="col">
+                                <h3>Last Name</h3>
+                                <input type="text" value="Smith">
+                            </div>
+                            <div class="col">
+                                <h3>First Name</h3>
+                                <input type="text" value="John">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <h3>Email</h3>
+                                <input type="text" value="JohnSmith@gmail.com">
+                            </div>
+                            <div class="col">
+                                <h3>Phone Number</h3>
+                                <input type="text" value="012-548-9531">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button class="update">Update</button>
+                        <button class="cancel">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
+    
     <footer>
         <ul>
             <li><a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
