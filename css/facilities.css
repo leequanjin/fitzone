@@ -1,0 +1,17 @@
+main {
+    background-color: #FFFFFF;
+    display: block;
+    height: 100%;
+    width: 94%;
+    margin: 3% 3% 0%;
+    padding: 0.5%;
+}
+
+.facilities-block {
+    background-color: #FFC371;
+    display: block;
+    height: 10%;
+    width: 95%;
+    margin: 3% auto;
+    border-radius: 30px;
+}
