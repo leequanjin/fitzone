@@ -135,16 +135,8 @@ main {
 }
 
 .content-view .table .row {
-    height: 185px;
-    background-color: #0087CA;
     display: flex;
-    flex-direction: row;
     margin-top: 20px;
-}
-
-.content-view .table .row {
-    display: flex;
-    column-gap: 20px;
     justify-content: space-between;
 }
 
@@ -209,13 +201,15 @@ main {
     transition: 0.3s;
 }
 
-.buttons button.cancel, .add {
+.buttons button.cancel,
+.add {
     background: #FFFFFF;
     color: #2D3031;
     border: 1px solid #D6DADB;
 }
 
-.buttons button.cancel:hover , .add:hover {
+.buttons button.cancel:hover,
+.add:hover {
     background: #EBE7DB;
     transition: 0.3s;
 }
@@ -243,20 +237,22 @@ main {
     font-size: 1.3rem;
 }
 
-.schedule table th, td, caption{
+.schedule table th,
+td,
+caption {
     border: rgba(0, 0, 0, 0.1) 1px solid;
     height: 30px;
     text-align: center;
     padding: 0.5rem
 }
 
-.schedule table tr td.remove:hover{
+.schedule table tr td.remove:hover {
     transition: 0.3s;
     color: #FFC371;
     cursor: pointer;
 }
 
-.application{
+.application {
     display: flex;
     justify-content: space-between;
 }
@@ -266,47 +262,86 @@ main {
     justify-content: space-between;
 }
 
-.application .page button{
+.application .page button {
     margin-right: 0;
     margin-left: 20px;
 }
 
-.content-view .table .row a:hover {
-    transition: 0.3s;
-    background-color: rgba(0, 0, 0, 0.1);
+.content-view .points {
+    display: flex;
+    align-items: end;
 }
 
-.content-view .table .row .col.reward {
-    border: rgba(0, 0, 0, 0.2) solid 1px;
-    width: 140px;
-    padding: 8px;
+.content-view .points .current-points {
+    height: fit-content;
+    margin-left: 3rem;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    background-color: #FFC371;
+    color: #FFFFFF;
 }
 
-.content-view .table .row .col .reward-container {
+.content-view .points .current-points h2 {}
+
+.content-view .reward-table .row {
+    margin-top: 25px;
+    display: flex;
+    height: 185px;
+}
+
+.content-view .reward-table .row .col {
     position: relative;
     overflow: hidden;
-    margin-bottom: 5px;
-    height: 130px;
-    width: 120px;
+    border: rgba(0, 0, 0, 0.2) solid 1px;
+    border-radius: 2px;
+    padding: 8px;
+    margin-right: 20px;
+    width: 140px;
+    height: 100%;
 }
 
-.content-view .table .row .col .reward-container img {
+.content-view .reward-table .row .col .item-img {
+    position: relative;
+    height: 80%;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.content-view .reward-table .row .col .item-img img {
     position: absolute;
     height: 100%;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.content-view .table .row .col.reward h3, h2{
+.content-view .reward-table .row .col h3,
+h2 {
     text-align: center;
 }
 
-.content-view .table .row .col.reward h3 {
+.content-view .reward-table .row .col h3 {
     color: #2D3031;
 }
 
-.content-view .table .row .col.reward h2 {
+.content-view .reward-table .row .col h2 {
     font-size: 1.3rem;
     font-weight: 200;
     color: #6C757D;
+}
+
+.layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.layer:hover {
+    transition: 0.3s;
+    background-color: rgb(255, 196, 113, 0.1);
 }
