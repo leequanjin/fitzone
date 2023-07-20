@@ -19,9 +19,14 @@ main {
 
 .facilities-block h1 {
     font-size: 3.5vw;
+    color: #FFFFFF;
     font-weight: bold;
     margin-top: 5%;
     padding: 0% 0% 3%;
+}
+
+.facilities-block a :hover {
+    color: #2D3031;
 }
 
 .facilities-block p {
@@ -108,6 +113,3 @@ main {
     margin: -6vw 0vw 0vw 21vw;
 }
 
-.btn-left :hover {
-    filter: blur(5px);
-}
