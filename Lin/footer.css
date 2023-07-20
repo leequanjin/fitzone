@@ -1,41 +1,21 @@
 footer {
-    height: 20%;
+    height: 12%;
     width: 100%;
-    display: block;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FFFFFF;
     bottom: 0;
-    background-color: #F6F6F6;
-    margin-top: 50%;
+    position: absolute;
+    font-size: 0.9vw;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-#copyRight {
-    display: block;
-    align-self: center;
-    text-align: center;
-    margin-top: 3vw;
-    font-size: 1vw;
-    padding-bottom: 2vw;
-}
-
-#leftFooter,#rightFooter {
-    width: 50%;
-    height: 15vw;
-    text-align: center;
-    margin: 2vw auto 10vw;
-    font-size: 1.5vw;
-}
-
-#leftFooter {
-    display: block;
-    float: left;
-}
-
-#rightFooter {
+footer table {
     display: flex;
-    float: right;
     justify-content: center;
+    margin-top: 1vw;
+    text-align: center;
+    color: #6C757D;
 }
 
-#rightFooter table {
-    padding: 1vw;
+footer i {
+    padding: 0.7vw 0.5vw 0.2vw;
 }
