@@ -23,6 +23,8 @@ main {
     font-weight: bold;
     margin-top: 5%;
     padding: 0% 0% 3%;
+    transition-duration: 0.8s;
+    transition-delay: 0.5s;
 }
 
 .facilities-block a :hover {
