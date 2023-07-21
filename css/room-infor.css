@@ -1,0 +1,38 @@
+/* To make the white background for content */
+main {
+    background-color: #FFFFFF;
+    display: block;
+    height: 100%;
+    width: 94%;
+    margin: 3% 3% 0%;
+    padding: 0.5%;
+}
+
+#title {
+    height: 9vw;
+    width: 95%;
+    background-color: #2D3031;
+    margin: 1% 2.5%;
+    padding: 1vw;
+    border-radius: 10px;
+}
+
+h1 {
+    color: #FFC371;
+    font-size: 4.5vw;
+    padding: 1.5vw;
+}
+
+#title img {
+    height: 5vw;
+    width: 5.5vw;
+    float: right;
+    margin: -7vw 3vw 0vw 0vw;
+}
+
+.images-slide {
+    height: 9vw;
+    width: 95%;
+    margin: 1% 2.5%;
+    padding: 1vw;
+}
