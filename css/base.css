@@ -110,13 +110,13 @@ header nav ul li ul li {
 }
 
 header nav ul li a.active {
-    background: #FFCA80;
+    background: #FFC371;
     color: #FFFFFF;
 }
 
 header nav ul li a:hover {
     transition: 0.3s;
-    background: #FFC371;
+    background: #FFCA80;
     color: #FFFFFF;
 }
 

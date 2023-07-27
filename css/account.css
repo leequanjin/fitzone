@@ -208,6 +208,10 @@ main {
     border: 1px solid #D6DADB;
 }
 
+.buttons button.cancel a{
+    color: #2D3031;
+}
+
 .buttons button.cancel:hover,
 .add:hover {
     background: #EBE7DB;
