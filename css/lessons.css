@@ -1,0 +1,169 @@
+/* To make the white background for content */
+main {
+    background-color: #FFFFFF;
+    display: block;
+    height: 100%;
+    width: 94%;
+    margin: 3% 3% 0%;
+    padding: 0.5%;
+}
+
+#lesson-nav {
+    height: 9vw;
+    width: 95%;
+    background-color: #2D3031;
+    margin: 1% 2.5%;
+    padding: 3vw 5vw;
+    border-radius: 10px;
+}
+
+#lesson-nav ul {
+    list-style-type: none;
+}
+
+#lesson-nav li {
+    display: inline;
+    margin-right: 5vw;
+}
+
+#lesson-nav a {
+    text-decoration: none;
+    font-size: 3vw;
+    color: #EBE7DB;
+}
+
+#lesson-nav a:hover {
+    transition: 0.3s;
+    color: #FFC371;
+}
+
+#lesson-nav a:active {
+    color: #FFC371;
+}
+
+.lesson-nav {
+    color: #FFCA80;
+}
+
+#to-class {
+    height: 3vw;
+    width: 95%;
+    display: block;
+    margin: 0vw auto;
+    padding: 0.5vw;
+    text-align: center;
+}
+
+#to-class ul {
+    list-style-type: none;
+}
+
+#to-class li {
+    display: inline;
+    margin: 2vw;
+}
+
+#to-class a {
+    text-decoration: none;
+    font-size: 2vw;
+    color: #6C757D;
+}
+
+#to-class a:hover {
+    transition: 0.3s;
+    color: #FFCA80;
+    text-decoration: underline;
+    text-decoration-line: overline;
+    text-decoration-color: #FFC371;
+}
+
+#classes {
+    width: 95%;
+    margin: 0% 2.5%;
+    padding: 1vw;
+}
+
+.class-description {
+    background: rgba(0, 0, 0, 0.5); /*Text background color with opacity 0.5 */
+    color: #FFFFFF;
+    width: 90%;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+    margin: 0% auto;
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the div horizontally and vertically */
+}
+
+.class-description h1 {
+    font-size: 3vw;
+    padding-bottom: 1vw;
+    width: 100%;
+    height: 3.5vw;
+    border-bottom: #EBE7DB dashed;
+}
+
+dl {
+    width: 90%;
+    height: 100%;
+    margin: 2vw auto 0vw;
+}
+
+dt {
+    font-size: 2.5vw;
+    padding-bottom: 0.1vw;
+}
+
+dd {
+    font-size: 1.5vw;
+    padding-bottom: 2vw;
+}
+
+#nutrition {
+    background-image: url('../images/nutrition-classes.jpg');
+}
+
+#hiit {
+    background-image: url('../images/hiit-classes.jpg');
+}
+
+#yoga {
+    background-image: url('../images/yoga-classes.jpg');
+}
+
+#dance {
+    background-image: url('../images/dance-classes.jpg');
+}
+
+#blended {
+    background-image: url('../images/basic-classes.jpg');
+}
+
+/* to make the cover effect */
+.scroll-cover {
+    position: relative;
+    height: 50vw;
+    width: 100%;
+    filter: brightness(0.8);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;   /* Adjust this value to set the height of different classes */
+}
+
+/* Animation to create the "cover" effect */
+@keyframes coverEffect { /*{ keyframes is a css rule used to make animation */
+    from {
+      background-position-y: 0; 
+    }
+    to {
+      background-position-y: calc(100vh - 100%); /*used to calculate the distance between top of the element; will update automatically */
+    }
+  }
+  
+  /* Apply the animation each classes description */
+  .scroll-cover .animate-cover {
+    animation: coverEffect 5s linear infinite; /* Used to adjust the animation duration*/
+  }
