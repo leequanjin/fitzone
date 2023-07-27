@@ -13,6 +13,185 @@
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/465be9f5fc.js" crossorigin="anonymous"></script>
     <style>
+        /* .color template */
+        .color-template {
+            color: #2D3031;
+            color: #6C757D;
+            color: #D6DADB;
+            color: #FFC371;
+            color: #FFCA80;
+            color: #EBE7DB;
+            color: #F2F2F2;
+            color: #FFFFFF;
+            color: #0087CA;
+            color: #0099E6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            border-radius: 10px;
+            background: rgba(0,0,0,0.1);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(0,0,0,0.2);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(0,0,0,0.4);
+        }
+
+        ::-webkit-scrollbar-thumb:active{
+            background: rgba(0,0,0,.6);
+        }
+
+        /* 10px => 1rem */
+        html {
+            height: 100%;
+            font-size: 62.5%;
+        }
+
+        body {
+            min-height: 100vh;
+            background-color: #EBE7DB;
+        }
+
+        main {
+            min-height: 600px;
+        }
+
+        /* header CSS*/
+        header {
+            position: relative;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #FFFFFF;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            padding: 0 2%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header img {
+            height: 41px;
+        }
+
+        header nav ul li {
+            position: relative;
+            float: left;
+        }
+
+        header nav ul li a {
+            font-size: 2rem;
+            letter-spacing: 1px;
+            padding: 18px;
+            color: #2D3031;
+            display: block;
+        }
+
+        header nav ul li ul {
+            position: absolute;
+            left: 0;
+            width: 200px;
+            background: #F2F2F2;
+            display: none;
+            z-index: 999;
+        }
+
+        header nav ul li ul li {
+            width: 100%;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        header nav ul li a.active {
+            background: #FFC371;
+            color: #FFFFFF;
+        }
+
+        header nav ul li a:hover {
+            transition: 0.3s;
+            background: #FFCA80;
+            color: #FFFFFF;
+        }
+
+        header .login-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 3.8rem;
+            color: #6C757D;
+        }
+
+        header .login-link.active {
+            color: #FFCA80;
+        }
+
+        header .login-link:hover {
+            transition: 0.3s;
+            color: #FFC371;
+        }
+
+        header nav ul li:hover>ul {
+            display: initial;
+        }
+
+        /* footer CSS*/
+        footer {
+            position: relative;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 8px;
+            background-color: #FFFFFF;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        footer ul li {
+            position: relative;
+            float: left;
+        }
+
+        footer ul li a {
+            display: block;
+            font-size: 3rem;
+            padding: 10px 20px 20px 20px;
+            color: #6C757D;
+        }
+
+        footer ul li a:hover {
+            transition: 0.3s;
+            color: #FFC371;
+        }
+
+        footer p {
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
         main {
             background-color: #FFFFFF;
             display: block;
