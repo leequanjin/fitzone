@@ -23,8 +23,8 @@
         }
 
         .setting {
-          display: flex; /*Turn elements flexible to control items inside */
-          flex-wrap: wrap; /*Allow the elements within body to wrap to next line, allow adjustments correctly*/
+            display: flex; /*Turn elements flexible to control items inside */
+            flex-wrap: wrap; /*Allow the elements within body to wrap to next line, allow adjustments correctly*/
         }
     
         p{
@@ -102,8 +102,7 @@
         .video-container:hover .overlay1,
         .video-container:hover .overlay2,
         .video-container:hover .overlay3,
-        .video-container:hover .overlay4,
-        .video-container2:hover .overlay5 {
+        .video-container:hover .overlay4{
           opacity: 0; /*on hover, cause the overlay to disappear*/
         }
     
@@ -114,34 +113,61 @@
           clear: both; /*clears any floated elements that appear before :after*/
         }
     
-        .video-link2 {
-          width: 50%; /*link will only occupy half of the screen*/
-          margin-left: 25%;
-          margin-right: 25%;
-          padding: 0;
-        }
-    
-        .video-container2 {
-          position: relative;
-          width: 100%;
-          padding-top: 56.25%; /* Maintain aspect ratio (16:9) */
-          /* creates a space within the container so that the video with position absolute can be placed within */
-        }
-    
-        .video-container2 video {
-          position: absolute; 
-          /*positions the video element absolutely to its closest positioned ancestor, in this case is the .video-container*/
-          top: 0; 
-          /*position the video element at the top-left corner of the video container element*/
-          left: 0;
-          width: 100%; /*allow video to grow accordingly to screen size*/
-          height: 100%;
-          object-fit: cover; /*ensures that the video scales properly*/
-        }
-    
         .temp {
           width: 100%;
           margin-top: 20px;
+        }
+
+        .temp article{
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 7em;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .container {
+            position: relative;
+            height: 400px;
+            width: 50%;
+            margin-left: 25%;
+            margin-right: 25%;
+        }
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .slide-button {
+            position: absolute;
+            top: 0%;
+            /* transform: translateY(-50%); */
+            height: 100%;
+            width: 10%; 
+            height: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .slide-button-prev {
+            float: left;
+            height: 100%;
+        }
+        .slide-button-next {
+            right: 0;
+            height: 100%;
+        }
+        .slide-button:hover {
+            background-color: rgb(255, 195, 113, 0.3);
         }
     </style>
 </head>
@@ -206,7 +232,7 @@
                 <div class="video-container">
                 <video src="TestVideo.mp4" loop muted></video>
                 <div class="overlay3">
-                    <p>Products</p>
+                    <p>Merchandises</p>
                 </div>
                 </div>
             </a>
@@ -224,23 +250,28 @@
 
             <div class="temp">
                 <article style="text-align: center;">
-                    lorem ipsum ipsum lorem
+                    News
                 </article>
             </div>
             <div class="separator"></div>  
 
-            <a href="news.html" class="video-link2">
-                <div class="video-container2">
-                <video src="TestVideo.mp4" loop muted></video>
-                <div class="overlay5">
-                    <p>News</p>
+            <div class="container">
+                <div class="slide">
+                  <a href="events.html"><img src="/images/banner1.jpg"></a>
                 </div>
+                <div class="slide">
+                  <a href="events.html"><img src="/images/banner2.jpg"></a>
                 </div>
-            </a>
+                <div class="slide">
+                  <a href="events.html"><img src="/images/banner3.jpg"></a>
+                </div>
+                <button class="slide-button slide-button-prev">&lt;</button>
+                <button class="slide-button slide-button-next">&gt;</button>
+              </div>
 
             <div class="temp">
                 <article style="text-align: center;">
-                    comments
+                    Reviews By Our Customers
                 </article>
             </div>
 
@@ -258,6 +289,44 @@
                     this.querySelector('video').pause();
                 });
                 });
+                
+                var slideIndex = 0;
+                var slides = document.getElementsByClassName("slide");
+                var prevButton = document.querySelector(".slide-button-prev");
+                var nextButton = document.querySelector(".slide-button-next");
+
+                showSlide(slideIndex);
+                startSlideInterval();
+
+                function showSlide(n) {
+                for (var i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slides[n].style.display = "block";
+                }
+
+                function prevSlide() {
+                slideIndex--;
+                if (slideIndex < 0) {
+                    slideIndex = slides.length - 1;
+                }
+                showSlide(slideIndex);
+                }
+
+                function nextSlide() {
+                slideIndex++;
+                if (slideIndex >= slides.length) {
+                    slideIndex = 0;
+                }
+                showSlide(slideIndex);
+                }
+
+                function startSlideInterval() {
+                slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds (adjust as needed)
+                }
+
+                prevButton.addEventListener("click", prevSlide);
+                nextButton.addEventListener("click", nextSlide);
             </script>
         </div>
     </main>
