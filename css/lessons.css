@@ -152,18 +152,3 @@ main {
     background-position: center;
     height: 100vh;   /* Adjust this value to set the height of different classes */
 }
-
-/* Animation to create the "cover" effect */
-@keyframes coverEffect { /*{ keyframes is a css rule used to make animation */
-    from {
-      background-position-y: 0; 
-    }
-    to {
-      background-position-y: calc(100vh - 100%); /*used to calculate the distance between top of the element; will update automatically */
-    }
-  }
-  
-  /* Apply the animation each classes description */
-  .scroll-cover .animate-cover {
-    animation: coverEffect 5s linear infinite; /* Used to adjust the animation duration*/
-  }
