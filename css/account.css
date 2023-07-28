@@ -56,7 +56,6 @@ main {
 .personal-details img {
     height: 150px;
     width: 150px;
-    border: 2px solid #6C757D;
     border-radius: 100px;
 }
 
@@ -208,7 +207,7 @@ main {
     border: 1px solid #D6DADB;
 }
 
-.buttons button.cancel a{
+.buttons button.cancel a {
     color: #2D3031;
 }
 

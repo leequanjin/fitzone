@@ -9,6 +9,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/modal.css">
     <link rel="stylesheet" href="/css/login-signup.css">
 
     <!-- Font Awesome Icons -->
@@ -38,7 +39,7 @@
                     </div>
 
                     <div class="field">
-                        <a href="/html/home.html">Login</a>
+                        <a href="javascript:delay('/html/home.html')" id="open-login-modal">Login</a>
                     </div>
 
                     <div class="form-link">
@@ -55,10 +56,18 @@
                             <span>Log in with Google</span>
                         </a>
                     </div>
-
                 </form>
             </div>
         </div>
+
+        <div class="modal" id="login-modal">
+            <div class="modal-content">
+                <h2>Login Successful</h2>
+                <div class="line"></div>
+                <h3>You will now be redirected to the main page.</h3>
+            </div>
+        </div>
+
         <!-- Sign-up form -->
         <div class="form sign-up">
             <div class="form-content">
@@ -79,7 +88,7 @@
                     </div>
 
                     <div class="field">
-                        <a href="/html/home.html">Sign up</a>
+                        <a href="javascript:delay('/html/home.html')" id="open-sign-up-modal">Sign up</a>
                     </div>
 
                     <div class="form-link">
@@ -100,6 +109,15 @@
                 </form>
             </div>
         </div>
+
+        <div class="modal" id="sign-up-modal">
+            <div class="modal-content">
+                <h2>Sign-up Successful</h2>
+                <div class="line"></div>
+                <h3>You will now be redirected to the main page.</h3>
+            </div>
+        </div>
+
     </section>
 
     <!-- JavaScript -->
