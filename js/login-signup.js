@@ -7,6 +7,8 @@ var signupModal = document.getElementById("sign-up-modal");
 var openLoginModal = document.getElementById("open-login-modal");
 var openSignupModal = document.getElementById("open-sign-up-modal");
 
+console.log(forms, pwShowHide, links)
+
 // hide and show password
 pwShowHide.forEach(eyeIcon => {
     eyeIcon.addEventListener("click", () => {
