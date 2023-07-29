@@ -19,12 +19,13 @@
             height: 100%;
             width: 94%;
             margin: 3% 3% 0%;
-            padding: 0.5%;
+            padding: 1.5%;
         }
 
         .Hot-event {
             display: flex;
             align-items: center;
+            padding: 15px;
         }
         .Hot-event img{
             height: 50vh;
@@ -34,7 +35,7 @@
         .Current, .Past{
             width: 50%;
             float: left;
-            padding-right: 10px;
+            
             position: relative;
         }
         
@@ -50,6 +51,7 @@
             font-size: 16px;
             opacity: 0;
             transition: opacity 0.3s ease;
+            object-fit: cover;
         }
 
         .Current:hover ~ .Past p {
@@ -57,14 +59,13 @@
             opacity: 1;
         }
 
-        .Past:hover ~ .Current p {
-            visibility: visible;
-            opacity: 1;
-        }
 
         .Current img , .Past img{
             width: 100%;
-            height: 30vh;
+            height: 40vh;
+            object-fit: cover;
+            padding: 10px;
+            border-radius: 20px;
         }
 
         .events{
@@ -72,20 +73,26 @@
             padding: 10px 0px;
         }
 
-        .info1 , .info2{
+        .info1 , .info2 , .info3 , .info4{
             width: 100%;
             display: flex;
             padding: 10px;
         }
-        .info1 img, .info2 img{
+        .info1 img, .info2 img, .info3 img, .info4 img{
             width: 50%;
             height: 30vh;
+            border-radius: 25px;
         }
-        .info1 p, .info2 p{
+        .info1 p, .info2 p, .info3 p, .info4 p{
             width: 50%;
             height: 20vh;
             text-align: left;
             font-size: 20px;
+            padding: 1.5vw;
+        }
+
+        .info-container{
+            display: flex;
         }
     </style>
 </head>
@@ -138,13 +145,25 @@
                 <p>This is Black</p>
             </div>
         </div>
-        <div class="info1">
-            <img src="/images/banner 5.jpg">
-            <p>lorem ipsum</p>
+        <div class="info-container">
+            <div class="info1">
+                <img src="/images/banner 5.jpg">
+                <p>lorem ipsum</p>
+            </div>
+            <div class="info3">
+                <img src="/images/banner 5.jpg">
+                <p>lorem ipsum</p>
+            </div>
         </div>
-        <div class="info2">
-            <p>ipsum lorem</p>
-            <img src="/images/banner2.jpg">
+        <div class="info-container">
+            <div class="info2">
+                <p>ipsum lorem</p>
+                <img src="/images/banner2.jpg">
+            </div>
+            <div class="info4">
+                <p>ipsum lorem</p>
+                <img src="/images/banner2.jpg">
+            </div>
         </div>
     </main>
     <script>
