@@ -12,7 +12,82 @@
 
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/465be9f5fc.js" crossorigin="anonymous"></script>
+    <style>
+        main {
+            background-color: #FFFFFF;
+            display: block;
+            height: 100%;
+            width: 94%;
+            margin: 3% 3% 0%;
+            padding: 0.5%;
+        }
 
+        .Hot-event {
+            display: flex;
+            align-items: center;
+        }
+        .Hot-event img{
+            height: 50vh;
+            width: 100%;
+        }
+        
+        .Current, .Past{
+            width: 50%;
+            float: left;
+            padding-right: 10px;
+            position: relative;
+        }
+        
+        .Current p , .Past p{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0);
+            color: white;
+            display: flex;
+            font-size: 16px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .Current:hover ~ .Past p {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .Past:hover ~ .Current p {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .Current img , .Past img{
+            width: 100%;
+            height: 30vh;
+        }
+
+        .events{
+            display: flex;
+            padding: 10px 0px;
+        }
+
+        .info1 , .info2{
+            width: 100%;
+            display: flex;
+            padding: 10px;
+        }
+        .info1 img, .info2 img{
+            width: 50%;
+            height: 30vh;
+        }
+        .info1 p, .info2 p{
+            width: 50%;
+            height: 20vh;
+            text-align: left;
+            font-size: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -50,7 +125,39 @@
         </a>
     </header>
     <main>
+        <div class="Hot-event">
+            <img src="/images/banner 1.png" >
+        </div>
+        <div class="events">
+            <div class="Current">
+                <img src="/images/banner 2.png">
+                <p>This is Blue</p>
+            </div>
+            <div class="Past" onmouseenter="showParagraph('.Current p')" , onmouseout="hideParagraph('.Current p')">
+                <img src="/images/banner 4.jpg">
+                <p>This is Black</p>
+            </div>
+        </div>
+        <div class="info1">
+            <img src="/images/banner 5.jpg">
+            <p>lorem ipsum</p>
+        </div>
+        <div class="info2">
+            <p>ipsum lorem</p>
+            <img src="/images/banner2.jpg">
+        </div>
     </main>
+    <script>
+        function showParagraph(targetSelector) {
+            var targetParagraph = document.querySelector(targetSelector);
+            targetParagraph.style.opacity = '1';
+        }
+
+        function hideParagraph(targetSelector) {
+            var targetParagraph = document.querySelector(targetSelector);
+            targetParagraph.style.opacity = '0';
+        }
+    </script>
     <footer>
         <ul>
             <li><a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
