@@ -29,15 +29,3 @@ h1 {
     float: right;
     margin: -7vw 3vw 0vw 0vw;
 }
-
-.text-slide {
-    height: 2vw;
-    width: 95%;
-    margin: 1% 2.5%;
-}
-
-.text-slide h3 {
-    color: #2D3031;
-    font-size: 2vw;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
