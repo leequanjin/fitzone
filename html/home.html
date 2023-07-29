@@ -63,7 +63,7 @@
           object-fit: cover; /*ensures that the video scales properly*/
         }
     
-        .overlay1, .overlay2, .overlay3, .overlay4, .overlay5 {
+        .overlay1, .overlay2, .overlay3, .overlay4 {
           position: absolute;
           top: 0;
           left: 0;
@@ -80,23 +80,22 @@
         /* Setting overlay color */
         .overlay1 {
           background-color: rgba(255, 0, 0, 0.3);
+          border-radius: 15px 0px 0px 0px;
         }
     
         .overlay2 {
           background-color: rgba(255, 255, 0, 0.3);
+          border-radius: 0px 15px 0px 0px;
         }
     
         .overlay3 {
           background-color: rgba(0, 0, 255, 0.3);
+          border-radius: 0px 0px 0px 15px;
         }
     
         .overlay4 {
             background-color: rgba(0, 255, 255, 0.3);
-        }
-    
-        .overlay5 {
-          background-color: rgba(255, 255, 255, 0.3);
-          color: black;
+            border-radius: 0px 0px 15px 0px;
         }
     
         .video-container:hover .overlay1,
@@ -279,37 +278,37 @@
             <div class="separator"></div>  
             <a href="/html/facilities/facilities.html" class="video-link">
                 <div class="video-container">
-                <video src="TestVideo.mp4" loop muted></video>
-                <div class="overlay1">
-                    <p>Facilities</p>
-                </div>
+                    <video src="../TestVideo.mp4" loop muted></video>
+                    <div class="overlay1">
+                        <p>Facilities</p>
+                    </div>
                 </div>
             </a>
 
             <a href="lessons/lessons.html" class="video-link">
                 <div class="video-container">
-                <video src="TestVideo.mp4" loop muted></video>
-                <div class="overlay2">
-                    <p>Lessons</p>
-                </div>
+                    <video src="TestVideo.mp4" loop muted></video>
+                    <div class="overlay2">
+                        <p>Lessons</p>
+                    </div>
                 </div>
             </a>
 
             <a href="merch.html" class="video-link">
                 <div class="video-container">
-                <video src="TestVideo.mp4" loop muted></video>
-                <div class="overlay3">
-                    <p>Merchandises</p>
-                </div>
+                    <video src="TestVideo.mp4" loop muted></video>
+                    <div class="overlay3">
+                        <p>Merchandises</p>
+                    </div>
                 </div>
             </a>
 
             <a href="about.html" class="video-link">
                 <div class="video-container">
-                <video src="TestVideo.mp4" loop muted></video>
-                <div class="overlay4">
-                    <p>About Us</p>
-                </div>
+                    <video src="TestVideo.mp4" loop muted></video>
+                    <div class="overlay4">
+                        <p>About Us</p>
+                    </div>
                 </div>
             </a>
 
