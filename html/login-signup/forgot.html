@@ -9,6 +9,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/modal.css">
     <link rel="stylesheet" href="/css/login-signup.css">
 
     <!-- Font Awesome Icons -->
@@ -29,10 +30,19 @@
                     </div>
 
                     <div class="field">
-                        <a href="login-signup.html">Continue</a>
+                        <a href="javascript:delay('/html/login-signup/login-signup.html')"
+                            id="open-login-modal">Continue</a>
                     </div>
 
                 </form>
+            </div>
+        </div>
+
+        <div class="modal" id="login-modal">
+            <div class="modal-content">
+                <h2>Link Sent</h2>
+                <div class="line"></div>
+                <h3>You will now be redirected back to the login page.</h3>
             </div>
         </div>
 

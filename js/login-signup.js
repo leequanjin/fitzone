@@ -2,8 +2,12 @@ const forms = document.querySelector(".forms")
 const pwShowHide = document.querySelectorAll(".eye-icon")
 const links = document.querySelectorAll(".link");
 
-console.log(forms, pwShowHide, links)
+var loginModal = document.getElementById("login-modal");
+var signupModal = document.getElementById("sign-up-modal");
+var openLoginModal = document.getElementById("open-login-modal");
+var openSignupModal = document.getElementById("open-sign-up-modal");
 
+// hide and show password
 pwShowHide.forEach(eyeIcon => {
     eyeIcon.addEventListener("click", () => {
         let pwFields = eyeIcon.parentElement.parentElement.querySelectorAll(".password");
@@ -27,3 +31,17 @@ links.forEach(link => {
         forms.classList.toggle("show-sign-up");
     })
 })
+
+// login modal
+openLoginModal.onclick = function () {
+    loginModal.style.display = "block";
+}
+
+// signup modal
+openSignupModal.onclick = function () {
+    signupModal.style.display = "block";
+}
+
+function delay(URL) {
+    setTimeout(function () { window.location = URL }, 2000);
+}

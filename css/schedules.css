@@ -1,0 +1,71 @@
+table {
+    width: 90%;
+    height: auto;
+    margin: 1% 5% 3%;
+}
+
+caption {
+    font-size: 2vw;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 100%;
+    padding: 0.3vw;
+    background-color: #FFC37150; /*Set transparent 50% of color #6C757D*/
+}
+
+th,td {
+    padding: 0.5vw;
+    margin: 0.5vw;
+    border-left: 0.1vw solid #FFFFFF;
+    border-right: 0.1vw solid #FFFFFF;
+    border-radius: 0.5vw;
+}
+
+th {
+    width: 10vw;
+    height: 4vw;
+    font-size: 1.5vw;
+    background-color: #FFC371;
+}
+
+td:nth-child(1) {
+    width: 10vw;
+    height: 4vw;
+    font-size: 1vw;
+    background-color: #FFC371;
+}
+
+td {
+    width: 10vw;
+    height: 5vw;
+    font-size: 1vw;
+    text-align: center;
+}
+
+td:hover {
+    transition: 1s;
+    background-color: #2D3031;
+    color: #F2F2F2;
+    font-size: 1.2vw;
+    font-weight: 1000;
+}
+
+tr:hover {
+    background-color: #6C757D50;
+}
+
+/* Hover effect for the whole column when hovering over any <td> in that column */
+td:hover::nth-child(2), /* Monday column */
+td:hover::nth-child(3), /* Tuesday column */
+td:hover::nth-child(4), /* Wednesday column */
+td:hover::nth-child(5), /* Thursday column */
+td:hover::nth-child(6), /* Friday column */
+td:hover::nth-child(7), /* Saturday column */
+td:hover::nth-child(8)  /* Sunday column */
+{
+  background-color: #6C757D50; /* Set your desired background color for the column */
+}
+
+.tutor {
+    font-size: 0.8vw;
+}

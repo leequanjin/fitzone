@@ -66,15 +66,33 @@ main {
 #to-class a {
     text-decoration: none;
     font-size: 2vw;
+    display: inline-block;
+    position: relative;
     color: #6C757D;
 }
 
 #to-class a:hover {
     transition: 0.3s;
-    color: #FFCA80;
-    text-decoration: underline;
-    text-decoration-line: overline;
-    text-decoration-color: #FFC371;
+    color: #FFC371;
+}
+  
+#to-class a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left; /*Place animation started*/
+}
+
+/* After mouse moveovwe the link */
+#to-class a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0); /*Return normal*/
+    height: 0.2vw;
+    bottom: 0;
+    left: 0;
+    background-color: #FFCA80;
+    transform-origin: bottom right; /*Line go to right until reach the end and disapear*/
+    transition: transform 0.25s ease-out; /*Animation disappear with ease out effect */
 }
 
 #classes {
@@ -121,6 +139,16 @@ main {
     padding-bottom: 2vw;
 }
 
+#nutrition, #hiit, #yoga, #dance, #blended{
+    position: relative;
+    height: 50vw;
+    width: 100%;
+    filter: brightness(0.8);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 #nutrition {
     background-image: url('../images/nutrition-classes.jpg');
 }
@@ -140,30 +168,3 @@ main {
 #blended {
     background-image: url('../images/basic-classes.jpg');
 }
-
-/* to make the cover effect */
-.scroll-cover {
-    position: relative;
-    height: 50vw;
-    width: 100%;
-    filter: brightness(0.8);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;   /* Adjust this value to set the height of different classes */
-}
-
-/* Animation to create the "cover" effect */
-@keyframes coverEffect { /*{ keyframes is a css rule used to make animation */
-    from {
-      background-position-y: 0; 
-    }
-    to {
-      background-position-y: calc(100vh - 100%); /*used to calculate the distance between top of the element; will update automatically */
-    }
-  }
-  
-  /* Apply the animation each classes description */
-  .scroll-cover .animate-cover {
-    animation: coverEffect 5s linear infinite; /* Used to adjust the animation duration*/
-  }

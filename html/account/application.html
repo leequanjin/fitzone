@@ -10,6 +10,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/account.css">
+    <link rel="stylesheet" href="/css/modal.css">
     <link rel="stylesheet" href="/css/profile-security.css">
 
     <!-- Font Awesome Icons -->
@@ -56,7 +57,7 @@
         <div class="container">
             <div class="menu">
                 <div class="personal-details">
-                    <img src="/images/user2.jpg" alt="">
+                    <img src="/images/user.png" alt="">
                     <h2>Gold Member</h2>
                     <h3>ID 2307595</h3>
                 </div>
@@ -66,7 +67,7 @@
                         <li><a href="/html/account/security.html">Security</a></li>
                         <li><a href="#" class="active">Applications</a></li>
                         <li><a href="/html/account/rewards.html">Point Rewards</a></li>
-                        <li><a href="/html/login-signup/login-signup.html" class="logout">Log Out</a></li>
+                        <li><a href="#" class="logout" id="open-modal">Log Out</a></li>
                     </ul>
                 </div>
             </div>
@@ -151,6 +152,17 @@
                     </div>
                 </div>
             </div>
+            <div class="modal" id="modal">
+                <div class="modal-content">
+                    <h2>Logging Out</h2>
+                    <div class="line"></div>
+                    <h3>Are you sure you want to log out?</h3>
+                    <div class="buttons">
+                        <a href="/html/login-signup/login-signup.html"><button class="update">Log Out</button></a>
+                        <button class="cancel" id="close-modal">Close</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <footer>
@@ -163,6 +175,9 @@
         </ul>
         <p>© 2023 Fit Zone All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript -->
+    <script src="/js/modal.js"></script>
 </body>
 
 </html>
