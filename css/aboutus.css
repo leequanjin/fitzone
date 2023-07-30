@@ -1,0 +1,37 @@
+/**/
+.intro{
+    min-height: 120vh;
+    display: flex;
+    align-items: center;
+    background: url("/CLimage/new-gym-girls-4k.jpg");
+    filter:brightness(0.6);
+    background-repeat: no-repeat;
+    background-size :cover;
+    background-position:top;   
+}
+/*adjust the font position*/
+section{
+    padding:2rem 7%;
+}
+
+
+.content{
+    max-width: 40rem;
+}
+
+.content h2{
+    font-size: 4rem ;
+    text-transform: uppercase;
+    color:#a91e1e;
+}
+
+.content p{
+    font-size: 2rem;
+    font-weight:lighter;
+    line-height: 1.8;
+    padding:1rem 0;
+    color: #0572a4;
+}
+    
+
+
