@@ -45,14 +45,21 @@
           padding: 0;
         }
     
-        .video-container {
+        .video-container{
           position: relative;
           width: 100%;
           padding-top: 56.25%; /* Maintain aspect ratio (16:9) */
           /* creates a space within the container so that the video with position absolute can be placed within */
         }
     
-        .video-container video {
+        .video-container2{
+          position: relative;
+          width: 100%;
+          padding-top: 28.125%; /* Maintain aspect ratio (16:9) */
+          /* creates a space within the container so that the video with position absolute can be placed within */
+        }
+
+        .video-container video, .video-container2 video {
           position: absolute; 
           /*positions the video element absolutely to its closest positioned ancestor, in this case is the .video-container*/
           top: 0; 
@@ -63,6 +70,7 @@
           object-fit: cover; /*ensures that the video scales properly*/
         }
     
+
         .overlay1, .overlay2, .overlay3, .overlay4 {
           position: absolute;
           top: 0;
@@ -303,8 +311,8 @@
     
     <main>
         <a href="/html/lessons/membership.html" class="video-link">
-            <div class="video-container">
-                <video src="../TestVideo.mp4" loop muted></video>
+            <div class="video-container2">
+                <video src="../TrialVideo.mp4" loop muted></video>
                 <div class="overlay5">
                     <p>Start Free Trial Now</p>
                 </div>
