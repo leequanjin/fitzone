@@ -29,3 +29,22 @@ h1 {
     float: right;
     margin: -7vw 3vw 0vw 0vw;
 }
+
+#slide-container {
+    width: 90%;
+    height: 20vw;
+    background-color: #2D3031;
+    display: block;
+    text-align: center;
+    margin: 1% auto;
+}
+
+#slide-img {
+    height: 96%;
+    height: 20vw;
+}
+
+#slide-img img{
+    height: 20vw;
+    width: 20vw;
+}
