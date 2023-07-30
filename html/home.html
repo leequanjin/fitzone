@@ -414,6 +414,7 @@
                 });
                 });
                 
+                //Set variables for slides
                 var slideIndex = 0;
                 var slides = document.getElementsByClassName("slide");
                 var prevButton = document.querySelector(".slide-button-prev");
@@ -451,12 +452,15 @@
 
                 prevButton.addEventListener("click", prevSlide);
                 nextButton.addEventListener("click", nextSlide);
+
+                //Set Variables for Comments
                 document.addEventListener('DOMContentLoaded', function() {
                 const commentSection = document.querySelector('.comment-section');
                 const commentItems = document.querySelectorAll('.comment-item');
                 const numItems = commentItems.length;
                 let currentIndex = 0;
-            
+                
+                //Load images into array
                 const imageUrls = [
                     "/images/banner 1.png", "/images/banner 2.png", "/images/banner3.jpg", "/images/banner 4.jpg", "/images/banner 5.jpg", 
                 ];
