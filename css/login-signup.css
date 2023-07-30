@@ -33,17 +33,14 @@
 
 .form.sign-up {
     opacity: 0;
-    pointer-events: none;
 }
 
 .forms.show-sign-up .form.sign-up {
     opacity: 1;
-    pointer-events: auto;
 }
 
 .forms.show-sign-up .form.login {
     opacity: 0;
-    pointer-events: none;
 }
 
 h1 {

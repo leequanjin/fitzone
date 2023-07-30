@@ -1,4 +1,4 @@
-/* .color template */
+/* color template */
 .color-template {
     color: #2D3031;
     color: #6C757D;
@@ -12,11 +12,21 @@
     color: #0099E6;
 }
 
+/* all */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #EBE7DB;
+}
+
+main {
+    min-height: 600px;
 }
 
 li {
@@ -25,6 +35,12 @@ li {
 
 a {
     text-decoration: none;
+}
+
+/* font-size 10px => 1rem */
+html {
+    height: 100%;
+    font-size: 62.5%;
 }
 
 /* scrollbar */
@@ -49,22 +65,7 @@ a {
     background: rgba(0, 0, 0, .6);
 }
 
-/* 10px => 1rem */
-html {
-    height: 100%;
-    font-size: 62.5%;
-}
-
-body {
-    min-height: 100vh;
-    background-color: #EBE7DB;
-}
-
-main {
-    min-height: 600px;
-}
-
-/* header CSS*/
+/* header */
 header {
     position: sticky;
     z-index: 999;
@@ -96,6 +97,7 @@ header nav ul li a {
     display: block;
 }
 
+/* dropdown menu */
 header nav ul li ul {
     position: absolute;
     left: 0;
@@ -103,6 +105,10 @@ header nav ul li ul {
     background: #F2F2F2;
     display: none;
     z-index: 999;
+}
+
+header nav ul li:hover ul {
+    display: block;
 }
 
 header nav ul li ul li {
@@ -136,10 +142,6 @@ header .login-link.active {
 header .login-link:hover {
     transition: 0.3s;
     color: #FFC371;
-}
-
-header nav ul li:hover>ul {
-    display: initial;
 }
 
 /* footer CSS*/
