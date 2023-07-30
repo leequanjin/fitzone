@@ -48,6 +48,8 @@
         .video-container{
           position: relative;
           width: 100%;
+          border-radius: 30px;
+          overflow: hidden;
           padding-top: 56.25%; /* Maintain aspect ratio (16:9) */
           /* creates a space within the container so that the video with position absolute can be placed within */
         }
@@ -55,6 +57,8 @@
         .video-container2{
           position: relative;
           width: 100%;
+          border-radius: 30px;
+          overflow: hidden;
           padding-top: 28.125%; /* Maintain aspect ratio (16:9) */
           /* creates a space within the container so that the video with position absolute can be placed within */
         }
@@ -112,7 +116,7 @@
           position: absolute;
           top: 30%;
           left: 0;
-          width: 50%;
+          width: 55%;
           height: 20%;
           color: white;
           display: flex;
@@ -410,6 +414,7 @@
                 });
                 });
                 
+                //Set variables for slides
                 var slideIndex = 0;
                 var slides = document.getElementsByClassName("slide");
                 var prevButton = document.querySelector(".slide-button-prev");
@@ -447,12 +452,15 @@
 
                 prevButton.addEventListener("click", prevSlide);
                 nextButton.addEventListener("click", nextSlide);
+
+                //Set Variables for Comments
                 document.addEventListener('DOMContentLoaded', function() {
                 const commentSection = document.querySelector('.comment-section');
                 const commentItems = document.querySelectorAll('.comment-item');
                 const numItems = commentItems.length;
                 let currentIndex = 0;
-            
+                
+                //Load images into array
                 const imageUrls = [
                     "/images/banner 1.png", "/images/banner 2.png", "/images/banner3.jpg", "/images/banner 4.jpg", "/images/banner 5.jpg", 
                 ];
