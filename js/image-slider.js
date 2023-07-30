@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded",function(){
             slideIndex = slides.length - 1;
         }
         //check if user reach last slide
-        else if ( slideIndex >= slides.length ){
+        else if ( index >= slides.length ){
             slideIndex = 0;
         }
 
