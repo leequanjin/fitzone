@@ -12,6 +12,7 @@
 
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/465be9f5fc.js" crossorigin="anonymous"></script>
+    <script src="/js/countdown.js"></script>
     <style>
         main {
             background-color: #FFFFFF;
@@ -36,12 +37,13 @@
         .Hot-event p {
             display: none; /* Hide the paragraph by default */
             position: absolute; /* Position the paragraph absolutely */
-            bottom: 0;
-            left: 0;
+            /* bottom: 0;
+            left: 0; */
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.7); /* Optional: Add a semi-transparent background */
+            background-color: rgba(0, 0, 0, 0); /* Optional: Add a semi-transparent background */
             color: white; /* Optional: Set the text color */
+            font-size: 15em;
             padding: 10px; /* Optional: Add some padding to the paragraph */
         }
 
@@ -49,10 +51,11 @@
             display: block; /* Display the paragraph when hovering over the container */
         }
         
+
+
         .Current, .Past{
             width: 50%;
             float: left;
-            
             position: relative;
         }
         
@@ -65,7 +68,7 @@
             background-color: rgba(0, 0, 0);
             color: white;
             display: flex;
-            font-size: 16px;
+            font-size: 10em;
             opacity: 0;
             transition: opacity 0.3s ease;
             object-fit: cover;
@@ -76,6 +79,13 @@
             opacity: 1;
         }
 
+        #Countdown{
+            text-align: center;
+            font-size: 100px;
+            margin-top: 0px;
+            background-color: (0,0,0,0.7);
+            border-radius: 20px;
+        }
 
         .Current img , .Past img{
             width: 100%;
@@ -153,33 +163,34 @@
             <img src="/images/banner 1.png" >
             <p>This is Hot Event stuff</p>
         </div>
+        <p id="Countdown"></p>
         <div class="events">
             <div class="Current">
                 <img src="/images/banner 2.png">
-                <p>This is Blue</p>
+                <p>This is Past Event</p>
             </div>
             <div class="Past" onmouseenter="showParagraph('.Current p')" , onmouseout="hideParagraph('.Current p')">
                 <img src="/images/banner 4.jpg">
-                <p>This is Black</p>
+                <p>This is Ongoing Event</p>
             </div>
         </div>
         <div class="info-container">
             <div class="info1">
                 <img src="/images/banner 5.jpg">
-                <p>lorem ipsum</p>
+                <p>New Gym room</p>
             </div>
             <div class="info3">
                 <img src="/images/banner 5.jpg">
-                <p>lorem ipsum</p>
+                <p>New Branch Opening Soon</p>
             </div>
         </div>
         <div class="info-container">
             <div class="info2">
-                <p>ipsum lorem</p>
+                <p>Valued Guest Coming Over</p>
                 <img src="/images/banner2.jpg">
             </div>
             <div class="info4">
-                <p>ipsum lorem</p>
+                <p>Stay Tune</p>
                 <img src="/images/banner2.jpg">
             </div>
         </div>
