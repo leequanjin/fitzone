@@ -26,10 +26,27 @@
             display: flex;
             align-items: center;
             padding: 15px;
+            position: relative;
         }
         .Hot-event img{
             height: 50vh;
             width: 100%;
+        }
+
+        .Hot-event p {
+            display: none; /* Hide the paragraph by default */
+            position: absolute; /* Position the paragraph absolutely */
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Optional: Add a semi-transparent background */
+            color: white; /* Optional: Set the text color */
+            padding: 10px; /* Optional: Add some padding to the paragraph */
+        }
+
+        .Hot-event:hover p {
+            display: block; /* Display the paragraph when hovering over the container */
         }
         
         .Current, .Past{
@@ -134,6 +151,7 @@
     <main>
         <div class="Hot-event">
             <img src="/images/banner 1.png" >
+            <p>This is Hot Event stuff</p>
         </div>
         <div class="events">
             <div class="Current">
