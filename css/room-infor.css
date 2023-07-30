@@ -31,8 +31,8 @@ main {
 }
 
 #slide-container {
-    max-width: 90%;
-    max-height: 20vw;
+    width: 90%;
+    height: 20vw;
     display: block;
     margin: 1% 5%;
     text-align: center;
@@ -79,9 +79,20 @@ button {
 }
 
 #item-title {
-    width: 10vw;
+    width: 90%;
     height: 3vw;
-    background-color: #fff;
+    background-color: #F2F2F290;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 0% auto;
+}
+
+#item-title h1 {
+    color: #FFFFFF;
+    font-size: 2vw;
 }
 
 #item-container {
