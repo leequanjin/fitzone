@@ -97,7 +97,35 @@
             background-color: rgba(0, 255, 255, 0.3);
             border-radius: 0px 0px 15px 0px;
         }
-    
+
+        .overlay5 {
+          background-color: rgba(255, 0, 0, .4);
+          border-radius: 30px;
+          position: absolute;
+          top: 30%;
+          left: 0;
+          width: 50%;
+          height: 20%;
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-left: 25%;
+          opacity: 1;
+          transition: opacity 0.5s ease;
+        }
+
+        .overlay5 p{
+          font-family: 'Times New Roman', Times, serif;
+          font-size: 8em;
+          font-weight: bolder;
+        }
+
+        .video-container:hover .overlay5{
+          background-color: rgba(255, 0, 0, .7);
+          opacity: 1; /*on hover, cause the overlay to appear*/
+        }
+
         .video-container:hover .overlay1,
         .video-container:hover .overlay2,
         .video-container:hover .overlay3,
@@ -274,6 +302,14 @@
     </header>
     
     <main>
+        <a href="/html/lessons/membership.html" class="video-link">
+            <div class="video-container">
+                <video src="../TestVideo.mp4" loop muted></video>
+                <div class="overlay5">
+                    <p>Start Free Trial Now</p>
+                </div>
+            </div>
+        </a>
         <div class="setting">
             <div class="separator"></div>  
             <a href="/html/facilities/facilities.html" class="video-link">
