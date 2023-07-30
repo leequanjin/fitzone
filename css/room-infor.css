@@ -17,7 +17,7 @@ main {
     border-radius: 10px;
 }
 
-h1 {
+#title h1 {
     color: #FFC371;
     font-size: 4.5vw;
     padding: 1.5vw;
@@ -28,4 +28,121 @@ h1 {
     width: 5.5vw;
     float: right;
     margin: -7vw 3vw 0vw 0vw;
+}
+
+#slide-container {
+    width: 90%;
+    height: 20vw;
+    display: block;
+    margin: 1% 5%;
+    text-align: center;
+    /* background-color: #000000; */
+    position: relative;
+    overflow: hidden;
+}
+
+.slide-image {
+    display: none;
+}
+
+.slide-image {
+    width: 100%;
+    height: auto;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    font-size: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#prevBtn {
+    left: 0;
+}
+
+#nextBtn {
+    right: 0;
+}
+
+#item {
+    width: 90%;
+    height: auto;
+    margin: 1% 5%;
+    padding: 1%;
+    background-color: #2D3031;
+    border-radius: 20px;
+}
+
+#item-title {
+    width: 90%;
+    height: 3vw;
+    background-color: #F2F2F290;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 0% auto;
+}
+
+#item-title h1 {
+    color: #FFFFFF;
+    font-size: 2vw;
+}
+
+#item-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    width: 23%;
+    height: 20vw;
+    background-color: #EBE7DB;
+    margin: 1%;
+    display: inline-block;
+    border-radius: 15px;
+}
+
+.item-img {
+    width: 90%;
+    height: 42%;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    margin: 3% 5%;
+    padding: 3% 5%;
+}
+
+.item-img img {
+    display: block;
+    margin: 0% auto;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.item-text {
+    width: 90%;
+    height: 45%;
+    display: block;
+    text-align: center;
+    margin: 3% auto;
+    padding: 3%;
+}
+
+.item-text h2 {
+    font-size: 2vw;
+    color: #2D3031;
+    margin: 2% 0%;
+}
+
+.item-text p {
+    font-size: 1.3vw;
+    margin-top: 2%;
 }

@@ -54,18 +54,6 @@ tr:hover {
     background-color: #6C757D50;
 }
 
-/* Hover effect for the whole column when hovering over any <td> in that column */
-td:hover::nth-child(2), /* Monday column */
-td:hover::nth-child(3), /* Tuesday column */
-td:hover::nth-child(4), /* Wednesday column */
-td:hover::nth-child(5), /* Thursday column */
-td:hover::nth-child(6), /* Friday column */
-td:hover::nth-child(7), /* Saturday column */
-td:hover::nth-child(8)  /* Sunday column */
-{
-  background-color: #6C757D50; /* Set your desired background color for the column */
-}
-
 .tutor {
     font-size: 0.8vw;
 }

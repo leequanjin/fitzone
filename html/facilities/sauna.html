@@ -13,6 +13,9 @@
 
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/465be9f5fc.js" crossorigin="anonymous"></script>
+    
+    <!-- javascript -->
+    <script src="../../js/image-slider.js"></script>
 
 </head>
 
@@ -57,18 +60,114 @@
             <a href="facilities.html"><img src="../../images/back-to-facilities.png" alt="Go back facilities page"></a>
         </div>
         
-        <div class="slider">
-            <div class="slides">
-              <img src="image1.jpg" alt="Image 1">
-              <img src="image2.jpg" alt="Image 2">
-              <img src="image3.jpg" alt="Image 3">
-              <!-- Add more images as needed -->
+        <div id="slide-container">
+            <div class="slide-img">
+                <img src="../../images/fit-sauna-bathroom.jpg" alt="Sauna Bathroom">
             </div>
-            <button class="prevBtn">&#10094;</button>
-            <button class="nextBtn">&#10095;</button>
-          </div>
+            <div class="slide-img">
+                <img src="../../images/fit-sauna-room.jpg" alt="Sauna Room 1">
+            </div>
+            <div class="slide-img">
+                <img src="../../images/fit-sauna-room2.jpg" alt="Sauna Room 2">
+            </div>
+
+            <button id="prevBtn">&#10094;</button>
+            <button id="nextBtn">&#10095;</button>
+
+        </div>
+
+        <div id="item">
+            <div id="item-title">
+                <h1>Item Available</h1>
+            </div>
+            <div id="item-container">
+                
+                <div class="item">
+                    <div class="item-img">
+                        <img src="../../images/sauna-thermometer.png" alt="thermometer" >
+                    </div>
+                    <div class="item-text">
+                        <h2>Thermometer</h2>
+                        <p>To check the current temperature of sauna room.</p>
+                    </div>
+                </div>
+    
+                <div class="item">
+                    <div class="item-img">
+                        <img src="../../images/sauna-stone.jpg" alt="Sauna Stone">
+                    </div>
+                    <div class="item-text">
+                        <h2>Sauna Stone</h2>
+                        <p>To absorb and retain heat.</p>
+                    </div>
+                </div>
+    
+                <div class="item">
+                    <div class="item-img">
+                        <img src="../../images/sauna-barrel.jpg" alt="Wooden Barrel">
+                    </div>
+                    <div class="item-text">
+                        <h2>Wooden Barrel</h2>
+                        <p>The barrel will be full of water and there will be a wooden spon.</p>
+                    </div>
+                </div>
+    
+                <div class="item">
+                    <div class="item-img">
+                        <img src="../../images/sauna-towel.png" alt="Towel">
+                    </div>
+                    <div class="item-text">
+                        <h2>Towel</h2>
+                        <p>The clean towel will be prepare in the sauna room area.</p>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+
 
     </main>
+    <script>
+        //Set variables for slides
+        var slideIndex = 0;
+        var slides = document.getElementsByClassName("slide-img");
+        var prevButton = document.getElementById("prevBtn");
+        var nextButton = document.getElementById("nextBtn");
+
+        showSlide(slideIndex);
+        startSlideInterval();
+
+        function showSlide(n) {
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[n].style.display = "block";
+        }
+
+        function prevSlide() {
+            slideIndex--;
+            if (slideIndex < 0) {
+                slideIndex = slides.length - 1;
+            }
+            showSlide(slideIndex);
+        }
+
+        function nextSlide() {
+            slideIndex++;
+            if (slideIndex >= slides.length) {
+                slideIndex = 0;
+            }
+            showSlide(slideIndex);
+        }
+
+        function startSlideInterval() {
+            slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds (adjust as needed)
+        }
+
+        prevButton.addEventListener("click", prevSlide);
+        nextButton.addEventListener("click", nextSlide);
+
+    </script>
 
     <footer>
         <ul>
