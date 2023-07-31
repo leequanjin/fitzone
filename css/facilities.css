@@ -12,16 +12,16 @@ main {
 .facilities-block {
     background-color: #FFC371;
     display: block;
-    height: 20vw;
-    width: 85vw;
+    height: 25rem;
+    width: 94%;
     margin: 3% auto;
     padding: 1%;
-    border-radius: 30px;
+    border-radius: 3rem;
 }
 
 /* zone name */
 .facilities-block h1 {
-    font-size: 3.5vw;
+    font-size: 4rem;
     color: #FFFFFF;
     font-weight: bold;
     margin-top: 5%;
@@ -36,22 +36,22 @@ main {
 
 /* zone description */
 .facilities-block p {
-    font-size: 2vw;
+    font-size: 2rem;
 }
 
 /* image display on left */
 .block-left {
     float: left;
-    height: 95%;
-    width: 35%;
-    margin: 2.5% 2.5%;
+    height: 20rem;
+    width: 35rem;
+    margin: 2% 0% 2% 3%;
     top: 0;
 }
 
 .block-left img {
-    height: 90%;
-    width: 95%;
-    border-radius: 20px;
+    height: 20vw;
+    width: 35vw;
+    border-radius: 2rem;
 }
 
 /* white background for image */
@@ -71,31 +71,31 @@ main {
 /* word display on right */
 .block-right {
     float: right;
-    height: 95%;
-    width: 55%;
-    margin: 2.5% 2.5%;
+    height: 20rem;
+    width: 40rem;
+    margin: 2% 5% 2% 0%;
 }
 
 /* go to next page button image */
 .btn-right {
     float: right;
-    width: 6vw;
-    height: 5vw;
-    margin: -6vw 19vw 0vw 0vw;
+    width: 6rem;
+    height: 5rem;
+    margin: -6rem 10rem 0rem 0rem;
 }
 
 /* display image at right */
 .right-block {
     float: right;
-    height: 95%;
-    width: 35%;
-    margin: 2.5% 2.5%;
+    height: 20rem;
+    width: 35rem;
+    margin: 2% 5% 2% 0%;
     top: 0;
 }
 
 .right-block img {
-    height: 90%;
-    width: 95%;
+    height: 20vw;
+    width: 35vw;
     border-radius: 20px;
 }
 
@@ -109,23 +109,23 @@ main {
 .real-r-img {
     display: flex;
     z-index: 20;
-    margin-top: -61%;
+    margin-top: -22rem;
     margin-right: 5%;
 }
 
 /* display word on the left */
 .left-block {
     float: left;
-    height: 95%;
-    width: 55%;
-    margin: 2.5% 2.5%;
+    height: 20rem;
+    width: 40rem;
+    margin: 2% 0% 2% 5%;
 }
 
 /* go to next page button image */
 .btn-left {
     float: left;
-    width: 6vw;
-    height: 5vw;
-    margin: -6vw 0vw 0vw 21vw;
+    width: 6rem;
+    height: 5rem;
+    margin: -6rem 0rem 0rem 26rem;
 }
 
