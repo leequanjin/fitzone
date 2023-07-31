@@ -93,7 +93,7 @@ button:hover {
     justify-content: center;
     text-align: center;
     align-items: center;
-    margin: 0% auto;
+    margin: 1% auto;
 }
 
 #item-title h1 {
@@ -101,15 +101,17 @@ button:hover {
     font-size: 2vw;
 }
 
-#item-container {
+.item-container {
+    width: 100%;
+    max-height: 22vw;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: first baseline;
+    margin: 1% 0% 2%;
 }
 
 .item {
     width: 23%;
-    height: 20vw;
+    height: 22vw;
     background-color: #EBE7DB;
     margin: 1%;
     display: inline-block;
@@ -117,6 +119,7 @@ button:hover {
 }
 
 .item-img {
+    display: block;
     width: 90%;
     height: 42%;
     background-color: #FFFFFF;
@@ -143,12 +146,18 @@ button:hover {
 }
 
 .item-text h2 {
-    font-size: 2vw;
+    font-size: 1.8vw;
     color: #2D3031;
     margin: 2% 0%;
 }
 
 .item-text p {
-    font-size: 1.3vw;
+    font-size: 1.2vw;
     margin-top: 2%;
+}
+
+.item-text h3 {
+    font-size: 1vw;
+    font-style: italic;
+    color: #6C757D;
 }
