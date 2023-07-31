@@ -8,29 +8,28 @@
 }
 
 .instructor {
-    width: 18vw;
-    height: 40vw;
+    width: 28rem;
+    height: 42rem;
     background-color: #FFC371;
-    border-radius: 2vw;
+    border-radius: 2rem;
     display: inline-block;
     margin: 2.3%;
-    padding: 3%;
+    padding: 1%;
     position: static;
-    border-left: 0.5vw solid #2D3031;
-    border-bottom: 0.5vw solid #2D3031;
+    border-left: 0.5rem solid #2D3031;
+    border-bottom: 0.5rem solid #2D3031;
 }
 
 .instructor-image {
-    height: 30%;
+    height: 35%;
     width: 100%;
     text-align: center;
-    margin: 3% 0%;
-    padding: 10%;
+    padding: 8%;
 }
 
 .instructor-image img {
     height: 100%;
-    width: 90%;
+    width: 80%;
     border-radius: 50%;
 }
 
@@ -39,35 +38,36 @@
 }
 
 .instructor-intro h1 {
-    font-size: 2vw;
+    font-size: 2.5rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
     color: #2D3031;
-    margin-bottom: 1.5vw;
+    margin-bottom: 1rem;
 }
 
 .instructor-intro h2 {
-    font-size: 1.5vw;
+    font-size: 1.4rem;
     color: #2D3031;
-    margin-bottom: 1.5vw;
+    margin-bottom: 1rem;
 }
 
 .instructor-intro p {
-    font-size: 1vw;
+    font-size: 1.2rem;
     color: #2D3031;
-    height: 3.5vw;
+    height: 5rem;
     width: 100%;
+    padding: 2%;
 }
 
 .word {
-    margin: 1.5vw 0vw;
+    margin: 1rem 0rem;
     font-style: italic;
 }
 
 .contact {
     width: 100%;
-    height: 3vw;
-    margin-top: 2vw;
+    height: 3rem;
+    margin-top: 2rem;
 }
 
 .contact ul {
@@ -81,8 +81,8 @@
 }
 
 .contact ul li a {
-    font-size: 2vw;
-    padding: 0.5vw;
+    font-size: 2rem;
+    padding: 0.5rem;
     color: #2D3031;
 }
 
