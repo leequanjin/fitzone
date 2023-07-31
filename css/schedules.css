@@ -29,6 +29,7 @@ th {
     background-color: #FFC371;
 }
 
+/*time has same color with th*/
 td:nth-child(1) {
     width: 40rem;
     height: 7rem;
@@ -55,6 +56,7 @@ tr:hover {
     background-color: #6C757D50;
 }
 
+/*diff design of text*/
 .tutor {
     font-size: 1.2rem;
 }
