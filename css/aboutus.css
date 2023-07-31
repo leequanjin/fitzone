@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     background: url("/CLimage/new-gym-girls-4k.jpg");
-    filter:brightness(0.7);
+    filter:brightness(0.9);
     background-repeat: no-repeat;
     background-size :cover;
     background-position:top;   
@@ -35,7 +35,34 @@ section{
 #id{
     scroll-margin-top:100px;
 }    
+.column-container{
+    display: flex;
+    flex-direction: column;
     
+}  
+.row-container{
+    display: flex;
+    flex-direction: row;
 
-
-
+    
+}
+.block{
+    height: 100px;
+    width: 250px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin:5px;
+    justify-content: center;
+    align-items: center;
+    
+}
+dl{
+    margin:0px;
+    padding: 0px;
+}
+dt{
+    font-weight: bold;
+}
+dd{
+    margin-left: 15px;
+}
