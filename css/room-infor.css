@@ -31,10 +31,10 @@ main {
 }
 
 #slide-container {
-    width: 90%;
-    height: 20vw;
+    width: 80%;
+    height: 25vw;
     display: block;
-    margin: 1% 5%;
+    margin: 1% 10%;
     text-align: center;
     /* background-color: #000000; */
     position: relative;
@@ -42,12 +42,13 @@ main {
 }
 
 .slide-image {
-    display: none;
+    width: 50vw;
+    height: 25vw;
 }
 
-.slide-image {
-    width: 100%;
-    height: auto;
+.slide-image img {
+    width: 50vw;
+    height: 25vw;
 }
 
 button {
@@ -67,6 +68,11 @@ button {
 
 #nextBtn {
     right: 0;
+}
+
+button:hover {
+    background-color: #EBE7DB;
+    border-radius: 50%;
 }
 
 #item {
