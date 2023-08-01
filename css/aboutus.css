@@ -1,22 +1,17 @@
-/**/
+/*background image*/
 .intro{
     min-height: 120vh;
     display: flex;
     align-items: center;
     background: url("/CLimage/new-gym-girls-4k.jpg");
-    filter:brightness(0.6);
+    filter:brightness(0.7);
     background-repeat: no-repeat;
     background-size :cover;
     background-position:top;   
 }
 /*adjust the font position*/
 section{
-    padding:2rem 7%;
-}
-
-
-.content{
-    max-width: 40rem;
+    padding:3rem 7%;
 }
 
 .content h2{
@@ -25,12 +20,49 @@ section{
     color:#a91e1e;
 }
 
+
+.content{
+    max-width: 40rem;
+}
+
+
+
+
+
+
+
+.introparagraph{
+    position: absolute;
+    bottom:5px;
+    right:5px;
+    background-color: transparent;
+    border:none;
+    padding:5px 10px;
+    cursor:pointer;
+
+}
+
 .content p{
     font-size: 2rem;
     font-weight:lighter;
     line-height: 1.8;
     padding:1rem 0;
     color: #0572a4;
+    
+}
+
+.expandbutton{
+    position: absolute;
+    bottom:5px;
+    right:5px;
+    background-color: transparent;
+    border:none;
+    padding:5px 10px;
+    cursor:pointer;
+}
+
+.paracontainer{
+    position:relative;
 }
     
 

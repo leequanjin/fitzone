@@ -8,67 +8,75 @@ main {
     padding: 0.5%;
 }
 
+/*sub title background*/
 #title {
-    height: 9vw;
+    height: 12rem;
     width: 95%;
     background-color: #2D3031;
     margin: 1% 2.5%;
-    padding: 1vw;
+    padding: 4rem;
     border-radius: 10px;
 }
 
+/*area name*/
 #title h1 {
     color: #FFC371;
-    font-size: 4.5vw;
-    padding: 1.5vw;
+    font-size: 5.5rem;
 }
 
+/*Back to previous page button*/
 #title img {
-    height: 5vw;
-    width: 5.5vw;
+    height: 5rem;
+    width: 5.5rem;
     float: right;
-    margin: -7vw 3vw 0vw 0vw;
+    margin: -7rem 3rem 0rem 0rem;
 }
 
+/*image slider section*/
 #slide-container {
-    max-width: 90%;
-    max-height: 20vw;
+    width: 80%;
+    height: 30rem;
     display: block;
-    margin: 1% 5%;
+    margin: 1% 10%;
     text-align: center;
-    /* background-color: #000000; */
     position: relative;
     overflow: hidden;
 }
 
+/*slide that change every 5s*/
 .slide-image {
-    display: none;
+    width: 50rem;
+    height: 30rem;
 }
 
-.slide-image {
-    width: 100%;
-    height: auto;
-}
-
+/*for manually control the image*/
 button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    padding: 10px;
-    font-size: 20px;
+    padding: 1rem;
+    font-size: 2rem;
     background: transparent;
     border: none;
     cursor: pointer;
 }
 
+/*go to previous img*/
 #prevBtn {
     left: 0;
 }
 
+/*go to next img*/
 #nextBtn {
     right: 0;
 }
 
+button:hover {
+    background-color: #EBE7DB;
+    border-radius: 50%;
+}
+
+/*Section for item list*/
 #item {
     width: 90%;
     height: auto;
@@ -78,32 +86,50 @@ button {
     border-radius: 20px;
 }
 
+/*bg of item list*/
 #item-title {
-    width: 10vw;
-    height: 3vw;
-    background-color: #fff;
-}
-
-#item-container {
+    width: 90%;
+    height: 3.5vw;
+    background-color: #F2F2F290;
+    border-radius: 20px;
     display: flex;
     justify-content: center;
+    text-align: center;
     align-items: center;
+    margin: 1% auto;
+}
+ /*title of item list*/
+#item-title h1 {
+    color: #FFFFFF;
+    font-size: 2.5rem;
 }
 
+/*each container contain 4 item*/
+.item-container {
+    width: 100%;
+    max-height: 28rem;
+    display: flex;
+    justify-content: first baseline; /*the item align from left to right*/
+    margin: 1% 0% 2%;
+}
+
+/*fix the size and design of every item*/
 .item {
     width: 23%;
-    height: 20vw;
+    height: 28rem;
     background-color: #EBE7DB;
     margin: 1%;
     display: inline-block;
-    border-radius: 15px;
+    border-radius: 1.5rem;
 }
 
+/*item image section*/
 .item-img {
+    display: block;
     width: 90%;
     height: 42%;
     background-color: #FFFFFF;
-    border-radius: 10px;
+    border-radius: 1rem;
     margin: 3% 5%;
     padding: 3% 5%;
 }
@@ -113,9 +139,10 @@ button {
     margin: 0% auto;
     height: 100%;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 1rem;
 }
 
+/*item text section*/
 .item-text {
     width: 90%;
     height: 45%;
@@ -125,13 +152,22 @@ button {
     padding: 3%;
 }
 
+/*item name*/
 .item-text h2 {
-    font-size: 2vw;
+    font-size: 2rem;
     color: #2D3031;
     margin: 2% 0%;
 }
 
+/*item description*/
 .item-text p {
-    font-size: 1.3vw;
+    font-size: 1.5rem;
     margin-top: 2%;
+}
+
+/*mention about item*/
+.item-text h3 {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #6C757D;
 }

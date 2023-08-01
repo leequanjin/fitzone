@@ -62,13 +62,13 @@
         
         <div id="slide-container">
             <div class="slide-img">
-                <img src="../../images/fit-sauna-bathroom.jpg" alt="Sauna Bathroom">
+                <img src="../../images/fit-sauna-bathroom.jpg" alt="Sauna Bathroom" style="height: 30rem; width: 60rem; border-radius: 0.5rem;">
             </div>
             <div class="slide-img">
-                <img src="../../images/fit-sauna-room.jpg" alt="Sauna Room 1">
+                <img src="../../images/fit-sauna-room.jpg" alt="Sauna Room 1" style="height: 30rem; width: 60rem; border-radius: 0.5rem;">
             </div>
             <div class="slide-img">
-                <img src="../../images/fit-sauna-room2.jpg" alt="Sauna Room 2">
+                <img src="../../images/fit-sauna-room2.jpg" alt="Sauna Room 2" style="height: 30rem; width: 60rem; border-radius: 0.5rem;">
             </div>
 
             <button id="prevBtn">&#10094;</button>
@@ -78,13 +78,13 @@
 
         <div id="item">
             <div id="item-title">
-                <h1>Item Here</h1>
+                <h1>Item Available</h1>
             </div>
-            <div id="item-container">
+            <div class="item-container">
                 
                 <div class="item">
                     <div class="item-img">
-                        <img src="../../images/sauna-thermometer.png" alt="thermometer" >
+                        <img src="../../images/sauna-thermometer.png" alt="Thermometer" >
                     </div>
                     <div class="item-text">
                         <h2>Thermometer</h2>
@@ -127,6 +127,47 @@
 
 
     </main>
+    <script>
+        //Set variables for slides
+        var slideIndex = 0;
+        var slides = document.getElementsByClassName("slide-img");
+        var prevButton = document.getElementById("prevBtn");
+        var nextButton = document.getElementById("nextBtn");
+
+        showSlide(slideIndex);
+        startSlideInterval();
+
+        function showSlide(n) {
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[n].style.display = "block";
+        }
+
+        function prevSlide() {
+            slideIndex--;
+            if (slideIndex < 0) {
+                slideIndex = slides.length - 1;
+            }
+            showSlide(slideIndex);
+        }
+
+        function nextSlide() {
+            slideIndex++;
+            if (slideIndex >= slides.length) {
+                slideIndex = 0;
+            }
+            showSlide(slideIndex);
+        }
+
+        function startSlideInterval() {
+            slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds (adjust as needed)
+        }
+
+        prevButton.addEventListener("click", prevSlide);
+        nextButton.addEventListener("click", nextSlide);
+
+    </script>
 
     <footer>
         <ul>

@@ -9,9 +9,13 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/room-infor.css">
 
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/465be9f5fc.js" crossorigin="anonymous"></script>
+
+    <!-- javascript -->
+    <script src="../../js/image-slider.js"></script>
 
 </head>
 
@@ -49,8 +53,178 @@
             <i class="fa-solid fa-circle-user"></i>
         </a>
     </header>
+
     <main>
+        <div id="title">
+            <h1>Energy Cafe</h1>
+            <a href="facilities.html"><img src="../../images/back-to-facilities.png" alt="Go back facilities page"></a>
+        </div>
+
+        <div id="slide-container">
+            <div class="slide-img">
+                <img src="../../images/fit-cafe.png" alt="Cafe" style="height: 30rem; width: 60rem; border-radius: 0.5rem;">
+            </div>
+            <div class="slide-img">
+                <img src="../../images/fit-rest-zone.png" alt="Cafe Table" style="height: 30rem; width: 60rem; border-radius: 0.5rem;">
+            </div>
+            <div class="slide-img">
+                <img src="../../images/fit-coffee.png" alt="Coffee Area" style="height: 30rem; width: 60rem; border-radius: 0.5rem;">
+            </div>
+
+            <button id="prevBtn">&#10094;</button>
+            <button id="nextBtn">&#10095;</button>
+
+        </div>
+
+        <div id="item">
+            <div id="item-title">
+                <h1>Menu</h1>
+            </div>
+            <div class="item-container">
+                
+                <div class="item">
+                    <div class="item-img">
+                        <img src="../../images/speghetti.jpg" alt="Speghetti" >
+                    </div>
+                    <div class="item-text">
+                        <h2>Speghetti</h2>
+                        <p>RM 8/plate </p> <br> <br>
+                        <h3>Source: Bolognese / Mushroom</h3>
+                    </div>
+                </div>
+    
+                <div class="item">
+                    <div class="item-img">
+                        <img src="../../images/ramen.jpg" alt="Ramen">
+                    </div>
+                    <div class="item-text">
+                        <h2>Japanese Ramen</h2>
+                        <p>RM 9/plate</p> <br> <br>
+                        <h3>Spicy / Non-spicy</h3>
+                    </div>
+                </div>
+    
+                <div class="item">
+                    <div class="item-img">
+                        <img src="../../images/egg-noodle.jpg" alt="Egg Noodle">
+                    </div>
+                    <div class="item-text">
+                        <h2>Egg Noodle Soup</h2>
+                        <p>RM 7/plate</p> <br> <br>
+                        <h3>Normal / Special</h3>
+                    </div>
+                </div>
+    
+                <div class="item">
+                    <div class="item-img">
+                        <img src="../../images/dry-noodle.jpg" alt="Dry Noodle">
+                    </div>
+                    <div class="item-text">
+                        <h2>Dry Noodle</h2>
+                        <p>RM 7/plate</p> <br> <br>
+                        <h3>Fish ball / Meat ball ( Chicken ) </h3>
+                    </div>
+                </div>
+    
+            </div>
+
+            <div class="item-container">
+                <div class="item">
+                    <div class="item-img">
+                        <img src="../../images/egg-mayo-sandwich.jpg" alt="Egg Mayo Sandwich">
+                    </div>
+                    <div class="item-text">
+                        <h2>Egg Mayo</h2>
+                        <p>RM 3/plate</p> <br> <br>
+                        <h3> Original / Whole Grain Bread </h3>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-img">
+                        <img src="../../images/italian-sandwich.jpeg" alt="Italian Sandwich">
+                    </div>
+                    <div class="item-text">
+                        <h2>Italian Sandwich</h2>
+                        <p>RM 7/plate</p> <br> <br>
+                        <h3> Ham / Chicken Slices </h3>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-img">
+                        <img src="../../images/fried-rice.jpg" alt="Fried Rice">
+                    </div>
+                    <div class="item-text">
+                        <h2>Fried Rice</h2>
+                        <p>RM 7/plate</p> <br> <br>
+                        <h3> Original / Special </h3>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-img">
+                        <img src="../../images/kimchi.jpg" alt="Kimchi">
+                    </div>
+                    <div class="item-text">
+                        <h2>Kimchi</h2>
+                        <p>RM 9/plate</p> <br> <br>
+                        <h3> Rice / Noodle </h3>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="item-container">
+                <div class="item">
+                    <div class="item-img">
+                        <img src="../../images/salad.jpg" alt="Salad">
+                    </div>
+                    <div class="item-text">
+                        <h2>Salad</h2>
+                        <p>RM 7/plate</p> <br> <br>
+                        <h3> Vegetables / Fruits / Mix </h3>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-img">
+                        <img src="../../images/coffee.jpg" alt="Coffee">
+                    </div>
+                    <div class="item-text">
+                        <h2>Coffee</h2>
+                        <p>RM 5/cup</p> <br> <br>
+                        <h3> Americano / Mocha / Latte </h3>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-img">
+                        <img src="../../images/juice.webp" alt="Juice">
+                    </div>
+                    <div class="item-text">
+                        <h2>Juice</h2>
+                        <p>RM 5/cup</p> <br> <br>
+                        <h3> Orange / Carrot / Apple </h3>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-img">
+                        <img src="../../images/water.jpg" alt="Mineral Water">
+                    </div>
+                    <div class="item-text">
+                        <h2>Mineral Water</h2>
+                        <p>RM 3/cup</p> <br> <br>
+                        <h3> *Can be refill </h3>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
     </main>
+
     <footer>
         <ul>
             <li><a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
