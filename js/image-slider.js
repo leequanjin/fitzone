@@ -1,50 +1,64 @@
-document.addEventListener("DOMContentLoaded",function(){
+let slideIndex = 0; /*the first slide index*/
 
-    let slideIndex = 0; /*the first slide index*/
-    const slides = document.getElementsByClassName("slide-image"); /*let slides become constant variable to call the image in html to slide*/
+//wut 7 is this
+//var slides = document.getElementsByClassName("slide-image"); /*let slides become constant variable to call the image in html to slide*/
 
-    //function to show current slide
-    function showSlide(index){
-        //if user go to previous slide
-        if ( index < 0 ){
-            //to calculate current slide length
-            slideIndex = slides.length - 1;
-        }
-        //check if user reach last slide
-        else if ( index >= slides.length ){
-            slideIndex = 0;
-        }
+//correct
+var slides = document.getElementsByClassName("slide-img");
 
-        //to hide all slide
-        for (let i = 0; i < slides.length ; i++ ){
-            slides[i].style.display = "none";
-        }
-
-        //show slides want to display
-        slides[slideIndex].style.display = "block";
+//function to show current slide
+function showSlide(index) {
+    //if user go to previous slide
+    if (index < 0) {
+        //to calculate current slide length
+        slideIndex = slides.length - 1;
+    }
+    //check if user reach last slide
+    else if (index >= slides.length) {
+        slideIndex = 0;
     }
 
-    //function to automatically move to next slide
-    function autoSlide() {
-        slideIndex++;
-        showSlide(slideIndex);
+    //to hide all slide
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
     }
 
-    //slide every 5 second
-    const interval = setInterval(autoSlide, 5000);
+    //show slides want to display
+    slides[slideIndex].style.display = "block";
+}
 
-    //manually control slide show using button
-    const prevBtn = document.getElementById("prevBtn");
-    const nextBtn = document.getElementById("nextBtn");
+//function to automatically move to next slide
+function autoSlide() {
+    slideIndex++;
+    showSlide(slideIndex);
+}
 
-    prevBtn.addEventListener("click", function(){
-        slideIndex--;
-        showSlide(slideIndex)
-    });
+//slide every 5 second
+const interval = setInterval(autoSlide, 5000);
 
-    nextBtn.addEventListener("click", function(){
-        slideIndex++;
-        showSlide(slideIndex)
-    });
+//manually control slide show using button
+// const prevBtn = document.getElementsByClassName("prevBtn");
+// const nextBtn = document.getElementsByClassName("nextBtn");
 
-});
+// prevBtn.addEventListener("click", function () {
+//     slideIndex--;
+//     showSlide(slideIndex)
+// });
+
+// nextBtn.addEventListener("click", function () {
+//     slideIndex++;
+
+//     showSlide(slideIndex)
+// });
+
+
+//easier, less bullshit
+function prev() {
+    slideIndex--;
+    showSlide(slideIndex);
+}
+
+function next() {
+    slideIndex--;
+    showSlide(slideIndex);
+}

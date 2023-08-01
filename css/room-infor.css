@@ -33,7 +33,7 @@ main {
 }
 
 /*image slider section*/
-#slide-container {
+.slide-container {
     width: 80%;
     height: 30rem;
     display: block;
@@ -62,12 +62,12 @@ button {
 }
 
 /*go to previous img*/
-#prevBtn {
+.prevBtn {
     left: 0;
 }
 
 /*go to next img*/
-#nextBtn {
+.nextBtn {
     right: 0;
 }
 
