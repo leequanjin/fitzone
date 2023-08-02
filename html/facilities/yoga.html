@@ -14,6 +14,9 @@
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/465be9f5fc.js" crossorigin="anonymous"></script>
 
+    <!-- javascript -->
+    <script src="../../js/image-slider.js"></script>
+
 </head>
 
 <body>
@@ -57,7 +60,22 @@
             <a href="facilities.html"><img src="../../images/back-to-facilities.png" alt="Go back facilities page"></a>
         </div>
 
-        <div id="slide-container">
+        <div class="slide-container">
+            <div class="slide-img">
+                <img src="../../images/fit-yoga-rest.png" alt="Yoga Room Rest Area" style="height: 30rem; width: 60rem; border-radius: 0.5rem;">
+            </div>
+            <div class="slide-img">
+                <img src="../../images/fit-yoga.png" alt="Yoga Room 1" style="height: 30rem; width: 60rem; border-radius: 0.5rem;">
+            </div>
+            <div class="slide-img">
+                <img src="../../images/fit-yoga-room2.jpg" alt="Yoga Room 2" style="height: 30rem; width: 60rem; border-radius: 0.5rem;">
+            </div>
+            <div class="slide-img">
+                <img src="../../images/yoga-classes.jpg" alt="Yoga Coaches" style="height: 30rem; width: 60rem; border-radius: 0.5rem;">
+            </div>
+
+            <button class="prevBtn" onclick="prev()">&#10094;</button>
+            <button class="nextBtn" onclick="next()">&#10095;</button>
 
         </div>
 
@@ -65,48 +83,60 @@
             <div id="item-title">
                 <h1>Item Available</h1>
             </div>
-            <div id="item-container">
+            <div class="item-container">
                 
                 <div class="item">
                     <div class="item-img">
-                        <img src="../../images/sauna-thermometer.png" alt="thermometer" >
+                        <img src="../../images/yoga-mat.jpg" alt="Yoga Mat" >
                     </div>
                     <div class="item-text">
-                        <h2>Thermometer</h2>
-                        <p>To check the current temperature of sauna room.</p>
+                        <h2>Yoga Mat</h2>
+                        <p>To protect your joints and help you stay locked when stretched in unstable position.</p>
                     </div>
                 </div>
     
                 <div class="item">
                     <div class="item-img">
-                        <img src="../../images/sauna-stone.jpg" alt="Sauna Stone">
+                        <img src="../../images/yoga-block.jpg" alt="Yoga Block">
                     </div>
                     <div class="item-text">
-                        <h2>Sauna Stone</h2>
-                        <p>To absorb and retain heat.</p>
+                        <h2>Yoga Block</h2>
+                        <p>To make yoga poses more accessible and act as support.</p>
                     </div>
                 </div>
     
                 <div class="item">
                     <div class="item-img">
-                        <img src="../../images/sauna-barrel.jpg" alt="Wooden Barrel">
+                        <img src="../../images/yoga-ball.jpg" alt="Yoga Ball" style="width: 12vw;">
                     </div>
                     <div class="item-text">
-                        <h2>Wooden Barrel</h2>
-                        <p>The barrel will be full of water and there will be a wooden spon.</p>
+                        <h2>Yoga Ball</h2>
+                        <p>The help expand range of motion and improve balance.</p>
                     </div>
                 </div>
     
                 <div class="item">
                     <div class="item-img">
-                        <img src="../../images/sauna-towel.png" alt="Towel">
+                        <img src="../../images/yoga-towel.jpg" alt="Yoga Towel">
                     </div>
                     <div class="item-text">
-                        <h2>Towel</h2>
-                        <p>The clean towel will be prepare in the sauna room area.</p>
+                        <h2>Yoga Towel</h2>
+                        <p>Used to add stability and prevent slipping on the yoga mat.</p>
                     </div>
                 </div>
     
+            </div>
+
+            <div class="item-container">
+                <div class="item">
+                    <div class="item-img">
+                        <img src="../../images/yoga-strap.webp" alt="Yoga Strap">
+                    </div>
+                    <div class="item-text">
+                        <h2>Yoga Strap</h2>
+                        <p>To improve posture or alignment in a pose.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </main>

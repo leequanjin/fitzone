@@ -9,7 +9,7 @@ var openSignupModal = document.getElementById("open-sign-up-modal");
 
 console.log(forms, pwShowHide, links)
 
-// hide and show password
+// switch eye icon,and hide/ show password
 pwShowHide.forEach(eyeIcon => {
     eyeIcon.addEventListener("click", () => {
         let pwFields = eyeIcon.parentElement.parentElement.querySelectorAll(".password");
@@ -27,23 +27,24 @@ pwShowHide.forEach(eyeIcon => {
     })
 })
 
+// switch between login and signup forms
 links.forEach(link => {
-    link.addEventListener("click", e => {
-        e.preventDefault(); //prevent form submit
+    link.onclick = function() {
         forms.classList.toggle("show-sign-up");
-    })
+    }
 })
 
-// login modal
+// show login modal
 openLoginModal.onclick = function () {
     loginModal.style.display = "block";
 }
 
-// signup modal
+// show signup modal
 openSignupModal.onclick = function () {
     signupModal.style.display = "block";
 }
 
+// delay page redirection by 2 seconds
 function delay(URL) {
     setTimeout(function () { window.location = URL }, 2000);
 }

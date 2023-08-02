@@ -27,15 +27,16 @@
     padding: 30px;
     border-radius: 6px;
     background-color: #FFFFFF;
-    /* https://getcssscan.com/css-box-shadow-examples (#1) */
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+/* hide signup form and prevent pointer events */
 .form.sign-up {
     opacity: 0;
     pointer-events: none;
 }
 
+/* switch login form with signup form when toggle .forms.show-sign-up class */
 .forms.show-sign-up .form.sign-up {
     opacity: 1;
     pointer-events: auto;
@@ -46,22 +47,10 @@
     pointer-events: none;
 }
 
-.form.sign-up {
-    opacity: 0;
-}
-
-.forms.show-sign-up .form.sign-up {
-    opacity: 1;
-}
-
-.forms.show-sign-up .form.login {
-    opacity: 0;
-}
-
 h1 {
     font-size: 2.8rem;
     font-weight: 600;
-    color: #2D3031;
+    color: #2D3031; 
     text-align: center;
 }
 
@@ -161,6 +150,7 @@ form a {
     transition: 0.3s;
 }
 
+/* eye icon, will switch using JavaScript */
 .fa-eye,
 .fa-eye-slash {
     position: absolute;

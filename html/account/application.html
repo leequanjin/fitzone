@@ -56,11 +56,13 @@
     <main>
         <div class="container">
             <div class="menu">
+                <!-- profile picture, membership type and ID of user -->
                 <div class="personal-details">
                     <img src="/images/user.png" alt="">
                     <h2>Gold Member</h2>
                     <h3>ID 2307595</h3>
                 </div>
+                <!-- account side menu -->
                 <div class="nav-menu">
                     <ul>
                         <li><a href="/html/account/profile.html">Your Profile</a></li>
@@ -87,57 +89,57 @@
                             </tr>
                             <tr>
                                 <td headers="number">1.</td>
-                                <td headers="date">19-10-2023</td>
-                                <td headers="time">08:00 - 10:00</td>
-                                <td headers="activity">Yoga for beginners</td>
+                                <td headers="date">16-10-2023</td>
+                                <td headers="time">09:00 - 10:00</td>
+                                <td headers="activity">Ashtanga</td>
                                 <td headers="venue">205 Yoga Studio</td>
-                                <td class="remove"><i class="fa-solid fa-trash"></i></td>
+                                <td class="remove" id="open-modal2"><i class="fa-solid fa-trash"></i></td>
                             </tr>
                             <tr>
                                 <td headers="number">2.</td> 
-                                <td headers="date">20-10-2023</td>
-                                <td headers="time">08:00 - 10:00</td>
-                                <td headers="activity">Yoga for beginners</td>
-                                <td headers="venue">205 Yoga Studio</td>
+                                <td headers="date">17-10-2023</td>
+                                <td headers="time">07:00 - 08:00</td>
+                                <td headers="activity">Basic Class</td>
+                                <td headers="venue">1F Gym Area</td>
                                 <td class="remove"><i class="fa-solid fa-trash"></i></td>
                             </tr>
                             <tr>
                                 <td headers="number">3.</td>
-                                <td headers="date">20-10-2023</td>
-                                <td headers="time">13:00 - 14:00</td>
-                                <td headers="activity">Body jam</td>
+                                <td headers="date">17-10-2023</td>
+                                <td headers="time">08:00 - 09:00</td>
+                                <td headers="activity">Zumba</td>
                                 <td headers="venue">202 Dance Studio</td>
                                 <td class="remove"><i class="fa-solid fa-trash"></i></td>
                             </tr>
                             <tr>
                                 <td headers="number">4.</td>
-                                <td headers="date">21-10-2023</td>
-                                <td headers="time">10:00 - 12:00</td>
-                                <td headers="activity">Dance fusion</td>
-                                <td headers="venue">203 Dance Studio</td>
+                                <td headers="date">18-10-2023</td>
+                                <td headers="time">09:00 - 10:00</td>
+                                <td headers="activity">Full-body HIIT</td>
+                                <td headers="venue">1F Gym Area</td>
                                 <td class="remove"><i class="fa-solid fa-trash"></i></td>
                             </tr>
                             <tr>
                                 <td headers="number">5.</td>
-                                <td headers="date">22-10-2023</td>
-                                <td headers="time">08:00 - 12:00</td>
-                                <td headers="activity">Yoga for beginners</td>
+                                <td headers="date">20-10-2023</td>
+                                <td headers="time">08:00 - 09:00</td>
+                                <td headers="activity">Hatha Yoga</td>
                                 <td headers="venue">205 Yoga Studio</td>
                                 <td class="remove"><i class="fa-solid fa-trash"></i></td>
                             </tr>
                             <tr>
                                 <td headers="number">6.</td>
-                                <td headers="date">27-10-2023</td>
-                                <td headers="time">08:00 - 08:30</td>
-                                <td headers="activity">Cardio Training</td>
+                                <td headers="date">21-10-2023</td>
+                                <td headers="time">16:00 - 17:00</td>
+                                <td headers="activity">CTabata</td>
                                 <td headers="venue">1F Gym Area</td>
                                 <td class="remove"><i class="fa-solid fa-trash"></i></td>
                             </tr>
                             <tr>
                                 <td headers="number">7.</td>
-                                <td headers="date">28-10-2023</td>
-                                <td headers="time">13:00 - 14:00</td>
-                                <td headers="activity">Warrior Workout</td>
+                                <td headers="date">22-10-2023</td>
+                                <td headers="time">08:00 - 09:00</td>
+                                <td headers="activity">Runner's HIIT</td>
                                 <td headers="venue">1F Gym Area</td>
                                 <td class="remove"><i class="fa-solid fa-trash"></i></td>
                             </tr>
@@ -152,6 +154,7 @@
                     </div>
                 </div>
             </div>
+            <!-- logout confirmation modal -->
             <div class="modal" id="modal">
                 <div class="modal-content">
                     <h2>Logging Out</h2>
@@ -160,6 +163,18 @@
                     <div class="buttons">
                         <a href="/html/login-signup/login-signup.html"><button class="update">Log Out</button></a>
                         <button class="cancel" id="close-modal">Close</button>
+                    </div>
+                </div>
+            </div>
+            <!-- delete confirmation modal -->
+            <div class="modal2" id="modal2">
+                <div class="modal-content">
+                    <h2>Remove Lesson</h2>
+                    <div class="line"></div>
+                    <h3>Are you sure you want to remove this lesson?</h3>
+                    <div class="buttons">
+                        <a href="/html/account/application.html"><button class="update">Save</button></a>
+                        <button class="cancel" id="close-modal2">Close</button>
                     </div>
                 </div>
             </div>

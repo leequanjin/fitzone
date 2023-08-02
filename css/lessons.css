@@ -8,13 +8,14 @@ main {
     padding: 0.5%;
 }
 
+/*sub nav go to other related page*/
 #lesson-nav {
-    height: 7vw;
+    height: 9rem;
     width: 95%;
     background-color: #2D3031;
     margin: 1% 2.5%;
-    padding: 2vw 5vw;
-    border-radius: 10px;
+    padding: 3.2rem;
+    border-radius: 3rem;
 }
 
 #lesson-nav ul {
@@ -23,12 +24,12 @@ main {
 
 #lesson-nav li {
     display: inline;
-    margin-right: 3vw;
+    margin-right: 5rem;
 }
 
 #lesson-nav a {
     text-decoration: none;
-    font-size: 2.5vw;
+    font-size: 3rem;
     color: #EBE7DB;
 }
 
@@ -45,12 +46,13 @@ main {
     color: #FFCA80;
 }
 
+/*nav go to title related introduction*/
 #to-class {
-    height: 3vw;
+    height: 3rem;
     width: 95%;
     display: block;
-    margin: 0vw auto;
-    padding: 0.5vw;
+    margin: 0rem auto 1rem;
+    padding: 0.5rem;
     text-align: center;
 }
 
@@ -60,12 +62,12 @@ main {
 
 #to-class li {
     display: inline;
-    margin: 2vw;
+    margin-right: 5rem;
 }
 
 #to-class a {
     text-decoration: none;
-    font-size: 2vw;
+    font-size: 2.5rem;
     display: inline-block;
     position: relative;
     color: #6C757D;
@@ -81,13 +83,13 @@ main {
     transform-origin: bottom left; /*Place animation started*/
 }
 
-/* After mouse moveovwe the link */
+/* After mouse moveover the link */
 #to-class a:after {
     content: '';
     position: absolute;
     width: 100%;
     transform: scaleX(0); /*Return normal*/
-    height: 0.2vw;
+    height: 0.2rem;
     bottom: 0;
     left: 0;
     background-color: #FFCA80;
@@ -95,10 +97,11 @@ main {
     transition: transform 0.25s ease-out; /*Animation disappear with ease out effect */
 }
 
+/*every different section*/
 #classes {
     width: 95%;
     margin: 0% 2.5%;
-    padding: 1vw;
+    padding: 1rem;
 }
 
 .class-description {
@@ -116,32 +119,33 @@ main {
 }
 
 .class-description h1 {
-    font-size: 3vw;
-    padding-bottom: 1vw;
+    font-size: 3rem;
+    padding-bottom: 1rem;
     width: 100%;
-    height: 3.5vw;
+    height: 3.5rem;
     border-bottom: #EBE7DB dashed;
 }
 
 .class-description dl {
     width: 90%;
     height: 100%;
-    margin: 2vw auto 0vw;
+    margin: 2rem auto 0rem;
 }
 
 .class-description dt {
-    font-size: 2.5vw;
-    padding-bottom: 0.1vw;
+    font-size: 2.5rem;
+    padding-bottom: 0.1rem;
 }
 
 .class-description dd {
-    font-size: 1.5vw;
-    padding-bottom: 2vw;
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
 }
 
+/*all classes constant bg*/
 #nutrition, #hiit, #yoga, #dance, #blended{
     position: relative;
-    height: 50vw;
+    height: 50rem;
     width: 100%;
     filter: brightness(0.8);
     background-repeat: no-repeat;
@@ -149,6 +153,7 @@ main {
     background-position: center;
 }
 
+/*bg img of every section*/
 #nutrition {
     background-image: url('../images/nutrition-classes.jpg');
 }
