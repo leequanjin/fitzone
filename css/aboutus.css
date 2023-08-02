@@ -1,4 +1,5 @@
-/*background image*/
+
+/* introbackground image*/
 .intro{
     min-height: 120vh;
     display: flex;
@@ -7,37 +8,60 @@
     filter:brightness(0.9);
     background-repeat: no-repeat;
     background-size :cover;
-    background-position:top;   
+    background-position:top;
+
 }
+
 /*adjust the font position*/
 section{
     padding:2rem 7%;
+    
 }
 
 
-.content{
+.intro-content{
     max-width: 40rem;
 }
 
-.content h2{
+.intro-content h2{
     font-size: 4rem ;
     text-transform: uppercase;
     color:#ff0505;
+    position: relative;
+    right: 40px;
 }
 
-.content p{
+.intro-content p{
     font-size: 2rem;
     font-weight:lighter;
     line-height: 1.8;
     padding:1rem 0;
     color: #fafbfc;
+    position: relative;
+    right: 40px;
 }
+
 #id{
-    scroll-margin-top:100px;
-}    
+    scroll-margin-top: 100px;
+} 
+h1.heading{
+    text-align: center;
+    color:#ccc;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+} 
+h1.heading span{
+    color:goldenrod;
+    
+}  
 .column-container{
     display: flex;
     flex-direction: column;
+    position: relative;
+    left: 700px;
+    bottom: 300px;
+
     
 }  
 .row-container{
@@ -47,14 +71,13 @@ section{
     
 }
 .block{
-    height: 100px;
-    width: 250px;
+    height: 150px;
+    width: 425px;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #badc11;
     margin:5px;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center;   
 }
 dl{
     margin:0px;
@@ -65,4 +88,34 @@ dt{
 }
 dd{
     margin-left: 15px;
+}
+
+.about.row{
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    flex-wrap: wrap;
+
+}
+.aboutus-content h3{
+    position:relative;
+    left: 700px;
+    bottom: 370px;
+    font-size: 3em;   
+}
+.aboutus-content p{
+    position: relative;
+    left: 700px;
+    bottom: 350px;
+    max-width:600px;
+    font-size: 1.5em;
+}
+.block dt{
+    font-weight: bold;
+    font-size: 2.5em;
+
+}
+.block dd{
+    font-size: 1.5em;
+    font-weight: lighter;
 }
