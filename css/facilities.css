@@ -12,16 +12,16 @@ main {
 .facilities-block {
     background-color: #FFC371;
     display: block;
-    height: 25rem;
+    height: 25vw;
     width: 94%;
     margin: 3% auto;
     padding: 1%;
-    border-radius: 3rem;
+    border-radius: 3vw;
 }
 
 /* zone name */
 .facilities-block h1 {
-    font-size: 4rem;
+    font-size: 4vw;
     color: #FFFFFF;
     font-weight: bold;
     margin-top: 5%;
@@ -36,14 +36,14 @@ main {
 
 /* zone description */
 .facilities-block p {
-    font-size: 2rem;
+    font-size: 2vw;
 }
 
 /* image display on left */
 .block-left {
     float: left;
-    height: 20rem;
-    width: 35rem;
+    height: 20vw;
+    width: 35vw;
     margin: 2% 0% 2% 3%;
     top: 0;
 }
@@ -51,7 +51,7 @@ main {
 .block-left img {
     height: 20vw;
     width: 35vw;
-    border-radius: 2rem;
+    border-radius: 2vw;
 }
 
 /* white background for image */
@@ -71,24 +71,24 @@ main {
 /* word display on right */
 .block-right {
     float: right;
-    height: 20rem;
-    width: 40rem;
+    height: 20vw;
+    width: 40vw;
     margin: 2% 5% 2% 0%;
 }
 
 /* go to next page button image */
 .btn-right {
     float: right;
-    width: 6rem;
-    height: 5rem;
-    margin: -6rem 10rem 0rem 0rem;
+    width: 6vw;
+    height: 5vw;
+    margin: -6vw 10vw 0vw 0vw;
 }
 
 /* display image at right */
 .right-block {
     float: right;
-    height: 20rem;
-    width: 35rem;
+    height: 20vw;
+    width: 35vw;
     margin: 2% 5% 2% 0%;
     top: 0;
 }
@@ -109,23 +109,23 @@ main {
 .real-r-img {
     display: flex;
     z-index: 20;
-    margin-top: -22rem;
+    margin-top: -21.5vw;
     margin-right: 5%;
 }
 
 /* display word on the left */
 .left-block {
     float: left;
-    height: 20rem;
-    width: 40rem;
+    height: 20vw;
+    width: 40vw;
     margin: 2% 0% 2% 5%;
 }
 
 /* go to next page button image */
 .btn-left {
     float: left;
-    width: 6rem;
-    height: 5rem;
-    margin: -6rem 0rem 0rem 26rem;
+    width: 6vw;
+    height: 5vw;
+    margin: -6vw 0vw 0vw 26vw;
 }
 

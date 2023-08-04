@@ -10,16 +10,16 @@
 
 /*every instructor has constant design and align one after another*/
 .instructor {
-    width: 28rem;
-    height: 42rem;
+    width: 28vw;
+    height: 42vw;
     background-color: #FFC371;
-    border-radius: 2rem;
+    border-radius: 2vw;
     display: inline-block;
     margin: 2.3%;
     padding: 1%;
     position: static;
-    border-left: 0.5rem solid #2D3031;
-    border-bottom: 0.5rem solid #2D3031;
+    border-left: 0.5vw solid #2D3031;
+    border-bottom: 0.5vw solid #2D3031;
 }
 
 .instructor-image {
@@ -30,7 +30,7 @@
 }
 
 .instructor-image img {
-    height: 100%;
+    height: 10vw;
     width: 80%;
     border-radius: 50%;
 }
@@ -40,38 +40,38 @@
 }
 
 .instructor-intro h1 {
-    font-size: 2.5rem;
+    font-size: 2.5vw;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
     color: #2D3031;
-    margin-bottom: 1rem;
+    margin-bottom: 1vw;
 }
 
 .instructor-intro h2 {
-    font-size: 1.4rem;
+    font-size: 1.4vw;
     color: #2D3031;
-    margin-bottom: 1rem;
+    margin-bottom: 1vw;
 }
 
 .instructor-intro p {
-    font-size: 1.2rem;
+    font-size: 1.2vw;
     color: #2D3031;
-    height: 5rem;
+    height: 5vw;
     width: 100%;
     padding: 2%;
 }
 
 /*the quote has diff design*/
 .word {
-    margin: 1rem 0rem;
+    margin: 1vw 0vw;
     font-style: italic;
 }
 
 /*for 3 diff i frame align one another*/
 .contact {
     width: 100%;
-    height: 3rem;
-    margin-top: 2rem;
+    height: 3vw;
+    margin-top: 2vw;
 }
 
 .contact ul {
@@ -85,8 +85,8 @@
 }
 
 .contact ul li a {
-    font-size: 2rem;
-    padding: 0.5rem;
+    font-size: 2vw;
+    padding: 0.5vw;
     color: #2D3031;
 }
 
