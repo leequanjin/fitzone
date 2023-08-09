@@ -1,4 +1,5 @@
 
+
 /* introbackground image*/
 .intro{
     min-height: 120vh;
@@ -50,6 +51,8 @@ h1.heading{
     text-transform: uppercase;
     padding-bottom: 3.5rem;
     font-size: 4rem;
+    position: relative;
+    right: 150px;
 } 
 h1.heading span{
     color:goldenrod;
@@ -59,8 +62,8 @@ h1.heading span{
     display: flex;
     flex-direction: column;
     position: relative;
-    left: 700px;
-    bottom: 300px;
+    left: 600px;
+    bottom: 350px;
 
     
 }  
@@ -71,8 +74,8 @@ h1.heading span{
     
 }
 .block{
-    height: 150px;
-    width: 425px;
+    height: 160px;
+    width: 250px;
     padding: 20px;
     border: 1px solid #badc11;
     margin:5px;
@@ -99,23 +102,27 @@ dd{
 }
 .aboutus-content h3{
     position:relative;
-    left: 700px;
+    left: 600px;
     bottom: 370px;
     font-size: 3em;   
 }
 .aboutus-content p{
     position: relative;
-    left: 700px;
-    bottom: 350px;
+    left: 600px;
+    bottom: 355px;
     max-width:600px;
     font-size: 1.5em;
 }
 .block dt{
     font-weight: bold;
-    font-size: 2.5em;
+    font-size: 1.75em;
 
 }
 .block dd{
-    font-size: 1.5em;
+    font-size: 1.25em;
     font-weight: lighter;
+}
+.image{
+    position: relative;
+    right: 75px;   
 }
