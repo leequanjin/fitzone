@@ -18,8 +18,8 @@
             display: block;
             height: 100%;
             width: 94%;
-            margin: 3% 3% 0%;
-            padding: 0.5%;
+            margin: 0% 3% 0%;
+            padding: 3.5% 0.5%;
         }
 
         .setting {
@@ -31,7 +31,7 @@
     
         p{
             font-family: 'Times New Roman', Times, serif;
-            font-size: 9em;
+            font-size: 6em;
             font-weight: bolder;
         }   
 
@@ -52,16 +52,18 @@
           width: 100%;
           border-radius: 30px;
           overflow: hidden;
-          padding-top: 56.25%; /* Maintain aspect ratio (16:9) */
+          padding-top: 56.25%; /*Maintain aspect ratio (16:9) */
           /* creates a space within the container so that the video with position absolute can be placed within */
         }
     
         .video-container2{
           position: relative;
-          width: 100%;
-          border-radius: 30px;
+          width: 94%;
+          /* border-radius: 30px; */
           overflow: hidden;
           padding-top: 28.125%; /* Maintain aspect ratio (16:9) */
+          margin: 2% 3%;
+          box-sizing: content-box;
           /* creates a space within the container so that the video with position absolute can be placed within */
         }
 
@@ -127,11 +129,12 @@
           margin-left: 25%;
           opacity: 1;
           transition: opacity 0.5s ease;
+          text-align: center;
         }
 
         .overlay5 p{
           font-family: 'Times New Roman', Times, serif;
-          font-size: 8em;
+          font-size: 7.5em;
           font-weight: bolder;
         }
 
@@ -316,8 +319,8 @@
     </header>
 
     <a href="/html/lessons/membership.html" class="video-link">
-        <div class="video-container2" style="margin-top: 50px;">
-            <video src="../TrialVideo.mp4" loop muted></video>
+        <div class="video-container2">
+            <video src="../TrialVideo.mp4" loop muted ></video>
             <div class="overlay5">
                 <p>Start Free Trial Now</p>
             </div>
