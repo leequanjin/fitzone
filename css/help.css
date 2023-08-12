@@ -14,7 +14,7 @@ main {
     flex-direction: column;
     gap:15px;
     position: relative;
-    left: 400px;
+    left: 300px;
 }
 .container h1{
     position: relative;
@@ -36,6 +36,7 @@ main {
     box-shadow: 0 15px 25px rgba(0,0,0,0.05);
     border-radius: 5px;
     overflow: hidden;
+    
 }
 .container .tab input{
     appearance: none;
@@ -65,16 +66,29 @@ main {
     color:#333;
     z-index: 10;
 }
+.container .tab input:checked label h2{
+    color: #333;
+    padding:2px 10px;
+    color: #FFFFFF;
+    border-radius: 2px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    
+}
 .container .tab .content{
     max-height: 0;
     transition: 1s;
     overflow: hidden;
 }
+.container .tab input:checked ~ .content p{
+    color:#333;   
+}
 .container .tab input:checked ~ .content{
-    max-height: 100vh;
+    max-height: 120vh;
 }
 
 .content p{
     font-size: 1.5em;
 }
+
+
 

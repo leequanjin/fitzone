@@ -12,7 +12,7 @@ main {
     min-height: 120vh;
     display: flex;
     align-items: center;
-    background: url("/CLimage/new-gym-girls-4k.jpg");
+    background: url("/CLimage/intro-background-img.jpg");
     filter:brightness(0.9);
     background-repeat: no-repeat;
     background-size :cover;
@@ -69,8 +69,9 @@ h1.heading span{
     display: flex;
     flex-direction: column;
     position: relative;
-    left: 600px;
-    bottom: 350px;
+    left: 350px;
+    bottom: 5px;
+    
 
     
 }  
@@ -81,7 +82,7 @@ h1.heading span{
     
 }
 .block{
-    height: 160px;
+    height: 120px;
     width: 250px;
     padding: 20px;
     border: 1px solid #badc11;
@@ -107,17 +108,17 @@ dd{
     flex-wrap: wrap;
 
 }
-.aboutus-content h3{
+.aboutus-content h2{
     position:relative;
-    left: 600px;
-    bottom: 370px;
-    font-size: 3em;   
+    left: 350px;
+    bottom: 20px;
+    font-size: 2em;   
 }
 .aboutus-content p{
     position: relative;
-    left: 600px;
-    bottom: 355px;
-    max-width:600px;
+    left: 350px;
+    bottom: 10px;
+    max-width:450px;
     font-size: 1.5em;
 }
 .block dt{
@@ -129,7 +130,10 @@ dd{
     font-size: 1.25em;
     font-weight: lighter;
 }
-.image{
+.row .image{
     position: relative;
-    right: 75px;   
+    right: 50px; 
+    
+    
+
 }
