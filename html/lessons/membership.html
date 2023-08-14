@@ -13,7 +13,138 @@
 
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/465be9f5fc.js" crossorigin="anonymous"></script>
+    <style>
+        .packages{
+            display: flex;
+        }
+        #beginner{
+            width: 33.33%;
+            height: 35vw;
+            margin-left: 2%;
+            margin-right: 2%;
+            border-radius: 10px;
+            background-image: linear-gradient(to bottom right, rgb(128, 128, 128), rgb(128, 128, 128,0.4), rgb(128, 128, 128));
+            animation: fade 7s infinite alternate ease-in-out;
+        }
+        #beginner:hover{
+            box-shadow: 1px 1px 20px rgb(128, 128, 128);
+        }
 
+        @keyframes fade {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.4;
+            }
+        }
+
+        #group {
+            width: 33.33%;
+            height: 35vw;
+            margin-left: 2%;
+            margin-right: 2%;
+            border-radius: 10px;
+            background-image: linear-gradient(to right, rgb(0, 139, 139,0.8), rgb(95, 158, 160, 0.7), rgb(0, 139, 139,0.8));
+            background-size: 200% 200%;
+            animation: shimmer 3s infinite linear;
+        }
+        #group:hover{
+            box-shadow: 1px 1px 20px rgb(0, 139, 139,0.8);
+        }
+
+        #premium{
+            width: 33.33%;
+            height: 35vw;
+            margin-left: 2%;
+            margin-right: 2%;
+            border-radius: 10px;
+            background-image: linear-gradient(to bottom right, rgb(255, 215, 0, 0.9), rgb(220, 220, 36, 0.5), 
+            rgb(255, 215, 0, 0.9), rgb(220, 220, 36, 0.5), rgb(255, 215, 0, 0.9));
+            background-size: 200% 200%;
+            animation: shimmer 4s infinite linear;
+        }
+        #premium:hover{
+            box-shadow: 1px 1px 20px rgb(255, 215, 0, 0.9);
+        }
+
+        @keyframes shimmer {
+            /* Keyframe block for the beginning of the animation (0%) */
+            0% {
+                background-position: 0% 0%; /* Initial background position */
+            }
+            /* Keyframe block for the end of the animation (100%) */
+            100% {
+                background-position: 200% 200%; /* Final background position */
+            }
+        }
+
+        .explaination{
+            display: flex;
+            flex-direction: column;
+            font-family: Helvetica, Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        .explaination h1{
+            margin-top: 2%;
+            font-size: 30px;
+            font-weight: bolder;
+        }
+        .explaination p{
+            font-size: 28px;
+            font-weight: normal;
+        }
+        .highlight {
+            color: rgba(255, 0, 0, 0.9);
+        }
+
+        .form {
+            display: grid;
+            margin: 3% 5%;
+            grid-template-columns: repeat(2, 1fr); /* 2 columns of equal width */
+            background-image: linear-gradient(to bottom right, rgb(87, 86, 83,0.6), rgb(0,0,0, 0.1), rgb(87, 86, 83,0.6));
+            box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+        }
+
+        .form > div {
+            padding: 20px; /* Add some padding to each form element */
+            background-color: white;
+            border-radius: 5px;
+            margin: 5% 5% 0% 5%;
+        }
+
+        .form p{
+            font-size: 20px;
+        }
+
+        .form input, .form select {
+            width: 100%;
+            font-size: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #submit {
+            height: 8vh;
+            width: 10vw;
+            grid-column: span 2; 
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 2%;
+            margin-bottom: 2%;
+            font-size: large;
+            color: white;
+            background-image: linear-gradient(to bottom, rgb(128, 0, 0, 0.9), rgb(222, 88, 88,0.9), rgb(128, 0, 0, 0.9));
+            background-size: 200% 200%;
+            animation: shimmer 10s infinite linear; 
+            border-radius: 5px;
+            border-style: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -60,6 +191,60 @@
                 <li><a href="membership.html" style="color: #FFCA80;">Membership</a></li>
             </ul>
         </nav>
+
+        <div class="packages">
+            <div id="beginner">
+                <p></p>
+            </div>
+            <div id="group">
+                <p></p>
+            </div>
+            <div id="premium">
+                <p></p>
+            </div>
+        </div>
+        <div class="explaination">
+            <br>
+            <h1>SIGN UP FOR YOUR <span class="highlight">FREE TRIAL</span></h1>
+            <p>Share with us your details and our team member will be in touch soon.</p>
+            <br>
+        </div>
+        <div class="form">
+            <div id="username">
+                <p>Enter Username</p>
+                <input type="name" placeholder="e.g. John Doe" class="input">
+            </div>
+            <div id="email">
+                <p>Enter E-mail</p>
+                <input type="email" placeholder="e.g. johndoe123@gmail.com" class="input">
+            </div>
+            <div id="contact">
+                <p>Enter Phone Number</p>
+                <input type="tel" placeholder="6012 345 6789" class="input">
+            </div>
+            <div id="package">
+                <p>Choose Your Package</p>
+                <select class="input">
+                    <option value="basic">Basic Package</option>
+                    <option value="family">Family Package</option>
+                    <option value="premium">Premium Package</option>
+                </select>
+            </div>
+            <div id="location">
+                <p>Choose Location of Gym</p>
+                <select class="input">
+                    <option value="location1">Location 1</option>
+                    <option value="location2">Location 2</option>
+                </select>
+            </div>
+            <div id="pax">
+                <p>Enter Pax</p>
+                <input type="number" placeholder="0" class="input">
+            </div>
+            <button id="submit">
+                SUBMIT
+            </button>
+        </div>
     </main>
 
     <footer>
