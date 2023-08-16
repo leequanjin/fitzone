@@ -24,20 +24,22 @@
             margin-left: 2%;
             margin-right: 2%;
             border-radius: 10px;
-            background-image: linear-gradient(to bottom right, rgb(128, 128, 128), rgb(128, 128, 128,0.4), rgb(128, 128, 128));
-            animation: fade 7s infinite alternate ease-in-out;
+            background-image: linear-gradient(to top left, rgb(128, 128, 128,0.9), rgb(128, 128, 128,0.4),
+            rgb(128, 128, 128,0.9), rgb(128, 128, 128,0.4),rgb(128, 128, 128,0.9));
+            background-size: 200% 200%;
+            animation: reverseshimmer 8s infinite linear;
         }
         #beginner:hover{
             box-shadow: 1px 1px 20px rgb(128, 128, 128);
         }
 
-        @keyframes fade {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.4;
-            }
+        @keyframes reverseshimmer {
+          0% {
+              background-position: 200% 200%; /* Initial background position */
+          }
+          100% {
+              background-position: 0% 0%; /* Final background position */
+          }
         }
 
         #group {
@@ -48,7 +50,7 @@
             border-radius: 10px;
             background-image: linear-gradient(to right, rgb(0, 139, 139,0.8), rgb(95, 158, 160, 0.7), rgb(0, 139, 139,0.8));
             background-size: 200% 200%;
-            animation: shimmer 3s infinite linear;
+            animation: shimmer 6s infinite linear;
         }
         #group:hover{
             box-shadow: 1px 1px 20px rgb(0, 139, 139,0.8);
@@ -80,15 +82,25 @@
             }
         }
 
+        #beginner h2,#group h2,#premium h2 {
+            margin: 2% auto;
+            text-align: center;
+            
+            font-family: Helvetica, Arial, Helvetica, sans-serif;
+            animation: none;
+            font-size: 5vh;
+        }
+
         .explaination{
             display: flex;
             flex-direction: column;
             font-family: Helvetica, Arial, Helvetica, sans-serif;
             text-align: center;
+            margin-top: 5%;
+            margin-bottom: 3%;
         }
 
         .explaination h1{
-            margin-top: 2%;
             font-size: 30px;
             font-weight: bolder;
         }
@@ -144,6 +156,33 @@
             animation: shimmer 10s infinite linear; 
             border-radius: 5px;
             border-style: none;
+            cursor: pointer;
+        }
+        .error-message{
+            color: red;
+            margin-top: 2%;
+            display: none;
+        }
+        #Thanks {
+            display: none;
+            position: absolute;
+            top: 110%;
+            left: 0;
+            width: 100%;
+            height: 117.5%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+            z-index: 100; /* Make sure the "thanks" overlay is on top of everything */
+        }
+
+        #Thanks p {
+            background-color: black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+            text-align: center;
         }
     </style>
 </head>
@@ -195,33 +234,37 @@
 
         <div class="packages">
             <div id="beginner">
+                <h2>Beginner's Plan</h2>
                 <p></p>
             </div>
             <div id="group">
+                <h2>Group Plan</h2>
                 <p></p>
             </div>
             <div id="premium">
+                <h2>Premium Plan</h2>
                 <p></p>
             </div>
         </div>
         <div class="explaination">
-            <br>
             <h1>SIGN UP FOR YOUR <span class="highlight">FREE TRIAL</span></h1>
             <p>Share with us your details and our team member will be in touch soon.</p>
-            <br>
         </div>
         <div class="form">
             <div id="username">
                 <p>Enter Username</p>
-                <input type="name" placeholder="e.g. John Doe" class="input">
+                <input type="name" required placeholder="e.g. John Doe" class="input">
+                <p class="error-message">Please fill in your name.</p>
             </div>
             <div id="email">
                 <p>Enter E-mail</p>
-                <input type="email" placeholder="e.g. johndoe123@gmail.com" class="input">
+                <input type="email" required placeholder="e.g. johndoe123@gmail.com" class="input">
+                <p class="error-message">Please fill in your e-mail.</p>
             </div>
             <div id="contact">
                 <p>Enter Phone Number</p>
-                <input type="tel" placeholder="6012 345 6789" class="input">
+                <input type="tel" required placeholder="6012 345 6789" class="input">
+                <p class="error-message">Please fill in you contact number.</p>
             </div>
             <div id="package">
                 <p>Choose Your Package</p>
@@ -240,14 +283,50 @@
             </div>
             <div id="pax">
                 <p>Enter Pax</p>
-                <input type="number" placeholder="0" class="input">
+                <input type="number" required placeholder="0" class="input">
+                <p class="error-message">Please fill up number of people.</p>
             </div>
-            <button id="submit">
+            <button id="submit" onclick="validateForm()">
                 SUBMIT
             </button>
         </div>
+        <div id="Thanks">
+            <p>Thank you for registering with us!</p>
+        </div>
     </main>
+    <script>
+        function resetFormFields() {
+            var requiredInputs = document.querySelectorAll('.input[required]');
+            
+            for (var i = 0; i < requiredInputs.length; i++) {
+                requiredInputs[i].value = ''; // Reset the value of the input field
+            }
+        }
 
+        function validateForm() {
+            var requiredInputs = document.querySelectorAll('.input[required]');
+            var errorMessages = document.querySelectorAll('.error-message');
+            var isValid = true;
+    
+            for (var i = 0; i < requiredInputs.length; i++) {
+                if (requiredInputs[i].value.trim() === '') {
+                    isValid = false;
+                    errorMessages[i].style.display = 'block'; // Show the corresponding error message
+                } else {
+                    errorMessages[i].style.display = 'none'; // Hide the error message if input is valid
+                }
+            }
+            if (isValid) {
+                document.getElementById('Thanks').style.display = 'block'; // Show the "thanks" overlay
+                resetFormFields();
+                setTimeout(function () {
+                    document.getElementById('Thanks').style.display = 'none'; // Hide the "thanks" overlay after 2 seconds
+                }, 2000);
+            }   
+
+            return isValid; // Allow form submission only if isValid is true
+        }
+    </script>
     <footer>
         <ul>
             <li><a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
