@@ -1,4 +1,3 @@
-
 main {
     background-color: #FFFFFF;
     display: block;
@@ -7,36 +6,30 @@ main {
     margin: 3% 3% 0%;
     padding: 0.5%;
 }
+
 /* introbackground image*/
-.intro{
+#intro{
     min-height: 120vh;
+    width: 100%;
     display: flex;
-    align-items: center;
     background: url("/CLimage/intro-background-img.jpg");
     filter:brightness(0.9);
     background-repeat: no-repeat;
     background-size :cover;
     background-position:top;
-
 }
-
-/*adjust the font position*/
-section{
-    padding:2rem 7%;
-    
-}
-
 
 .intro-content{
-    max-width: 40rem;
+    width: 80vh;
+    height: 55vh;
+    max-width: 50rem;
+    margin: 50vh 0vh 0vh 5vh;
 }
 
 .intro-content h2{
     font-size: 4rem ;
     text-transform: uppercase;
     color:#ff0505;
-    position: relative;
-    right: 40px;
 }
 
 .intro-content p{
@@ -45,42 +38,64 @@ section{
     line-height: 1.8;
     padding:1rem 0;
     color: #fafbfc;
-    position: relative;
-    right: 40px;
 }
 
-#id{
-    scroll-margin-top: 100px;
-} 
-h1.heading{
+#getstarted {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2D3031;
+    padding: 1rem;
+    border-radius: 10px;
+    border: ridge #ff0505;
+}
+
+#getstarted :hover{
+    font-size: 2.5rem;
+    color: #ff0505;
+}
+
+h1{
     text-align: center;
     color:#ccc;
     text-transform: uppercase;
-    padding-bottom: 3.5rem;
     font-size: 4rem;
-    position: relative;
-    right: 150px;
+    margin: 5rem 0rem 2rem;
 } 
-h1.heading span{
-    color:goldenrod;
-    
-}  
-.column-container{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    left: 350px;
-    bottom: 5px;
-    
 
-    
-}  
+.row{
+    width: 90%;
+    height: auto;
+    margin: 0% 5%;
+}
+
+.row img {
+    float: left;
+    width: 45%;
+}
+
+.aboutus-content, .column-container {
+    width: 50%;
+    margin-left: 50%;
+}
+
+.aboutus-content h2{
+    font-size: 3em;  
+    line-height: 2;
+}
+
+.aboutus-content p{
+    font-size: 1.5em;
+}
+
+.column-container {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
 .row-container{
     display: flex;
-    flex-direction: row;
-
-    
 }
+
 .block{
     height: 120px;
     width: 250px;
@@ -90,50 +105,14 @@ h1.heading span{
     justify-content: center;
     align-items: center;   
 }
-dl{
-    margin:0px;
-    padding: 0px;
-}
-dt{
-    font-weight: bold;
-}
-dd{
-    margin-left: 15px;
-}
 
-.about.row{
-    display: flex;
-    align-items: center;
-    gap: 1px;
-    flex-wrap: wrap;
-
-}
-.aboutus-content h2{
-    position:relative;
-    left: 350px;
-    bottom: 20px;
-    font-size: 2em;   
-}
-.aboutus-content p{
-    position: relative;
-    left: 350px;
-    bottom: 10px;
-    max-width:450px;
-    font-size: 1.5em;
-}
 .block dt{
     font-weight: bold;
     font-size: 1.75em;
 
 }
 .block dd{
+    margin-left: 15px;
     font-size: 1.25em;
     font-weight: lighter;
-}
-.row .image{
-    position: relative;
-    right: 50px; 
-    
-    
-
 }
