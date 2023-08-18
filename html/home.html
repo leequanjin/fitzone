@@ -23,146 +23,162 @@
         }
 
         .setting {
-            display: flex; /*Turn elements flexible to control items inside */
-            flex-wrap: wrap; /*Allow the elements within body to wrap to next line, allow adjustments correctly*/
+            display: flex;
+            /*Turn elements flexible to control items inside */
+            flex-wrap: wrap;
+            /*Allow the elements within body to wrap to next line, allow adjustments correctly*/
             margin-left: 5%;
             margin-right: 5%;
         }
-    
-        p{
+
+        p {
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             font-size: 6em;
             font-weight: bolder;
-        }   
-
-        .separator{
-          position: relative;
-          width: 100%;
-          padding-bottom: 10px;
         }
-    
+
+        .separator {
+            position: relative;
+            width: 100%;
+            padding-bottom: 10px;
+        }
+
         .video-link {
-          width: 50%; /*link will only occupy half of the screen*/
-          margin: 0;
-          padding: 0;
-        }
-    
-        .video-container{
-          position: relative;
-          width: 100%;
-          border-radius: 30px;
-          overflow: hidden;
-          padding-top: 56.25%; /*Maintain aspect ratio (16:9) */
-          /* creates a space within the container so that the video with position absolute can be placed within */
-        }
-    
-        .video-container2{
-          position: relative;
-          width: 94%;
-          /* border-radius: 30px; */
-          overflow: hidden;
-          padding-top: 28.125%; /* Maintain aspect ratio (16:9) */
-          margin: 2% 3%;
-          box-sizing: content-box;
-          /* creates a space within the container so that the video with position absolute can be placed within */
+            width: 50%;
+            /*link will only occupy half of the screen*/
+            margin: 0;
+            padding: 0;
         }
 
-        .video-container video, .video-container2 video {
-          position: absolute; 
-          /*positions the video element absolutely to its closest positioned ancestor, in this case is the .video-container*/
-          top: 0; 
-          /*position the video element at the top-left corner of the video container element*/
-          left: 0;
-          width: 100%; /*allow video to grow accordingly to screen size*/
-          height: 100%;
-          object-fit: cover; /*ensures that the video scales properly*/
+        .video-container {
+            position: relative;
+            width: 100%;
+            border-radius: 30px;
+            overflow: hidden;
+            padding-top: 56.25%;
+            /*Maintain aspect ratio (16:9) */
+            /* creates a space within the container so that the video with position absolute can be placed within */
         }
-    
 
-        .overlay1, .overlay2, .overlay3, .overlay4 {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          color: white;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          opacity: 1;
-          transition: opacity 0.5s ease;
+        .video-container2 {
+            position: relative;
+            width: 94%;
+            /* border-radius: 30px; */
+            overflow: hidden;
+            padding-top: 28.125%;
+            /* Maintain aspect ratio (16:9) */
+            margin: 2% 3%;
+            box-sizing: content-box;
+            /* creates a space within the container so that the video with position absolute can be placed within */
         }
-    
+
+        .video-container video,
+        .video-container2 video {
+            position: absolute;
+            /*positions the video element absolutely to its closest positioned ancestor, in this case is the .video-container*/
+            top: 0;
+            /*position the video element at the top-left corner of the video container element*/
+            left: 0;
+            width: 100%;
+            /*allow video to grow accordingly to screen size*/
+            height: 100%;
+            object-fit: cover;
+            /*ensures that the video scales properly*/
+        }
+
+
+        .overlay1,
+        .overlay2,
+        .overlay3,
+        .overlay4 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+
         /* Setting overlay color */
         .overlay1 {
-          background-color: rgba(95, 65, 45, 0.5);
-          border-radius: 15px 0px 0px 0px;
+            background-color: rgba(95, 65, 45, 0.5);
+            border-radius: 15px 0px 0px 0px;
         }
-    
+
         .overlay2 {
-          background-color: rgba(90, 85, 70, 0.5);
-          border-radius: 0px 15px 0px 0px;
+            background-color: rgba(90, 85, 70, 0.5);
+            border-radius: 0px 15px 0px 0px;
         }
-    
+
         .overlay3 {
-          background-color: rgba(0, 0, 255, 0.3);
-          border-radius: 0px 0px 0px 15px;
+            background-color: rgba(0, 0, 255, 0.3);
+            border-radius: 0px 0px 0px 15px;
         }
-    
+
         .overlay4 {
             background-color: rgba(71, 30, 21, 0.5);
             border-radius: 0px 0px 15px 0px;
         }
 
         .overlay5 {
-          background-color: rgba(255, 0, 0, .4);
-          border-radius: 30px;
-          position: absolute;
-          top: 30%;
-          left: 0;
-          width: 55%;
-          height: 55%;
-          color: white;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin-left: 25%;
-          opacity: 1;
-          transition: opacity 0.5s ease;
-          text-align: center;
+            background-color: rgba(255, 0, 0, .4);
+            border-radius: 30px;
+            position: absolute;
+            top: 30%;
+            left: 0;
+            width: 55%;
+            height: 55%;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 25%;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+            text-align: center;
         }
 
-        .overlay5 p{
-          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-          font-size: 7.5em;
-          font-weight: bolder;
+        .overlay5 p {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 7.5em;
+            font-weight: bolder;
         }
 
-        .video-container:hover .overlay5{
-          background-color: rgba(255, 0, 0, .7);
-          opacity: 1; /*on hover, cause the overlay to appear*/
+        .video-container:hover .overlay5 {
+            background-color: rgba(255, 0, 0, .7);
+            opacity: 1;
+            /*on hover, cause the overlay to appear*/
         }
 
         .video-container:hover .overlay1,
         .video-container:hover .overlay2,
         .video-container:hover .overlay3,
-        .video-container:hover .overlay4{
-          opacity: 0; /*on hover, cause the overlay to disappear*/
-        }
-    
-        /* helps unfloats all previous element and secure their position */
-        .clearfix::after {
-          content: ""; /*insert and invisible content which is :after*/
-          display: table; /*trigger a new block formatting context*/
-          clear: both; /*clears any floated elements that appear before :after*/
-        }
-    
-        .temp {
-          width: 100%;
-          margin-top: 80px;
+        .video-container:hover .overlay4 {
+            opacity: 0;
+            /*on hover, cause the overlay to disappear*/
         }
 
-        .temp article{
+        /* helps unfloats all previous element and secure their position */
+        .clearfix::after {
+            content: "";
+            /*insert and invisible content which is :after*/
+            display: table;
+            /*trigger a new block formatting context*/
+            clear: both;
+            /*clears any floated elements that appear before :after*/
+        }
+
+        .temp {
+            width: 100%;
+            margin-top: 80px;
+        }
+
+        .temp article {
             text-align: center;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             font-size: 7em;
@@ -177,6 +193,7 @@
             margin-left: 1%;
             margin-right: 1%;
         }
+
         .slide {
             position: absolute;
             top: 0;
@@ -184,17 +201,19 @@
             width: 100%;
             height: 100%;
         }
+
         .slide img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
+
         .slide-button {
             position: absolute;
             top: 0%;
             /* transform: translateY(-50%); */
             height: 100%;
-            width: 5.5%; 
+            width: 5.5%;
             height: auto;
             background-color: rgba(0, 0, 0, 0.5);
             color: white;
@@ -202,83 +221,86 @@
             font-size: 14px;
             cursor: pointer;
         }
+
         .slide-button-prev {
             float: left;
             height: 100%;
         }
+
         .slide-button-next {
             right: 0;
             height: 100%;
         }
+
         .slide-button:hover {
             background-color: rgb(255, 195, 113, 0.3);
         }
 
-        .reviews{
-        margin: 0;
-        padding: auto;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        .reviews {
+            margin: 0;
+            padding: auto;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
         }
 
-        .comment-section{
-        align-items: center;
-        display: flex;
-        height: 400px;
-        margin: auto;
-        max-width: 1000px;
-        position: relative;
+        .comment-section {
+            align-items: center;
+            display: flex;
+            height: 400px;
+            margin: auto;
+            max-width: 1000px;
+            position: relative;
         }
 
-        .comment-item{
-        height: 200px;
-        opacity: 0;
-        position: absolute;
-        transition: all 0.3 ease-in-out;
-        width: 330px;
-        z-index: 0;
-        border-radius: 15px;
-        background-size:contain ;
+        .comment-item {
+            height: 200px;
+            opacity: 0;
+            position: absolute;
+            transition: all 0.3 ease-in-out;
+            width: 330px;
+            z-index: 0;
+            border-radius: 15px;
+            background-size: contain;
         }
 
-        .comment-item-1{
-        right: 10%;
-        opacity: .4;
-        transform: translateX(-50%);
+        .comment-item-1 {
+            right: 10%;
+            opacity: .4;
+            transform: translateX(-50%);
         }
 
-        .comment-item-2{
-        right: 40%;
-        height: 250px;
-        opacity: 0.8;
-        width: 380px;
-        z-index: 1;
+        .comment-item-2 {
+            right: 40%;
+            height: 250px;
+            opacity: 0.8;
+            width: 380px;
+            z-index: 1;
         }
 
-        .comment-item-3{
-        box-shadow: -2px 5px 33px 6px black;
-        height: 300px;
-        opacity: 1;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 430px;
-        z-index: 2;
+        .comment-item-3 {
+            box-shadow: -2px 5px 33px 6px black;
+            height: 300px;
+            opacity: 1;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 430px;
+            z-index: 2;
         }
 
-        .comment-item-4{
-        left: 70%;
-        height: 250px;
-        opacity: 0.8;
-        width: 380px;
-        z-index: 1;
+        .comment-item-4 {
+            left: 70%;
+            height: 250px;
+            opacity: 0.8;
+            width: 380px;
+            z-index: 1;
         }
 
-        .comment-item-5{
-        left: 100%;
-        opacity: .4;
-        transform: translateX(+50%)
+        .comment-item-5 {
+            left: 100%;
+            opacity: .4;
+            transform: translateX(+50%)
         }
     </style>
 </head>
@@ -320,17 +342,17 @@
 
     <a href="/html/lessons/membership.html" class="video-link">
         <div class="video-container2">
-            <video src="../TrialVideo.mp4" loop muted ></video>
+            <video src="../TrialVideo.mp4" loop muted></video>
             <div class="overlay5">
                 <p>Start Free Trial Now</p>
             </div>
         </div>
     </a>
-    
+
     <main>
-        
+
         <div class="setting">
-            <div class="separator"></div>  
+            <div class="separator"></div>
             <a href="/html/facilities/facilities.html" class="video-link">
                 <div class="video-container">
                     <video src="../FacilitiesVideo.mp4" loop></video>
@@ -374,17 +396,17 @@
                     News
                 </article>
             </div>
-            <div class="separator"></div>  
+            <div class="separator"></div>
 
             <div class="container">
                 <div class="slide">
-                  <a href="news.html"><img src="/images/banner1.jpg"></a>
+                    <a href="news.html"><img src="/images/banner1.jpg"></a>
                 </div>
                 <div class="slide">
-                  <a href="news.html"><img src="/images/banner2.jpg"></a>
+                    <a href="news.html"><img src="/images/banner2.jpg"></a>
                 </div>
                 <div class="slide">
-                  <a href="news.html"><img src="/images/banner3.jpg"></a>
+                    <a href="news.html"><img src="/images/banner3.jpg"></a>
                 </div>
                 <button class="slide-button slide-button-prev">&lt;</button>
                 <button class="slide-button slide-button-next">&gt;</button>
@@ -398,11 +420,11 @@
 
             <div class="reviews">
                 <div class="comment-section">
-                  <img class="comment-item comment-item-1" src="/images/banner 1.png" data-index="1">
-                  <img class="comment-item comment-item-2" src="/images/banner 2.png" data-index="2">
-                  <img class="comment-item comment-item-3" src="/images/banner3.jpg" data-index="3">
-                  <img class="comment-item comment-item-4" src="/images/banner 4.jpg" data-index="4">
-                  <img class="comment-item comment-item-5" src="/images/banner 5.jpg" data-index="5">
+                    <img class="comment-item comment-item-1" src="/images/banner 1.png" data-index="1">
+                    <img class="comment-item comment-item-2" src="/images/banner 2.png" data-index="2">
+                    <img class="comment-item comment-item-3" src="/images/banner3.jpg" data-index="3">
+                    <img class="comment-item comment-item-4" src="/images/banner 4.jpg" data-index="4">
+                    <img class="comment-item comment-item-5" src="/images/banner 5.jpg" data-index="5">
                 </div>
             </div>
 
@@ -411,16 +433,16 @@
                 var links = document.querySelectorAll('.video-link, .video-link2'); //selects all the elements within the class ('.video-link')
 
                 links.forEach(function (link) { // allows you to perform actions on each individual element.
-                link.addEventListener('mouseenter', function () { 
-                    //adds a callback function that receives the current element as a parameter and executes the code within
-                    this.querySelector('video').play();
+                    link.addEventListener('mouseenter', function () {
+                        //adds a callback function that receives the current element as a parameter and executes the code within
+                        this.querySelector('video').play();
+                    });
+
+                    link.addEventListener('mouseleave', function () {
+                        this.querySelector('video').pause();
+                    });
                 });
-            
-                link.addEventListener('mouseleave', function () {
-                    this.querySelector('video').pause();
-                });
-                });
-                
+
                 //Set variables for slides
                 var slideIndex = 0;
                 var slides = document.getElementsByClassName("slide");
@@ -431,73 +453,73 @@
                 startSlideInterval();
 
                 function showSlide(n) {
-                for (var i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                slides[n].style.display = "block";
+                    for (var i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    slides[n].style.display = "block";
                 }
 
                 function prevSlide() {
-                slideIndex--;
-                if (slideIndex < 0) {
-                    slideIndex = slides.length - 1;
-                }
-                showSlide(slideIndex);
+                    slideIndex--;
+                    if (slideIndex < 0) {
+                        slideIndex = slides.length - 1;
+                    }
+                    showSlide(slideIndex);
                 }
 
                 function nextSlide() {
-                slideIndex++;
-                if (slideIndex >= slides.length) {
-                    slideIndex = 0;
-                }
-                showSlide(slideIndex);
+                    slideIndex++;
+                    if (slideIndex >= slides.length) {
+                        slideIndex = 0;
+                    }
+                    showSlide(slideIndex);
                 }
 
                 function startSlideInterval() {
-                slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds (adjust as needed)
+                    slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds (adjust as needed)
                 }
 
                 prevButton.addEventListener("click", prevSlide);
                 nextButton.addEventListener("click", nextSlide);
 
                 //Set Variables for Comments
-                document.addEventListener('DOMContentLoaded', function() {
-                const commentSection = document.querySelector('.comment-section');
-                const commentItems = document.querySelectorAll('.comment-item');
-                const numItems = commentItems.length;
-                let currentIndex = 0;
-                
-                //Load images into array
-                const imageUrls = [
-                    "/images/banner 1.png", "/images/banner 2.png", "/images/banner3.jpg", "/images/banner 4.jpg", "/images/banner 5.jpg", 
-                ];
-            
-                const updateImage = () => {
-                    for (let i = 0; i < numItems; i++) {
-                    commentItems[i].src = imageUrls[(currentIndex + i) % numItems];
-                    }
-                };
-            
-                const moveLeft = () => {
-                    currentIndex = (currentIndex - 1 + numItems) % numItems;
+                document.addEventListener('DOMContentLoaded', function () {
+                    const commentSection = document.querySelector('.comment-section');
+                    const commentItems = document.querySelectorAll('.comment-item');
+                    const numItems = commentItems.length;
+                    let currentIndex = 0;
+
+                    //Load images into array
+                    const imageUrls = [
+                        "/images/banner 1.png", "/images/banner 2.png", "/images/banner3.jpg", "/images/banner 4.jpg", "/images/banner 5.jpg",
+                    ];
+
+                    const updateImage = () => {
+                        for (let i = 0; i < numItems; i++) {
+                            commentItems[i].src = imageUrls[(currentIndex + i) % numItems];
+                        }
+                    };
+
+                    const moveLeft = () => {
+                        currentIndex = (currentIndex - 1 + numItems) % numItems;
+                        updateImage();
+                    };
+
+                    const moveRight = () => {
+                        currentIndex = (currentIndex + 1) % numItems;
+                        updateImage();
+                    };
+
+                    // Add click event listeners for both left and right sides of the container
+                    commentSection.addEventListener('click', (event) => {
+                        if (event.clientX < commentSection.getBoundingClientRect().left + commentSection.offsetWidth * 0.4) {
+                            moveLeft();
+                        } else if (event.clientX > commentSection.getBoundingClientRect().left + commentSection.offsetWidth * 0.6) {
+                            moveRight();
+                        }
+                    });
+
                     updateImage();
-                };
-            
-                const moveRight = () => {
-                    currentIndex = (currentIndex + 1) % numItems;
-                    updateImage();
-                };
-            
-                // Add click event listeners for both left and right sides of the container
-                commentSection.addEventListener('click', (event) => {
-                    if (event.clientX < commentSection.getBoundingClientRect().left + commentSection.offsetWidth * 0.4) {
-                    moveLeft();
-                    } else if (event.clientX > commentSection.getBoundingClientRect().left + commentSection.offsetWidth * 0.6) {
-                    moveRight();
-                    }
-                });
-            
-                updateImage();
                 });
             </script>
         </div>
