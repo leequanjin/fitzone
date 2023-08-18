@@ -29,37 +29,46 @@
             padding: 15px;
             position: relative;
         }
-        .Hot-event img{
+
+        .Hot-event img {
             height: 50vh;
             width: 100%;
         }
 
         .Hot-event p {
-            display: none; /* Hide the paragraph by default */
-            position: absolute; /* Position the paragraph absolutely */
+            display: none;
+            /* Hide the paragraph by default */
+            position: absolute;
+            /* Position the paragraph absolutely */
             /* bottom: 0;
             left: 0; */
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0); /* Optional: Add a semi-transparent background */
-            color: white; /* Optional: Set the text color */
+            background-color: rgba(0, 0, 0, 0);
+            /* Optional: Add a semi-transparent background */
+            color: white;
+            /* Optional: Set the text color */
             font-size: 15em;
-            padding: 10px; /* Optional: Add some padding to the paragraph */
+            padding: 10px;
+            /* Optional: Add some padding to the paragraph */
         }
 
         .Hot-event:hover p {
-            display: block; /* Display the paragraph when hovering over the container */
+            display: block;
+            /* Display the paragraph when hovering over the container */
         }
-        
 
 
-        .Current, .Past{
+
+        .Current,
+        .Past {
             width: 50%;
             float: left;
             position: relative;
         }
-        
-        .Current p , .Past p{
+
+        .Current p,
+        .Past p {
             position: absolute;
             top: 0;
             left: 0;
@@ -74,12 +83,12 @@
             object-fit: cover;
         }
 
-        .Current:hover ~ .Past p {
+        .Current:hover~.Past p {
             visibility: visible;
             opacity: 1;
         }
 
-        #Countdown{
+        #Countdown {
             text-align: center;
             width: 90%;
             display: block;
@@ -91,7 +100,8 @@
             border-radius: 20px;
         }
 
-        .Current img , .Past img{
+        .Current img,
+        .Past img {
             width: 100%;
             height: 40vh;
             object-fit: cover;
@@ -99,22 +109,33 @@
             border-radius: 20px;
         }
 
-        .events{
+        .events {
             display: flex;
             padding: 10px 0px;
         }
 
-        .info1 , .info2 , .info3 , .info4{
+        .info1,
+        .info2,
+        .info3,
+        .info4 {
             width: 100%;
             display: flex;
             padding: 10px;
         }
-        .info1 img, .info2 img, .info3 img, .info4 img{
+
+        .info1 img,
+        .info2 img,
+        .info3 img,
+        .info4 img {
             width: 50%;
             height: 30vh;
             border-radius: 25px;
         }
-        .info1 p, .info2 p, .info3 p, .info4 p{
+
+        .info1 p,
+        .info2 p,
+        .info3 p,
+        .info4 p {
             width: 50%;
             height: 20vh;
             text-align: left;
@@ -122,7 +143,7 @@
             padding: 1.5vw;
         }
 
-        .info-container{
+        .info-container {
             display: flex;
         }
     </style>
@@ -164,7 +185,7 @@
     </header>
     <main>
         <div class="Hot-event">
-            <img src="/images/banner 1.png" >
+            <img src="/images/banner 1.png">
             <p>This is Hot Event stuff</p>
         </div>
         <p id="Countdown"></p>
