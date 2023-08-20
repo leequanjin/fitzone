@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="hotspot.css">
+    <script src="hotspot.js"></script>
+</head>
+<body>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+<h1>15 tips to improve web accessibility</h1>
+
+<div id="demo">
+  <div id="page">
+    <div id="flip">
+      <div id="front">
+        <div class="link" id="skip-link"></div>
+        <div class="image" id="logo"></div>
+        <div id="menu"></div>
+        <div id="page-title"></div>
+        <div class="paragraph" id="paragraph-1"></div>
+        <div class="paragraph" id="paragraph-2"></div>
+        <div id="page-image"></div>
+      </div>
+      <div id="back">
+        <div class="meta">&lt;!doctype&nbsp;html&gt;</div>
+        <div>&lt;html&nbsp;<span class="attr">lang</span><span class="symb">=</span><span class="value">"en"</span>&gt;</div>
+        <div>&nbsp;&nbsp;&lt;head&gt;</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;<span class="text">My&nbsp;Page</span>&lt;/title&gt;</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta&nbsp;<span class="attr">name</span><span class="symb">=</span><span class="value">"author"</span>&nbsp;<span class="attr">content</span><span class="symb">=</span><span class="value">"Al Montoro"</span>&nbsp;/&gt;</div>
+        <div>&nbsp;&nbsp;&lt;/head&gt;</div>
+        <div>&nbsp;&nbsp;&lt;body&gt;</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;&lt;header&gt;</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;<span class="text">Page&nbsp;Title</span>&lt;/h1&gt;</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&nbsp;<span class="attr">role</span><span class="symb">=</span><span class="value">"navigation"</span>&gt;</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;<span class="attr">href</span><span class="symb">=</span><span class="value">"home.html"</span>&gt;<span class="text">Home</span>&lt;/a&gt;&lt;/li&gt;</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;<span class="attr">href</span><span class="symb">=</span><span class="value">"sec.html"</span>&nbsp;<span class="attr">aria-current</span><span class="symb">=</span><span class="value">"page"</span>&gt;<span class="text">Section</span>&lt;/a&gt;&lt;/li&gt;</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;<span class="attr">href</span><span class="symb">=</span><span class="value">"contact.html"</span>&gt;<span class="text">Contact</span>&lt;/a&gt;&lt;/li&gt;</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/header&gt;</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;&lt;main&gt;</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;section&gt;</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;<span class="text">Lorem&nbsp;Ipsum</span>&lt;/h2&gt;</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;<span class="attr">src</span><span class="symb">=</span><span class="value">"pic.jpg"</span>&nbsp;<span class="attr">alt</span><span class="symb">=</span><span class="value">"Detailed&nbsp;description&nbsp;of&nbsp;picture"</span>/&gt;</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text">Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet</></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">...</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/section&gt;</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/main&gt;</div>
+          <div>&nbsp;&nbsp;&lt;/body&gt;</div>
+          <div>&lt;/html&gt;</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button id="turn-page" tabindex="1">
+    <i class="fa fa-undo" aria-hidden="true"></i>
+    See more tips
+  </button>
+
+  <div id="advices">
+    <section class="advice front right" id="advice-logo" tabindex="0">
+      <h2>Logo/Site name redirects to home</h2>
+      <span>
+        Users need easy access to the home page, and the logo is expected to be a link to it.
+      </span>
+    </section>
+    <section class="advice front" id="advice-skip" tabindex="0">
+      <h2>Link skips directly to the content</h2>
+      <span>
+        Make it easy for users to jump the header, menu, etc. and jump to the page main content by adding a skip link.
+      </span>
+    </section>
+    <section class="advice front" id="advice-menu" tabindex="0">
+      <h2>Menus should also be usable via keyboard</h2>
+      <span>
+        A way to control and navigate the menu via keyboard should be available for users that don't use a mouse.
+      </span>
+    </section>
+    <section class="advice front right" id="advice-contrast" tabindex="0">
+      <h2>Good color contrast</h2>
+      <span>
+        The color of the text and elements on the foreground should contrast enough with the color of the background.
+      </span>
+    </section>
+    <section class="advice front" id="advice-font-color" tabindex="0">
+      <h2>Text must always<br> be readable</h2>
+      <span>
+        Pick a font that is easy to read, avoid small font sizes, and adapt the size to fit different screens.
+      </span>
+    </section>
+    <section class="advice front right" id="advice-abbr" tabindex="0">
+      <h2>Give meaning to abbreviations</h2>
+      <span>
+        Screen readers don't recognize   acronyms or abbreviations. Use titles and the abbr tag to add meaning to them.
+      </span>
+    </section>
+    <section class="advice front right" id="advice-form" tabindex="0">
+      <h2>Descriptive and<br> easy to use forms</h2>
+      <span>
+        Use placeholders and labels to describe the fields. Organize fields in order. If there are errors, make it easy to jump and fix them. 
+      </span>
+    </section>
+    <section class="advice front" id="advice-img-type" tabindex="0">
+      <h2>The right image for the right place</h2>
+      <span>
+        Consider type and sizes. Use SVG for vectorial graphics and icons (leverage its accessibility features).
+      </span>
+    </section>
+    <section class="advice back right" id="advice-lang" tabindex="0">
+      <h2>Specify the language of document/elements</h2>
+      <span>
+        It will help with Braille translation software, and with the pronounciation and definitions in screen readers.
+      </span>
+    </section>
+    <section class="advice back" id="advice-meta" tabindex="0">
+      <h2>Use metadata and social media tags</h2>
+      <span>
+        Well-crafted metadata provides orientation to users, screen readers, and external sites.
+      </span>
+    </section>
+    <section class="advice back right" id="advice-links" tabindex="0">
+      <h2>Have meaningful<br> and usefull links</h2>
+      <span>
+        Don't have empty links, or links with just images and no description... or many similar links (e.g. "Read more"). 
+      </span>
+    </section>
+    <section class="advice back" id="advice-aria" tabindex="0">
+      <h2>Use ARIA attributes and roles</h2>
+      <span>
+        They provide useful properties and make the web more accessible for people with disabilities.
+      </span>
+    </section>
+    <section class="advice back right" id="advice-html5" tabindex="0">
+      <h2>Use semantic tags</h2>
+      <span>
+        Not only good for accessibility, but html5 tags improve performance and SEO. 
+      </span>
+    </section>
+    <section class="advice back right" id="advice-struct" tabindex="0">
+      <h2>Structure content logically</h2>
+      <span>
+        Headings and content must be structured in an orderly way. Don't skip headings, have valid HTML. 
+      </span>
+    </section>
+    <section class="advice back" id="advice-img-alt" tabindex="0">
+      <h2>Always have <br> alternative text</h2>
+      <span>
+        First principle of web accessibility... and sometimes easier said than done.
+      </span>
+    </section>
+  </div>
+</div>
+
+</body>
+</html>
