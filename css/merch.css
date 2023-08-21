@@ -1,11 +1,11 @@
 
-
+/*Promotion*/
 .promotion{
-    width: 700px;
-    height: 200px;
+    width: 900px;
+    height: 250px;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    margin: 150px;
+    margin: 75px;
     background-image: url(/CLimage/merchant-img.png);
     background-repeat: no-repeat ;
     background-size:100% 100%;
@@ -16,17 +16,17 @@
     font-family:'Barlow Condensed', sans-serif;
     font-weight: 900;
     font-size: 4em;
-    position: relative;
-    left:170px;
-    top: 55px;
+    padding-left: 25rem;
+    padding-top: 8rem;
+    
+    
 }
 
 .content h2{
     font-family:'Barlow Condensed', sans-serif;
     font-weight:bold;
-    position: relative;
-    left:250px;
-    top: 60px;
+    padding-left: 27rem;
+    padding-top: 5rem;
     
 
 }
@@ -34,9 +34,7 @@
 .content p{
     font-family:'Barlow Condensed', sans-serif;
     font-weight: 600;
-    position: relative;
-    left:415px;
-    top: 60px;
+    
 
 }
 
@@ -85,6 +83,7 @@
 
 .products .box .card .image img{
     width: 150px;
+    height: 175px;
     margin: 15px 0;
     transition: 0.3s;
 }
