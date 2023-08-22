@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    flex-direction: row;
+}
+
+.left {
+    width: 500px;
+    height: 100vh;
+    background-color: black;
+}
+
+.right {
+    height: 100vh;
+    flex-grow: 1;
+    background-color: red;
+}
+
+.right .top {
+    height: 40vh;
+    width: 100%;
+    background-color: yellow;
+}
+
+.right .bot {
+    height: 60vh;
+    width: 100%;
+    background-color: blue;
+}
+
+.right .bot .row {
+    display: flex;
+    flex-direction: row;
+    height: 50%;
+    background-color: purple;
+    border: 1px solid white;
+}
+
+.right .bot .row .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    background-color: beige;
+    border: 1px solid green;
+}
