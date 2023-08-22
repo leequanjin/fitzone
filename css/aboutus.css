@@ -35,7 +35,6 @@ main {
 .intro-content p{
     max-width: 50rem;
     font-size: 2.4rem;
-    /* font-weight:lighter; */
     line-height: 1.6;
     padding:1rem 0;
     color: #241d13c6;
@@ -83,6 +82,17 @@ h1{
 span{
     color: goldenrod;
 }
+.about{
+    height: max-content;
+    width: 100%;
+    background-color: #EBE7DB;
+    border-radius: 20px;
+    display: block;
+    margin: auto 10% auto 0%;
+    text-align: center;
+
+
+}
 
 .row{
     width: 95%;
@@ -112,6 +122,7 @@ span{
     font-size: 1.75rem;
     font-weight: 400;
     max-width: fit-content;
+    color: #241d13c6;
     
 }
 
@@ -143,6 +154,7 @@ span{
     padding: 10px 0px 0px 12px;
     font-size: 1.5em;
     font-weight: lighter;
+    color: #241d13c6;
 }
 
 #imagemap_bg {
