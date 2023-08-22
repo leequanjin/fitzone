@@ -81,7 +81,8 @@ main {
     overflow: hidden;
 }
 .container .tab input:checked ~ .content p{
-    color:#333;   
+    color:#333; 
+    margin: 1.5%;
 }
 .container .tab input:checked ~ .content{
     max-height: 120vh;
