@@ -25,7 +25,7 @@ main {
 }
 
 .intro-content h2{
-    max-width: 38vw;
+    max-width: 39vw;
     font-size: 3vw;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -79,31 +79,40 @@ h1{
     text-transform: uppercase;
     font-size: 4rem;
     margin: 5rem 0rem 2rem;
-} 
+}
+span{
+    color: goldenrod;
+}
 
 .row{
-    width: 90%;
+    width: 95%;
     height: auto;
-    margin: 0% 5%;
+    margin: 0% 3%;
 }
 
 .row img {
+    padding:18px 10px;
     float: left;
-    width: 40%;
+    width: 38%;
+    height:415px;
 }
 
-.aboutus-content, .column-container {
+.aboutus-content .column-container {
     width: 55%;
-    margin-left: 45%;
+    margin-left: 40%;
 }
 
 .aboutus-content h2{
-    font-size: 3em;  
-    line-height: 2;
+    font-size: 3rem;  
+    line-height: 1.75;
+    
 }
 
 .aboutus-content p{
-    font-size: 1.5em;
+    font-size: 1.75rem;
+    font-weight: 400;
+    max-width: fit-content;
+    
 }
 
 .column-container {
@@ -116,11 +125,11 @@ h1{
 }
 
 .block{
-    height: 180px;
-    width: 250px;
-    padding: 20px;
+    height: 140px;
+    width: 270px;
+    padding: 6px;
     border: 1px solid #badc11;
-    margin:5px;
+    margin:2px;
     justify-content: center;
     align-items: center;   
 }
@@ -131,7 +140,7 @@ h1{
 }
 
 .block dd{
-    padding-left: 12px;
+    padding: 10px 0px 0px 12px;
     font-size: 1.5em;
     font-weight: lighter;
 }
