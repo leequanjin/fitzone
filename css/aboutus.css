@@ -9,49 +9,67 @@ main {
 
 /* introbackground image*/
 #intro{
+    padding-top: 50vh;
     min-height: 120vh;
     width: 100%;
-    display: flex;
     background: url("/CLimage/intro-background-img.jpg");
-    filter:brightness(0.9);
     background-repeat: no-repeat;
     background-size :cover;
     background-position:top;
 }
 
 .intro-content{
-    width: 80vh;
-    height: 55vh;
-    max-width: 50rem;
-    margin: 50vh 0vh 0vh 5vh;
+    padding: 40px 30px;
+    width: 100%;
+    background-color: #ffffff5c;
 }
 
 .intro-content h2{
-    font-size: 4rem ;
+    max-width: 39vw;
+    font-size: 3vw;
     text-transform: uppercase;
-    color:#ff0505;
+    letter-spacing: 2px;
+    color:#241D13;
 }
 
 .intro-content p{
-    font-size: 2rem;
-    font-weight:lighter;
-    line-height: 1.8;
+    max-width: 50rem;
+    font-size: 2.4rem;
+    line-height: 1.6;
     padding:1rem 0;
-    color: #fafbfc;
+    color: #241d13c6;
 }
 
 #getstarted {
+    width: 210px;
+    text-align: center;
+    margin-top: 30px;
+    background-color: #FFFFFF;
+    color: #241D13;
     font-size: 2rem;
-    font-weight: bold;
-    color: #2D3031;
-    padding: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 1.5rem 0;
     border-radius: 10px;
-    border: ridge #ff0505;
+    border: solid 1.5px #241D13;
 }
 
-#getstarted :hover{
-    font-size: 2.5rem;
-    color: #ff0505;
+#getstarted:hover {
+    transition: 0.3s;
+    background-color: #241D13;
+    color: #FFFFFF;
+}
+
+.intro-content a{
+
+    text-decoration: none;
+    color: #2D3031; 
+}
+
+.intro-content a:hover{
+
+    color: #FFF;
+    
 }
 
 h1{
@@ -60,31 +78,52 @@ h1{
     text-transform: uppercase;
     font-size: 4rem;
     margin: 5rem 0rem 2rem;
-} 
+}
+span{
+    color: goldenrod;
+}
+.about{
+    height: max-content;
+    width: 100%;
+    background-color: #EBE7DB;
+    border-radius: 20px;
+    display: block;
+    margin: auto 10% auto 0%;
+    text-align: center;
+
+
+}
 
 .row{
-    width: 90%;
+    width: 95%;
     height: auto;
-    margin: 0% 5%;
+    margin: 0% 3%;
 }
 
 .row img {
+    padding:18px 10px;
     float: left;
-    width: 40%;
+    width: 38%;
+    height:415px;
 }
 
-.aboutus-content, .column-container {
+.aboutus-content .column-container {
     width: 55%;
-    margin-left: 45%;
+    margin-left: 40%;
 }
 
 .aboutus-content h2{
-    font-size: 3em;  
-    line-height: 2;
+    font-size: 3rem;  
+    line-height: 1.75;
+    
 }
 
 .aboutus-content p{
-    font-size: 1.5em;
+    font-size: 1.75rem;
+    font-weight: 400;
+    max-width: fit-content;
+    color: #241d13c6;
+    
 }
 
 .column-container {
@@ -97,11 +136,11 @@ h1{
 }
 
 .block{
-    height: 180px;
-    width: 250px;
-    padding: 20px;
+    height: 140px;
+    width: 270px;
+    padding: 6px;
     border: 1px solid #badc11;
-    margin:5px;
+    margin:2px;
     justify-content: center;
     align-items: center;   
 }
@@ -112,9 +151,10 @@ h1{
 }
 
 .block dd{
-    padding-left: 12px;
+    padding: 10px 0px 0px 12px;
     font-size: 1.5em;
     font-weight: lighter;
+    color: #241d13c6;
 }
 
 #location {

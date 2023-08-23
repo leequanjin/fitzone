@@ -1,21 +1,19 @@
 main {
     background-color: #FFFFFF;
     height: 100%;
-    width: 94%;
+    width: 95%;
     margin: 3% 3% 0%;
     padding: 0.5%;
     position: relative;
 }
 
 .container{
-    /* margin: 0 40px; */
     max-width: 620px;
     display:flex;
     margin: 0 auto 10%;
     flex-direction: column;
     gap:15px;
-    /* position: relative;
-    left: 300px; */
+   
 }
 .container h1{
     position: relative;
@@ -24,17 +22,13 @@ main {
     font-size: 3em;
 
 }
-.container h2{
-    color:#333;
-    font-size: 2em;
-}
 
 .container .tab{
     position:relative;
     top: 50px;
-    background: #fff;
+    background-color: #fff;
     padding: 0 20px 20px;
-    box-shadow: 0 15px 25px rgba(0,0,0,0.05);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 5px;
     overflow: hidden;
     
@@ -62,6 +56,7 @@ main {
     transform:rotate(135deg);
 }
 .container .tab label h2{
+    font-size: 2em;
     position: relative;
     font-weight: 500;
     color:#333;
@@ -80,8 +75,14 @@ main {
     transition: 1s;
     overflow: hidden;
 }
+
+.container .tab .content p{
+    margin: 1.5%;
+}
+
 .container .tab input:checked ~ .content p{
-    color:#333;   
+    color:#333; 
+
 }
 .container .tab input:checked ~ .content{
     max-height: 120vh;
