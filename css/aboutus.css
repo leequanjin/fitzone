@@ -77,16 +77,15 @@ h1{
     color:#ccc;
     text-transform: uppercase;
     font-size: 4rem;
-    margin: 5rem 0rem 2rem;
+    padding: 10px 0px 10px 0px;
 }
 span{
     color: goldenrod;
 }
 .about{
-    height: max-content;
+    height: 520px;
     width: 100%;
-    background-color: #EBE7DB;
-    border-radius: 20px;
+    background-color: #000000;
     display: block;
     margin: auto 10% auto 0%;
     text-align: center;
@@ -115,14 +114,17 @@ span{
 .aboutus-content h2{
     font-size: 3rem;  
     line-height: 1.75;
+    color: #FFF;
     
 }
 
 .aboutus-content p{
     font-size: 1.75rem;
     font-weight: 400;
-    max-width: fit-content;
-    color: #241d13c6;
+    justify-content: center;
+    align-items: center;
+    
+    color: #f2f2f2;
     
 }
 
@@ -137,9 +139,9 @@ span{
 
 .block{
     height: 140px;
-    width: 270px;
+    width: 290px;
     padding: 6px;
-    border: 1px solid #badc11;
+    border: 1px solid #FFF;
     margin:2px;
     justify-content: center;
     align-items: center;   
@@ -148,13 +150,14 @@ span{
 .block dt{
     font-weight: bold;
     font-size: 2em;
+    color: #FFC371;
 }
 
 .block dd{
     padding: 10px 0px 0px 12px;
     font-size: 1.5em;
     font-weight: lighter;
-    color: #241d13c6;
+    color: #f2f2f2;
 }
 
 #imagemap_bg {
