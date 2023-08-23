@@ -161,10 +161,8 @@ span{
 }
 
 #map-nav {
-    position: absolute;
-    height: 10%;
+    height: 60px;
     width: 100%;
-    background-color: #000000;
 }
 
 #location {
@@ -242,7 +240,7 @@ span{
     color: #FFCA80;
 }
 
-#imagemap_bg {
+#imagemap-bg {
     width: fit-content;
     height: fit-content;
     border-radius: 20px;
@@ -252,8 +250,12 @@ span{
     padding: 2%;
 }
 
-#imagemap_bg img {
+#imagemap-bg img {
     width: 870px;
     height: 418px;
     border: 5px double #2D3031;
+}
+
+#imagemap-bg h2 {
+    text-align: right;
 }
