@@ -157,6 +157,13 @@ span{
     color: #241d13c6;
 }
 
+#map-nav {
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    background-color: #000000;
+}
+
 #location {
     width: 90%;
     height: auto;
