@@ -121,6 +121,7 @@ span{
 .aboutus-content p{
     font-size: 1.75rem;
     font-weight: 400;
+    display: flex;
     justify-content: center;
     align-items: center;
     
@@ -131,10 +132,13 @@ span{
 .column-container {
     margin-top: 2%;
     margin-bottom: 2%;
+   
 }
 
 .row-container{
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .block{
