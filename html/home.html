@@ -43,7 +43,7 @@
             padding-bottom: 10px;
         }
 
-        .video-link {
+        .video-link, .video-link2 {
             width: 50%;
             /*link will only occupy half of the screen*/
             margin: 0;
@@ -129,7 +129,7 @@
             background-color: rgba(255, 0, 0, .4);
             border-radius: 30px;
             position: absolute;
-            top: 30%;
+            top: 20%;
             left: 0;
             width: 55%;
             height: 55%;
@@ -138,8 +138,8 @@
             justify-content: center;
             align-items: center;
             margin-left: 25%;
-            opacity: 1;
-            transition: opacity 0.5s ease;
+            opacity: 0;
+            transition: opacity 1s ease;
             text-align: center;
         }
 
@@ -149,9 +149,10 @@
             font-weight: bolder;
         }
 
-        .video-container:hover .overlay5 {
+        .video-container2:hover .overlay5 {
             background-color: rgba(255, 0, 0, .7);
             opacity: 1;
+            transition: opacity 3s ease;
             /*on hover, cause the overlay to appear*/
         }
 
@@ -255,11 +256,11 @@
         }
 
         .comment-item {
-            height: 200px;
-            opacity: 0;
+            height: 250px;
+            /* opacity: 0; */
             position: absolute;
             transition: all 0.3 ease-in-out;
-            width: 330px;
+            width: 380px;
             z-index: 0;
             border-radius: 15px;
             background-size: contain;
@@ -267,8 +268,8 @@
 
         .comment-item-1 {
             right: 10%;
-            opacity: .4;
-            transform: translateX(-50%);
+            opacity: .0;
+            transform: translateX(-70%);
         }
 
         .comment-item-2 {
@@ -277,6 +278,7 @@
             opacity: 0.8;
             width: 380px;
             z-index: 1;
+            transform: translateX(-75%);
         }
 
         .comment-item-3 {
@@ -285,7 +287,7 @@
             opacity: 1;
             left: 50%;
             transform: translateX(-50%);
-            width: 430px;
+            width: 562px;
             z-index: 2;
         }
 
@@ -295,12 +297,13 @@
             opacity: 0.8;
             width: 380px;
             z-index: 1;
+            transform: translateX(+78%);
         }
 
         .comment-item-5 {
             left: 100%;
-            opacity: .4;
-            transform: translateX(+50%)
+            opacity: .0;
+            transform: translateX(+70%)
         }
     </style>
 </head>
@@ -340,9 +343,9 @@
         </a>
     </header>
 
-    <a href="/html/lessons/membership.html" class="video-link">
+    <a href="/html/lessons/membership.html" class="video-link2">
         <div class="video-container2">
-            <video src="../TrialVideo.mp4" loop muted></video>
+            <video src="../TrialVideo.mp4" loop muted autoplay></video>
             <div class="overlay5">
                 <p>Start Free Trial Now</p>
             </div>
@@ -420,18 +423,18 @@
 
             <div class="reviews">
                 <div class="comment-section">
-                    <img class="comment-item comment-item-1" src="/images/banner 1.png" data-index="1">
-                    <img class="comment-item comment-item-2" src="/images/banner 2.png" data-index="2">
-                    <img class="comment-item comment-item-3" src="/images/banner3.jpg" data-index="3">
-                    <img class="comment-item comment-item-4" src="/images/banner 4.jpg" data-index="4">
-                    <img class="comment-item comment-item-5" src="/images/banner 5.jpg" data-index="5">
+                    <img class="comment-item comment-item-1" src="/images/Evacomment.jpg" data-index="1">
+                    <img class="comment-item comment-item-2" src="/images/Jasoncomment.jpg" data-index="2">
+                    <img class="comment-item comment-item-3" src="/images/Jeffreycomment.jpg" data-index="3">
+                    <img class="comment-item comment-item-4" src="/images/Koocomment.jpg" data-index="4">
+                    <img class="comment-item comment-item-5" src="/images/Xeniacomment.jpg" data-index="5">
                 </div>
             </div>
 
-            <!-- handles the functionality of playing and pausing the video when mouse enters or leave -->
             <script>
-                var links = document.querySelectorAll('.video-link, .video-link2'); //selects all the elements within the class ('.video-link')
-
+                <!-- handles the functionality of playing and pausing the video when mouse enters or leave -->
+                var links = document.querySelectorAll('.video-link'); //selects all the elements within the class ('.video-link')
+                //, .video-link2 paste this if want start trial video to stop playing when mouse is not over it.
                 links.forEach(function (link) { // allows you to perform actions on each individual element.
                     link.addEventListener('mouseenter', function () {
                         //adds a callback function that receives the current element as a parameter and executes the code within
@@ -491,7 +494,7 @@
 
                     //Load images into array
                     const imageUrls = [
-                        "/images/banner 1.png", "/images/banner 2.png", "/images/banner3.jpg", "/images/banner 4.jpg", "/images/banner 5.jpg",
+                        "/images/Evacomment.jpg", "/images/Jasoncomment.jpg", "/images/Jeffreycomment.jpg", "/images/Koocomment.jpg", "/images/Xeniacomment.jpg",
                     ];
 
                     const updateImage = () => {
