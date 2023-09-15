@@ -33,7 +33,7 @@ main {
 }
 
 .content {
-    width: 600px;
+    width: 700px;
 }
 
 .content-view {
@@ -120,6 +120,7 @@ main {
 /* profile and security page css */
 .content-view .table {
     margin-top: 10px;
+    padding-right: 80px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
