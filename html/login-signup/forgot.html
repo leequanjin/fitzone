@@ -24,16 +24,14 @@
                 <h1>Forgot Password</h1>
                 <h2>Enter your email address and we will send you <br> a link to reset your password.</h2>
 
-                <form action="#">
+                <form action="javascript:delay('/html/login-signup/login-signup.html')" method="post">
                     <div class="field">
                         <input type="email" placeholder="Email" class="input">
                     </div>
 
                     <div class="field">
-                        <a href="javascript:delay('/html/login-signup/login-signup.html')"
-                            id="open-login-modal">Continue</a>
+                        <input id="open-login-modal" class="login-signup-btn" onclick="window.location.href = delay()" type="submit" value="Continue" />
                     </div>
-
                 </form>
             </div>
         </div>

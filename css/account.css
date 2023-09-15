@@ -1,4 +1,4 @@
-.color-template {
+input.color-template {
     color: #2D3031;
     color: #6C757D;
     color: #D6DADB;
@@ -33,11 +33,11 @@ main {
 }
 
 .content {
-    width: 70%;
-    min-width: 400px;
+    width: 600px;
 }
 
 .content-view {
+    width: 100%;
     padding: 40px;
 }
 
@@ -120,18 +120,17 @@ main {
 /* profile and security page css */
 .content-view .table {
     margin-top: 10px;
-    display: flex;
-}
-
-.content-view .table {
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
 }
 
 .content-view .table .row {
+    width: 100%;
     display: flex;
     margin-top: 20px;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
 }
 
 .content-view .table .row .col {
@@ -147,7 +146,7 @@ main {
     margin-top: 5px;
     padding: 10px 15px;
     width: 100%;
-    max-width: 280px;
+    max-width: 230px;
     border: 1px solid #D6DADB;
     border-radius: 4px;
     outline: none;
@@ -176,7 +175,7 @@ main {
 }
 
 /* buttons  */
-.buttons button {
+.buttons input {
     cursor: pointer;
     margin: 30px 20px 0 0;
     padding: 12px;
@@ -187,29 +186,29 @@ main {
     font-weight: 600;
 }
 
-.buttons button.update {
+.buttons input.update {
     background: #FFC371;
     color: #FFFFFF;
     border: none;
 }
 
-.buttons button.update:hover {
+.buttons input.update:hover {
     background: #FFCA80;
     transition: 0.3s;
 }
 
-.buttons button.cancel,
+.buttons input.cancel,
 .add {
     background: #FFFFFF;
     color: #2D3031;
     border: 1px solid #D6DADB;
 }
 
-.buttons button.cancel a {
+.buttons input.cancel a {
     color: #2D3031;
 }
 
-.buttons button.cancel:hover,
+.buttons input.cancel:hover,
 .add:hover {
     background: #EBE7DB;
     transition: 0.3s;
