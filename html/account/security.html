@@ -51,7 +51,7 @@
             <i class="fa-solid fa-circle-user"></i>
         </a>
     </header>
-    
+
     <main>
         <div class="container">
             <div class="menu">
@@ -72,63 +72,66 @@
                     </ul>
                 </div>
             </div>
-            <div class="content">
-                <div class="content-view">
-                    <h1>Reset Password</h1>
-                    <div class="table">
-                        <div class="row">
-                            <div class="col">
-                                <h3>Old Password</h3>
-                                <input type="text">
+            <form action="#" method="post" onsubmit="return false;">
+                <div class="content">
+                    <div class="content-view">
+                        <h1>Reset Password</h1>
+                        <div class="table">
+                            <div class="row">
+                                <div class="col">
+                                    <h3>Old Password</h3>
+                                    <input type="text" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <h3>New Password</h3>
+                                    <input type="text" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <h3>Confirm Password</h3>
+                                    <input type="password" required>
+                                </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col">
-                                <h3>New Password</h3>
-                                <input type="text">
-                            </div>
+                        <div class="checkbox">
+                            <input class="box" type="checkbox" value="enable" name="enable" />
+                            <label for="enable">Enable Two-Factor Authentication</label>
                         </div>
-                        <div class="row">
-                            <div class="col">
-                                <h3>Confirm Password</h3>
-                                <input type="text">
-                            </div>
+                        <div class="buttons">
+                            <input type="button" class="update" id="open-modal2" value="Update">
+                            <input type="reset" class="cancel" value="Cancel">
                         </div>
                     </div>
-                    <div class="checkbox">
-                        <input class="box" type="checkbox" value="enable" name="enable" />
-                        <label for="enable">Enable Two-Factor Authentication</label>
-                    </div>
-                    <div class="buttons">
-                        <button class="update" id="open-modal2">Update</button>
-                        <a href="/html/account/security.html"><button class="cancel">Cancel</button></a>
+                </div>
+                <!-- logout confirmation modal -->
+                <div class="modal" id="modal">
+                    <div class="modal-content">
+                        <h2>Logging Out</h2>
+                        <div class="line"></div>
+                        <h3>Are you sure you want to log out?</h3>
+                        <div class="buttons">
+                            <a href="/html/login-signup/login-signup.html"><input type="button" class="update"
+                                    value="Log Out"></a>
+                            <input type="button" class="cancel" id="close-modal" value="Close">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- logout confirmation modal -->
-            <div class="modal" id="modal">
-                <div class="modal-content">
-                    <h2>Logging Out</h2>
-                    <div class="line"></div>
-                    <h3>Are you sure you want to log out?</h3>
-                    <div class="buttons">
-                        <a href="/html/login-signup/login-signup.html"><button class="update">Log Out</button></a>
-                        <button class="cancel" id="close-modal">Close</button>
+                <!-- update confirmation modal -->
+                <div class="modal2" id="modal2">
+                    <div class="modal-content">
+                        <h2>Update Information</h2>
+                        <div class="line"></div>
+                        <h3>Are you sure you want to save changes?</h3>
+                        <div class="buttons">
+                            <input type="submit" class="update" id="close-modal2" value="Save">
+                            <input type="button" class="cancel" id="close-modal3" value="Close">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- update confirmation modal -->
-            <div class="modal2" id="modal2">
-                <div class="modal-content">
-                    <h2>Update Information</h2>
-                    <div class="line"></div>
-                    <h3>Are you sure you want to save changes?</h3>
-                    <div class="buttons">
-                        <a href="/html/account/security.html"><button class="update">Save</button></a>
-                        <button class="cancel" id="close-modal2">Close</button>
-                    </div>
-                </div>
-            </div>
+            </form>
         </div>
     </main>
     <footer>
