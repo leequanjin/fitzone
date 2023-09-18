@@ -5,7 +5,7 @@ var closeModal = document.getElementById("close-modal");
 var modal2 = document.getElementById("modal2");
 var openModal2 = document.getElementById("open-modal2");
 var closeModal2 = document.getElementById("close-modal2");
-
+var closeModal3 = document.getElementById("close-modal3");
 console.log(modal, openModal, modal2, openModal2, closeModal)
 
 // show modal
@@ -32,6 +32,11 @@ openModal2.onclick = function () {
 
 // close modal2
 closeModal2.onclick = function () {
+  modal2.style.display = "none";
+}
+
+// close modal2
+closeModal3.onclick = function () {
   modal2.style.display = "none";
 }
 
