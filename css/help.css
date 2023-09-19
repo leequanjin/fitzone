@@ -1,37 +1,42 @@
 main {
     background-color: #FFFFFF;
-    height: 100%;
     width: 95%;
     margin: 3% 3% 0%;
     padding: 0.5%;
     position: relative;
 }
 
+section#faq{
+    min-height: 120vh;
+    max-height: 200vh;
+    background-image: url("/images/faqbckgrd.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 200px;
+}
+
 .container{
+    height: 100%;
     max-width: 620px;
-    display:flex;
-    margin: 0 auto 10%;
+    margin: 0 auto;
     flex-direction: column;
-    gap:15px;
+    overflow: hidden;
    
 }
 .container h1{
-    position: relative;
-    left:130px;
-    top: 20px;
+    padding: 20px;
+    text-align: center;
     font-size: 3em;
-
 }
 
 .container .tab{
-    position:relative;
-    top: 50px;
+    margin-bottom:15px;
     background-color: #fff;
     padding: 0 20px 20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 5px;
-    overflow: hidden;
-    
 }
 .container .tab input{
     appearance: none;
@@ -77,7 +82,7 @@ main {
 }
 
 .container .tab .content p{
-    margin: 1.5%;
+    margin: 10px;
 }
 
 .container .tab input:checked ~ .content p{
@@ -92,5 +97,8 @@ main {
     font-size: 1.5em;
 }
 
+.tab {
+    position: relative;
+}
 
 

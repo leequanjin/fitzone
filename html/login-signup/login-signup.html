@@ -24,13 +24,13 @@
             <div class="form-content">
                 <h1>Login</h1>
 
-                <form action="#">
+                <form action="javascript:delay('/html/home.html')" method="post">
                     <div class="field">
-                        <input type="email" placeholder="Email" class="input">
+                        <input type="email" name="cEmail" placeholder="Email/UserID" class="input">
                     </div>
 
                     <div class="field">
-                        <input type="password" placeholder="Password" class="password">
+                        <input type="password" name="cPassword" placeholder="Password" class="password">
                         <i class="fa-solid fa-eye-slash eye-icon"></i>
                     </div>
 
@@ -39,7 +39,7 @@
                     </div>
                     
                     <div class="field">
-                        <a href="javascript:delay('/html/home.html')" id="open-login-modal">Login</a>
+                        <input id="open-login-modal" class="login-signup-btn" onclick="window.location.href = delay()" type="submit" value="Login"/>
                     </div>
 
                     <div class="form-link">
@@ -73,9 +73,9 @@
             <div class="form-content">
                 <h1>Sign up</h1>
 
-                <form action="#">
+                <form action="javascript:delay('/html/home.html')" method="post">
                     <div class="field">
-                        <input type="email" placeholder="Email" class="input">
+                        <input type="email" placeholder="Email/UserID" class="input">
                     </div>
 
                     <div class="field">
@@ -88,7 +88,7 @@
                     </div>
 
                     <div class="field">
-                        <a href="javascript:delay('/html/home.html')" id="open-sign-up-modal">Sign up</a>
+                        <input id="open-sign-up-modal" class="login-signup-btn" onclick="window.location.href = delay()" type="submit" value="Sign up"/>
                     </div>
 
                     <div class="form-link">
