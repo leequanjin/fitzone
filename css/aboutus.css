@@ -165,16 +165,12 @@ span{
 }
 
 
-    
-    
-
 #location {
-    width: 99.9%%;
+    width: 99.9%;
     height: auto;
     display: flex;
-    background-color: grey;
 }
-#location h1{}
+
 
 #map {
     display: flex;
@@ -245,7 +241,10 @@ span{
 }
 
 #pricisemap{
-    background-color: gray;
+    background-image:  url('/images/locationbckgrd.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3%;
 }
 #imagemap-bg {
     width: fit-content;
@@ -269,6 +268,4 @@ span{
     
 }
 
-.hotspot area:hover{
-    color: #FFCA80;
-}
+
