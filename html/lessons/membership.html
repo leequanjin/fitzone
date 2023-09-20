@@ -21,7 +21,7 @@
 
         #beginner {
             width: 33.33%;
-            height: 35vw;
+            height: 39vw;
             margin-left: 2%;
             margin-right: 2%;
             border-radius: 10px;
@@ -29,6 +29,7 @@
                     rgb(128, 128, 128, 0.9), rgb(128, 128, 128, 0.4), rgb(128, 128, 128, 0.9));
             background-size: 200% 200%;
             animation: reverseshimmer 8s infinite linear;
+            overflow: auto;
         }
 
         #beginner:hover {
@@ -49,13 +50,14 @@
 
         #group {
             width: 33.33%;
-            height: 35vw;
+            height: 39vw;
             margin-left: 2%;
             margin-right: 2%;
             border-radius: 10px;
             background-image: linear-gradient(to right, rgb(0, 139, 139, 0.8), rgb(95, 158, 160, 0.5), rgb(0, 139, 139, 0.8));
             background-size: 200% 200%;
             animation: shimmer 6s infinite linear;
+            overflow: auto;
         }
 
         #group:hover {
@@ -64,7 +66,7 @@
 
         #premium {
             width: 33.33%;
-            height: 35vw;
+            height: 39vw;
             margin-left: 2%;
             margin-right: 2%;
             border-radius: 10px;
@@ -72,6 +74,7 @@
                     rgb(255, 215, 0, 0.9), rgb(220, 220, 36, 0.5), rgb(255, 215, 0, 0.9));
             background-size: 200% 200%;
             animation: shimmer 4s infinite linear;
+            overflow: auto;
         }
 
         #premium:hover {
@@ -108,6 +111,7 @@
         }
 
         .price h1{
+            padding-top: 3vh;
             text-align: center;
             font-size: 3vh;
         }
@@ -119,10 +123,15 @@
         .price p{
             font-size: 2.5vh;
             text-align: center;
-            padding-bottom: .5em;
+            padding-bottom: 5vh;
+            border-bottom: 1px solid black ;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .plandetails li{
+            font-size: 3vh;
             text-align: center;
             margin-left: 5%;
             margin-right: 5%;
@@ -131,6 +140,14 @@
             padding-bottom: .9em;
         }
 
+        .note{
+            vertical-align: bottom;
+        }
+        .note p{
+            font-size: 2vh;
+            text-align: end;
+            color: rgb(207, 38, 38);
+        }
 
         .explaination {
             display: flex;
@@ -319,8 +336,10 @@
                 </div>
                 <ul class="plandetails">
                     <li>Access to all classes Mon-Fri</li>
+                    <li>Access to all gym equipments</li>
+                    <li>Access to cafeteria</li>
                     <li>Free T-shirt</li>
-                    <li></li>
+                    <li>Locker provided</li>
                 </ul>
             </div>
             <div id="group">
@@ -331,8 +350,10 @@
                 </div>
                 <ul class="plandetails">
                     <li>Access to all classes Mon-Fri</li>
-                    <li>Free T-shirt</li>
-                    <li>All member goes to the same </li>
+                    <li>Access to all gym equipments</li>
+                    <li>Free T-shirts</li>
+                    <li>Lockers provided</li>
+                    <li>Share the same program together in a group</li>
                 </ul>
                 <div class="note">
                     <p>This plan is only applicable to a pax of 5.</p>
@@ -348,7 +369,7 @@
                     <li>24/7 Gym Access</li>
                     <li>Custom strength and conditioning program</li>
                     <li>Free consulation on diet plan</li>
-                    <li>AND ALL BENEFITS FROM PREVIOUS PLANS</li>
+                    <li>Receive all benefits Beginner PLANS</li>
                 </ul>
             </div>
         </div>
@@ -360,31 +381,31 @@
             <div id="username">
                 <p>Enter Username</p>
                 <input type="name" required placeholder="e.g. John Doe" class="input" pattern="^[A-Za-z\s'-]+$">
-                <p class="error-message">Please fill in your name.</p>
+                <p class="error-message">Please fill in correct name.</p>
             </div>
             <div id="email">
                 <p>Enter E-mail</p>
                 <input type="email" required placeholder="e.g. johndoe123@gmail.com" class="input" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
-                <p class="error-message">Please fill in your e-mail.</p>
+                <p class="error-message">Please fill in correct e-mail.</p>
             </div>
             <div id="contact">
                 <p>Enter Phone Number</p>
                 <input type="tel" required placeholder="6012 345 6789" class="input" pattern="^(?:\d{10}|\d{3}[-\s]\d{3}[-\s]\d{4}|\(\d{3}\)[-\s]\d{3}[-\s]\d{4})$">
-                <p class="error-message">Please fill in you contact number.</p>
+                <p class="error-message">Please fill in correct contact number.</p>
             </div>
             <div id="package">
                 <p>Choose Your Package</p>
                 <select class="input">
-                    <option value="basic">Basic Package</option>
-                    <option value="family">Family Package</option>
-                    <option value="premium">Premium Package</option>
+                    <option value="basic">Beginner Plan</option>
+                    <option value="family">Group Plan</option>
+                    <option value="premium">Premium Plan</option>
                 </select>
             </div>
             <div id="location">
                 <p>Choose Location of Gym</p>
                 <select class="input">
-                    <option value="location1">Location 1</option>
-                    <option value="location2">Location 2</option>
+                    <option value="location1">Wangsa Maju</option>
+                    <option value="location2">Sunway Pyramid (Coming Soon)</option>
                 </select>
             </div>
             <div id="pax">
