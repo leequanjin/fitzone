@@ -189,15 +189,11 @@
             font-size: 20px;
             grid-column: span 2; 
             margin-left: 22%; 
-            margin-right: 32%; 
+            margin-right: 22%; 
             margin-top: 2%;
             padding: unset; 
             background-color: unset;
             /* color: red; */
-        }
-
-        #terms p{
-            float: right;
         }
 
         #terms input{
@@ -363,7 +359,7 @@
         <div class="form">
             <div id="username">
                 <p>Enter Username</p>
-                <input type="name" required placeholder="e.g. John Doe" class="input">
+                <input type="name" required placeholder="e.g. John Doe" class="input" pattern="^[A-Za-z\s'-]+$">
                 <p class="error-message">Please fill in your name.</p>
             </div>
             <div id="email">
@@ -373,7 +369,7 @@
             </div>
             <div id="contact">
                 <p>Enter Phone Number</p>
-                <input type="tel" required placeholder="6012 345 6789" class="input">
+                <input type="tel" required placeholder="6012 345 6789" class="input" pattern="^(?:\d{10}|\d{3}[-\s]\d{3}[-\s]\d{4}|\(\d{3}\)[-\s]\d{3}[-\s]\d{4})$">
                 <p class="error-message">Please fill in you contact number.</p>
             </div>
             <div id="package">
@@ -397,8 +393,7 @@
                 <p class="error-message">Please fill up number of people.</p>
             </div>
             <div id="terms">
-                <input type="checkbox" required id="agreementcheck">
-                <p>Agree to terms and conditions</p>
+                <input type="checkbox" required id="agreementcheck">Agree to terms and conditions
             </div>
             <p class="error-message2" style="text-align: center;">Please accept the terms and condition to proceed.</p>
             <button id="submit" onclick="validateForm()">
@@ -418,25 +413,72 @@
             }
         }
 
+        // Check form
         function validateForm() {
             var requiredInputs = document.querySelectorAll('.input[required]');
             var checkBox = document.getElementById('agreementcheck');
             var errorMessages = document.querySelectorAll('.error-message');
             var errorMessages2 = document.querySelectorAll('.error-message2');
             var isValid = true;
-
+            
+            // Check if any input is empty
             for (var i = 0; i < requiredInputs.length; i++) {
                 if (requiredInputs[i].value.trim() === '') {
                     isValid = false;
                     errorMessages[i].style.display = 'block'; // Show the corresponding error message
-                    
-                }else if(checkBox.checked == false){
-                    errorMessages2[i].style.display = 'block'; // Show the corresponding error message
-                    isValid = false;
                 } else {
                     errorMessages[i].style.display = 'none'; // Hide the error message if input is valid
                 }
             }
+
+            // Check the email input separately
+            var emailInput = document.querySelector('input[type="email"]');
+            var emailErrorMessage = document.querySelector('#email .error-message');
+            if (emailInput) {
+                var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                if (!emailPattern.test(emailInput.value.trim())) {
+                    isValid = false;
+                    emailErrorMessage.style.display = 'block'; // Show the email error message
+                } else {
+                    emailErrorMessage.style.display = 'none'; // Hide the email error message if input is valid
+                }
+            }
+
+            // Check the name input separately
+            var nameInput = document.querySelector('input[type="name"]');
+            var nameErrorMessage = document.querySelector('#username .error-message');
+            if (nameInput) {
+                var namePattern = /^[A-Za-z\s'-]+$/;
+                if (!namePattern.test(nameInput.value.trim())) {
+                    isValid = false;
+                    nameErrorMessage.style.display = 'block'; // Show the email error message
+                } else {
+                    nameErrorMessage.style.display = 'none'; // Hide the email error message if input is valid
+                }
+            }
+
+            // Check the contact input separately
+            var phoneInput = document.querySelector('input[type="tel"]');
+            var phoneErrorMessage = document.querySelector('#contact .error-message');
+            if (phoneInput) {
+                var phonePattern = /^(?:\d{10}|\d{3}[-\s]\d{3}[-\s]\d{4}|\(\d{3}\)[-\s]\d{3}[-\s]\d{4})$/;
+                if (!phonePattern.test(phoneInput.value.trim())) {
+                    isValid = false;
+                    phoneErrorMessage.style.display = 'block'; // Show the email error message
+                } else {
+                    phoneErrorMessage.style.display = 'none'; // Hide the email error message if input is valid
+                }
+            }
+
+            // Check if the checkbox is checked
+            if (!checkBox.checked) {
+                errorMessages2[0].style.display = 'block'; // Show the "terms and conditions" error message
+                isValid = false;
+            } else {
+                errorMessages2[0].style.display = 'none'; // Hide the "terms and conditions" error message
+            }
+            
+            // Display thank you after successful form submission
             if (isValid) {
                 document.getElementById('Thanks').style.display = 'block'; // Show the "thanks" overlay
                 resetFormFields();
@@ -445,7 +487,7 @@
                 }, 2000);
             }
 
-            return isValid; // Allow form submission only if isValid is true
+                return isValid; // Allow form submission only if isValid is true
         }
     </script>
     <footer>
