@@ -1,3 +1,7 @@
+html{
+    scroll-padding-top: 12rem;
+}
+
 /* To make the white background for content */
 main {
     background-color: #FFFFFF;

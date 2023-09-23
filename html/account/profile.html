@@ -80,25 +80,29 @@
                             <div class="row">
                                 <div class="col">
                                     <h3>Last Name</h3>
-                                    <input type="text" value="Smith" pattern="[a-z A-Z]+"
-                                        oninvalid="setCustomValidity('Please enter alphabets only. ')">
+                                    <input type="text" value="Smith" pattern="[a-z A-Z]+" required
+                                        oninvalid="setCustomValidity('Please enter alphabets and spaces only.')"
+                                        oninput="setCustomValidity('')">
                                 </div>
                                 <div class="col">
                                     <h3>First Name</h3>
-                                    <input type="text" value="John" pattern="[a-z A-Z]+"
-                                        oninvalid="setCustomValidity('Please enter alphabets only. ')">
+                                    <input type="text" value="John" pattern="[a-z A-Z]+" required
+                                        oninvalid="setCustomValidity('Please enter alphabets and spaces only.')"
+                                        oninput="setCustomValidity('')">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col">
                                     <h3>Email</h3>
-                                    <input type="email" value="JohnSmith@gmail.com"
-                                        oninvalid="setCustomValidity('Please enter a valid email. ')">
+                                    <input type="email" value="JohnSmith@gmail.com" required
+                                        oninvalid="setCustomValidity('Please enter a valid email.')"
+                                        oninput="setCustomValidity('')">
                                 </div>
                                 <div class="col">
                                     <h3>Phone Number</h3>
-                                    <input type="tel" value="012-548-9531" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                                        oninvalid="setCustomValidity('Please follow the format XXX-XXX-XXXX. ')">
+                                    <input type="tel" value="012-548-9531" pattern="[0-9]{3}-?[0-9]{3,4}-?[0-9]{4}" required
+                                        oninvalid="setCustomValidity('Please enter a valid 10 or 11-digit phone number.')"
+                                        oninput="setCustomValidity('')">
                                 </div>
                             </div>
                         </div>

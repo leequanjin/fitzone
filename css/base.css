@@ -41,6 +41,7 @@ a {
 html {
     height: 100%;
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 /* scrollbar */
@@ -179,4 +180,13 @@ footer ul li a:hover {
 footer p {
     font-size: 1rem;
     letter-spacing: 1px;
+}
+
+@keyframes fade {
+       0%{
+        opacity: 0;
+       } 
+       100%{
+        opacity: 1;
+       }
 }

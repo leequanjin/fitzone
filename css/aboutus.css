@@ -16,6 +16,7 @@ main {
     background-repeat: no-repeat;
     background-size :cover;
     background-position:top;
+    animation: fade 1s ease-in;
 }
 
 .intro-content{
