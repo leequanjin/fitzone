@@ -1,8 +1,59 @@
-main {
-    background-color: #FFFFFF;
+.formbg {
+    background-color: #FFC371;
+    width: 90%;
+    height: fit-content;
+    margin: 3% auto;
     display: block;
-    height: 100%;
-    width: 94%;
-    margin: 3% 3% 0%;
-    padding: 0.5%;
+    padding: 2%;
+}
+
+.backArrow {
+    width: 35%;
+    height: fit-content;
+    padding: 2%;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+}
+
+h1 {
+    font-size: 5vw;
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.inputForm {
+    background-color: #F2F2F2;
+    width: 60%;
+    height: fit-content;
+    padding: 2%;
+    display: inline-block;
+    font-size: 20px;
+}
+
+label {
+    display: block;
+    float: left;
+    clear: left;
+    margin: 15px 0px;
+    width: 40%;
+ }
+ 
+input, select, textarea {
+    display: block;
+    float: left;
+    margin: 20px 0px;
+    width: 55%;
+    height: 25px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+textarea{
+    height: 100px;
+}
+
+.buyerBtn {
+    display: block;
 }
