@@ -1,8 +1,8 @@
-main {
+.formbg {
     background-color: #FFFFFF;
+    width: 90%;
+    height: auto;
+    margin: 3% auto 0;
     display: block;
-    height: 100%;
-    width: 94%;
-    margin: 3% 3% 0%;
-    padding: 0.5%;
+    padding: 2%;
 }
