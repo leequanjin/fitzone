@@ -1,8 +1,32 @@
 .formbg {
-    background-color: #FFFFFF;
+    background-color: #FFC371;
     width: 90%;
-    height: auto;
-    margin: 3% auto 0;
+    height: fit-content;
+    margin: 3% auto 0%;
     display: block;
     padding: 2%;
+}
+
+.backArrow {
+    width: 35%;
+    height: fit-content;
+    padding: 2%;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+}
+
+h1 {
+    font-size: 5vw;
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.inputForm {
+    background-color: #F2F2F2;
+    width: 60%;
+    height: fit-content;
+    padding: 2%;
+    display: inline-block;
 }
