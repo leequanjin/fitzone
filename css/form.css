@@ -29,4 +29,31 @@ h1 {
     height: fit-content;
     padding: 2%;
     display: inline-block;
+    font-size: 20px;
+}
+
+label {
+    display: block;
+    float: left;
+    clear: left;
+    margin: 15px 0px;
+    width: 40%;
+ }
+ 
+input, select, textarea {
+    display: block;
+    float: left;
+    margin: 20px 0px;
+    width: 55%;
+    height: 25px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+textarea{
+    height: 100px;
+}
+
+.buyerBtn {
+    display: block;
 }
