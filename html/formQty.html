@@ -67,17 +67,17 @@
                 <form>
                     <div class="buyerName">
                         <label for="nameBox">Name* </label>
-                        <input type="text" id="nameBox" name="Name" required/>
+                        <input type="text" id="nameBox" name="Name" placeholder="John Smith" required/>
                     </div>
         
                     <div class="buyerNo">
                         <label for="phoneBox">Phone Number* </label>
-                        <input type="tel" id="phoneBox" name="phoneNumber" placeholder="+60 00 0000 000" required/>
+                        <input type="tel" id="phoneBox" name="phoneNumber" placeholder="0123456789" pattern="[0-9]{3}-?[0-9]{3,4}-?[0-9]{4}" required/>
                     </div>
         
                     <div class="buyerEmail">
                         <label for="mailBox">E-mail* </label>
-                        <input type="email" id="mailBox" name="email" required/>
+                        <input type="email" id="mailBox" name="email" placeholder="abc@example.com"required/>
                     </div>
         
                     <div class="buyerAddress">
@@ -92,12 +92,91 @@
         
                     <div class="buyerBtn">
                         <input type="reset" value="Cancel Order">
-                        <input type="submit" value="Place Your Order">
+                        <input type="submit" value="Place Your Order" onclick="confirmSubmit()">
                     </div>
             </form>
+
+            <div id="submitTxt">
+            </div>
+
             </section>
         </div>   
     </main>
+
+    <script>
+        function confirmSubmit() {
+            var requiredInputs = document.querySelectorAll('input[required]');
+            var valid = true;
+            var txt;
+
+            // Check if any input is empty
+            for (var i = 0; i < requiredInputs.length; i++) {
+                if (requiredInputs[i].value.trim() === '') {
+                    txt = "Cannot leave blank!"
+                    valid = false;
+                    break;
+                }
+                else {
+                    // Check the phone number is valid
+                    var phoneInput = document.querySelector('input[type="tel"]');
+                    var phonePattern = /^([0-9]{3}-?[0-9]{3,4}-?[0-9]{4})$/;
+                    
+                    if (phoneInput) {
+                        if (!phonePattern.test(phoneInput.value.trim())) {
+                            txt = "Phone number Invalid!"
+                            valid = false;
+                            break;
+                        } 
+                        else{
+                            var emailInput = document.querySelector('input[type="email"]');
+                            var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                            if (emailInput){
+                                // Check the email is valid
+                                if (!emailPattern.test(emailInput.value.trim())){
+                                    txt = "Invalid E-mail!"
+                                    valid = false;
+                                    break;
+                                }
+                                else{
+                                    valid = true;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            const bName = document.getElementById("nameBox");
+            const bPhone = document.getElementById("phoneBox");
+            const bMail = document.getElementById("mailBox");
+            const bAddr = document.getElementById("addrBox");
+            const bQty = document.getElementById("quantityBox");
+
+            if (valid){
+                if (confirm("Are you sure to order?")) {
+                    txt = "Order successfully!";
+                    bName.value = "";
+                    bPhone.value = "";
+                    bMail.value = "";
+                    bAddr.value = "";
+                    bQty.value = "";
+                    event.preventDefault();
+                } else {
+                    txt = "Order Cancel!";
+                    bName.value = "";
+                    bPhone.value = "";
+                    bMail.value = "";
+                    bAddr.value = "";
+                    bQty.value = "";
+                    event.preventDefault();
+                }
+            }
+
+            
+            // Prompt error message and order success message and also cancel message
+            document.getElementById("submitTxt").innerHTML = txt;
+        }
+    </script>
 
     <footer>
         <ul>
