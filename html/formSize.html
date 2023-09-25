@@ -59,7 +59,8 @@
                 </div>
                 <div class="backTxt">
                     <h1>Order Now</h1>
-                    <h2>Item with * is required to be fill in.</h2></div>
+                    <h2>Item with * is required to be fill in.</h2>
+                </div>
             </section>
     
             <section class="inputForm">
@@ -71,7 +72,7 @@
         
                     <div class="buyerNo">
                         <label for="phoneBox">Phone Number* </label>
-                        <input type="tel" id="phoneBox" name="phoneNumber" placeholder="+60 00 0000 000" required/>
+                        <input type="tel" id="phoneBox" name="phoneNumber" placeholder="+60 00 0000 000" pattern="[0-9]{3}-?[0-9]{3,4}-?[0-9]{4}" required/>
                     </div>
         
                     <div class="buyerEmail">

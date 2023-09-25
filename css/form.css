@@ -96,14 +96,12 @@ input:focus, select:focus, textarea:focus {
     background-color: #EBE7DB;
 } 
 
-.buyerName:focus:valid, .buyerNo:focus:valid, .buyerEmail:focus:valid, .buyerAddress:focus:valid, .buyerSize:focus:valid, .buyerQty:focus:valid {
-    /* background: green url(../images/formValid.jpeg) right/contain no-repeat; */
-    background-color: green;
+#nameBox:focus:valid, #phoneBox:focus:valid, #mailBox:focus:valid, #addrBox:focus:valid {
+    background-color: #DFFF9E;
 }
 
-.buyerName:focus:invalid, .buyerNo:focus:invalid, .buyerEmail:focus:invalid, .buyerAddress:focus:invalid, .buyerSize:focus:invalid, .buyerQty:focus:invalid {
-    /* background: #DC8D7C url(../images/formInvalid.jpeg) right/contain no-repeat; */
-    background-color: red;
+#nameBox:focus:Invalid, #phoneBox:focus:Invalid, #mailBox:focus:Invalid, #addrBox:focus:Invalid {
+    background-color: #FAB4A4;
 }
 
 .buyerBtn input {
@@ -113,7 +111,7 @@ input:focus, select:focus, textarea:focus {
     margin: 5% 0% 3% 13%;
     font-size: 1.6vw;
     font-weight: bold;
-    background-color: #FFD35C;
+    background-color: #FFDA1A;
     color: #2D3031;
     border: 0;
 }

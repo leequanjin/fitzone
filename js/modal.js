@@ -35,7 +35,7 @@ closeModal2.onclick = function () {
   modal2.style.display = "none";
 }
 
-// close modal2
+// close modal3
 closeModal3.onclick = function () {
   modal2.style.display = "none";
 }
