@@ -74,6 +74,18 @@ textarea{
     height: 150px;
 }
 
+input:focus, select:focus, textarea:focus {
+    background-color: #EBE7DB;
+} 
+
+.buyerName:focus:valid, .buyerNo:focus:valid, .buyerEmail:focus:valid, .buyerAddress:focus:valid, .buyerSize:focus:valid, .buyerQty:focus:valid {
+    background: green url(../images/formValid.jpeg) right/contain no-repeat;
+}
+
+.buyerName:focus:invalid, .buyerNo:focus:invalid, .buyerEmail:focus:invalid, .buyerAddress:focus:invalid, .buyerSize:focus:invalid, .buyerQty:focus:invalid {
+    background: #DC8D7C url(../images/formInvalid.jpeg) right/contain no-repeat;
+}
+
 .buyerBtn input {
     display: inline-block;
     width: 30%;
