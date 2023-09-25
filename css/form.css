@@ -125,7 +125,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 .buyerBtn input:hover {
-    background-color: #F2F2F2;
+    background-color: #FFDA1ADF;
     transition: .5s;
 }
 
