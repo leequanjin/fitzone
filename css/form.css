@@ -62,7 +62,7 @@
     background-color: #033C59;
     color: #F3EAF4;
     width: 60%;
-    height: 660px;
+    height: 700px;
     padding: 2%;
     display: inline-block;
     font-size: 20px;
@@ -70,7 +70,7 @@
 }
 
 form {
-    height: 600px;
+    height: 650px;
 }
 
 label {
@@ -130,4 +130,5 @@ input:focus, select:focus, textarea:focus {
     height: 20px;
     display: block;
     text-align: center;
+    
 }
