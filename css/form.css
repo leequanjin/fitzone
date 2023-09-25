@@ -62,11 +62,15 @@
     background-color: #033C59;
     color: #F3EAF4;
     width: 60%;
-    height: fit-content;
+    height: 660px;
     padding: 2%;
     display: inline-block;
     font-size: 20px;
     border-radius: 40px;
+}
+
+form {
+    height: 600px;
 }
 
 label {
@@ -119,4 +123,11 @@ input:focus, select:focus, textarea:focus {
 .buyerBtn input:hover {
     background-color: #F2F2F2;
     transition: .5s;
+}
+
+#submitTxt {
+    width: 100%;
+    height: 20px;
+    display: block;
+    text-align: center;
 }
