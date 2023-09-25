@@ -1,5 +1,6 @@
 .formbg {
-    background-image: linear-gradient(to right, #FFD577,  #DC8D7C);
+    /* background-image: linear-gradient(to right, #FFD577,  #DC8D7C); */
+    background-color: #FFBA41;
     width: 90%;
     height: fit-content;
     margin: 3% auto;
@@ -9,14 +10,18 @@
 
 .backArrow {
     width: 35%;
-    height: fit-content;
+    height: 600px;
     padding: 2%;
     display: inline-block;
     text-align: center;
     vertical-align: top;
 }
 
-.backArrow button {
+.backBtn {
+    height: 35%;
+}
+
+.backBtn button {
     font-size: 30px;
     font-weight: bold;
     border-radius: 50%;
@@ -24,31 +29,44 @@
     width: 50px;
     border: 0;
     margin-right: 100%;
+    background-color: #F2F2F2;
 }
 
-.backArrow h1 {
+.backBtn button:hover {
+    width: 60px;
+    height: 60px;
+    transition: 1s;
+}
+
+.backTxt {
+    height: 65%;
+}
+
+.backTxt h1 {
     font-size: 5vw;
     font-weight: bold;
     width: 50%;
     display: display;
-    margin: 100px auto 5px;
-    color: #392F3C;
+    margin: 0% auto;
+    color: #0C1E34;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.backArrow h2{
+.backTxt h2{
     font-size: 1.5vw;
     width: 98%;
     margin-top: 0%;
 }
 
 .inputForm {
-    background-color: #F2F2F2;
+    background-color: #033C59;
+    color: #F3EAF4;
     width: 60%;
     height: fit-content;
     padding: 2%;
     display: inline-block;
     font-size: 20px;
+    border-radius: 40px;
 }
 
 label {
@@ -79,11 +97,13 @@ input:focus, select:focus, textarea:focus {
 } 
 
 .buyerName:focus:valid, .buyerNo:focus:valid, .buyerEmail:focus:valid, .buyerAddress:focus:valid, .buyerSize:focus:valid, .buyerQty:focus:valid {
-    background: green url(../images/formValid.jpeg) right/contain no-repeat;
+    /* background: green url(../images/formValid.jpeg) right/contain no-repeat; */
+    background-color: green;
 }
 
 .buyerName:focus:invalid, .buyerNo:focus:invalid, .buyerEmail:focus:invalid, .buyerAddress:focus:invalid, .buyerSize:focus:invalid, .buyerQty:focus:invalid {
-    background: #DC8D7C url(../images/formInvalid.jpeg) right/contain no-repeat;
+    /* background: #DC8D7C url(../images/formInvalid.jpeg) right/contain no-repeat; */
+    background-color: red;
 }
 
 .buyerBtn input {
@@ -92,4 +112,13 @@ input:focus, select:focus, textarea:focus {
     height: 50px;
     margin: 5% 0% 3% 13%;
     font-size: 1.6vw;
+    font-weight: bold;
+    background-color: #FFD35C;
+    color: #2D3031;
+    border: 0;
+}
+
+.buyerBtn input:hover {
+    background-color: #F2F2F2;
+    transition: .5s;
 }
