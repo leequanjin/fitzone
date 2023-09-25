@@ -62,15 +62,12 @@ main {
 }
 
 .intro-content a{
-
     text-decoration: none;
     color: #2D3031; 
 }
 
 .intro-content a:hover{
-
     color: #FFF;
-    
 }
 
 h1{
@@ -90,8 +87,6 @@ span{
     display: block;
     margin: auto 10% auto 0%;
     text-align: center;
-
-
 }
 
 .row{
@@ -125,7 +120,6 @@ span{
     display: flex;
     justify-content: center;
     align-items: center;
-    
     color: #f2f2f2;
     
 }
@@ -133,7 +127,6 @@ span{
 .column-container {
     margin-top: 2%;
     margin-bottom: 2%;
-   
 }
 
 .row-container{
@@ -266,7 +259,6 @@ span{
     width: 870px;
     height: 418px;
     border: 5px double #2D3031;
-    
 }
 
 
