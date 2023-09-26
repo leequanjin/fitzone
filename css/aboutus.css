@@ -24,6 +24,16 @@ main {
     width: 100%;
     background-color: #ffffff5c;
 }
+#achievable{
+    
+    color: #241D13;
+    -webkit-text-stroke: 1vw green ;
+    text-transform: uppercase;
+
+
+
+}
+/*rgba(245,236,130,255)*/
 
 .intro-content h2{
     max-width: 39vw;
