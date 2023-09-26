@@ -131,18 +131,16 @@ header nav ul li a:hover {
 header .login-link {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    font-size: 3.8rem;
-    color: #6C757D;
+    filter: invert(48%) sepia(5%) saturate(690%) hue-rotate(167deg) brightness(92%) contrast(92%);
 }
 
 header .login-link.active {
-    color: #FFCA80;
+    filter: invert(79%) sepia(35%) saturate(566%) hue-rotate(340deg) brightness(101%) contrast(101%);
 }
 
 header .login-link:hover {
-    transition: 0.3s;
-    color: #FFC371;
+    transition: 0.1s;
+    filter: invert(79%) sepia(35%) saturate(566%) hue-rotate(340deg) brightness(101%) contrast(101%);
 }
 
 /* footer CSS*/
@@ -165,19 +163,22 @@ footer ul li {
     float: left;
 }
 
-footer ul li a {
+footer ul li img {
     display: block;
-    font-size: 3rem;
-    padding: 10px 20px 20px 20px;
-    color: #6C757D;
+    height: 45px;
+    width: 55px;
+    padding: 5px 10px;
+    margin: 0 5px 5px 5px;
+    filter: invert(48%) sepia(5%) saturate(690%) hue-rotate(167deg) brightness(92%) contrast(92%);
 }
 
-footer ul li a:hover {
-    transition: 0.3s;
-    color: #FFC371;
+footer ul li img:hover {
+    transition: 0.1s;
+    filter: invert(79%) sepia(35%) saturate(566%) hue-rotate(340deg) brightness(101%) contrast(101%);
 }
 
 footer p {
+    color: #6C757D;
     font-size: 1rem;
     letter-spacing: 1px;
 }

@@ -84,14 +84,15 @@
     display: inline;
 }
 
-.contact ul li a {
-    font-size: 2vw;
-    padding: 0.5vw;
-    color: #2D3031;
+.contact ul li img {
+    width: 3.5vw;
+    height: 3.5vw;
+    padding: 0.6vw;
+    filter: invert(18%) sepia(7%) saturate(321%) hue-rotate(149deg) brightness(93%) contrast(95%);
 }
 
-.contact ul li a:hover {
-    color: #fd9c52;
+.contact ul li img:hover {
+    filter: invert(61%) sepia(70%) saturate(511%) hue-rotate(332deg) brightness(105%) contrast(98%);
 }
 
 @keyframes instructorHover {

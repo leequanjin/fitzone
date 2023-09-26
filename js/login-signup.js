@@ -17,12 +17,9 @@ pwShowHide.forEach(eyeIcon => {
         pwFields.forEach(password => {
             if (password.type == "password") {
                 password.type = "text";
-                eyeIcon.classList.replace("fa-eye-slash", "fa-eye");
                 return;
             }
-
             password.type = "password";
-            eyeIcon.classList.replace("fa-eye", "fa-eye-slash");
         })
     })
 })
