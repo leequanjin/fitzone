@@ -39,7 +39,7 @@
 }
 
 .backTxt {
-    height: 65%;
+    height: 40%;
 }
 
 .backTxt h1 {
@@ -58,6 +58,17 @@
     margin-top: 0%;
 }
 
+.backInfor {
+    width: 100%;
+    height: 35%;
+    background-color: #0C1E34;
+    color: #EBE7DB;
+    padding: 5%;
+    font-size: 2vw;
+    text-align: center;
+    border-radius: 20px;
+}
+
 .inputForm {
     background-color: #033C59;
     color: #F3EAF4;
@@ -70,7 +81,7 @@
 }
 
 #formQty {
-    height: 530px;
+    height: 550px;
 }
 
 #formSize {
