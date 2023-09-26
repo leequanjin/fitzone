@@ -19,7 +19,7 @@ section#faq{
 
 .container{
     height: 100%;
-    max-width: 620px;
+    max-width: 650px;
     margin: 0 auto;
     flex-direction: column;
     overflow: hidden;
@@ -33,12 +33,16 @@ section#faq{
 }
 
 .container .tab{
+    position: relative;
     margin-bottom:15px;
     background-color: #fff;
-    padding: 0 20px 20px;
+    padding: 0 25px 20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 5px;
+    width: 590px;
 }
+
+
 .container .tab input{
     appearance: none;
 }
@@ -53,53 +57,123 @@ section#faq{
     right: 20px;
     font-size: 3em;
     color: rgba(0,0,0,0.1);
-    transition: transform 1s;
+    
+    
 }
 .container .tab:hover label::after{
     color:#333;
 }
+
+/* to let the '+' symbol rotate*/
 .container .tab input:checked ~ label::after{
     transform:rotate(135deg);
+    transition: 1s;
+    color: #FFFFFF;
 }
+
 .container .tab label h2{
-    font-size: 2em;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    margin-right: 10px;
+    padding:10px;
+}
+.container .tab:nth-child(2) label h2{
+    background: linear-gradient(135deg,#FD6E6A,#FFC660);
+}
+.container .tab:nth-child(3) label h2{
+    background: linear-gradient(135deg,#FD6E6A,#FFC660);
+}
+.container .tab:nth-child(4) label h2{
+    background: linear-gradient(135deg,#FD6E6A,#FFC660);
+}
+.container .tab:nth-child(5) label h2{
+    background: linear-gradient(135deg,#FD6E6A,#FFC660);
+}
+.container .tab:nth-child(6) label h2{
+    background: linear-gradient(135deg,#FD6E6A,#FFC660);
+}
+.container .tab:nth-child(7) label h2{
+    background: linear-gradient(135deg,#FD6E6A,#FFC660);
+}
+.container .tab:nth-child(8) label h2{
+    background: linear-gradient(135deg,#FD6E6A,#FFC660);
+}
+.container .tab:nth-child(9) label h2{
+    background: linear-gradient(135deg,#FD6E6A,#FFC660);
+}
+.container .tab:nth-child(10) label h2{
+    background: linear-gradient(135deg,#FD6E6A,#FFC660);
+}
+.container .tab:nth-child(11) label h2{
+    background: linear-gradient(135deg,#FD6E6A,#FFC660);
+}
+/*to show the background color & text number moved to right end after click*/
+.container .tab input:checked ~  label h2{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: rgba(255,255,255,0.2);
+    font-size: 12rem;
+    justify-content: flex-end;
+    padding: 20px;
+
+}
+
+.container .tab label h3{
+    font-size: 2rem;
     position: relative;
     font-weight: 500;
     color:#333;
-    z-index: 10;
+    z-index: 10; /*bring the h3 element infront background color */
 }
-.container .tab input:checked label h2{
+
+.container .tab input:checked ~ label h3{
+    font-size: 1.7rem;
+    background-color: #FFFFFF;
     color: #333;
-    padding:2px 10px;
-    color: #FFFFFF;
+    padding:2px 20px; 
     border-radius: 2px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    
 }
+/* to hide the answer */
 .container .tab .content{
     max-height: 0;
-    transition: 1s;
     overflow: hidden;
 }
 
-.container .tab .content p{
-    margin: 10px;
-}
-
-.container .tab input:checked ~ .content p{
-    color:#333; 
-
-}
+/*to expand the answer*/
 .container .tab input:checked ~ .content{
     max-height: 120vh;
 }
 
-.content p{
-    font-size: 1.5em;
+.container .tab .content p{
+    margin: 10px;
+    font-size: 1.75rem;
+    padding-right: 20px;
+    text-align: justify;
+    position: relative;  
+    z-index: 10;  /*bring the p element infront background color */
+    color: #333;
 }
 
-.tab {
-    position: relative;
+
+.container .tab input:checked ~ .content p{
+    color:#333;        
 }
+
+
+
+
+
+
 
 

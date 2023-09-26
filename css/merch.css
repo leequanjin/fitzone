@@ -120,11 +120,11 @@ main {
     height: 8%;
 }
 
-.products .box .card .products_text .products_star{
-    color: orange;
+.products .box .card .products_text .products_star img{
+    filter: invert(58%) sepia(68%) saturate(918%) hue-rotate(0deg) brightness(103%) contrast(104%);
     cursor: pointer;
-    height: 10%;
-    margin-bottom: 5%;
+    height: 1vw;
+    width: 1vw;
 }
 
 @keyframes orderbtn {
@@ -153,5 +153,5 @@ main {
     width: 75%;
     background-color: #2D3031; 
     color: #FFFFFF;
-    animation: orderbtn 0.3s ease-in 1;
+    animation: orderbtn 0.4s ease-in 1;
 }

@@ -12,8 +12,7 @@
     <link rel="stylesheet" href="/css/form.css">
     
 
-    <!-- Font Awesome Icons -->
-    <script src="https://kit.fontawesome.com/465be9f5fc.js" crossorigin="anonymous"></script>
+    
 
 </head>
 
@@ -48,7 +47,7 @@
         </nav>
 
         <a href="/html/account/profile.html" class="login-link">
-            <i class="fa-solid fa-circle-user"></i>
+            <img src="/icons/circle-user-solid.png" alt="profile logo">
         </a>
     </header>
     
@@ -61,6 +60,9 @@
                 <div class="backTxt">
                     <h1>Order Now</h1>
                     <h2>Item with * is required to be fill in.</h2>
+                    <P>
+                        If your order item have not received, kindly reach out to us promptly. Your satisfaction is our top priority, we're ready to assist you every step of the way.
+                    </P>
                 </div>
             </section>
     
@@ -167,7 +169,7 @@
 
             if (valid){
                 if (confirm("Are you sure to order?")) {
-                    txt = "Order successfully!";
+                    txt = "Ordered successfully!";
                     bName.value = "";
                     bPhone.value = "";
                     bMail.value = "";
@@ -176,7 +178,7 @@
                     bQty.value = "1";
                     event.preventDefault();
                 } else {
-                    txt = "Order Cancel!";
+                    txt = "Order Cancelled!";
                     bName.value = "";
                     bPhone.value = "";
                     bMail.value = "";
@@ -195,11 +197,11 @@
 
     <footer>
         <ul>
-            <li><a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
-            <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
-            <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-            <li><a href="https://www.pinterest.com/" target="_blank"><i class="fa-brands fa-pinterest"></i></a></li>
-            <li><a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+            <li><a href="https://www.twitter.com/" target="_blank"><img src="/icons/twitter.png" alt=""></a></li>
+            <li><a href="https://www.facebook.com/" target="_blank"><img src="/icons/facebook.png" alt=""></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank"><img src="/icons/instagram.png" alt=""></a></li>
+            <li><a href="https://www.pinterest.com/" target="_blank"><img src="/icons/pinterest.png" alt=""></a></li>
+            <li><a href="https://www.youtube.com/" target="_blank"><img src="/icons/youtube.png" alt=""></a></li>
         </ul>
         <p>© 2023 Fit Zone All rights reserved.</p>
     </footer>
