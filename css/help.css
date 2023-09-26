@@ -19,7 +19,7 @@ section#faq{
 
 .container{
     height: 100%;
-    max-width: 620px;
+    max-width: 650px;
     margin: 0 auto;
     flex-direction: column;
     overflow: hidden;
@@ -38,6 +38,7 @@ section#faq{
     padding: 0 20px 20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 5px;
+    width: 570px;
 }
 .container .tab input{
     appearance: none;
@@ -54,21 +55,37 @@ section#faq{
     font-size: 3em;
     color: rgba(0,0,0,0.1);
     transition: transform 1s;
+    
 }
 .container .tab:hover label::after{
     color:#333;
 }
+
 .container .tab input:checked ~ label::after{
     transform:rotate(135deg);
 }
+
 .container .tab label h2{
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    margin-right: 10px;
+    padding:10px;
+}
+.container .tab label h3{
     font-size: 2em;
     position: relative;
     font-weight: 500;
     color:#333;
     z-index: 10;
 }
-.container .tab input:checked label h2{
+.container .tab input:checked label h3{
     color: #333;
     padding:2px 10px;
     color: #FFFFFF;
@@ -87,7 +104,8 @@ section#faq{
 }
 
 .container .tab input:checked ~ .content p{
-    color:#333; 
+    color:#333;
+    
 
 }
 .container .tab input:checked ~ .content{
