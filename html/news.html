@@ -30,31 +30,29 @@
         }
 
         .Hot-event img {
-            height: 50vh;
+            height: 100%;
             width: 100%;
         }
 
         .Hot-event p {
-            display: none;
-            /* Hide the paragraph by default */
+            display: block; /* Start with the paragraph visible (to enable fading in) */
             position: absolute;
-            /* Position the paragraph absolutely */
-            /* bottom: 0;
-            left: 0; */
             width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0);
-            /* Optional: Add a semi-transparent background */
+            height: 30%;
+            background-color: rgba(0, 0, 0, 0.3);
             color: white;
-            /* Optional: Set the text color */
-            font-size: 15em;
+            font-size: 5em;
+            font-style: italic;
             padding: 10px;
-            /* Optional: Add some padding to the paragraph */
+            text-align: center;
+            opacity: 0; /* Initially, set opacity to 0 to make it transparent */
+            transform: translateY(100px); /* Move the paragraph down a bit to hide it initially */
+            transition: opacity 5s ease, transform 3s ease; /* Transition opacity and transform properties */
         }
 
         .Hot-event:hover p {
-            display: block;
-            /* Display the paragraph when hovering over the container */
+            opacity: 1; /* Make the paragraph fully visible (opaque) when hovered */
+            transform: translateY(0); /* Move the paragraph back to its original position */
         }
 
         .Current,
@@ -70,19 +68,22 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0);
-            color: white;
+            height: 20%;
+            background-color: white;
+            color: black;
             display: flex;
-            font-size: 10em;
+            font-size: 5em;
+            text-align: center;
             opacity: 0;
-            transition: opacity 0.3s ease;
+            transform: translateY(100px); /* Move the paragraph down a bit to hide it initially */
+            transition: opacity 3s ease, transform 2s ease; /* Transition opacity and transform properties */
             object-fit: cover;
         }
 
-        .Current:hover~.Past p {
+        .Current:hover p, .Past:hover p {
             visibility: visible;
-            opacity: 1;
+            opacity: 1; /* Make the paragraph fully visible (opaque) when hovered */
+            transform: translateY(0); /* Move the paragraph back to its original position */
         }
 
         #Countdown {
@@ -93,7 +94,7 @@
             margin-right: auto;
             font-size: 50px;
             margin-top: 0px;
-            background-color: rgb(0, 0, 0, .7);
+            background-image: linear-gradient(to bottom right, rgb(87, 86, 83, 0.3), rgb(0, 0, 0, 0.0), rgb(87, 86, 83, 0.2));
             border-radius: 20px;
         }
 
@@ -223,42 +224,48 @@
     </header>
     <main>
         <div class="Hot-event">
-            <img src="/images/banner 1.png">
-            <p>This is Hot Event stuff</p>
+            <img src="/hotevent.jpg">
+            <p>The Hottest Event Happening at our Venue Right Now! <br>Bring along your partner to train together
+                 and enjoy the facilities brought to by Fitzone </p>
         </div>
         <p id="Countdown"></p>
         <div class="events">
             <div class="Current">
                 <img src="/currentevent.jpg">
-                <p>This is Past Event</p>
-            </div>
-            <div class="Past" onmouseenter="showParagraph('.Current p')" , onmouseout="hideParagraph('.Current p')">
-                <img src="/images/Pastevent.png">
                 <p>This is Ongoing Event</p>
+            </div>
+            <div class="Past">  <!-- onmouseenter="showParagraph('.Current p')" , onmouseout="hideParagraph('.Current p')" -->
+                <img src="/images/Pastevent.png">
+                <p>This is Past Event</p>
             </div>
         </div>
         <div class="info-container">
             <div class="info1">
-                <img src="/images/banner 5.jpg">
+                <img src="/images/fit-boxing.png">
                 <p class="title"><span>New Gym room</span>
+                <br>A new gym area is <strong>BOXING</strong> their way into Fitzone's venue. For all you heavy puncher lovers,
+                we at Fitzone are expanding our venue so that you guys can have more fun and better training.
                 </p>
             </div>
             <div class="coach">
                 <p class="title"><span>Mystery Instructor Coming Soon</span>
-
+                <br><br>The <em>LEGEND</em>, The <em>MYTH</em>, HE is coming to Fitzone to bless everyone with the knowledge of keeping fit.
+                Starting this November, HE will make his appearance and will be in charge of multiple training regime. As of now, why not
+                get used to Fitzone.
                 </p>
                 <img src="/images/MysteryCoach.png">
             </div>
             <div class="newbranch">
                 <video src="/Pyramid.mp4" loop muted autoplay></video>
                 <p class="title"><span>New Branch Opening Soon</span>
+                <br><br>A new branch is opening soon!!! Check our latest ad and take a <em>very very very</em> easy guess on where it will be.
                 </p>
             </div>
             <div class="guide">
                 <p class="details"><span>Try Ashtanga with Eddie</span> 
-                    <br><br>Ashtanga is all about the <em style="font-style: italic;">flow</em> To find your strength and melt away stress.
-                    <br><br>Join Eddie in this <em style="font-style: italic;">transformative journey</em> at Fitzone Gym.
-                    <br><br>As he guides you in Ashtanga and unlock your <em style="font-style: italic;">true potential</em>.
+                    <br><br>Ashtanga is all about the <em>flow</em> To find your strength and melt away stress.
+                    <br><br>Join Eddie in this <em>transformative journey</em> at Fitzone Gym.
+                    <br><br>As he guides you in Ashtanga and unlock your <em>true potential</em>.
                 </p>
                 <img src="/images/AshtangaTalk.jpg">
             </div>
@@ -267,7 +274,7 @@
             
         </div>
     </main>
-    <script>
+    <!-- <script>
         function showParagraph(targetSelector) {
             var targetParagraph = document.querySelector(targetSelector);
             targetParagraph.style.opacity = '1';
@@ -277,7 +284,7 @@
             var targetParagraph = document.querySelector(targetSelector);
             targetParagraph.style.opacity = '0';
         }
-    </script>
+    </script> -->
     <footer>
         <ul>
             <li><a href="https://www.twitter.com/" target="_blank"><img src="/icons/twitter.png" alt=""></a></li>
