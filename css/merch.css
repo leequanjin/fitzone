@@ -43,10 +43,11 @@ main {
 }
 
 
-/*Products*/
+
 .products{
     width: 100%;
     height: fit-content;
+    animation: fade 2s ease;
 
 }
 .products h1{
@@ -58,6 +59,7 @@ main {
     text-transform: uppercase;
     color: #FFC371;
 }
+
 .products .box{
     width: 100%;
     height: fit-content;
@@ -92,6 +94,7 @@ main {
     transition: 0.3s;
 }
 
+/*image bigger when hover*/
 .products .box .card:hover .image img{
     transform: scale(1.1);
 }

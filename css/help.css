@@ -84,36 +84,26 @@ section#faq{
     margin-right: 10px;
     padding:10px;
 }
-.container .tab:nth-child(2) label h2{
-    background: linear-gradient(135deg,#FD6E6A,#FFC660);
+/*for odd number only, first num start with 2*/
+.container .tab.tab:nth-child(2n) label h2{
+    background: linear-gradient(135deg,#ef9e9b,#fbbf57);
 }
 .container .tab:nth-child(3) label h2{
-    background: linear-gradient(135deg,#FD6E6A,#FFC660);
-}
-.container .tab:nth-child(4) label h2{
-    background: linear-gradient(135deg,#FD6E6A,#FFC660);
+    background: linear-gradient(135deg,#f8bb52,#f7e32b);
 }
 .container .tab:nth-child(5) label h2{
-    background: linear-gradient(135deg,#FD6E6A,#FFC660);
-}
-.container .tab:nth-child(6) label h2{
-    background: linear-gradient(135deg,#FD6E6A,#FFC660);
+    background: linear-gradient(135deg,#f8bb52,#f7e32b);
 }
 .container .tab:nth-child(7) label h2{
-    background: linear-gradient(135deg,#FD6E6A,#FFC660);
-}
-.container .tab:nth-child(8) label h2{
-    background: linear-gradient(135deg,#FD6E6A,#FFC660);
+    background: linear-gradient(135deg,#f8bb52,#f7e32b);
 }
 .container .tab:nth-child(9) label h2{
-    background: linear-gradient(135deg,#FD6E6A,#FFC660);
-}
-.container .tab:nth-child(10) label h2{
-    background: linear-gradient(135deg,#FD6E6A,#FFC660);
+    background: linear-gradient(135deg,#f8bb52,#f7e32b);    
 }
 .container .tab:nth-child(11) label h2{
-    background: linear-gradient(135deg,#FD6E6A,#FFC660);
+    background: linear-gradient(135deg,#f8bb52,#f7e32b);
 }
+
 /*to show the background color & text number moved to right end after click*/
 .container .tab input:checked ~  label h2{
     position:absolute;
@@ -164,7 +154,6 @@ section#faq{
     z-index: 10;  /*bring the p element infront background color */
     color: #333;
 }
-
 
 .container .tab input:checked ~ .content p{
     color:#333;        
