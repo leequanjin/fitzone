@@ -13,12 +13,12 @@ main {
     height: 250px;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    background-image: url(/CLimage/merchant-img.png);
+    background-image: url(/images/merchant-img.png);
     background-repeat: no-repeat ;
     background-size:100% 100%;
     background-position: center;
     display: block;
-    margin: 8% auto;
+    margin: 4% auto;
     text-align: center;
     padding: 6%;
 }
@@ -153,5 +153,5 @@ main {
     width: 75%;
     background-color: #2D3031; 
     color: #FFFFFF;
-    animation: orderbtn 0.3s ease-in 1;
+    animation: orderbtn 0.4s ease-in 1;
 }

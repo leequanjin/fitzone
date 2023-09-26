@@ -39,7 +39,7 @@
 }
 
 .backTxt {
-    height: 65%;
+    height: 40%;
 }
 
 .backTxt h1 {
@@ -55,7 +55,19 @@
 .backTxt h2{
     font-size: 1.5vw;
     width: 98%;
-    margin-top: 0%;
+    margin-top: 2%;
+}
+
+.backTxt p {
+    width: 100%;
+    height: fit-content;
+    margin-top: 5%;
+    background-color: #0C1E34;
+    color: #EBE7DB;
+    padding: 5%;
+    font-size: 1.6vw;
+    text-align: center;
+    border-radius: 20px;
 }
 
 .inputForm {
@@ -67,6 +79,14 @@
     display: inline-block;
     font-size: 20px;
     border-radius: 40px;
+}
+
+#formQty {
+    height: 535px;
+}
+
+#formSize {
+    height: 600px;
 }
 
 label {
@@ -96,29 +116,43 @@ input:focus, select:focus, textarea:focus {
     background-color: #EBE7DB;
 } 
 
-.buyerName:focus:valid, .buyerNo:focus:valid, .buyerEmail:focus:valid, .buyerAddress:focus:valid, .buyerSize:focus:valid, .buyerQty:focus:valid {
-    /* background: green url(../images/formValid.jpeg) right/contain no-repeat; */
-    background-color: green;
+#nameBox:focus:valid, #phoneBox:focus:valid, #mailBox:focus:valid, #addrBox:focus:valid {
+    background-color: #DFFF9E;
 }
 
-.buyerName:focus:invalid, .buyerNo:focus:invalid, .buyerEmail:focus:invalid, .buyerAddress:focus:invalid, .buyerSize:focus:invalid, .buyerQty:focus:invalid {
-    /* background: #DC8D7C url(../images/formInvalid.jpeg) right/contain no-repeat; */
-    background-color: red;
+#nameBox:focus:Invalid, #phoneBox:focus:Invalid, #mailBox:focus:Invalid, #addrBox:focus:Invalid {
+    background-color: #FAB4A4;
+}
+
+.buyerBtn {
+    width: 100%;
+    height: fit-content;
+    display: block;
+    margin-left: 12%;
 }
 
 .buyerBtn input {
     display: inline-block;
     width: 30%;
     height: 50px;
-    margin: 5% 0% 3% 13%;
+    margin: 5% 0% 3% 5%;
     font-size: 1.6vw;
     font-weight: bold;
-    background-color: #FFD35C;
+    background-color: #FFDA1A;
     color: #2D3031;
     border: 0;
 }
 
 .buyerBtn input:hover {
-    background-color: #F2F2F2;
+    background-color: #FFDA1ADF;
     transition: .5s;
+}
+
+#submitTxt {
+    width: 100%;
+    height: 30px;
+    display: block;
+    text-align: center;
+    font-size: 2.2vw;
+    margin-top: 2%;
 }

@@ -12,7 +12,7 @@ main {
     padding-top: 50vh;
     min-height: 120vh;
     width: 100%;
-    background: url("/CLimage/intro-background-img.jpg");
+    background: url("/images/intro-background-img.jpg");
     background-repeat: no-repeat;
     background-size :cover;
     background-position:top;
@@ -74,14 +74,14 @@ h1{
     text-align: center;
     color:#ccc;
     text-transform: uppercase;
-    font-size: 4rem;
+    font-size: 4.2rem;
     padding: 10px 0px 10px 0px;
 }
 span{
     color: goldenrod;
 }
 .about{
-    height: 520px;
+    height: 600px;
     width: 100%;
     background-color: #000000;
     display: block;
@@ -98,9 +98,10 @@ span{
 .row img {
     padding:18px 10px;
     float: left;
-    width: 38%;
-    height:415px;
+    width: 40%;
+    height:450px;
 }
+
 
 .aboutus-content .column-container {
     width: 55%;
@@ -108,14 +109,14 @@ span{
 }
 
 .aboutus-content h2{
-    font-size: 3rem;  
+    font-size: 3.2rem;  
     line-height: 1.75;
     color: #FFF;
     
 }
 
 .aboutus-content p{
-    font-size: 1.6rem;
+    font-size: 1.75rem;
     font-weight: 400;
     display: flex;
     justify-content: center;
@@ -133,11 +134,12 @@ span{
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 .block{
-    height: 140px;
-    width: 290px;
+    height: 160px;
+    width: 43%;
     padding: 6px;
     border: 1px solid #FFF;
     margin:2px;
@@ -153,7 +155,7 @@ span{
 
 .block dd{
     padding: 10px 0px 0px 12px;
-    font-size: 1.5em;
+    font-size: 1.63rem;
     font-weight: lighter;
     color: #f2f2f2;
 }
