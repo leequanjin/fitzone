@@ -84,14 +84,15 @@
     display: inline;
 }
 
-.contact ul li a {
-    font-size: 2vw;
-    padding: 0.5vw;
-    color: #2D3031;
+.contact ul li img {
+    width: 3.5vw;
+    height: 3.5vw;
+    padding: 0.6vw;
+    filter: invert(18%) sepia(7%) saturate(321%) hue-rotate(149deg) brightness(93%) contrast(95%);
 }
 
-.contact ul li a:hover {
-    color: #FFCA80;
+.contact ul li img:hover {
+    filter: invert(83%) sepia(66%) saturate(474%) hue-rotate(315deg) brightness(100%) contrast(103%);
 }
 
 .instructor:hover {

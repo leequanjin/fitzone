@@ -151,14 +151,14 @@ form a {
 }
 
 /* eye icon, will switch using JavaScript */
-.fa-eye,
-.fa-eye-slash {
+.eye-icon {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     right: 15px;
-    font-size: 1.8rem;
-    color: #6C757D;
+    height: 1.4vw;
+    width: 1.8vw;
+    filter: invert(48%) sepia(4%) saturate(891%) hue-rotate(167deg) brightness(93%) contrast(92%);
     cursor: pointer;
 }
 
