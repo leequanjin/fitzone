@@ -5,11 +5,23 @@
     display: block;
     margin: 3% auto;    
 }
-.receipt.fitzoneDetail {
-    display: block;
-    margin: 10px 10px 0px 10px;
-    
 
+.fitzoneDetail {
+    display: block;
+    height: 15%;
+    padding: 2% 12% 0 15%;
+    
+}
+.fitzoneDetail h1{
+    text-align: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+.fitzoneDetail p{
+    padding-right: 5%;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.75rem;
 }
 span{
     color: goldenrod;
