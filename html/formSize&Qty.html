@@ -85,12 +85,12 @@
         
                     <div class="buyerAddress">
                         <label for="addrBox">Address* </label>
-                        <textarea name="address" id="addrBox" cols="30" rows="10" required></textarea>
+                        <textarea name="address" id="addrBox" required></textarea>
                     </div>
         
                     <div class="buyerSize">
                         <label for="size">Size* </label>
-                        <select name="productSize" id="size">
+                        <select name="productSize" id="size" required>
                             <option value="Small">S</option>
                             <option value="Medium">M</option>
                             <option value="Large">L</option>
@@ -104,8 +104,8 @@
                     </div>
         
                     <div class="buyerBtn">
-                        <input type="reset" value="Cancel Order">
-                        <input type="submit" value="Place Your Order" onclick="confirmSubmit()">
+                        <input type="reset" value="Cancel Order" >
+                        <input type="submit" value="Place Your Order">
                     </div>
 
                 </form>
@@ -116,84 +116,6 @@
             </section>
         </div>   
     </main>
-
-    <script>
-        function confirmSubmit() {
-            var requiredInputs = document.querySelectorAll('input[required]');
-            var valid = true;
-            var txt;
-
-            // Check if any input is empty
-            for (var i = 0; i < requiredInputs.length; i++) {
-                if (requiredInputs[i].value.trim() === '') {
-                    txt = "Cannot leave blank!"
-                    valid = false;
-                    break;
-                }
-                else {
-                    // Check the phone number is valid
-                    var phoneInput = document.querySelector('input[type="tel"]');
-                    var phonePattern = /^([0-9]{3}-?[0-9]{3,4}-?[0-9]{4})$/;
-                    
-                    if (phoneInput) {
-                        if (!phonePattern.test(phoneInput.value.trim())) {
-                            txt = "Phone number Invalid!"
-                            valid = false;
-                            break;
-                        } 
-                        else{
-                            var emailInput = document.querySelector('input[type="email"]');
-                            var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-                            if (emailInput){
-                                // Check the email is valid
-                                if (!emailPattern.test(emailInput.value.trim())){
-                                    txt = "Invalid E-mail!"
-                                    valid = false;
-                                    break;
-                                }
-                                else{
-                                    valid = true;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-            const bName = document.getElementById("nameBox");
-            const bPhone = document.getElementById("phoneBox");
-            const bMail = document.getElementById("mailBox");
-            const bAddr = document.getElementById("addrBox");
-            const bSize = document.getElementById("size");
-            const bQty = document.getElementById("quantityBox");
-
-            if (valid){
-                if (confirm("Are you sure to order?")) {
-                    txt = "Ordered successfully!";
-                    bName.value = "";
-                    bPhone.value = "";
-                    bMail.value = "";
-                    bAddr.value = "";
-                    bSize.value = "S";
-                    bQty.value = "1";
-                    event.preventDefault();
-                } else {
-                    txt = "Order Cancelled!";
-                    bName.value = "";
-                    bPhone.value = "";
-                    bMail.value = "";
-                    bAddr.value = "";
-                    bSize.value = "S";
-                    bQty.value = "1";
-                    event.preventDefault();
-                }
-            }
-
-            
-            // Prompt error message and order success message and also cancel message
-            document.getElementById("submitTxt").innerHTML = txt;
-        }
-    </script>
 
     <footer>
         <ul>

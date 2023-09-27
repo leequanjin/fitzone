@@ -94,7 +94,7 @@ label {
     float: left;
     clear: left;
     margin: 15px 0px 15px 10px;
-    width: 35%;
+    width: 30%;
     height: 35px;
  }
  
@@ -102,14 +102,14 @@ input, select, textarea {
     display: block;
     float: left;
     margin: 15px 0px;
-    width: 60%;
+    width: 65%;
     height: 35px;
     border-radius: 5px;
     padding: 10px;
 }
 
-textarea{
-    height: 150px;
+textarea {
+    height: 140px;
 }
 
 input:focus, select:focus, textarea:focus {
@@ -120,7 +120,7 @@ input:focus, select:focus, textarea:focus {
     background-color: #DFFF9E;
 }
 
-#nameBox:focus:Invalid, #phoneBox:focus:Invalid, #mailBox:focus:Invalid, #addrBox:focus:Invalid {
+#nameBox:focus:invalid, #phoneBox:focus:invalid, #mailBox:focus:invalid, #addrBox:focus:invalid {
     background-color: #FAB4A4;
 }
 
