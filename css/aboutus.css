@@ -73,6 +73,8 @@ main {
     line-height: 1.6;
     padding:1rem 0;
     color: #241d13c6;
+    justify-content: center;
+    text-align: justify;
 }
 
 #joinNow {
