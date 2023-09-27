@@ -1,0 +1,17 @@
+.receipt{
+    background-color: #FFFFFF;
+    height: 850px;
+    width: 800px;
+    display: block;
+    margin: 3% auto;    
+}
+.receipt.fitzoneDetail {
+    display: block;
+    margin: 10px 10px 0px 10px;
+    
+
+}
+span{
+    color: goldenrod;
+    
+}
