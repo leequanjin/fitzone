@@ -52,7 +52,7 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.backTxt h2{
+.backTxt h5{
     font-size: 1.5vw;
     width: 98%;
     margin-top: 2%;
@@ -81,31 +81,70 @@
     border-radius: 40px;
 }
 
+@keyframes orderItemColor {
+    0% {
+        background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44, #f32170, #ff6b08, #cf23cf, #eedd44, #f32170, #ff6b08, #cf23cf, #eedd44, #f32170, #ff6b08, #cf23cf, #eedd44);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+    25% {
+        background: linear-gradient(to right, #eedd44, #f32170, #ff6b08, #cf23cf, #eedd44, #f32170, #ff6b08, #cf23cf, #eedd44, #f32170, #ff6b08, #cf23cf, #eedd44, #f32170, #ff6b08, #cf23cf);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+    50% {
+        background: linear-gradient(to right, #cf23cf, #eedd44, #f32170, #ff6b08, #cf23cf, #eedd44, #f32170, #ff6b08, #cf23cf, #eedd44, #f32170, #ff6b08, #cf23cf, #eedd44, #f32170, #ff6b08);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+    75% {
+        background: linear-gradient(to right, #ff6b08, #cf23cf, #eedd44, #f32170, #ff6b08, #cf23cf, #eedd44, #f32170, #ff6b08, #cf23cf, #eedd44, #f32170, #ff6b08, #cf23cf, #eedd44, #f32170);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+    100% {
+        background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44, #f32170, #ff6b08, #cf23cf, #eedd44, #f32170, #ff6b08, #cf23cf, #eedd44, #f32170, #ff6b08, #cf23cf, #eedd44);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+}
+
+.inputForm h2 {
+    font-size: 2.3vw;
+    padding: 0.5%;
+    margin-bottom: 1%;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    animation: orderItemColor 1s ease-in infinite;
+}
+
 #formQty {
     height: 535px;
 }
 
 #formSize {
-    height: 600px;
+    height: 520px;
 }
 
 label {
     display: block;
     float: left;
     clear: left;
-    margin: 15px 0px 15px 10px;
-    width: 30%;
+    margin: 10px 0px 10px 10px;
+    width: 40%;
     height: 35px;
  }
  
 input, select, textarea {
     display: block;
     float: left;
-    margin: 15px 0px;
-    width: 65%;
+    margin: 10px 0px;
+    width: 55%;
     height: 35px;
     border-radius: 5px;
-    padding: 10px;
+    padding: 5px;
+    font-size: 1vw;
 }
 
 textarea {
@@ -155,4 +194,49 @@ input:focus, select:focus, textarea:focus {
     text-align: center;
     font-size: 2.2vw;
     margin-top: 2%;
+}
+
+#buyerTotal {
+    height: 200px;
+    display: block;
+    text-align: left;
+    margin: 1%;
+}
+
+
+#paymentYN {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: linear-gradient(180deg, rgba(129, 83, 20, 0.4), rgba(45, 48, 49, 0.4));
+}
+
+#paymentYN-content {
+    position: relative;
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 30px;
+    max-width: 500px;
+}
+
+#paymentYN-content h2 {
+    color: #2D3031;
+    text-align: left;
+    padding: 0 10px;
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+}
+
+#paymentYN-content h3 {
+    color: #6C757D;
+    font-weight: normal;
+    padding: 20px 10px;
+    font-size: 1.6rem;
 }

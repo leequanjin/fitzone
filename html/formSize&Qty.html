@@ -59,7 +59,9 @@
                 </div>
                 <div class="backTxt">
                     <h1>Order Now</h1>
-                    <h2>Item with * is required to be fill in.</h2>
+                    <h5>One order per receipt.</h5>
+                    <h5>Item with * is required to be fill in.</h5>
+                    <h5>Only accept cash, credit card and debit card.</h5>
                     <P>
                         If your order item have not received, kindly reach out to us promptly. Your satisfaction is our top priority, we're ready to assist you every step of the way.
                     </P>
@@ -67,64 +69,154 @@
             </section>
     
             <section class="inputForm">
-                <form id="formSize">
-                    <div class="buyerName">
-                        <label for="nameBox">Name* </label>
-                        <input type="text" id="nameBox" name="Name" placeholder="John Smith" required/>
+                <h2>- Navy Power Sleeveless Tee -</h2>
+                <form id="formSize" method="post" onsubmit="return false">
+                    <div id="orderContent">
+                        <div class="buyerName">
+                            <label for="nameBox">Name* </label>
+                            <input type="text" id="nameBox" name="Name" placeholder="John Smith" required/>
+                        </div>
+            
+                        <div class="buyerNo">
+                            <label for="phoneBox">Phone Number* </label>
+                            <input type="tel" id="phoneBox" name="phoneNumber" placeholder="0123456789" pattern="[0-9]{3}-?[0-9]{3,4}-?[0-9]{4}" required/>
+                        </div>
+            
+                        <div class="buyerEmail">
+                            <label for="mailBox">E-mail* </label>
+                            <input type="email" id="mailBox" name="email" placeholder="abc@example.com" required/>
+                        </div>
+            
+                        <div class="buyerAddress">
+                            <label for="addrBox">Address* </label>
+                            <textarea name="address" id="addrBox" required></textarea>
+                        </div>
+            
+                        <div class="buyerSize">
+                            <label for="size">Size* </label>
+                            <select name="productSize" id="size" required>
+                                <option value="Small">S</option>
+                                <option value="Medium">M</option>
+                                <option value="Large">L</option>
+                                <option value="ExtraLarge">XL</option>
+                            </select>
+                        </div>
+            
+                        <div class="buyerQty">
+                            <label for="quantity">Quantity </label>
+                            <input type="number" name="productQuantity" id="quantityBox" value="1" min="1" max="10" step="1"/>
+                        </div>
+            
+                        <div class="buyerBtn">
+                            <input type="reset" value="Cancel Order" >
+                            <input type="submit" value="Place Your Order" id="placeOrder">
+                        </div>
                     </div>
-        
-                    <div class="buyerNo">
-                        <label for="phoneBox">Phone Number* </label>
-                        <input type="tel" id="phoneBox" name="phoneNumber" placeholder="0123456789" pattern="[0-9]{3}-?[0-9]{3,4}-?[0-9]{4}" required/>
-                    </div>
-        
-                    <div class="buyerEmail">
-                        <label for="mailBox">E-mail* </label>
-                        <input type="email" id="mailBox" name="email" placeholder="abc@example.com" required/>
-                    </div>
-        
-                    <div class="buyerAddress">
-                        <label for="addrBox">Address* </label>
-                        <textarea name="address" id="addrBox" required></textarea>
-                    </div>
-        
-                    <div class="buyerSize">
-                        <label for="size">Size* </label>
-                        <select name="productSize" id="size" required>
-                            <option value="Small">S</option>
-                            <option value="Medium">M</option>
-                            <option value="Large">L</option>
-                            <option value="ExtraLarge">XL</option>
-                        </select>
-                    </div>
-        
-                    <div class="buyerQty">
-                        <label for="quantity">Quantity </label>
-                        <input type="number" name="productQuantity" id="quantityBox" value="1" min="1" max="10" step="1"/>
-                    </div>
-        
-                    <div class="buyerBtn">
-                        <input type="reset" value="Cancel Order" >
-                        <input type="submit" value="Place Your Order" onclick="askPay()">
-                    </div>
-
                 </form>
+
+                <!-- Prompt total price -->
+                <div id="buyerTotal">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th rowspan="3">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <tb>Price per item</tb>
+                                <tb>:</tb>
+                                <tb id="itemPrice">0.00</tb>
+                            </tr>
+                            <tr>
+                                <tb>Quantity</tb>
+                                <tb>:</tb>
+                                <tb id="itemQty">0</tb>
+                            </tr>
+                            <tr>
+                                <tb>Total</tb>
+                                <tb>:</tb>
+                                <tb id="totalPrice">0.00</tb>
+                            </tr>
+                            <tr>
+                                <tb>SST (6%)</tb>
+                                <tb>:</tb>
+                                <tb id="sst">0.00</tb>
+                            </tr>
+                            <tr>
+                                <tb>Delivery Fee</tb>
+                                <tb>:</tb>
+                                <tb id="deliveryFee">0.00</tb>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <tb>Grand Total</tb>
+                                <tb>:</tb>
+                                <tb id="gTotal">0.00</tb>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
             </section>
+
         </div>   
+
+        <!-- Prompt to let user select how to pay -->
+        <div id="paymentYN">
+            <div id="paymentYN-content">
+                <h2>Choose a payment method</h2>
+                <h3>Please be note that we just accept Cash on delivery, Credit Card or Debit Card</h3>
+                <div class="buttons">
+                    <input type="submit" class="calcPayment" id="cash" value="Cash on Delivery">
+                    <input type="submit" class="calcPayment" id="card" value="Pay by Card">
+                    <input type="button" class="cancel" id="unPaybtn" value="Cancel Payment">
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <script>
-        function askPay() {
-            document.forms[0].onsubmit = function(){
-                if (this.checkValidity()) {
-                    var pay_result = ("Proceed to payment.");
-                    if (pay_result == true){
-                        alert ("PAID");
-                    }
-                }
+        var placeOrder = document.getElementById("placeOrder");
+        var selectPayment = document.getElementById("paymentYN");
+        var closeSelect = document.getElementById("unPaybtn");
+
+        // Function to check if the form is valid
+        function isFormValid() {
+            var form = document.forms[0];
+            return form.checkValidity();
+        }
+    
+        // Function to show the payment selection boxes
+        function showPaymentOptions() {
+            // Check if the form is valid
+            if (isFormValid()) {
+                selectPayment.style.display = "block";
             }
         }
+    
+        // Function to close the payment selection boxes
+        function closePaymentOptions() {
+            var selectPayment = document.getElementById("paymentYN");
+            selectPayment.style.display = "none";
+        }
+    
+        // Attach event listeners
+        document.addEventListener("DOMContentLoaded", function () {
+    
+            placeOrder.addEventListener("click", showPaymentOptions);
+            document.getElementById("unPaybtn").addEventListener("click", closePaymentOptions);
+
+            window.onclick = function (event) {
+                if (event.target == selectPayment) {
+                    selectPayment.style.display = "none";
+                }
+            }
+        });
     </script>
+    
 
     <footer>
         <ul>
