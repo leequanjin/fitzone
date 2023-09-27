@@ -22,6 +22,107 @@
             padding: 1.5%;
         }
 
+        /* Setting Up for button */
+        .video-container, .video-container2 ,.video-container3{
+            position: relative;
+            display: inline-block;
+        }
+        .overlay-button1 {
+            position: absolute;
+            top: 95%; /* Adjust this value to vertically center the button */
+            left: 95%; /* Adjust this value to horizontally center the button */
+            transform: translate(-50%, -50%); /* Center the button precisely */
+            background-color: #FF5733; /* Button background color */
+            color: #FFFFFF; /* Button text color */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 100px;
+            cursor: pointer;
+        }
+        .overlay-button2,.overlay-button3 {
+            position: absolute;
+            top: 90%; /* Adjust this value to vertically center the button */
+            left: 90%; /* Adjust this value to horizontally center the button */
+            transform: translate(-50%, -50%); /* Center the button precisely */
+            background-color: #006207; /* Button background color */
+            color: #FFFFFF; /* Button text color */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 100px;
+            cursor: pointer;
+        }
+        /* Modal styles for hot events*/
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal video {
+            max-width: 90%;
+            max-height: 80vh;
+        }
+
+        .modal p {
+            color: #FFFFFF;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .modal .close-modal {
+            background-color: #FF5733;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        /* Modal styles for current and past events */
+        .modal2,.modal3 {
+            overflow: visible;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal2 video,.modal3 video {
+            max-width: 90%;
+            max-height: 80vh;
+        }
+
+        .modal2 p,.modal3 p {
+            color: #FFFFFF;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .modal2 .close-modal,.modal3 .close-modal {
+            background-color: #006207;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        /* To display Hot Events */
         .Hot-event {
             display: flex;
             position: relative;
@@ -49,7 +150,7 @@
             margin-left: auto;
             margin-right: auto;
             font-size: 50px;
-            margin-top: 0px;
+            margin-bottom: 2%;
             background-image: linear-gradient(to bottom right, rgb(87, 86, 83, 0.3), rgb(0, 0, 0, 0.0), rgb(87, 86, 83, 0.2));
             border-radius: 20px;
         }
@@ -83,23 +184,6 @@
             object-fit: cover;
         }
 
-        /* .Hot-event p {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 20%;
-            background-color: white;
-            color: black;
-            display: flex;
-            font-size: 4em;
-            text-align: center;
-            opacity: 0;
-            transform: translateY(150px); 
-            transition: opacity 3s ease, transform 2s ease;
-            object-fit: cover;
-        } */
-
         .Past p {
             color: red;
         }
@@ -127,10 +211,18 @@
             
         }
 
-        .events {
+        .smallevents {
             display: flex;
             padding: 10px; 
             margin: 0;
+        }
+
+        .events{
+            background-color: #c9e45d;
+        }
+
+        .info-container{
+            background-color: #f27070;
         }
 
         .info1,
@@ -146,7 +238,7 @@
         
         .info1 img{
             width: 50%;
-            height: 30vh;
+            height: 60vh;
             border-radius: 25px;
         }
 
@@ -206,6 +298,15 @@
             font-size: 30px;
             font-weight: 700;
         }
+
+        h2{
+            text-align: center;
+            font-size: 10vh;
+            background-color: white;
+            padding: 2%;
+            
+        }
+
     </style>
 </head>
 
@@ -244,29 +345,35 @@
         </a>
     </header>
     <main>
-        <div class="mainevent">
-            <div class="Hot-event video-link">
-                <video src="/HotEvent.mp4" loop></video>
-                <!-- <p>This is Hot Event</p> -->
-            </div>
-        </div>
-        <p id="Countdown"></p>
         <div class="events">
-            <div class="Current video-link">
-                <video src="/CurrentOngoingEvent.mp4" loop style="padding-right: 5px;"></video>
-                <p>This is Ongoing Event</p>
+            <h2 style="padding-top: 0%;">Latest Events</h2>
+            <div class="mainevent">
+                <div class="Hot-event video-link video-container">
+                    <video src="/HotEvent.mp4" loop></video>
+                    <button class="overlay-button1">Learn More</button>
+                    <!-- <p>This is Hot Event</p> -->
+                </div>
             </div>
-            <div class="Past video-link">  
-                <video src="/PastLaunchEvent.mp4" loop style="padding-left: 5px;"></video>
-                <p>This Event has Ended</p>
+            <p id="Countdown"></p>
+            <div class="smallevents">
+                <div class="Current video-link video-container2">
+                    <video src="/CurrentOngoingEvent.mp4" loop style="padding-right: 5px;"></video>
+                    <p>This is Ongoing Event</p>
+                    <button class="overlay-button2">Learn More</button>
+                </div>
+                <div class="Past video-link video-container3">  
+                    <video src="/PastLaunchEvent.mp4" loop style="padding-left: 5px;"></video>
+                    <p>This Event has Ended</p>
+                    <button class="overlay-button3">Learn More</button>
+                </div>
             </div>
         </div>
         <div class="info-container">
+            <h2>Latest News</h2>
             <div class="info1">
                 <img src="/images/fit-boxing.png">
                 <p class="title"><span>New Gym room</span>
-                
-                <br>A new gym area is <strong>BOXING</strong> their way into Fitzone's venue. For all you heavy puncher lovers,
+                <br><br>A new gym area is <strong>BOXING</strong> their way into Fitzone's venue. For all you heavy puncher lovers,
                 we at Fitzone are expanding our venue so that you guys can have more fun and better training.
                 </p>
             </div>
@@ -293,14 +400,10 @@
                 <img src="/images/AshtangaTalk.jpg">
             </div>
         </div>
-        <div class="info-container">
-            
-        </div>
     </main>
     <script>
         <!-- handles the functionality of playing and pausing the video when mouse enters or leave -->
         var links = document.querySelectorAll('.video-link'); //selects all the elements within the class ('.video-link')
-        //, .video-link2 paste this if want start trial video to stop playing when mouse is not over it.
         links.forEach(function (link) { // allows you to perform actions on each individual element.
             link.addEventListener('mouseenter', function () {
                 //adds a callback function that receives the current element as a parameter and executes the code within
@@ -311,6 +414,76 @@
                 this.querySelector('video').pause();
             });
         });
+
+        //For Hot Event
+        const overlayButton = document.querySelector('.overlay-button1');
+        const videoContainer = overlayButton.parentElement;
+        overlayButton.addEventListener('click', () => {
+            openModal(videoContainer.querySelector('video').src);
+        });
+        function openModal(videoSrc) {
+            const modal = document.createElement('div');
+            modal.classList.add('modal');
+            modal.innerHTML = `
+                <video src="${videoSrc}" controls autoplay loop></video>
+                <p style="text-align: center;">
+                    Fitzone is having a couple's event now. <br>Get together with your partner and start working out
+                    <br>with Fitzone and their new awesome new promotion!
+                </p>
+                <button class="close-modal">Close</button>
+            `;
+            document.body.appendChild(modal);
+
+            modal.querySelector('.close-modal').addEventListener('click', () => {
+                modal.remove();
+            });
+        }
+        //For Current Event 
+        const overlayButton2 = document.querySelector('.overlay-button2');
+        const videoContainer2 = overlayButton2.parentElement;
+        overlayButton2.addEventListener('click', () => {
+            openModal2(videoContainer2.querySelector('video').src);
+        });
+        function openModal2(videoSrc) {
+            const modal2 = document.createElement('div');
+            modal2.classList.add('modal2');
+            modal2.innerHTML = `
+                <video src="${videoSrc}" controls autoplay loop></video>
+                <p style="text-align: center;">
+                    Fitzone is having a limited event now. <br>With only RM 70, Fitzone will offer you a training program best fit for you.
+                    <br>What are you waiting for? Go to Fitzone now! First Come First Serve!
+                </p>
+                <button class="close-modal">Close</button>
+            `;
+            document.body.appendChild(modal2);
+
+            modal2.querySelector('.close-modal').addEventListener('click', () => {
+                modal2.remove();
+            });
+        }
+        //For Past Event 
+        const overlayButton3 = document.querySelector('.overlay-button3');
+        const videoContainer3 = overlayButton3.parentElement;
+        overlayButton3.addEventListener('click', () => {
+            openModal3(videoContainer3.querySelector('video').src);
+        });
+        function openModal3(videoSrc) {
+            const modal3 = document.createElement('div');
+            modal3.classList.add('modal3');
+            modal3.innerHTML = `
+                <video src="${videoSrc}" controls autoplay loop></video>
+                <p style="text-align: center; font-size: 8vh;">
+                    Sorry but this Event Has Already Ended.
+                    <br>
+                </p>
+                <button class="close-modal">Close</button>
+            `;
+            document.body.appendChild(modal3);
+
+            modal3.querySelector('.close-modal').addEventListener('click', () => {
+                modal3.remove();
+            });
+        }
     </script>
     <footer>
         <ul>
