@@ -83,7 +83,7 @@
             object-fit: cover;
         }
 
-        .Hot-event p {
+        /* .Hot-event p {
             position: absolute;
             top: 0;
             left: 0;
@@ -98,17 +98,17 @@
             transform: translateY(150px); /* Move the paragraph down a bit to hide it initially */
             transition: opacity 3s ease, transform 2s ease; /* Transition opacity and transform properties */
             object-fit: cover;
-        }
-        
+        } */
+
         .Past p {
             color: red;
         }
        
-        .Current:hover p{
+        /* .Current:hover p{
             visibility: visible;
             opacity: 1; /* Make the paragraph fully visible (opaque) when hovered */
             transform: translateY(300px); /* Move the paragraph back to its original position */
-        }
+        } */
 
         .Past:hover p, .Hot-event:hover p  {
             visibility: visible;
@@ -247,7 +247,7 @@
         <div class="mainevent">
             <div class="Hot-event video-link">
                 <video src="/HotEvent.mp4" loop></video>
-                <p>This is Hot Event</p>
+                <!-- <p>This is Hot Event</p> -->
             </div>
         </div>
         <p id="Countdown"></p>
