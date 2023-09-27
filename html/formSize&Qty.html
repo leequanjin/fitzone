@@ -105,17 +105,26 @@
         
                     <div class="buyerBtn">
                         <input type="reset" value="Cancel Order" >
-                        <input type="submit" value="Place Your Order">
+                        <input type="submit" value="Place Your Order" onclick="askPay()">
                     </div>
 
                 </form>
-
-                <div id="submitTxt">
-                </div>
-
             </section>
         </div>   
     </main>
+
+    <script>
+        function askPay() {
+            document.forms[0].onsubmit = function(){
+                if (this.checkValidity()) {
+                    var pay_result = ("Proceed to payment.");
+                    if (pay_result == true){
+                        alert ("PAID");
+                    }
+                }
+            }
+        }
+    </script>
 
     <footer>
         <ul>
