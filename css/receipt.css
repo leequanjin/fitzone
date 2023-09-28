@@ -76,8 +76,10 @@ th,td{
 th{
     background-color: rgb(214, 209, 209);
 }
+
 .alignright{
     text-align: right;
+    padding-right: 1%;
 }
 
 .tymessage h3{
@@ -89,19 +91,40 @@ th{
     font-size: 13px;
     
 }
+.button{
+    display: flex;
+    margin-left: 80%;
+    height:10%;
+}
 #Exit{
     height: 40px;
     width: 50px;
-    padding: 4px;
+    padding: 8px;
     text-align: center;
-    align-items:end;
-    background-color: #FFFFFF;
+    background-color: #EFEFEF;
     color: #241D13;
-    font-size: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: solid 1.5px #241d1380;
+    margin-left: 2%;
+    margin-top: 1%;
+    
+}
+#prtbtn{
+    height: 40px;
+    width: 50px;
+    font-size: 18px;
     font-weight: 500;
     border-radius: 10px;
     border: solid 1.5px #241d1380;
-    margin-left: 85%;
-
+    margin-bottom: 1%;
 
 }
+@media print{
+    
+    .hiddenprint{
+        display: none;
+    }
+}
+  
+
