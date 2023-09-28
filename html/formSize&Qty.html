@@ -198,17 +198,17 @@
                     <form action="#" method="post" onsubmit="return false">
 
                         <div id="cardImg">
-                            <input type="radio" name="cardType" id="visa">
+                            <input type="radio" name="cardType" id="visa" required>
                             <label for="visa" class="cardTypeBtn">
                                 <img src="../images/visa.png" alt="Visa Card">
                             </label>
 
-                            <input type="radio" name="cardType" id="master">
+                            <input type="radio" name="cardType" id="master" required>
                             <label for="master" class="cardTypeBtn">
                                 <img src="../images/master-card.png" alt="Master Card">
                             </label>
 
-                            <input type="radio" name="cardType" id="paypal">
+                            <input type="radio" name="cardType" id="paypal" required>
                             <label for="paypal" class="cardTypeBtn">
                                 <img src="../images/paypal.png" alt="PayPal" >
                             </label>
@@ -222,52 +222,15 @@
         
                             <div class="cName">
                                 <label for="cardName">CARD HOLDER</label> <br>
-                                <input type="text" id="cardName" required>
+                                <input type="text" id="cardName" placeholder="John Smith" required>
                             </div>
                         </div>
 
                         <div id="cardRight">
-                            <!-- <div class="cMonth">
-                                <label for="month">EXPIRATION MM</label>
-                                <select name="month" id="month">
-                                    <option value="m" selected disabled>Month</option>
-                                    <option value="1">01</option>
-                                    <option value="2">02</option>
-                                    <option value="3">03</option>
-                                    <option value="4">04</option>
-                                    <option value="5">05</option>
-                                    <option value="6">06</option>
-                                    <option value="7">07</option>
-                                    <option value="8">08</option>
-                                    <option value="9">09</option>
-                                    <option value="10">10</option>
-                                    <option value="11">11</option>
-                                    <option value="12">12</option>
-                                </select>
-                            </div>
-        
-                            <div class="cYear">
-                                <label for="year">EXPIRATION YY</label>
-                                <select name="year" id="year">
-                                    <option value="y" selected disabled>Year</option>
-                                    <option value="2019">2019</option>
-                                    <option value="2020">2020</option>
-                                    <option value="2021">2021</option>
-                                    <option value="2022">2022</option>
-                                    <option value="2023">2023</option>
-                                    <option value="2024">2024</option>
-                                    <option value="2025">2025</option>
-                                    <option value="2026">2026</option>
-                                    <option value="2027">2027</option>
-                                    <option value="2028">2028</option>
-                                    <option value="2029">2029</option>
-                                    <option value="2030">2030</option>
-                                </select>
-                            </div> -->
 
                             <div class="date">
                                 <label for="dateInput">Expiry Date</label>
-                                <input type="text" id="dateInput" placeholder="MM/YY" maxlength="5">
+                                <input type="text" id="dateInput" placeholder="MM/YY" maxlength="5" required>
                             </div>
         
                             <div class="cCvv">
@@ -276,7 +239,7 @@
                             </div>
                         </div>
     
-                        <div class="submitCard">
+                        <div id="submitCard">
                             <input type="submit" id="submitCardbtn" value="Submit">
                         </div>
                     </form>
@@ -327,7 +290,7 @@
         });
 
 
-        //-----BREAK LINE-----
+        //----- Break Line ----- (to open or close payment selection and cash)
         // To let user choose what method they would like to use to pay
         var placeOrder = document.getElementById("placeOrder");
         var selectPayment = document.getElementById("paymentYN");
@@ -389,6 +352,7 @@
             }
         });
 
+        // ----- Break Line ----- (for card method select)
         // If the radio button is not selected, close the border
         const radioButtons = document.querySelectorAll('input[type="radio"]');
 
@@ -404,6 +368,7 @@
             });
         });
 
+        // ----- Break Line ----- (for date validation)
         // Get a reference to the input element
         const dateInput = document.getElementById('dateInput');
 

@@ -466,7 +466,7 @@ input[type="radio"]:checked + label img {
 /* Set card num and card holder at left */
 #cardLeft {
     width: 55%;
-    height: 30%;
+    height: 45%;
     font-size: 1.2vw;
     display: block;
     border: 0;
@@ -476,6 +476,7 @@ input[type="radio"]:checked + label img {
 /* Set card month, year and cvv at right */
 #cardRight {
     width: 45%;
+    height: 45%;
     float: right;
     text-align: left;
 }
@@ -496,17 +497,34 @@ input[type="radio"]:checked + label img {
     width: 5%;
 }
 
-.submitCard input {
-    width: 60%;
-    height: 3vw;
-    font-size: 1.2vw;
+/* display color if invalid input */
+#cardNo:focus:valid, #cardName:focus:valid, #dateInput:focus:valid, #cvv:focus:valid {
+    background-color: #DFFF9E;
+}
+
+#cardNo:focus:invalid, #cardName:invalid, #dateInput:focus:invalid, #cvv:focus:invalid {
+    background-color: #FAB4A4;
+}
+
+#submitCard {
+    width: 100%;
+    height: 15%;
+    display: flex;
+}
+
+#submitCard input {
+    width: 30%;
+    height: 90%;
+    padding: 2px;
+    border-radius: 10px;
+    font-size: 1.4vw;
     display: block;
-    margin-left: 20%;
+    margin: 2% 0% 0% 35%;
     border: 0;
     background-color: #fddac5;
 }
 
-.submitCard input:hover {
+#submitCard input:hover {
     background-color: #fccdb0;
     border-top: 0;
     border-right: 0;
