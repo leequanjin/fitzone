@@ -16,39 +16,6 @@
 </head>
 
 <body>
-    <header>
-        <a href="/html/home.html"><img src="/images/fitzone_logo.png" alt="fitzone logo"> </a>
-
-        <nav>
-            <ul>
-                <li><a href="/html/home.html">Home</a></li>
-                <li><a href="/html/about.html">About</a></li>
-                <li><a href="/html/news.html">News</a></li>
-                <li><a href="/html/facilities/facilities.html">Facilities +</a>
-                    <ul>
-                        <li><a href="/html/facilities/gym.html">Gym Area</a></li>
-                        <li><a href="/html/facilities/cafe.html">Energy Cafe</a></li>
-                        <li><a href="/html/facilities/yoga.html">Yoga Room</a></li>
-                        <li><a href="/html/facilities/sauna.html">Sauna Room</a></li>
-                    </ul>
-                </li>
-                <li><a href="/html/lessons/lessons.html">Lessons +</a>
-                    <ul>
-                        <li><a href="/html/lessons/membership.html">Memberships</a></li>
-                        <li><a href="/html/lessons/schedules.html">Schedules</a></li>
-                        <li><a href="/html/lessons/instructors.html">Instructors</a></li>
-                    </ul>
-                </li>
-                <li><a href="/html/merch.html">Merchandise</a></li>
-                <li><a href="#" class="active">Help</a></li>
-
-            </ul>
-        </nav>
-
-        <a href="/html/account/profile.html" class="login-link">
-            <img src="/icons/circle-user-solid.png" alt="profile logo">
-        </a>
-    </header>
     <main>
         <div class="receipt">
             <div class="fitzoneDetail">
@@ -80,6 +47,7 @@
                     <table>
                         <tr>
                             <th>Item Name</th>
+                            <th>Size</th>
                             <th>Unit Price</th>
                             <th>Quantity</th>
                             <th>Amount</th>
@@ -87,27 +55,28 @@
                         <tbody>
                             <tr>
                                 <td>Navy Power Sleeveless Tee</td>
+                                <td>S</td>
                                 <td>30.70</td>
                                 <td>1</td>
                                 <td>30.70</td>
                             </tr>
                             <tr>
-                                <td class="alignright"colspan="3">Subtotal</td>
+                                <td class="alignright"colspan="4">Subtotal</td>
                                 <td>30.70</td>
                             </tr>
                             <tr>
-                                <td class="alignright" colspan="3" >SST 5%</td>
-                                <td>1.54</td>
+                                <td class="alignright" colspan="4" >SST 6%</td>
+                                <td>1.84</td>
                             </tr>
                             <tr>
-                                <td class="alignright" colspan="3">Delivery fee</td>
+                                <td class="alignright" colspan="4">Delivery fee</td>
                                 <td>5.00</td>
                             </tr>
                         </tbody>
                         <tfoot>
                             <tr>
-                                <th class="alignright" colspan="3">TOTAL</th>
-                                <td>37.24</td>
+                                <th class="alignright" colspan="4">TOTAL</th>
+                                <td>37.54</td>
                             </tr>
                         </tfoot>
                     </table>
@@ -118,34 +87,33 @@
                 <div class="message">
                     <p>This receipt is computer generated and no signature is required</p>
                     <p>Note: Your item will be received within 10 days</p>
+            </div>
                     <div class="button">
-                    <a href="/html/merch.html"><div id="Exit">Exit</div></a>
-                    
-                    </div>
-                    
+                    <p ><input id="prtbtn" class="hiddenprint" type="button"  value="Print" onclick="print()"></p>
+                    <a href="/html/merch.html"><div class="hiddenprint" id="Exit">Exit</div></a>
                 </div>
-                
-                
-            
-                
-
-
-        </div>
+        
         
 
 
     </main>
-
-    <footer>
-        <ul>
-            <li><a href="https://www.twitter.com/" target="_blank"><img src="/icons/twitter.png" alt=""></a></li>
-            <li><a href="https://www.facebook.com/" target="_blank"><img src="/icons/facebook.png" alt=""></a></li>
-            <li><a href="https://www.instagram.com/" target="_blank"><img src="/icons/instagram.png" alt=""></a></li>
-            <li><a href="https://www.pinterest.com/" target="_blank"><img src="/icons/pinterest.png" alt=""></a></li>
-            <li><a href="https://www.youtube.com/" target="_blank"><img src="/icons/youtube.png" alt=""></a></li>
-        </ul>
-        <p>© 2023 Fit Zone All rights reserved.</p>
-    </footer>
 </body>
+    <script>
+        // Let the user print out the receipt
+        function print() {
+        var printdata = document.getElementsByClassName("receipt")[0].outerHTML;
+        var newwin = window.open("", "_blank");
+        newwin.document.open();
+        newwin.document.write('<html><body>');
+        newwin.document.write(printdata);
+        newwin.document.write('</body></html>');
+        newwin.document.close();
+        newwin.print();
+        newwin.close();
+}
+    </script>
+
+    
+
 
 </html>
