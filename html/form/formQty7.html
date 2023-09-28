@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <header>
+    <header id="headNav">
         <a href="/html/home.html"><img src="/images/fitzone_logo.png" alt="fitzone logo"> </a>
 
         <nav>
@@ -72,7 +72,7 @@
             </section>
     
             <section class="inputForm">
-                <h2>- Navy Power Sleeveless Tee -</h2>
+                <h2>- Hardwork Harvest Mug -</h2>
 
                 <!-- Prompt total price -->
                 <div id="buyerTotal">
@@ -114,7 +114,7 @@
                     </table>
                 </div>
 
-                <form action="#" id="formSize" method="post" onsubmit="return false">
+                <form action="#" id="formQty" method="post" onsubmit="return false">
                     <div id="orderContent">
                         <div class="buyerName">
                             <label for="nameBox">Name* </label>
@@ -136,18 +136,18 @@
                             <textarea name="address" id="addrBox" required></textarea>
                         </div>
             
-                        <div class="buyerSize">
+                        <!-- <div class="buyerSize">
                             <label for="size">Size* </label>
                             <select name="productSize" id="size" required>
-                                <option value="Small">S</option>
-                                <option value="Medium">M</option>
-                                <option value="Large">L</option>
-                                <option value="ExtraLarge">XL</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
                             </select>
-                        </div>
+                        </div> -->
             
                         <div class="buyerQty">
-                            <label for="quantity">Quantity </label>
+                            <label for="quantityBox">Quantity </label>
                             <input type="number" name="productQuantity" id="quantityBox" value="1" min="1" max="10" step="1"/>
                         </div>
             
@@ -216,7 +216,7 @@
 
                         <div id="cardLeft">
                             <div class="cNumber">
-                                <label for="cardNum">CARD NUMBER</label> <br>
+                                <label for="cardNo">CARD NUMBER</label> <br>
                                 <input type="text" id="cardNo" maxlength="16" placeholder="0000 0000 0000 0000" required>
                             </div>
         
@@ -248,6 +248,7 @@
             </div>
         </div>
 
+        <!-- Display the receipt -->
         <div id="displayR">
             <div class="receipt">
 
@@ -274,9 +275,9 @@
                         </div>
                         <div>
                             <h2>: 1024</h2>
-                            <h2>: John Smith</h2>
-                            <h2>: 0123456789</h2>
-                            <h2>: Credit Card</h2>
+                            <h2>: <span id="getName">John Smith</span></h2>
+                            <h2>: <span id="getContact">0123456789</span> </h2>
+                            <h2>: <span id="getPayMethod">Credit Card</span> </h2>
                             <h2>: Accepted</h2>
                         </div>
                     </div>
@@ -287,8 +288,8 @@
                             <h2>Time</h2>
                         </div>
                         <div>
-                            <h2>: 12.3.2023</h2>
-                            <h2>: 13:24</h2>
+                            <h2>: <span id="getDate">00/00/0000</span> </h2>
+                            <h2>: <span id="getTime">00:00</span> </h2>
                         </div>
                     </div>
                 </div>
@@ -297,7 +298,7 @@
                     <table>
                         <tr>
                             <th>Item Name</th>
-                            <th>Size</th>
+                            <!-- <th>Size</th> -->
                             <th>Unit Price</th>
                             <th>Quantity</th>
                             <th>Amount</th>
@@ -305,28 +306,28 @@
                         <tbody>
                             <tr>
                                 <td>Navy Power Sleeveless Tee</td>
-                                <td>S</td>
-                                <td>30.70</td>
-                                <td>1</td>
-                                <td class="alignright">30.70</td>
+                                <!-- <td> <span id="getSize">S</span> </td> -->
+                                <td> <span id="getPrice">00.00</span> </td>
+                                <td> <span id="getQty">0</span> </td>
+                                <td class="alignright"> <span id="getTotal1">00.00</span> </td>
                             </tr>
                             <tr>
-                                <td class="alignright" colspan="4">Subtotal</td>
-                                <td class="alignright">30.70</td>
+                                <td class="alignright" colspan="3">Subtotal</td>
+                                <td class="alignright"> <span id="getTotal2">00.00</span> </td>
                             </tr>
                             <tr>
-                                <td class="alignright" colspan="4">SST 6%</td>
-                                <td class="alignright">1.84</td>
+                                <td class="alignright" colspan="3">SST 6%</td>
+                                <td class="alignright"> <span id="getSst">0.00</span> </td>
                             </tr>
                             <tr>
-                                <td class="alignright" colspan="4">Delivery fee</td>
-                                <td class="alignright">5.00</td>
+                                <td class="alignright" colspan="3">Delivery fee</td>
+                                <td class="alignright"> <span id="getDelivery">0.00</span> </td>
                             </tr>
                         </tbody>
                         <tfoot>
                             <tr>
-                                <th class="alignright" colspan="4">TOTAL</th>
-                                <td class="alignright">37.54</td>
+                                <th class="alignright" colspan="3">TOTAL</th>
+                                <td class="alignright"> <span id="getGtotal">00.00</span> </td>
                             </tr>
                         </tfoot>
                     </table>
@@ -342,10 +343,8 @@
                 </div>
     
                 <div class="button">
-                    <input id="prtbtn" class="hiddenprint" type="button" value="Print" onclick="print()">
-                    <a href="../merch.html">
-                        <div class="hiddenprint" id="Exit">Exit</div>
-                    </a>
+                    <input id="prtbtn" class="hiddenprint" type="button" value="Print" onclick="printReceipt()">
+                    <input type="button" name="exit" id="Exit" value="Exit" class="hiddenprint">
                 </div>
                 
             </div>
@@ -358,7 +357,9 @@
         var quantity = document.getElementById("quantityBox").value;
 
         // price need enter manually as dont have database to store data
-        var price = 30.7;
+        var price = 15.7;
+
+        var method = "";
 
         // Initialize the values in the table when the page loads
         window.addEventListener("DOMContentLoaded", function () {
@@ -382,6 +383,16 @@
             document.getElementById("deliveryFee").textContent = delivery.toFixed(2);
             document.getElementById("gTotal").textContent = finalTotal.toFixed(2);
             document.getElementById("PaymentBoxTotal").textContent = finalTotal.toFixed(2);
+
+            // For receipt
+            document.getElementById("getPrice").textContent = price.toFixed(2);
+            document.getElementById("getQty").textContent = quantity; 
+            document.getElementById("getTotal1").textContent = total;
+
+            document.getElementById("getTotal2").textContent = total;
+            document.getElementById("getSst").textContent = sst.toFixed(2);
+            document.getElementById("getDelivery").textContent = delivery.toFixed(2);
+            document.getElementById("getGtotal").textContent = finalTotal.toFixed(2);
         }
 
         // Update data price once quantity changes
@@ -401,6 +412,7 @@
         var cardConfirm = document.getElementById("confirmCard");
 
         var receipt = document.getElementById("displayR");
+        var headNav = document.getElementById("headNav");
 
         // Function to check if the form is valid
         function isFormValid() {
@@ -427,6 +439,7 @@
         function openCash() {
             selectPayment.style.display = "none";
             cashConfirm.style.display = "block";
+            method = "Cash";
         }
 
         // Display message if user confirm to use cash and finish
@@ -434,6 +447,8 @@
             if (confirm("Thank you for your purchase.")) {
                 cashConfirm.style.display = "none";
                 receipt.style.display = "block";
+                headNav.style.display = "none";
+                updateReceipt();
                 // window.location.href = "merch.html";
             }
         }
@@ -446,8 +461,9 @@
 
         // Function open if user choose to use card
         function openCard() {
-            selectPayment.style.display = "none"
-            cardConfirm.style.display = "block"
+            selectPayment.style.display = "none";
+            cardConfirm.style.display = "block";
+            method = "Credit Card";
         }
 
         function isCardValid() {
@@ -460,6 +476,8 @@
                 if (confirm("Thank you for your purchase!")) {
                     cardConfirm.style.display = "none";
                     receipt.style.display = "block";
+                    headNav.style.display = "none";
+                    updateReceipt();
                     //window.location.href = "merch.html";
                 }
             }
@@ -468,6 +486,11 @@
         function closeCard() {
             selectPayment.style.display = "block"
             cardConfirm.style.display = "none"
+        }
+
+        // Go back Merchandise
+        function exitReceipt() {
+            window.location.href = "/html/merch.html";
         }
     
         // Attach event listeners
@@ -486,6 +509,9 @@
             document.getElementById("card").addEventListener("click", openCard);
             document.getElementById("submitCardbtn").addEventListener("click",cardMsg);
             document.getElementById("unCardbtn").addEventListener("click",closeCard);
+
+            //Regarding to print
+            document.getElementById("Exit").addEventListener("click",exitReceipt)
 
             window.onclick = function (event) {
                 if (event.target == selectPayment) {
@@ -562,18 +588,38 @@
             document.body.classList.remove("stop-scrolling");
         }
 
-        // // Let the user print out the receipt
-        // function print() {
-        //     var printdata = document.getElementsByClassName("receipt")[0].outerHTML;
-        //     var newwin = window.open("", "_blank");
-        //     newwin.document.open();
-        //     newwin.document.write('<html><body><main><displayR>');
-        //     newwin.document.write(printdata);
-        //     newwin.document.write('</displayR></main></body></html>');
-        //     newwin.document.close();
-        //     newwin.print();
-        //     newwin.close();
-        // }
+        //----- Break Line ----- (Regarding Receipt Printing)
+
+        // Calculate current date and time
+        var currentDate = new Date();
+        var formattedDate = currentDate.toLocaleDateString();
+        var formattedTime = currentDate.toLocaleTimeString(); 
+
+        // Load all the data inside
+        function updateReceipt() {
+            // Get data  
+            var name = document.getElementById("nameBox").value;
+            var contact = document.getElementById("phoneBox").value;
+            // var size = document.getElementById("size").value;
+
+            // Update data
+
+            document.getElementById("getName").textContent = name;
+            document.getElementById("getContact").textContent = contact;
+            document.getElementById("getPayMethod").textContent = method;
+
+            document.getElementById("getDate").textContent = formattedDate; 
+            document.getElementById("getTime").textContent = formattedTime;
+
+            // document.getElementById("getSize").textContent = size;
+            
+        }
+
+        // To print out the receipt
+        function printReceipt() {
+            window.print();
+
+        }
 
     </script>
     

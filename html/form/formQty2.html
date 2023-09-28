@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitzone</title>
+    <link rel="icon" href="/images/fitzone_logo-only.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/form.css">
+    
+
+    
+
+</head>
+
+<body>
+    <header id="headNav">
+        <a href="/html/home.html"><img src="/images/fitzone_logo.png" alt="fitzone logo"> </a>
+
+        <nav>
+            <ul>
+                <li><a href="/html/home.html">Home</a></li>
+                <li><a href="/html/about.html">About</a></li>
+                <li><a href="/html/news.html">News</a></li>
+                <li><a href="/html/facilities/facilities.html">Facilities +</a>
+                    <ul>
+                        <li><a href="/html/facilities/gym.html">Gym Area</a></li>
+                        <li><a href="/html/facilities/cafe.html">Energy Cafe</a></li>
+                        <li><a href="/html/facilities/yoga.html">Yoga Room</a></li>
+                        <li><a href="/html/facilities/sauna.html">Sauna Room</a></li>
+                    </ul>
+                </li>
+                <li><a href="/html/lessons/lessons.html">Lessons +</a>
+                    <ul>
+                        <li><a href="/html/lessons/membership.html">Memberships</a></li>
+                        <li><a href="/html/lessons/schedules.html">Schedules</a></li>
+                        <li><a href="/html/lessons/instructors.html">Instructors</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="active">Merchandise</a></li>
+                <li><a href="/html/help.html">Help</a></li>
+
+            </ul>
+        </nav>
+
+        <a href="/html/account/profile.html" class="login-link">
+            <img src="../../icons/circle-user-solid.png" alt="profile logo">
+        </a>
+    </header>
+    
+    <main>
+        <div class="formbg">
+            <section class="backArrow">
+                <div class="backBtn">
+                    <button><a href="../merch.html"> &#8617; </a></button>
+                </div>
+                <div class="backTxt">
+                    <h1>Order Now</h1>
+                    <ul>
+                        <li>One order per receipt.</li>
+                        <li>Only accept cash, credit card and debit card.</li>
+                        <li>Every purchase will be charge 6% SST and RM 5 delivery fee.</li>
+                        <li>Item with * is required to be fill in.</li>
+                    </ul>
+                    <P>
+                        If your order item have not received, kindly reach out to us promptly. Your satisfaction is our top priority, we're ready to assist you every step of the way.
+                    </P>
+                </div>
+            </section>
+    
+            <section class="inputForm">
+                <h2>- SkyBreeze Gym Backpack -</h2>
+
+                <!-- Prompt total price -->
+                <div id="buyerTotal">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="3"> * Total * </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Price per item</td>
+                                <td id="itemPrice" colspan="2">0.00</td>
+                            </tr>
+                            <tr>
+                                <td>Quantity</td>
+                                <td id="itemQty" colspan="2">0</td>
+                            </tr>
+                            <tr>
+                                <td>Total</td>
+                                <td id="totalPrice" colspan="2">0.00</td>
+                            </tr>
+                            <tr>
+                                <td>SST (6%)</td>
+                                <td id="sst" colspan="2">0.00</td>
+                            </tr>
+                            <tr>
+                                <td>Delivery Fee</td>
+                                <td id="deliveryFee" colspan="2">0.00</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Grand Total</th>
+                                <th>RM</th>
+                                <th id="gTotal">0.00</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <form action="#" id="formQty" method="post" onsubmit="return false">
+                    <div id="orderContent">
+                        <div class="buyerName">
+                            <label for="nameBox">Name* </label>
+                            <input type="text" id="nameBox" name="Name" placeholder="John Smith" required/>
+                        </div>
+            
+                        <div class="buyerNo">
+                            <label for="phoneBox">Phone Number* </label>
+                            <input type="tel" id="phoneBox" name="phoneNumber" placeholder="0123456789" pattern="[0-9]{3}-?[0-9]{3,4}-?[0-9]{4}" required/>
+                        </div>
+            
+                        <div class="buyerEmail">
+                            <label for="mailBox">E-mail* </label>
+                            <input type="email" id="mailBox" name="email" placeholder="abc@example.com" required/>
+                        </div>
+            
+                        <div class="buyerAddress">
+                            <label for="addrBox">Address* </label>
+                            <textarea name="address" id="addrBox" required></textarea>
+                        </div>
+            
+                        <!-- <div class="buyerSize">
+                            <label for="size">Size* </label>
+                            <select name="productSize" id="size" required>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                            </select>
+                        </div> -->
+            
+                        <div class="buyerQty">
+                            <label for="quantityBox">Quantity </label>
+                            <input type="number" name="productQuantity" id="quantityBox" value="1" min="1" max="10" step="1"/>
+                        </div>
+            
+                        <div class="buyerBtn">
+                            <input type="reset" value="Cancel Order" >
+                            <input type="submit" value="Place Your Order" id="placeOrder">
+                        </div>
+                    </div>
+                </form>
+
+
+
+            </section>
+
+        </div>   
+
+        <!-- Prompt to let user select how to pay -->
+        <div id="paymentYN">
+            <div id="paymentYN-content">
+                <h2>Choose a payment method</h2>
+                <h3>Total : RM <span id="PaymentBoxTotal"></span> </h3>
+                <div id="paymentMethod">
+                    <input type="submit" class="calcPayment" id="cash" value="Cash on Delivery">
+                    <input type="submit" class="calcPayment" id="card" value="Pay by Card">
+                    <input type="button" class="cancel" id="unPaybtn" value="Cancel Payment">
+                </div>
+            </div>
+        </div>
+
+        <!-- Prompt to let user confirm use cash -->
+        <div id="confirmCash">
+            <div id="confirmCash-content">
+                <h2>Are you sure?</h2>
+                <h3>Please be noted that your item will be sent back to our center if you did not pay when the item arrive at the location.</h3>
+                <div id="confirmCashBtn">
+                    <input type="button" class="cancel" id="unCashbtn" value="Cancel">
+                    <input type="submit" id="cashbtn" value="Yes">
+                </div>
+            </div>
+        </div>
+
+        <!-- Prompt to let user enter card detail -->
+        <div id="confirmCard">
+            <div id="confirmCard-content">
+                <h2>Payment Details</h2>
+
+                <div id="cardInput">
+                    <form action="#" method="post" onsubmit="return false" id="cardForm">
+
+                        <div id="cardImg">
+                            <input type="radio" name="cardType" id="visa" checked required>
+                            <label for="visa" class="cardTypeBtn">
+                                <img src="../../images/visa.png" alt="Visa Card">
+                            </label>
+
+                            <input type="radio" name="cardType" id="master" required>
+                            <label for="master" class="cardTypeBtn">
+                                <img src="../../images/master-card.png" alt="Master Card">
+                            </label>
+
+                            <input type="radio" name="cardType" id="paypal" required>
+                            <label for="paypal" class="cardTypeBtn">
+                                <img src="../../images/paypal.png" alt="PayPal" >
+                            </label>
+                        </div>
+
+                        <div id="cardLeft">
+                            <div class="cNumber">
+                                <label for="cardNo">CARD NUMBER</label> <br>
+                                <input type="text" id="cardNo" maxlength="16" placeholder="0000 0000 0000 0000" required>
+                            </div>
+        
+                            <div class="cName">
+                                <label for="cardName">CARD HOLDER</label> <br>
+                                <input type="text" id="cardName" placeholder="John Smith" required>
+                            </div>
+                        </div>
+
+                        <div id="cardRight">
+
+                            <div class="cDate">
+                                <label for="dateInput">Expiry Date</label>
+                                <input type="text" id="dateInput" placeholder="MM/YY" maxlength="5" required>
+                            </div>
+        
+                            <div class="cCvv">
+                                <label for="cvv">CVV</label>
+                                <input type="text" name="cvv" id="cvv" maxlength="3" required>
+                            </div>
+                        </div>
+    
+                        <div id="submitCard">
+                            <input type="reset" class="cancel" id="unCardbtn" value="Cancel">
+                            <input type="submit" class="submit" id="submitCardbtn" value="Submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Display the receipt -->
+        <div id="displayR">
+            <div class="receipt">
+
+                <div class="fitzoneDetail">
+                    <h1><span>FitZone</span> Merchandise</h1>
+                    <p>9, Jalan Malinja 2, Taman Bunga Raya, 53300 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur</p>
+                    <p>Tel: 011-26102193</p>
+                </div>
+    
+                <div class="longblock"></div>
+    
+                <div class="title">
+                    <h2>Receipt</h2>
+                </div>
+    
+                <div class="customerDetail">
+                    <div class="block1">
+                        <div>
+                            <h2>Receipt Number</h2>
+                            <h2>Customer Name</h2>
+                            <h2>Contact Number</h2>
+                            <h2>Payment Method</h2>
+                            <h2>Status</h2>
+                        </div>
+                        <div>
+                            <h2>: 1024</h2>
+                            <h2>: <span id="getName">John Smith</span></h2>
+                            <h2>: <span id="getContact">0123456789</span> </h2>
+                            <h2>: <span id="getPayMethod">Credit Card</span> </h2>
+                            <h2>: Accepted</h2>
+                        </div>
+                    </div>
+    
+                    <div class="block2">
+                        <div>
+                            <h2>Date</h2>
+                            <h2>Time</h2>
+                        </div>
+                        <div>
+                            <h2>: <span id="getDate">00/00/0000</span> </h2>
+                            <h2>: <span id="getTime">00:00</span> </h2>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="receiptDetail">
+                    <table>
+                        <tr>
+                            <th>Item Name</th>
+                            <!-- <th>Size</th> -->
+                            <th>Unit Price</th>
+                            <th>Quantity</th>
+                            <th>Amount</th>
+                        </tr>
+                        <tbody>
+                            <tr>
+                                <td>Navy Power Sleeveless Tee</td>
+                                <!-- <td> <span id="getSize">S</span> </td> -->
+                                <td> <span id="getPrice">00.00</span> </td>
+                                <td> <span id="getQty">0</span> </td>
+                                <td class="alignright"> <span id="getTotal1">00.00</span> </td>
+                            </tr>
+                            <tr>
+                                <td class="alignright" colspan="3">Subtotal</td>
+                                <td class="alignright"> <span id="getTotal2">00.00</span> </td>
+                            </tr>
+                            <tr>
+                                <td class="alignright" colspan="3">SST 6%</td>
+                                <td class="alignright"> <span id="getSst">0.00</span> </td>
+                            </tr>
+                            <tr>
+                                <td class="alignright" colspan="3">Delivery fee</td>
+                                <td class="alignright"> <span id="getDelivery">0.00</span> </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th class="alignright" colspan="3">TOTAL</th>
+                                <td class="alignright"> <span id="getGtotal">00.00</span> </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+    
+                <div class="tymessage">
+                    <h3>Thank you for shopping with us!</h3>
+                </div>
+    
+                <div class="message">
+                    <p>This receipt is computer generated and no signature is required <br>Note: Your item will be received
+                        within 10 days</p>
+                </div>
+    
+                <div class="button">
+                    <input id="prtbtn" class="hiddenprint" type="button" value="Print" onclick="printReceipt()">
+                    <input type="button" name="exit" id="Exit" value="Exit" class="hiddenprint">
+                </div>
+                
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Calculate prices
+        // Initialize every value needed
+        var quantity = document.getElementById("quantityBox").value;
+
+        // price need enter manually as dont have database to store data
+        var price = 102.2;
+
+        var method = "";
+
+        // Initialize the values in the table when the page loads
+        window.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("itemPrice").textContent = price.toFixed(2);
+            document.getElementById("itemQty").textContent = quantity;
+            updateTotalPrice();
+        });
+
+        function updateTotalPrice() {
+            var totalP = quantity * price;
+            var total = totalP.toFixed(2);
+            var sst = total * 6 / 100;
+            var delivery = 5;
+            var finalTotal = totalP + sst + delivery;
+            
+            // Update every data once user input something
+            document.getElementById("itemPrice").textContent = price.toFixed(2); 
+            document.getElementById("itemQty").textContent = quantity;
+            document.getElementById("totalPrice").textContent = total; 
+            document.getElementById("sst").textContent = sst.toFixed(2);
+            document.getElementById("deliveryFee").textContent = delivery.toFixed(2);
+            document.getElementById("gTotal").textContent = finalTotal.toFixed(2);
+            document.getElementById("PaymentBoxTotal").textContent = finalTotal.toFixed(2);
+
+            // For receipt
+            document.getElementById("getPrice").textContent = price.toFixed(2);
+            document.getElementById("getQty").textContent = quantity; 
+            document.getElementById("getTotal1").textContent = total;
+
+            document.getElementById("getTotal2").textContent = total;
+            document.getElementById("getSst").textContent = sst.toFixed(2);
+            document.getElementById("getDelivery").textContent = delivery.toFixed(2);
+            document.getElementById("getGtotal").textContent = finalTotal.toFixed(2);
+        }
+
+        // Update data price once quantity changes
+        document.getElementById("quantityBox").addEventListener("change", function () {
+            quantity = document.getElementById("quantityBox").value;
+            updateTotalPrice();
+        });
+
+
+        //----- Break Line ----- (to open or close payment selection, cash ,card and receipt)
+        // To let user choose what method they would like to use to pay
+        var placeOrder = document.getElementById("placeOrder");
+        var selectPayment = document.getElementById("paymentYN");
+
+        var cashConfirm = document.getElementById("confirmCash");
+
+        var cardConfirm = document.getElementById("confirmCard");
+
+        var receipt = document.getElementById("displayR");
+        var headNav = document.getElementById("headNav");
+
+        // Function to check if the form is valid
+        function isFormValid() {
+            var form = document.forms[0];
+            return form.checkValidity();
+        }
+    
+        // Function to show the payment selection boxes
+        function showPaymentOptions() {
+            // Check if the form is valid
+            if (isFormValid()) {
+                disableScroll();
+                selectPayment.style.display = "block";
+            }
+        }
+    
+        // Function to close the payment selection boxes
+        function closePaymentOptions() {
+            enableScroll()
+            selectPayment.style.display = "none";
+        }
+
+        // Fuction open if user choose to use cash (close selectPayment and ask confirm cash)
+        function openCash() {
+            selectPayment.style.display = "none";
+            cashConfirm.style.display = "block";
+            method = "Cash";
+        }
+
+        // Display message if user confirm to use cash and finish
+        function cashMsg() {
+            if (confirm("Thank you for your purchase.")) {
+                cashConfirm.style.display = "none";
+                receipt.style.display = "block";
+                headNav.style.display = "none";
+                updateReceipt();
+                // window.location.href = "merch.html";
+            }
+        }
+
+        // Go back payment selection if user cancel
+        function closeCash() {
+            selectPayment.style.display = "block";
+            cashConfirm.style.display = "none";
+        }
+
+        // Function open if user choose to use card
+        function openCard() {
+            selectPayment.style.display = "none";
+            cardConfirm.style.display = "block";
+            method = "Credit Card";
+        }
+
+        function isCardValid() {
+            var form = document.forms[1];
+            return form.checkValidity();
+        }
+
+        function cardMsg() {
+            if (isCardValid()) {
+                if (confirm("Thank you for your purchase!")) {
+                    cardConfirm.style.display = "none";
+                    receipt.style.display = "block";
+                    headNav.style.display = "none";
+                    updateReceipt();
+                    //window.location.href = "merch.html";
+                }
+            }
+        }
+
+        function closeCard() {
+            selectPayment.style.display = "block"
+            cardConfirm.style.display = "none"
+        }
+
+        // Go back Merchandise
+        function exitReceipt() {
+            window.location.href = "/html/merch.html";
+        }
+    
+        // Attach event listeners
+        document.addEventListener("DOMContentLoaded", function () {
+    
+            // Regarding to payment method selection
+            placeOrder.addEventListener("click", showPaymentOptions);
+            document.getElementById("unPaybtn").addEventListener("click", closePaymentOptions);
+
+            // Regarding to cash
+            document.getElementById("cash").addEventListener("click", openCash);
+            document.getElementById("cashbtn").addEventListener("click",cashMsg);
+            document.getElementById("unCashbtn").addEventListener("click",closeCash);
+
+            // Regarding to card
+            document.getElementById("card").addEventListener("click", openCard);
+            document.getElementById("submitCardbtn").addEventListener("click",cardMsg);
+            document.getElementById("unCardbtn").addEventListener("click",closeCard);
+
+            //Regarding to print
+            document.getElementById("Exit").addEventListener("click",exitReceipt)
+
+            window.onclick = function (event) {
+                if (event.target == selectPayment) {
+                    enableScroll()
+                    selectPayment.style.display = "none";
+                }
+            }
+        });
+
+        // ----- Break Line ----- (for card method select)
+        // If the radio button is not selected, close the border
+        const radioButtons = document.querySelectorAll('input[type="radio"]');
+
+        radioButtons.forEach((radioButton) => {
+            radioButton.addEventListener('change', function () {
+                if (this.checked) {
+                    radioButtons.forEach((rb) => {
+                        if (rb !== this) {
+                            rb.checked = false;
+                        }
+                    });
+                }
+            });
+        });
+
+        // ----- Break Line ----- (for date validation)
+        // Get a reference to the input element
+        const dateInput = document.getElementById('dateInput');
+
+        // Add an input event listener to format the input as mm/yy
+        dateInput.addEventListener('input', function () {
+            const value = dateInput.value;
+            
+            // Remove any non-numeric characters
+            const numericValue = value.replace(/\D/g, '');
+
+            // Check if the value is empty or has more than 4 characters
+            if (numericValue.length == 0 || numericValue.length > 4) {
+                dateInput.value = '';
+            } else {
+                // Format the value as mm/yy
+                dateInput.value = numericValue.slice(0, 2) + '/' + numericValue.slice(2, 4);
+
+                // Check if the month and year is in the valid range
+                const month = parseInt(numericValue.slice(0, 2));
+                const month_1 = parseInt(numericValue.slice(0, 1));
+                const month_2 = parseInt(numericValue.slice(1, 2));
+                const year_1 = parseInt(numericValue.slice(2, 3));
+                const year_2 = parseInt(numericValue.slice(3, 4));
+
+                if (month < 0 || month > 12) {
+                    alert("Month must be between 01 and 12.");
+                    dateInput.value = "";
+                } else {
+                    if (month_1 == 0 && month_2 == 0){
+                        alert("Month must be between 01 and 12.");
+                        dateInput.value = "";
+                    }else {
+                        if (year_1 < 2 || (year_1 == 2 && year_2 < 3) || (month_1 == 0 && month_2 < 9 && year_1 == 2 && year_2 < 4)) {
+                            alert("Please enter a valid year (at least 23).");
+                            dateInput.value = "";
+                        }
+                    }
+                }
+            }
+        });
+
+        //----- Break Line ----- (Deny user to scroll after submit)
+        function disableScroll() {
+            document.body.classList.add("stop-scrolling");
+        }
+
+        function enableScroll() {
+            document.body.classList.remove("stop-scrolling");
+        }
+
+        //----- Break Line ----- (Regarding Receipt Printing)
+
+        // Calculate current date and time
+        var currentDate = new Date();
+        var formattedDate = currentDate.toLocaleDateString();
+        var formattedTime = currentDate.toLocaleTimeString(); 
+
+        // Load all the data inside
+        function updateReceipt() {
+            // Get data  
+            var name = document.getElementById("nameBox").value;
+            var contact = document.getElementById("phoneBox").value;
+            // var size = document.getElementById("size").value;
+
+            // Update data
+
+            document.getElementById("getName").textContent = name;
+            document.getElementById("getContact").textContent = contact;
+            document.getElementById("getPayMethod").textContent = method;
+
+            document.getElementById("getDate").textContent = formattedDate; 
+            document.getElementById("getTime").textContent = formattedTime;
+
+            // document.getElementById("getSize").textContent = size;
+            
+        }
+
+        // To print out the receipt
+        function printReceipt() {
+            window.print();
+
+        }
+
+    </script>
+    
+
+    <footer>
+        <ul>
+            <li><a href="https://www.twitter.com/" target="_blank"><img src="/icons/twitter.png" alt=""></a></li>
+            <li><a href="https://www.facebook.com/" target="_blank"><img src="/icons/facebook.png" alt=""></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank"><img src="/icons/instagram.png" alt=""></a></li>
+            <li><a href="https://www.pinterest.com/" target="_blank"><img src="/icons/pinterest.png" alt=""></a></li>
+            <li><a href="https://www.youtube.com/" target="_blank"><img src="/icons/youtube.png" alt=""></a></li>
+        </ul>
+        <p>© 2023 Fit Zone All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
