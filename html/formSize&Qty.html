@@ -193,21 +193,27 @@
         <div id="confirmCard">
             <div id="confirmCard-content">
                 <h2>Payment Details</h2>
-                
-                <div id="cardImg">
-                    <img src="../images/visa.png" alt="Visa Card">
-                    <img src="../images/master-card.png" alt="Master Card">
-                    <img src="../images/paypal.png" alt="PayPal" >
-                </div>
 
                 <div id="cardInput">
-
-                    <div id="cardImg">
-                        <label for="cardOption">Select your card: </label>
-                        <input type="radio">
-                    </div>
-
                     <form action="#" method="post" onsubmit="return false">
+
+                        <div id="cardImg">
+                            <input type="radio" name="cardType" id="visa">
+                            <label for="visa" class="cardTypeBtn">
+                                <img src="../images/visa.png" alt="Visa Card">
+                            </label>
+
+                            <input type="radio" name="cardType" id="master">
+                            <label for="master" class="cardTypeBtn">
+                                <img src="../images/master-card.png" alt="Master Card">
+                            </label>
+
+                            <input type="radio" name="cardType" id="paypal">
+                            <label for="paypal" class="cardTypeBtn">
+                                <img src="../images/paypal.png" alt="PayPal" >
+                            </label>
+                        </div>
+
                         <div id="cardLeft">
                             <div class="cNumber">
                                 <label for="cardNum">CARD NUMBER</label> <br>
@@ -221,7 +227,7 @@
                         </div>
 
                         <div id="cardRight">
-                            <div class="cMonth">
+                            <!-- <div class="cMonth">
                                 <label for="month">EXPIRATION MM</label>
                                 <select name="month" id="month">
                                     <option value="m" selected disabled>Month</option>
@@ -257,11 +263,16 @@
                                     <option value="2029">2029</option>
                                     <option value="2030">2030</option>
                                 </select>
+                            </div> -->
+
+                            <div class="date">
+                                <label for="dateInput">Expiry Date</label>
+                                <input type="text" id="dateInput" placeholder="MM/YY" maxlength="5">
                             </div>
         
                             <div class="cCvv">
                                 <label for="cvv">CVV</label>
-                                <input type="text" name="cvv" id="cvv" maxlength="4" required>
+                                <input type="text" name="cvv" id="cvv" maxlength="3" required>
                             </div>
                         </div>
     
@@ -374,6 +385,61 @@
             window.onclick = function (event) {
                 if (event.target == selectPayment) {
                     selectPayment.style.display = "none";
+                }
+            }
+        });
+
+        // If the radio button is not selected, close the border
+        const radioButtons = document.querySelectorAll('input[type="radio"]');
+
+        radioButtons.forEach((radioButton) => {
+            radioButton.addEventListener('change', function () {
+                if (this.checked) {
+                    radioButtons.forEach((rb) => {
+                        if (rb !== this) {
+                            rb.checked = false;
+                        }
+                    });
+                }
+            });
+        });
+
+        // Get a reference to the input element
+        const dateInput = document.getElementById('dateInput');
+
+        // Add an input event listener to format the input as mm/yy
+        dateInput.addEventListener('input', function () {
+            const value = dateInput.value;
+            
+            // Remove any non-numeric characters
+            const numericValue = value.replace(/\D/g, '');
+
+            // Check if the value is empty or has more than 4 characters
+            if (numericValue.length == 0 || numericValue.length > 4) {
+                dateInput.value = '';
+            } else {
+                // Format the value as mm/yy
+                dateInput.value = numericValue.slice(0, 2) + '/' + numericValue.slice(2, 4);
+
+                // Check if the month and year is in the valid range
+                const month = parseInt(numericValue.slice(0, 2));
+                const month_1 = parseInt(numericValue.slice(0, 1));
+                const month_2 = parseInt(numericValue.slice(1, 2));
+                const year = parseInt(numericValue.slice(2, 4));
+                
+                if (month < 0 || month > 12) {
+                    alert("Month must be between 01 and 12.");
+                    dateInput.value = "";
+                } else {
+                    if (month_1==0 && month_2==0){
+                        alert("Month must be between 01 and 12.");
+                        dateInput.value = "";
+                    }else {
+                        if (year < 23) {
+                            alert("Please enter a valid year (at least 23).");
+                            dateInput.value = "";
+                        }
+                    }
                 }
             }
         });
