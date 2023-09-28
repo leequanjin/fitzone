@@ -195,7 +195,7 @@
                 <h2>Payment Details</h2>
 
                 <div id="cardInput">
-                    <form action="#" method="post" onsubmit="return false">
+                    <form action="#" method="post" onsubmit="return false" id="cardForm">
 
                         <div id="cardImg">
                             <input type="radio" name="cardType" id="visa" required>
@@ -240,7 +240,8 @@
                         </div>
     
                         <div id="submitCard">
-                            <input type="submit" id="submitCardbtn" value="Submit">
+                            <input type="submit" class="submit" id="submitCardbtn" value="Submit">
+                            <input type="reset" class="cancel" id="unCardbtn" value="Cancel">
                         </div>
                     </form>
                 </div>
@@ -290,12 +291,14 @@
         });
 
 
-        //----- Break Line ----- (to open or close payment selection and cash)
+        //----- Break Line ----- (to open or close payment selection, cash and card)
         // To let user choose what method they would like to use to pay
         var placeOrder = document.getElementById("placeOrder");
         var selectPayment = document.getElementById("paymentYN");
 
         var cashConfirm = document.getElementById("confirmCash");
+
+        var cardConfirm = document.getElementById("confirmCard");
 
         // Function to check if the form is valid
         function isFormValid() {
@@ -322,15 +325,40 @@
             cashConfirm.style.display = "block";
         }
 
+        // Display message if user confirm to use cash and finish
         function cashMsg() {
             if (confirm("Thank you for your purchase, will direct you back to Merchandise page.")) {
                 window.location.href = "merch.html";
             }
         }
 
+        // Go back payment selection if user cancel
         function closeCash() {
             selectPayment.style.display = "block";
             cashConfirm.style.display = "none";
+        }
+
+        // Function open if user choose to use card
+        function openCard() {
+            selectPayment.style.display = "none"
+            cardConfirm.style.display = "block"
+        }
+
+        function isCardValid() {
+            var form = document.forms[1];
+            return form.checkValidity();
+        }
+
+        function cardMsg() {
+            if (isCardValid()) {
+                alert("Thank you for your purchase! Proceeding you to Merchandise page.");
+                window.location.href = "merch.htm";
+            }
+        }
+
+        function closeCard() {
+            selectPayment.style.display = "block"
+            cardConfirm.style.display = "none"
         }
     
         // Attach event listeners
@@ -344,6 +372,11 @@
             document.getElementById("cash").addEventListener("click", openCash);
             document.getElementById("cashbtn").addEventListener("click",cashMsg);
             document.getElementById("unCashbtn").addEventListener("click",closeCash);
+
+            // Regarding to card
+            document.getElementById("card").addEventListener("click", openCard);
+            document.getElementById("submitCardbtn").addEventListener("click",cardMsg);
+            document.getElementById("unCardbtn").addEventListener("click",closeCard);
 
             window.onclick = function (event) {
                 if (event.target == selectPayment) {
@@ -409,6 +442,9 @@
                 }
             }
         });
+
+        //----- Break Line -----
+
     </script>
     
 

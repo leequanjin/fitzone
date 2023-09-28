@@ -390,7 +390,7 @@ input:focus, label:focus, textarea:focus {
 }
 
 #confirmCard {
-    /* display: none; */
+    display: none;
     position: fixed;
     z-index: 1;
     left: 0;
