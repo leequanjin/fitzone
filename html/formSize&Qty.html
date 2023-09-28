@@ -310,12 +310,14 @@
         function showPaymentOptions() {
             // Check if the form is valid
             if (isFormValid()) {
+                disableScroll();
                 selectPayment.style.display = "block";
             }
         }
     
         // Function to close the payment selection boxes
         function closePaymentOptions() {
+            enableScroll()
             selectPayment.style.display = "none";
         }
 
@@ -380,6 +382,7 @@
 
             window.onclick = function (event) {
                 if (event.target == selectPayment) {
+                    enableScroll()
                     selectPayment.style.display = "none";
                 }
             }
@@ -444,6 +447,14 @@
         });
 
         //----- Break Line -----
+
+        function disableScroll() {
+            document.body.classList.add("stop-scrolling");
+        }
+
+        function enableScroll() {
+            document.body.classList.remove("stop-scrolling");
+        }
 
     </script>
     
