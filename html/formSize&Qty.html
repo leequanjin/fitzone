@@ -180,11 +180,11 @@
         <!-- Prompt to let user confirm use cash -->
         <div id="confirmCash">
             <div id="confirmCash-content">
-                <h2>Are you confirm to pay when the item arrive?</h2>
-                <h3>Please be noted that your item will be send back to our center if you did not pay when the item arrive at your house.</h3>
+                <h2>Are you sure?</h2>
+                <h3>Please be noted that your item will be sent back to our center if you did not pay when the item arrive at the location.</h3>
                 <div id="confirmCashBtn">
-                    <input type="submit" id="cashbtn" value="Yes">
                     <input type="button" class="cancel" id="unCashbtn" value="Cancel">
+                    <input type="submit" id="cashbtn" value="Yes">
                 </div>
             </div>
         </div>
@@ -329,7 +329,7 @@
 
         // Display message if user confirm to use cash and finish
         function cashMsg() {
-            if (confirm("Thank you for your purchase, will direct you back to Merchandise page.")) {
+            if (confirm("Thank you for your purchase.")) {
                 window.location.href = "merch.html";
             }
         }
@@ -353,8 +353,9 @@
 
         function cardMsg() {
             if (isCardValid()) {
-                alert("Thank you for your purchase! Proceeding you to Merchandise page.");
-                window.location.href = "merch.html";
+                if (confirm("Thank you for your purchase!")) {
+                    window.location.href = "merch.html";
+                }
             }
         }
 
