@@ -180,11 +180,11 @@
         <!-- Prompt to let user confirm use cash -->
         <div id="confirmCash">
             <div id="confirmCash-content">
-                <h2>Are you confirm to pay when the item arrive?</h2>
-                <h3>Please be noted that your item will be send back to our center if you did not pay when the item arrive at your house.</h3>
+                <h2>Are you sure?</h2>
+                <h3>Please be noted that your item will be sent back to our center if you did not pay when the item arrive at the location.</h3>
                 <div id="confirmCashBtn">
-                    <input type="submit" id="cashbtn" value="Yes">
                     <input type="button" class="cancel" id="unCashbtn" value="Cancel">
+                    <input type="submit" id="cashbtn" value="Yes">
                 </div>
             </div>
         </div>
@@ -245,8 +245,6 @@
                         </div>
                     </form>
                 </div>
-
-               
             </div>
         </div>
 
@@ -334,8 +332,13 @@
 
         // Display message if user confirm to use cash and finish
         function cashMsg() {
+<<<<<<< HEAD:html/formSize&Qty.html
             if (confirm("Thank you for your purchase, will direct you back to Merchandise page.")) {
                 window.location.href = "receipt.html";
+=======
+            if (confirm("Thank you for your purchase.")) {
+                window.location.href = "merch.html";
+>>>>>>> 603feffc158d53da80f47e2f1e3c5699ded1b901:html/form/formSize&Qty.html
             }
         }
 
@@ -358,8 +361,9 @@
 
         function cardMsg() {
             if (isCardValid()) {
-                alert("Thank you for your purchase! Proceeding you to Merchandise page.");
-                window.location.href = "merch.html";
+                if (confirm("Thank you for your purchase!")) {
+                    window.location.href = "merch.html";
+                }
             }
         }
 
@@ -452,8 +456,7 @@
         });
         url="receipt.html?name="+nameBox+"&phone="+phoneBox;
 
-        //----- Break Line -----
-
+        //----- Break Line ----- (Deny user to scroll after submit)
         function disableScroll() {
             document.body.classList.add("stop-scrolling");
         }
