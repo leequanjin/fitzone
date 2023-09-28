@@ -465,20 +465,12 @@ input[type="radio"]:checked + label img {
 
 /* Set card num and card holder at left */
 #cardLeft {
-    width: 55%;
+    width: 50%;
     height: 45%;
     font-size: 1.2vw;
     display: block;
     border: 0;
     float: left;
-}
-
-/* Set card month, year and cvv at right */
-#cardRight {
-    width: 45%;
-    height: 45%;
-    float: right;
-    text-align: left;
 }
 
 .cNumber, .cName {
@@ -489,12 +481,31 @@ input[type="radio"]:checked + label img {
     width: 80%;
 }
 
-.cMonth, .cYear, .cCcv {
-    margin-bottom: 3%;
+/* Set card month, year and cvv at right */
+#cardRight {
+    width: 50%;
+    height: 45%;
+    float: right;
+    display: block;background-color: #d6dadb9a;
+    border-radius: 5px;
+    padding: 4% 3%;
 }
 
-.cCcv input {
-    width: 5%;
+#cardRight label {
+    float: left;
+    width: 50%;
+    clear: left;
+    margin-bottom: 10%;
+}
+
+#cardRight input {
+    float: right;
+    clear: right;
+    width: 40%;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10%;
+    border: 0;
 }
 
 /* display color if invalid input */
@@ -502,7 +513,7 @@ input[type="radio"]:checked + label img {
     background-color: #DFFF9E;
 }
 
-#cardNo:focus:invalid, #cardName:invalid, #dateInput:focus:invalid, #cvv:focus:invalid {
+#cardNo:focus:invalid, #cardName:focus:invalid, #dateInput:focus:invalid, #cvv:focus:invalid {
     background-color: #FAB4A4;
 }
 
@@ -513,22 +524,20 @@ input[type="radio"]:checked + label img {
 }
 
 #submitCard input {
-    width: 30%;
+    width: 25%;
     height: 90%;
     padding: 2px;
     border-radius: 10px;
     font-size: 1.4vw;
     display: block;
-    margin: 2% 0% 0% 35%;
-    border: 0;
+    margin: 3% 0% 0% 37.5%;
     background-color: #fddac5;
+    border: 2px solid #2d3031;
 }
 
 #submitCard input:hover {
     background-color: #fccdb0;
     border-top: 0;
     border-right: 0;
-    border-bottom: 5px solid #2D3031;
-    border-left: 4px solid #2d3031;
     font-weight: bold;
 }
