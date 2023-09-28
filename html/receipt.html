@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/receipt.css">
 
-    
+
 
 </head>
 
@@ -29,78 +29,94 @@
             </div>
             <div class="customerDetail">
                 <div class="block1">
-                    <h2>Receipt Number:<br>Customer Name:<br> Contact Number:<br> Date:<br> Time:<br> Payment Method:<br>Status:</h2>
+                    <div>
+                        <h2>Receipt Number</h2>
+                        <h2>Customer Name</h2>
+                        <h2>Contact Number</h2>
+                        <h2>Payment Method</h2>
+                        <h2>Status</h2>
+                    </div>
+                    <div>
+                        <h2>: 1024</h2>
+                        <h2>: John Smith</h2>
+                        <h2>: 0123456789</h2>
+                        <h2>: Credit Card</h2>
+                        <h2>: Accepted</h2>
+                    </div>
                 </div>
+
                 <div class="block2">
-                    <h2>1024</h2>
-                    <h2>John Smith</h2>
-                    <h2>0123456789</h2>
-                    <h2>12.3.2023</h2>
-                    <h2>13:24</h2>
-                    <h2>Credit Card</h2>
-                    <h2>Accepted</h2>
+                    <div>
+                        <h2>Date</h2>
+                        <h2>Time</h2>
+                    </div>
+                    <div>
+                        <h2>: 12.3.2023</h2>
+                        <h2>: 13:24</h2>
+                    </div>
                 </div>
             </div>
-                
-                
-                <div class="receiptDetail">
-                    <table>
+
+            <div class="receiptDetail">
+                <table>
+                    <tr>
+                        <th>Item Name</th>
+                        <th>Size</th>
+                        <th>Unit Price</th>
+                        <th>Quantity</th>
+                        <th>Amount</th>
+                    </tr>
+                    <tbody>
                         <tr>
-                            <th>Item Name</th>
-                            <th>Size</th>
-                            <th>Unit Price</th>
-                            <th>Quantity</th>
-                            <th>Amount</th>
+                            <td>Navy Power Sleeveless Tee</td>
+                            <td>S</td>
+                            <td>30.70</td>
+                            <td>1</td>
+                            <td class="alignright">30.70</td>
                         </tr>
-                        <tbody>
-                            <tr>
-                                <td>Navy Power Sleeveless Tee</td>
-                                <td>S</td>
-                                <td>30.70</td>
-                                <td>1</td>
-                                <td>30.70</td>
-                            </tr>
-                            <tr>
-                                <td class="alignright"colspan="4">Subtotal</td>
-                                <td>30.70</td>
-                            </tr>
-                            <tr>
-                                <td class="alignright" colspan="4" >SST 6%</td>
-                                <td>1.84</td>
-                            </tr>
-                            <tr>
-                                <td class="alignright" colspan="4">Delivery fee</td>
-                                <td>5.00</td>
-                            </tr>
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <th class="alignright" colspan="4">TOTAL</th>
-                                <td>37.54</td>
-                            </tr>
-                        </tfoot>
-                    </table>
-                </div>
-                <div class="tymessage">
-                    <h3>Thank you for shopping with us!</h3>
-                </div>
-                <div class="message">
-                    <p>This receipt is computer generated and no signature is required</p>
-                    <p>Note: Your item will be received within 10 days</p>
+                        <tr>
+                            <td class="alignright" colspan="4">Subtotal</td>
+                            <td class="alignright">30.70</td>
+                        </tr>
+                        <tr>
+                            <td class="alignright" colspan="4">SST 6%</td>
+                            <td class="alignright">1.84</td>
+                        </tr>
+                        <tr>
+                            <td class="alignright" colspan="4">Delivery fee</td>
+                            <td class="alignright">5.00</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th class="alignright" colspan="4">TOTAL</th>
+                            <td class="alignright">37.54</td>
+                        </tr>
+                    </tfoot>
+                </table>
             </div>
-                    <div class="button">
-                    <p ><input id="prtbtn" class="hiddenprint" type="button"  value="Print" onclick="print()"></p>
-                    <a href="/html/merch.html"><div class="hiddenprint" id="Exit">Exit</div></a>
-                </div>
-        
-        
+            <div class="tymessage">
+                <h3>Thank you for shopping with us!</h3>
+            </div>
+            <div class="message">
+                <p>This receipt is computer generated and no signature is required <br>Note: Your item will be received
+                    within 10 days</p>
+            </div>
+            <div class="button">
+                <input id="prtbtn" class="hiddenprint" type="button" value="Print" onclick="print()">
+                <a href="/html/merch.html">
+                    <div class="hiddenprint" id="Exit">Exit</div>
+                </a>
+            </div>
+
+
 
 
     </main>
 </body>
-    <script>
-        // Let the user print out the receipt
-        function print() {
+<script>
+    // Let the user print out the receipt
+    function print() {
         var printdata = document.getElementsByClassName("receipt")[0].outerHTML;
         var newwin = window.open("", "_blank");
         newwin.document.open();
@@ -110,10 +126,10 @@
         newwin.document.close();
         newwin.print();
         newwin.close();
-}
-    </script>
+    }
+</script>
 
-    
+
 
 
 </html>

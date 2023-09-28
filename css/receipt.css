@@ -1,17 +1,18 @@
 .receipt{
     background-color: #FFFFFF;
-    height: 850px;
-    width: 800px;
+    max-width: 800px;
     display: block;
-    margin: 3% auto;    
+    margin: 3% auto; 
+    padding: 10px 10px 30px 10px;   
+    border: hsl(0, 1%, 33%) 3px solid;
 }
 
 .fitzoneDetail {
     display: block;
     height: 15%;
     padding: 2% 12% 0 15%;
-    
 }
+
 .fitzoneDetail h1{
     text-align: center;
     justify-content: center;
@@ -25,42 +26,51 @@
 }
 span{
     color: goldenrod;
-    
 }
 
 .longblock{
     display: inline-block;
-    height: 3px;
-    width: 800px;
-    background-color: hsla(0, 2%, 62%, 0.388);
+    height: 2px;
+    width: 100%;
+    margin: 20px 0;
+    background-color: hsl(0, 1%, 33%);
 }
+
 .title h2{
     font-size: 3rem;
-    display: flex;
     text-align: center;
-    justify-content: center;
 }
 .customerDetail{
     display: flex;
-    height: 25%;
-    margin: 2% 0 0 23%;
+    justify-content: space-between;
+    margin: 25px 10%;
+}
 
+.customerDetail .block1 {
+    display: flex;
+    flex-grow: 1;
+    padding-right: 10%;
+    justify-content: space-between;
 }
-.block1{
-    justify-content: center; 
-    font-size: 1.7rem;  
 
+.customerDetail .block2 {
+    display: flex;
+    flex-grow: 1;
+    padding-left: 10%;
+    justify-content: space-between;
 }
-.block2{
-    padding-left:10% ;
-    justify-content: center;
-    font-size: 1.7rem; 
-    
+
+.customerDetail .block h2{
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding: 2px 0;
 }
+
 .receiptDetail{
     height: 30%;
     margin: 2% 0 0 10%;
 }
+
 table{
     border: 2px solid grey;
     border-collapse: collapse;
@@ -70,8 +80,7 @@ table{
 th,td{
     border: 2px solid grey;
     text-align: center;
-    font-size: 18px;
-    
+    font-size: 18px;  
 }
 th{
     background-color: rgb(214, 209, 209);
@@ -79,7 +88,11 @@ th{
 
 .alignright{
     text-align: right;
-    padding-right: 1%;
+    padding-right: 10px;
+}
+
+.tymessage {
+    margin-top: 20px;
 }
 
 .tymessage h3{
@@ -87,18 +100,20 @@ th{
     text-align: center;
 }
 .message p{
-    margin: 1% 0 0 1%;
+    margin: 20px 0 0 10%;
     font-size: 13px;
     
 }
 .button{
     display: flex;
-    margin-left: 80%;
-    height:10%;
+    justify-content: flex-end;
+    margin-top: 20px;
+    padding-right: 9%;
+    gap: 10px;
 }
 #Exit{
     height: 40px;
-    width: 50px;
+    width: 80px;
     padding: 8px;
     text-align: center;
     background-color: #EFEFEF;
@@ -106,19 +121,14 @@ th{
     font-size: 18px;
     border-radius: 10px;
     border: solid 1.5px #241d1380;
-    margin-left: 2%;
-    margin-top: 1%;
-    
 }
 #prtbtn{
     height: 40px;
-    width: 50px;
+    width: 80px;
     font-size: 18px;
     font-weight: 500;
     border-radius: 10px;
     border: solid 1.5px #241d1380;
-    margin-bottom: 1%;
-
 }
 @media print{
     
