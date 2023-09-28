@@ -47,7 +47,7 @@
         </nav>
 
         <a href="/html/account/profile.html" class="login-link">
-            <img src="/icons/circle-user-solid.png" alt="profile logo">
+            <img src="../../icons/circle-user-solid.png" alt="profile logo">
         </a>
     </header>
     
@@ -55,7 +55,7 @@
         <div class="formbg">
             <section class="backArrow">
                 <div class="backBtn">
-                    <button><a href="merch.html"> &#8617; </a></button>
+                    <button><a href="../merch.html"> &#8617; </a></button>
                 </div>
                 <div class="backTxt">
                     <h1>Order Now</h1>
@@ -200,17 +200,17 @@
                         <div id="cardImg">
                             <input type="radio" name="cardType" id="visa" checked required>
                             <label for="visa" class="cardTypeBtn">
-                                <img src="../images/visa.png" alt="Visa Card">
+                                <img src="../../images/visa.png" alt="Visa Card">
                             </label>
 
                             <input type="radio" name="cardType" id="master" required>
                             <label for="master" class="cardTypeBtn">
-                                <img src="../images/master-card.png" alt="Master Card">
+                                <img src="../../images/master-card.png" alt="Master Card">
                             </label>
 
                             <input type="radio" name="cardType" id="paypal" required>
                             <label for="paypal" class="cardTypeBtn">
-                                <img src="../images/paypal.png" alt="PayPal" >
+                                <img src="../../images/paypal.png" alt="PayPal" >
                             </label>
                         </div>
 
@@ -248,6 +248,108 @@
             </div>
         </div>
 
+        <div id="displayR">
+            <div class="receipt">
+
+                <div class="fitzoneDetail">
+                    <h1><span>FitZone</span> Merchandise</h1>
+                    <p>9, Jalan Malinja 2, Taman Bunga Raya, 53300 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur</p>
+                    <p>Tel: 011-26102193</p>
+                </div>
+    
+                <div class="longblock"></div>
+    
+                <div class="title">
+                    <h2>Receipt</h2>
+                </div>
+    
+                <div class="customerDetail">
+                    <div class="block1">
+                        <div>
+                            <h2>Receipt Number</h2>
+                            <h2>Customer Name</h2>
+                            <h2>Contact Number</h2>
+                            <h2>Payment Method</h2>
+                            <h2>Status</h2>
+                        </div>
+                        <div>
+                            <h2>: 1024</h2>
+                            <h2>: John Smith</h2>
+                            <h2>: 0123456789</h2>
+                            <h2>: Credit Card</h2>
+                            <h2>: Accepted</h2>
+                        </div>
+                    </div>
+    
+                    <div class="block2">
+                        <div>
+                            <h2>Date</h2>
+                            <h2>Time</h2>
+                        </div>
+                        <div>
+                            <h2>: 12.3.2023</h2>
+                            <h2>: 13:24</h2>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="receiptDetail">
+                    <table>
+                        <tr>
+                            <th>Item Name</th>
+                            <th>Size</th>
+                            <th>Unit Price</th>
+                            <th>Quantity</th>
+                            <th>Amount</th>
+                        </tr>
+                        <tbody>
+                            <tr>
+                                <td>Navy Power Sleeveless Tee</td>
+                                <td>S</td>
+                                <td>30.70</td>
+                                <td>1</td>
+                                <td class="alignright">30.70</td>
+                            </tr>
+                            <tr>
+                                <td class="alignright" colspan="4">Subtotal</td>
+                                <td class="alignright">30.70</td>
+                            </tr>
+                            <tr>
+                                <td class="alignright" colspan="4">SST 6%</td>
+                                <td class="alignright">1.84</td>
+                            </tr>
+                            <tr>
+                                <td class="alignright" colspan="4">Delivery fee</td>
+                                <td class="alignright">5.00</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th class="alignright" colspan="4">TOTAL</th>
+                                <td class="alignright">37.54</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+    
+                <div class="tymessage">
+                    <h3>Thank you for shopping with us!</h3>
+                </div>
+    
+                <div class="message">
+                    <p>This receipt is computer generated and no signature is required <br>Note: Your item will be received
+                        within 10 days</p>
+                </div>
+    
+                <div class="button">
+                    <input id="prtbtn" class="hiddenprint" type="button" value="Print" onclick="print()">
+                    <a href="../merch.html">
+                        <div class="hiddenprint" id="Exit">Exit</div>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
     </main>
 
     <script>
@@ -288,12 +390,9 @@
             quantity = document.getElementById("quantityBox").value;
             updateTotalPrice();
         });
-        
-        
-        
 
 
-        //----- Break Line ----- (to open or close payment selection, cash and card)
+        //----- Break Line ----- (to open or close payment selection, cash ,card and receipt)
         // To let user choose what method they would like to use to pay
         var placeOrder = document.getElementById("placeOrder");
         var selectPayment = document.getElementById("paymentYN");
@@ -302,6 +401,7 @@
 
         var cardConfirm = document.getElementById("confirmCard");
 
+        var receipt = document.getElementById("displayR");
 
         // Function to check if the form is valid
         function isFormValid() {
@@ -332,13 +432,10 @@
 
         // Display message if user confirm to use cash and finish
         function cashMsg() {
-<<<<<<< HEAD:html/formSize&Qty.html
-            if (confirm("Thank you for your purchase, will direct you back to Merchandise page.")) {
-                window.location.href = "receipt.html";
-=======
             if (confirm("Thank you for your purchase.")) {
-                window.location.href = "merch.html";
->>>>>>> 603feffc158d53da80f47e2f1e3c5699ded1b901:html/form/formSize&Qty.html
+                cashConfirm.style.display = "none";
+                receipt.style.display = "block";
+                // window.location.href = "merch.html";
             }
         }
 
@@ -362,7 +459,9 @@
         function cardMsg() {
             if (isCardValid()) {
                 if (confirm("Thank you for your purchase!")) {
-                    window.location.href = "merch.html";
+                    cardConfirm.style.display = "none";
+                    receipt.style.display = "block";
+                    //window.location.href = "merch.html";
                 }
             }
         }
@@ -463,6 +562,19 @@
 
         function enableScroll() {
             document.body.classList.remove("stop-scrolling");
+        }
+
+        // Let the user print out the receipt
+        function print() {
+            var printdata = document.getElementsByClassName("receipt")[0].outerHTML;
+            var newwin = window.open("", "_blank");
+            newwin.document.open();
+            newwin.document.write('<html><body><main><displayR>');
+            newwin.document.write(printdata);
+            newwin.document.write('</displayR></main></body></html>');
+            newwin.document.close();
+            newwin.print();
+            newwin.close();
         }
 
     </script>
