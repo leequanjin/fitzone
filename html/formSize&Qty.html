@@ -425,17 +425,18 @@
                 const month = parseInt(numericValue.slice(0, 2));
                 const month_1 = parseInt(numericValue.slice(0, 1));
                 const month_2 = parseInt(numericValue.slice(1, 2));
-                const year = parseInt(numericValue.slice(2, 4));
-                
+                const year_1 = parseInt(numericValue.slice(2, 3));
+                const year_2 = parseInt(numericValue.slice(3, 4));
+
                 if (month < 0 || month > 12) {
                     alert("Month must be between 01 and 12.");
                     dateInput.value = "";
                 } else {
-                    if (month_1==0 && month_2==0){
+                    if (month_1 == 0 && month_2 == 0){
                         alert("Month must be between 01 and 12.");
                         dateInput.value = "";
                     }else {
-                        if (year < 23) {
+                        if (year_1 < 2 || (year_1 == 2 && year_2 < 3) || (month_1 == 0 && month_2 < 9 && year_1 == 2 && year_2 < 4)) {
                             alert("Please enter a valid year (at least 23).");
                             dateInput.value = "";
                         }
