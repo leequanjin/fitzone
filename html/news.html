@@ -29,8 +29,8 @@
         }
         .overlay-button1 {
             position: absolute;
-            top: 95%; /* Adjust this value to vertically center the button */
-            left: 95%; /* Adjust this value to horizontally center the button */
+            top: 90%; /* Adjust this value to vertically center the button */
+            left: 94%; /* Adjust this value to horizontally center the button */
             transform: translate(-50%, -50%); /* Center the button precisely */
             background-color: #FF5733; /* Button background color */
             color: #FFFFFF; /* Button text color */
@@ -41,7 +41,7 @@
         }
         .overlay-button2,.overlay-button3 {
             position: absolute;
-            top: 90%; /* Adjust this value to vertically center the button */
+            top: 85%; /* Adjust this value to vertically center the button */
             left: 90%; /* Adjust this value to horizontally center the button */
             transform: translate(-50%, -50%); /* Center the button precisely */
             background-color: #006207; /* Button background color */
@@ -218,11 +218,14 @@
         }
 
         .events{
-            background-color: #c9e45d;
+            background-image: linear-gradient(to bottom, rgb(201, 228, 93,.0), rgb(201, 228, 93,.3), rgb(201, 228, 93,1),
+            rgb(201, 228, 93,.3), rgb(201, 228, 93,.0));
         }
 
         .info-container{
-            background-color: #f27070;
+            background-image: linear-gradient(to bottom , rgba(194, 216, 232, 0), rgb(186, 216, 239,.1), rgb(186, 216, 239,1),
+            rgb(186, 216, 239,.3), rgb(186, 216, 239,.0));
+            
         }
 
         .info1,
@@ -346,7 +349,7 @@
     </header>
     <main>
         <div class="events">
-            <h2 style="padding-top: 0%;">Latest Events</h2>
+            <h2 style="padding-top: 0%; padding-bottom: 0%;">Latest Events</h2>
             <div class="mainevent">
                 <div class="Hot-event video-link video-container">
                     <video src="/videos/HotEvent.mp4" loop></video>
@@ -357,7 +360,7 @@
             <p id="Countdown"></p>
             <div class="smallevents">
                 <div class="Current video-link video-container2">
-                    <video src="/videos/CurrentOngoingEvent.mp4" loop style="padding-right: 5px;"></video>
+                    <video src="/videos/CurrentOngoingEvent.mp4#t=5" loop style="padding-right: 5px;"></video>
                     <p>This is Ongoing Event</p>
                     <button class="overlay-button2">Learn More</button>
                 </div>
@@ -372,7 +375,7 @@
             <h2>Latest News</h2>
             <div class="info1">
                 <img src="/images/fit-boxing.png">
-                <p class="title"><span>New Gym room</span>
+                <p class="title"  style="text-align: center;"><span>New Gym room</span>
                 <br><br>A new gym area is <strong>BOXING</strong> their way into Fitzone's venue. For all you heavy puncher lovers,
                 we at Fitzone are expanding our venue so that you guys can have more fun and better training.
                 </p>
@@ -387,7 +390,7 @@
             </div>
             <div class="newbranch">
                 <video src="/videos/Pyramid.mp4" loop muted autoplay></video>
-                <p class="title"><span>New Branch Opening Soon</span>
+                <p class="title"  style="text-align: center;"><span>New Branch Opening Soon</span>
                 <br><br>A new branch is opening soon!!! Check <output></output> our latest ad and take a <em>very very very</em> easy guess on where it will be.
                 </p>
             </div>
@@ -396,6 +399,7 @@
                     <br><br>Ashtanga is all about the <em>flow</em> To find your strength and melt away stress.
                     <br><br>Join Eddie in this <em>transformative journey</em> at Fitzone Gym.
                     <br><br>As he guides you in Ashtanga and unlock your <em>true potential</em>.
+                    
                 </p>
                 <img src="/images/AshtangaTalk.jpg">
             </div>
@@ -428,7 +432,8 @@
                 <video src="${videoSrc}" controls autoplay loop></video>
                 <p style="text-align: center;">
                     Fitzone is having a couple's event now. <br>Get together with your partner and start working out
-                    <br>with Fitzone and their new awesome new promotion!
+                    <br>with Fitzone and their 
+                    <a href="/html/lessons/membership.html" title="Sign Up Now" style="color: red">New Awesome Promotion!</a>
                 </p>
                 <button class="close-modal">Close</button>
             `;
@@ -451,7 +456,8 @@
                 <video src="${videoSrc}" controls autoplay loop></video>
                 <p style="text-align: center;">
                     Fitzone is having a limited event now. <br>With only RM 70, Fitzone will offer you a training program best fit for you.
-                    <br>What are you waiting for? Go to Fitzone now! First Come First Serve!
+                    <br>What are you waiting for? Go to Fitzone now! 
+                    <a href="/html/lessons/membership.html" title="Sign Up Now" style="color: red">First Come First Serve!</a>
                 </p>
                 <button class="close-modal">Close</button>
             `;
