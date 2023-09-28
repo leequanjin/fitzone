@@ -23,13 +23,13 @@
             <div class="form-content">
                 <h1>Login</h1>
 
-                <form action="javascript:delay('/html/home.html')" method="post">
+                <form action="" method="get" onsubmit="return false">
                     <div class="field">
-                        <input type="email" name="cEmail" placeholder="Email/UserID" class="input">
+                        <input type="text" id="login-email" name="cEmail" placeholder="Email/Username" class="input">
                     </div>
 
                     <div class="field">
-                        <input type="password" name="cPassword" placeholder="Password" class="password">
+                        <input type="password" id="login-password" name="cPassword" placeholder="Password" class="password">
                         <img class="eye-icon" src="/icons/eye-slash-solid.png" alt="eye icon">
                     </div>
 
@@ -38,7 +38,7 @@
                     </div>
                     
                     <div class="field">
-                        <input id="open-login-modal" class="login-signup-btn" onclick="window.location.href = delay()" type="submit" value="Login"/>
+                        <input id="open-login-modal" class="login-signup-btn" type="submit" value="Login"/>
                     </div>
 
                     <div class="form-link">
@@ -72,22 +72,22 @@
             <div class="form-content">
                 <h1>Sign up</h1>
 
-                <form action="javascript:delay('/html/home.html')" method="post">
+                <form action="" method="get" onsubmit="return false">
                     <div class="field">
-                        <input type="email" placeholder="Email/UserID" class="input">
+                        <input type="email" id="signup-email" placeholder="Email/Username" class="input">
                     </div>
 
                     <div class="field">
-                        <input type="password" placeholder="Password" class="password">
+                        <input type="password" id="signup-password" placeholder="Password" class="password">
                     </div>
 
                     <div class="field">
-                        <input type="password" placeholder="Confirm Password" class="password">
+                        <input type="password" id="confirm-password" placeholder="Confirm Password" class="password">
                         <img class="eye-icon" src="/icons/eye-slash-solid.png" alt="eye icon">
                     </div>
 
                     <div class="field">
-                        <input id="open-sign-up-modal" class="login-signup-btn" onclick="window.location.href = delay()" type="submit" value="Sign up"/>
+                        <input id="open-sign-up-modal" class="login-signup-btn" type="submit" value="Sign up"/>
                     </div>
 
                     <div class="form-link">

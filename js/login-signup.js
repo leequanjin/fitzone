@@ -26,22 +26,52 @@ pwShowHide.forEach(eyeIcon => {
 
 // switch between login and signup forms
 links.forEach(link => {
-    link.onclick = function() {
+    link.onclick = function () {
         forms.classList.toggle("show-sign-up");
     }
 })
 
 // show login modal
 openLoginModal.onclick = function () {
-    loginModal.style.display = "block";
+    var loginEmail = document.getElementById("login-email").value;
+    var loginPassword = document.getElementById("login-password").value;
+    if (loginEmail === "admin@gmail.com" && loginPassword === "admin123") {
+        loginModal.style.display = "block";
+        setTimeout(function() {
+            window.location.href = '/html/home.html';
+        }, 2000);
+    }
+    else {
+        alert("Your Email/UserID or Password is incorrect!");
+        return;
+    }
 }
 
 // show signup modal
 openSignupModal.onclick = function () {
-    signupModal.style.display = "block";
-}
+    var signupEmail = document.getElementById("signup-email").value;
+    var signupPassword = document.getElementById("signup-password").value;
+    var confirmPassword = document.getElementById("confirm-password").value;
+    if (signupEmail.length < 8) {
+        alert("Email/Username must be at least 8 characters.")
+        return;
+    }
 
-// delay page redirection by 2 seconds
-function delay(URL) {
-    setTimeout(function () { window.location = URL }, 2000);
+    else if (signupPassword.length < 8) {
+        alert("Password must be at least 8 characters.")
+        return;
+    }
+    
+    else if (signupPassword === confirmPassword) {
+        signupModal.style.display = "block";
+        setTimeout(function() {
+            window.location.href = '/html/home.html';
+        }, 2000);
+    }
+    
+    else {
+        alert("Password and confirm password do not match!");
+        return;
+    }
+    
 }
