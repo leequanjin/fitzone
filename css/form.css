@@ -683,7 +683,7 @@ input[type="radio"]:checked + label img {
     height: 90%;
 }
 
-#displayR th, #displayR td{
+#displayR th, #displayR td:not(:last-child){
     border: 2px solid grey;
     text-align: center;
     font-size: 18px;  
@@ -696,6 +696,8 @@ input[type="radio"]:checked + label img {
 .alignright{
     text-align: right;
     padding-right: 10px;
+    border: 2px solid grey;
+    font-size: 18px;  
 }
 
 .tymessage {
@@ -743,8 +745,25 @@ input[type="radio"]:checked + label img {
 }
 
 @media print{
-    
-    .hiddenprint{
+    .hiddenprint {
         display: none;
+    }
+
+    footer {
+        display: none;
+    }
+
+    header {
+        display: none;
+    }
+
+    /* Avoid page breaks inside certain elements */
+    .receipt {
+        page-break-inside: avoid;
+    }
+
+    /* Ensure page breaks after certain elements */
+    .receipt:last-child {
+        page-break-after: auto;
     }
 }
