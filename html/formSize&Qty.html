@@ -284,11 +284,15 @@
             document.getElementById("PaymentBoxTotal").textContent = finalTotal.toFixed(2);
         }
 
+
         // Update data price once quantity changes
         document.getElementById("quantityBox").addEventListener("change", function () {
             quantity = document.getElementById("quantityBox").value;
             updateTotalPrice();
         });
+        
+        
+        
 
 
         //----- Break Line ----- (to open or close payment selection, cash and card)
@@ -299,6 +303,7 @@
         var cashConfirm = document.getElementById("confirmCash");
 
         var cardConfirm = document.getElementById("confirmCard");
+
 
         // Function to check if the form is valid
         function isFormValid() {
@@ -330,7 +335,7 @@
         // Display message if user confirm to use cash and finish
         function cashMsg() {
             if (confirm("Thank you for your purchase, will direct you back to Merchandise page.")) {
-                window.location.href = "merch.html";
+                window.location.href = "receipt.html";
             }
         }
 
@@ -445,6 +450,7 @@
                 }
             }
         });
+        url="receipt.html?name="+nameBox+"&phone="+phoneBox;
 
         //----- Break Line -----
 

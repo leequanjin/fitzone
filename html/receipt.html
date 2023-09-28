@@ -99,6 +99,23 @@
     </main>
 </body>
     <script>
+        // Function to get URL parameters
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+
+        // Retrieve and display values from URL parameters
+        var name = getUrlParameter('nameBox');
+
+        // Display the values on the page
+        document.write('<td>Name: ' + nameBox + '</td>');
+        document.write('<td>Phone: ' + phoneBox + '</td>');
+        
+
+
         // Let the user print out the receipt
         function print() {
         var printdata = document.getElementsByClassName("receipt")[0].outerHTML;
@@ -112,6 +129,7 @@
         newwin.close();
 }
     </script>
+
 
     
 
