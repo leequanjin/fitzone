@@ -18,7 +18,7 @@
 }
 
 .backBtn {
-    height: 35%;
+    height: 30%;
 }
 
 .backBtn button {
@@ -39,7 +39,7 @@
 }
 
 .backTxt {
-    height: 40%;
+    height: 70%;
 }
 
 .backTxt h1 {
@@ -52,10 +52,17 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.backTxt h5{
+.backTxt ul {
+    width: 80%;
+    display: block;
+    margin: 3% auto;
+}
+
+.backTxt ul li{
     font-size: 1.5vw;
-    width: 98%;
     margin-top: 2%;
+    text-align: left;
+    list-style-type: disc;
 }
 
 .backTxt p {
@@ -81,7 +88,7 @@
     border-radius: 40px;
 }
 
-@keyframes orderItemColor {
+/* @keyframes orderItemColor {
     0% {
         background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44, #f32170, #ff6b08, #cf23cf, #eedd44, #f32170, #ff6b08, #cf23cf, #eedd44, #f32170, #ff6b08, #cf23cf, #eedd44);
         -webkit-text-fill-color: transparent;
@@ -107,7 +114,7 @@
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
     }
-}
+} */
 
 .inputForm h2 {
     font-size: 2.3vw;
@@ -116,7 +123,8 @@
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
-    animation: orderItemColor 1s ease-in infinite;
+    /* animation: orderItemColor 1s ease-in infinite; */
+    color: #F2F2F2;
 }
 
 #formQty {
@@ -127,16 +135,22 @@
     height: 520px;
 }
 
-label {
+#orderContent {
+    display: block;
+    width: 90%;
+    margin-left: 10%;
+}
+
+#orderContent label {
     display: block;
     float: left;
     clear: left;
     margin: 10px 0px 10px 10px;
-    width: 40%;
+    width: 30%;
     height: 35px;
  }
  
-input, select, textarea {
+.buyerName input, .buyerNo input,  .buyerEmail input, .buyerSize select, .buyerQty input {
     display: block;
     float: left;
     margin: 10px 0px;
@@ -147,11 +161,18 @@ input, select, textarea {
     font-size: 1vw;
 }
 
-textarea {
+.buyerAddress textarea {
+    display: block;
+    float: left;
+    margin: 10px 0px;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 1vw;
+    width: 55%;
     height: 140px;
 }
 
-input:focus, select:focus, textarea:focus {
+input:focus, label:focus, textarea:focus {
     background-color: #EBE7DB;
 } 
 
@@ -167,12 +188,12 @@ input:focus, select:focus, textarea:focus {
     width: 100%;
     height: fit-content;
     display: block;
-    margin-left: 12%;
+    margin-left:3%;
 }
 
 .buyerBtn input {
     display: inline-block;
-    width: 30%;
+    width: 35%;
     height: 50px;
     margin: 5% 0% 3% 5%;
     font-size: 1.6vw;
@@ -180,6 +201,8 @@ input:focus, select:focus, textarea:focus {
     background-color: #FFDA1A;
     color: #2D3031;
     border: 0;
+    padding: 5px;
+    border-radius: 10px;
 }
 
 .buyerBtn input:hover {
@@ -187,22 +210,69 @@ input:focus, select:focus, textarea:focus {
     transition: .5s;
 }
 
-#submitTxt {
-    width: 100%;
-    height: 30px;
-    display: block;
-    text-align: center;
-    font-size: 2.2vw;
-    margin-top: 2%;
-}
-
 #buyerTotal {
-    height: 200px;
+    height: fit-content;
     display: block;
     text-align: left;
-    margin: 1%;
+    margin: 3% auto 5%;
+    width: 60%;
 }
 
+#buyerTotal table {
+    width: 100%;
+    height: 20vw;
+    background-color: #ede9e8;
+    padding: 3%;
+    border-radius: 20px;
+    color: #0f485b;
+}
+
+#buyerTotal th {
+    font-size: 2vw;
+}
+
+#buyerTotal td {
+    font-size: 1.5vw;
+}
+
+#buyerTotal thead, #buyerTotal tfoot {
+    height: 10%;
+}
+
+#buyerTotal tbody {
+    height: 80%;
+}
+
+#buyerTotal thead th:first-child {
+    text-align: center;
+    border-bottom: 2px solid #0f485b;
+}
+
+#buyerTotal tfoot th:last-child {
+    text-align: end;
+    color: #d57a67;
+}
+
+#buyerTotal tfoot th:nth-child(2) {
+    color: #d57a67;
+}
+
+#buyerTotal table tbody tr td:first-child {
+    width: 65%;
+}
+
+#buyerTotal table tbody tr td:last-child {
+    width: 20%;
+    text-align: end;
+}
+
+#buyerTotal tbody tr:nth-child(3) td {
+    border-top: 2px dashed #0f485b;
+}
+
+#buyerTotal tbody tr:last-child td {
+    border-bottom: 2px dashed #0f485b;
+}
 
 #paymentYN {
     display: none;
@@ -217,26 +287,248 @@ input:focus, select:focus, textarea:focus {
 }
 
 #paymentYN-content {
-    position: relative;
     border-radius: 8px;
     box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
     background-color: #fefefe;
-    margin: 15% auto;
-    padding: 30px;
-    max-width: 500px;
+    display: block;
+    margin: 20% auto;
+    padding: 2vw;
+    width: 35vw;
+    height: 25vw;
 }
 
 #paymentYN-content h2 {
     color: #2D3031;
     text-align: left;
-    padding: 0 10px;
-    font-size: 2.4rem;
+    font-size: 2vw;
     letter-spacing: 1px;
+    padding-bottom: 1vw;
+    border-bottom: 3px solid #ff9501;
 }
 
 #paymentYN-content h3 {
     color: #6C757D;
     font-weight: normal;
-    padding: 20px 10px;
-    font-size: 1.6rem;
+    padding: 0.5vw;
+    font-size: 1.5vw;
+}
+
+#paymentMethod input {
+    width: 80%;
+    height: 3vw;
+    font-size: 1.2vw;
+    display: block;
+    margin-left: 10%;
+    border: 0;
+    background-color: #fddac5;
+}
+
+#paymentMethod input:hover {
+    background-color: #fccdb0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 5px solid #2D3031;
+    border-left: 4px solid #2d3031;
+    font-weight: bold;
+}
+
+#confirmCash {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: linear-gradient(180deg, rgba(129, 83, 20, 0.4), rgba(45, 48, 49, 0.4));
+}
+
+#confirmCash-content {
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+    background-color: #fefefe;
+    display: block;
+    margin: 20% auto;
+    padding: 2vw;
+    width: 35vw;
+    height: 25vw;
+}
+#confirmCash-content h2 {
+    color: #2D3031;
+    text-align: left;
+    font-size: 2vw;
+    letter-spacing: 1px;
+    padding-bottom: 1vw;
+    border-bottom: 3px solid #ff9501;
+}
+
+#confirmCash-content h3 {
+    color: #6C757D;
+    font-weight: normal;
+    padding: 0.5vw;
+    font-size: 1.5vw;
+}
+
+#confirmCash input {
+    width: 80%;
+    height: 3vw;
+    font-size: 1.2vw;
+    display: block;
+    margin-left: 10%;
+    border: 0;
+    background-color: #fddac5;
+}
+
+#confirmCash input:hover {
+    background-color: #fccdb0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 5px solid #2D3031;
+    border-left: 4px solid #2d3031;
+    font-weight: bold;
+}
+
+#confirmCard {
+    /* display: none; */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: linear-gradient(180deg, rgba(129, 83, 20, 0.4), rgba(45, 48, 49, 0.4));
+}
+
+#confirmCard-content {
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+    background-color: #fefefe;
+    display: block;
+    margin: 20% auto;
+    padding: 2vw;
+    width: 40vw;
+    height: 25vw;
+}
+
+#confirmCard-content h2 {
+    color: #2D3031;
+    text-align: left;
+    font-size: 2vw;
+    letter-spacing: 1px;
+    padding-bottom: 1vw;
+    border-bottom: 3px solid #ff9501;
+}
+
+#cardInput {
+    height: 90%;
+    padding: 2%;
+}
+
+#cardInput form {
+    height: 100%;
+    width: 100%;
+}
+
+#cardInput label, #cardInput input {
+    height: 1.8vw;
+    padding: 2px;
+    font-size: 1.2vw;
+}
+
+#cardImg {
+    width: 100%;
+    height: 35%;
+    align-items: center;
+    text-align: center;
+}
+
+#cardImg img {
+    width: 8vw;
+    padding: 2%;
+    margin: 0% 1%;
+    border-radius: 20px;
+}
+
+#cardImg img:hover{
+    border: 3px solid #FFDA1A;
+}
+
+#cardImg input {
+    display: none;
+}
+
+input[type="radio"]:checked + label img {
+    border: 3px solid #FFDA1A;
+}
+
+/* Set card num and card holder at left */
+#cardLeft {
+    width: 55%;
+    height: 45%;
+    font-size: 1.2vw;
+    display: block;
+    border: 0;
+    float: left;
+}
+
+/* Set card month, year and cvv at right */
+#cardRight {
+    width: 45%;
+    height: 45%;
+    float: right;
+    text-align: left;
+}
+
+.cNumber, .cName {
+    margin-bottom: 5%;
+}
+
+.cNumber input, .cName input {
+    width: 80%;
+}
+
+.cMonth, .cYear, .cCcv {
+    margin-bottom: 3%;
+}
+
+.cCcv input {
+    width: 5%;
+}
+
+/* display color if invalid input */
+#cardNo:focus:valid, #cardName:focus:valid, #dateInput:focus:valid, #cvv:focus:valid {
+    background-color: #DFFF9E;
+}
+
+#cardNo:focus:invalid, #cardName:invalid, #dateInput:focus:invalid, #cvv:focus:invalid {
+    background-color: #FAB4A4;
+}
+
+#submitCard {
+    width: 100%;
+    height: 15%;
+    display: flex;
+}
+
+#submitCard input {
+    width: 30%;
+    height: 90%;
+    padding: 2px;
+    border-radius: 10px;
+    font-size: 1.4vw;
+    display: block;
+    margin: 2% 0% 0% 35%;
+    border: 0;
+    background-color: #fddac5;
+}
+
+#submitCard input:hover {
+    background-color: #fccdb0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 5px solid #2D3031;
+    border-left: 4px solid #2d3031;
+    font-weight: bold;
 }

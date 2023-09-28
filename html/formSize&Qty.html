@@ -59,9 +59,12 @@
                 </div>
                 <div class="backTxt">
                     <h1>Order Now</h1>
-                    <h5>One order per receipt.</h5>
-                    <h5>Item with * is required to be fill in.</h5>
-                    <h5>Only accept cash, credit card and debit card.</h5>
+                    <ul>
+                        <li>One order per receipt.</li>
+                        <li>Only accept cash, credit card and debit card.</li>
+                        <li>Every purchase will be charge 6% SST and RM 5 delivery fee.</li>
+                        <li>Item with * is required to be fill in.</li>
+                    </ul>
                     <P>
                         If your order item have not received, kindly reach out to us promptly. Your satisfaction is our top priority, we're ready to assist you every step of the way.
                     </P>
@@ -70,7 +73,48 @@
     
             <section class="inputForm">
                 <h2>- Navy Power Sleeveless Tee -</h2>
-                <form id="formSize" method="post" onsubmit="return false">
+
+                <!-- Prompt total price -->
+                <div id="buyerTotal">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="3"> * Total * </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Price per item</td>
+                                <td id="itemPrice" colspan="2">0.00</td>
+                            </tr>
+                            <tr>
+                                <td>Quantity</td>
+                                <td id="itemQty" colspan="2">0</td>
+                            </tr>
+                            <tr>
+                                <td>Total</td>
+                                <td id="totalPrice" colspan="2">0.00</td>
+                            </tr>
+                            <tr>
+                                <td>SST (6%)</td>
+                                <td id="sst" colspan="2">0.00</td>
+                            </tr>
+                            <tr>
+                                <td>Delivery Fee</td>
+                                <td id="deliveryFee" colspan="2">0.00</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Grand Total</th>
+                                <th>RM</th>
+                                <th id="gTotal">0.00</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <form action="#" id="formSize" method="post" onsubmit="return false">
                     <div id="orderContent">
                         <div class="buyerName">
                             <label for="nameBox">Name* </label>
@@ -114,50 +158,7 @@
                     </div>
                 </form>
 
-                <!-- Prompt total price -->
-                <div id="buyerTotal">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th rowspan="3">Total</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <tb>Price per item</tb>
-                                <tb>:</tb>
-                                <tb id="itemPrice">0.00</tb>
-                            </tr>
-                            <tr>
-                                <tb>Quantity</tb>
-                                <tb>:</tb>
-                                <tb id="itemQty">0</tb>
-                            </tr>
-                            <tr>
-                                <tb>Total</tb>
-                                <tb>:</tb>
-                                <tb id="totalPrice">0.00</tb>
-                            </tr>
-                            <tr>
-                                <tb>SST (6%)</tb>
-                                <tb>:</tb>
-                                <tb id="sst">0.00</tb>
-                            </tr>
-                            <tr>
-                                <tb>Delivery Fee</tb>
-                                <tb>:</tb>
-                                <tb id="deliveryFee">0.00</tb>
-                            </tr>
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <tb>Grand Total</tb>
-                                <tb>:</tb>
-                                <tb id="gTotal">0.00</tb>
-                            </tr>
-                        </tfoot>
-                    </table>
-                </div>
+
 
             </section>
 
@@ -167,8 +168,8 @@
         <div id="paymentYN">
             <div id="paymentYN-content">
                 <h2>Choose a payment method</h2>
-                <h3>Please be note that we just accept Cash on delivery, Credit Card or Debit Card</h3>
-                <div class="buttons">
+                <h3>Total : RM <span id="PaymentBoxTotal"></span> </h3>
+                <div id="paymentMethod">
                     <input type="submit" class="calcPayment" id="cash" value="Cash on Delivery">
                     <input type="submit" class="calcPayment" id="card" value="Pay by Card">
                     <input type="button" class="cancel" id="unPaybtn" value="Cancel Payment">
@@ -176,12 +177,125 @@
             </div>
         </div>
 
+        <!-- Prompt to let user confirm use cash -->
+        <div id="confirmCash">
+            <div id="confirmCash-content">
+                <h2>Are you confirm to pay when the item arrive?</h2>
+                <h3>Please be noted that your item will be send back to our center if you did not pay when the item arrive at your house.</h3>
+                <div id="confirmCashBtn">
+                    <input type="submit" id="cashbtn" value="Yes">
+                    <input type="button" class="cancel" id="unCashbtn" value="Cancel">
+                </div>
+            </div>
+        </div>
+
+        <!-- Prompt to let user enter card detail -->
+        <div id="confirmCard">
+            <div id="confirmCard-content">
+                <h2>Payment Details</h2>
+
+                <div id="cardInput">
+                    <form action="#" method="post" onsubmit="return false">
+
+                        <div id="cardImg">
+                            <input type="radio" name="cardType" id="visa" required>
+                            <label for="visa" class="cardTypeBtn">
+                                <img src="../images/visa.png" alt="Visa Card">
+                            </label>
+
+                            <input type="radio" name="cardType" id="master" required>
+                            <label for="master" class="cardTypeBtn">
+                                <img src="../images/master-card.png" alt="Master Card">
+                            </label>
+
+                            <input type="radio" name="cardType" id="paypal" required>
+                            <label for="paypal" class="cardTypeBtn">
+                                <img src="../images/paypal.png" alt="PayPal" >
+                            </label>
+                        </div>
+
+                        <div id="cardLeft">
+                            <div class="cNumber">
+                                <label for="cardNum">CARD NUMBER</label> <br>
+                                <input type="text" id="cardNo" maxlength="16" placeholder="0000 0000 0000 0000" required>
+                            </div>
+        
+                            <div class="cName">
+                                <label for="cardName">CARD HOLDER</label> <br>
+                                <input type="text" id="cardName" placeholder="John Smith" required>
+                            </div>
+                        </div>
+
+                        <div id="cardRight">
+
+                            <div class="date">
+                                <label for="dateInput">Expiry Date</label>
+                                <input type="text" id="dateInput" placeholder="MM/YY" maxlength="5" required>
+                            </div>
+        
+                            <div class="cCvv">
+                                <label for="cvv">CVV</label>
+                                <input type="text" name="cvv" id="cvv" maxlength="3" required>
+                            </div>
+                        </div>
+    
+                        <div id="submitCard">
+                            <input type="submit" id="submitCardbtn" value="Submit">
+                        </div>
+                    </form>
+                </div>
+
+               
+            </div>
+        </div>
+
     </main>
 
     <script>
+        // Calculate prices
+        // Initialize every value needed
+        var quantity = document.getElementById("quantityBox").value;
+
+        // price need enter manually as dont have database to store data
+        var price = 30.7;
+
+        // Initialize the values in the table when the page loads
+        window.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("itemPrice").textContent = price.toFixed(2);
+            document.getElementById("itemQty").textContent = quantity;
+            updateTotalPrice();
+        });
+
+        function updateTotalPrice() {
+            var totalP = quantity * price;
+            var total = totalP.toFixed(2);
+            var sst = total * 6 / 100;
+            var delivery = 5;
+            var finalTotal = totalP + sst + delivery;
+            
+            // Update every data once user input something
+            document.getElementById("itemPrice").textContent = price.toFixed(2); 
+            document.getElementById("itemQty").textContent = quantity;
+            document.getElementById("totalPrice").textContent = total; 
+            document.getElementById("sst").textContent = sst.toFixed(2);
+            document.getElementById("deliveryFee").textContent = delivery.toFixed(2);
+            document.getElementById("gTotal").textContent = finalTotal.toFixed(2);
+            document.getElementById("PaymentBoxTotal").textContent = finalTotal.toFixed(2);
+        }
+
+        // Update data price once quantity changes
+        document.getElementById("quantityBox").addEventListener("change", function () {
+            quantity = document.getElementById("quantityBox").value;
+            updateTotalPrice();
+        });
+
+
+        //----- Break Line ----- (to open or close payment selection and cash)
+        // To let user choose what method they would like to use to pay
         var placeOrder = document.getElementById("placeOrder");
         var selectPayment = document.getElementById("paymentYN");
-        var closeSelect = document.getElementById("unPaybtn");
+
+        var cashConfirm = document.getElementById("confirmCash");
 
         // Function to check if the form is valid
         function isFormValid() {
@@ -199,19 +313,99 @@
     
         // Function to close the payment selection boxes
         function closePaymentOptions() {
-            var selectPayment = document.getElementById("paymentYN");
             selectPayment.style.display = "none";
+        }
+
+        // Fuction open if user choose to use cash (close selectPayment and ask confirm cash)
+        function openCash() {
+            selectPayment.style.display = "none";
+            cashConfirm.style.display = "block";
+        }
+
+        function cashMsg() {
+            if (confirm("Thank you for your purchase, will direct you back to Merchandise page.")) {
+                window.location.href = "merch.html";
+            }
+        }
+
+        function closeCash() {
+            selectPayment.style.display = "block";
+            cashConfirm.style.display = "none";
         }
     
         // Attach event listeners
         document.addEventListener("DOMContentLoaded", function () {
     
+            // Regarding to payment method selection
             placeOrder.addEventListener("click", showPaymentOptions);
             document.getElementById("unPaybtn").addEventListener("click", closePaymentOptions);
+
+            // Regarding to cash
+            document.getElementById("cash").addEventListener("click", openCash);
+            document.getElementById("cashbtn").addEventListener("click",cashMsg);
+            document.getElementById("unCashbtn").addEventListener("click",closeCash);
 
             window.onclick = function (event) {
                 if (event.target == selectPayment) {
                     selectPayment.style.display = "none";
+                }
+            }
+        });
+
+        // ----- Break Line ----- (for card method select)
+        // If the radio button is not selected, close the border
+        const radioButtons = document.querySelectorAll('input[type="radio"]');
+
+        radioButtons.forEach((radioButton) => {
+            radioButton.addEventListener('change', function () {
+                if (this.checked) {
+                    radioButtons.forEach((rb) => {
+                        if (rb !== this) {
+                            rb.checked = false;
+                        }
+                    });
+                }
+            });
+        });
+
+        // ----- Break Line ----- (for date validation)
+        // Get a reference to the input element
+        const dateInput = document.getElementById('dateInput');
+
+        // Add an input event listener to format the input as mm/yy
+        dateInput.addEventListener('input', function () {
+            const value = dateInput.value;
+            
+            // Remove any non-numeric characters
+            const numericValue = value.replace(/\D/g, '');
+
+            // Check if the value is empty or has more than 4 characters
+            if (numericValue.length == 0 || numericValue.length > 4) {
+                dateInput.value = '';
+            } else {
+                // Format the value as mm/yy
+                dateInput.value = numericValue.slice(0, 2) + '/' + numericValue.slice(2, 4);
+
+                // Check if the month and year is in the valid range
+                const month = parseInt(numericValue.slice(0, 2));
+                const month_1 = parseInt(numericValue.slice(0, 1));
+                const month_2 = parseInt(numericValue.slice(1, 2));
+                const year_1 = parseInt(numericValue.slice(2, 3));
+                const year_2 = parseInt(numericValue.slice(3, 4));
+
+                if (month < 0 || month > 12) {
+                    alert("Month must be between 01 and 12.");
+                    dateInput.value = "";
+                } else {
+                    if (month_1 == 0 && month_2 == 0){
+                        alert("Month must be between 01 and 12.");
+                        dateInput.value = "";
+                    }else {
+                        if (year_1 < 2 || (year_1 == 2 && year_2 < 3) || (month_1 == 0 && month_2 < 9 && year_1 == 2 && year_2 < 4)) {
+                            alert("Please enter a valid year (at least 23).");
+                            dateInput.value = "";
+                        }
+                    }
                 }
             }
         });
