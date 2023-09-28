@@ -384,7 +384,6 @@
             document.getElementById("PaymentBoxTotal").textContent = finalTotal.toFixed(2);
         }
 
-
         // Update data price once quantity changes
         document.getElementById("quantityBox").addEventListener("change", function () {
             quantity = document.getElementById("quantityBox").value;
@@ -553,7 +552,6 @@
                 }
             }
         });
-        url="receipt.html?name="+nameBox+"&phone="+phoneBox;
 
         //----- Break Line ----- (Deny user to scroll after submit)
         function disableScroll() {
@@ -564,18 +562,18 @@
             document.body.classList.remove("stop-scrolling");
         }
 
-        // Let the user print out the receipt
-        function print() {
-            var printdata = document.getElementsByClassName("receipt")[0].outerHTML;
-            var newwin = window.open("", "_blank");
-            newwin.document.open();
-            newwin.document.write('<html><body><main><displayR>');
-            newwin.document.write(printdata);
-            newwin.document.write('</displayR></main></body></html>');
-            newwin.document.close();
-            newwin.print();
-            newwin.close();
-        }
+        // // Let the user print out the receipt
+        // function print() {
+        //     var printdata = document.getElementsByClassName("receipt")[0].outerHTML;
+        //     var newwin = window.open("", "_blank");
+        //     newwin.document.open();
+        //     newwin.document.write('<html><body><main><displayR>');
+        //     newwin.document.write(printdata);
+        //     newwin.document.write('</displayR></main></body></html>');
+        //     newwin.document.close();
+        //     newwin.print();
+        //     newwin.close();
+        // }
 
     </script>
     
