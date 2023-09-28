@@ -198,7 +198,7 @@
                     <form action="#" method="post" onsubmit="return false" id="cardForm">
 
                         <div id="cardImg">
-                            <input type="radio" name="cardType" id="visa" required>
+                            <input type="radio" name="cardType" id="visa" checked required>
                             <label for="visa" class="cardTypeBtn">
                                 <img src="../images/visa.png" alt="Visa Card">
                             </label>
@@ -352,7 +352,7 @@
         function cardMsg() {
             if (isCardValid()) {
                 alert("Thank you for your purchase! Proceeding you to Merchandise page.");
-                window.location.href = "merch.htm";
+                window.location.href = "merch.html";
             }
         }
 
