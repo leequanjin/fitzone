@@ -205,7 +205,7 @@ span{
 
 /*our location*/
 #map-nav {
-    background-image:  url('/images/ourlocation.jpg');
+    background-image:  url('/images/locationbckgrd.jpg');
     background-repeat: no-repeat;
     background-size:cover;
     padding: 5% 3%;
