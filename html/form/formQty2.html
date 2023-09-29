@@ -217,7 +217,7 @@
                         <div id="cardLeft">
                             <div class="cNumber">
                                 <label for="cardNo">CARD NUMBER</label> <br>
-                                <input type="text" id="cardNo" maxlength="16" placeholder="0000 0000 0000 0000" required>
+                                <input type="text" id="cardNo" maxlength="16" placeholder="0000 0000 0000 0000" pattern="[0-9]{16}" required>
                             </div>
         
                             <div class="cName">
@@ -235,7 +235,7 @@
         
                             <div class="cCvv">
                                 <label for="cvv">CVV</label>
-                                <input type="text" name="cvv" id="cvv" maxlength="3" placeholder="000" required>
+                                <input type="text" name="cvv" id="cvv" maxlength="3" placeholder="000" pattern="[0-9]{3}" required>
                             </div>
                         </div>
     
