@@ -276,14 +276,18 @@
         }
 
         #Thanks p {
-            background-color: black;
+            background-color: rgba(0, 0, 0, 0.348);
             position: absolute;
             top: 50%;
             left: 50%;
+            height: auto;
+            width: 70%;
             transform: translate(-50%, -50%);
             color: white;
             font-size: 24px;
             text-align: center;
+            box-shadow: 10px 10px 10px #888888, 10px -10px 10px, -10px 10px 10px;
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -428,7 +432,9 @@
             </button>
         </div>
         <div id="Thanks">
-            <p>Thank you for registering with us!</p>
+            <p>Thank you for registering with us!<br>Your information has been saved.
+            <br>Please visit our branch anytime to activate your package.
+            </p>
         </div>
     </main>
     <script>
