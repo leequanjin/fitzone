@@ -207,7 +207,7 @@ span{
 #map-nav {
     background-image:  url('/images/locationbckgrd.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
     padding: 5% 3%;
 }
 
