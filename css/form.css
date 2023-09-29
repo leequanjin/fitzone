@@ -693,6 +693,10 @@ input[type="radio"]:checked + label img {
     background-color: rgb(214, 209, 209);
 }
 
+#displayR tbody tr:not(:first-child) td:first-child, #displayR tfoot th {
+    text-align: end;
+}
+
 .alignright{
     text-align: right;
     padding-right: 10px;
@@ -742,6 +746,12 @@ input[type="radio"]:checked + label img {
     font-weight: 500;
     border-radius: 10px;
     border: solid 1.5px #241d1380;
+}
+
+.button input:hover, #Exit:hover {
+    background-color: #241d1380;
+    color: #F2F2F2;
+    transition: 0.5s;
 }
 
 @media print{
