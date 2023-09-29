@@ -1,3 +1,5 @@
+
+/*consistance layout base of fitzone*/
 main {
     background-color: #FFFFFF;
     display: block;
@@ -7,7 +9,7 @@ main {
     padding: 0.5%;
 }
 
-/* introbackground image*/
+/* intro of Fitzone styling*/
 #intro{
     padding-top: 50vh;
     min-height: 120vh;
@@ -24,11 +26,13 @@ main {
     width: 100%;
     background-color: #ffffff5c;
 }
+
 #achievable {
     color: #FFFFFF;
     position: relative;
 }
 
+/*animation for word achievable*/
 #achievable:before {
     content: "ACHIEVABLE";
     position: absolute;
@@ -76,7 +80,7 @@ main {
     justify-content: center;
     text-align: justify;
 }
-
+/*join us button*/
 #joinNow {
     width: 210px;
     text-align: center;
@@ -106,6 +110,7 @@ main {
     color: #FFF;
 }
 
+/*every h1 styling*/
 h1{
     text-align: center;
     color:#ccc;
@@ -116,6 +121,8 @@ h1{
 span{
     color: goldenrod;
 }
+
+/*about us */
 .about{
     height: 600px;
     width: 100%;
@@ -196,6 +203,7 @@ span{
     color: #f2f2f2;
 }
 
+/*our location*/
 #map-nav {
     background-image:  url('/images/locationbckgrd.jpg');
     background-repeat: no-repeat;
@@ -230,7 +238,7 @@ span{
     height: fit-content;
     width: 95%;
     padding: 3px;
-    background-color: #B4997B;
+    background-color: #ccc;
     border-radius: 20px;
     display: block;
     margin: auto 3% auto 0%;
@@ -240,7 +248,7 @@ span{
 
 #address_frame h1 {
     font-size: 3rem;
-    color: #EBE7DB;
+    color: #daa520;
 }
 
 #address_frame h2 {
@@ -266,12 +274,13 @@ span{
     display: inline;
 }
 
+/*icon*/
 .contact ul li img {
     width: 3.5vw;
     height: 3.5vw;
     padding: 0.6vw;
     margin: 0 0.4vw;
-    filter: invert(100%) sepia(8%) saturate(323%) hue-rotate(259deg) brightness(114%) contrast(90%);
+    filter:invert(48%) sepia(5%) saturate(690%) hue-rotate(167deg) brightness(92%) contrast(92%);
 }
 
 .contact ul li img:hover {
@@ -283,7 +292,7 @@ span{
     width: fit-content;
     height: fit-content;
     border-radius: 20px;
-    background-color: #C2B39F;
+    background-color: #ccc;
     display: block;
     margin: 0% auto;
     padding: 1%;
