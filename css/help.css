@@ -1,3 +1,4 @@
+/*consistance layout base of fitzone*/
 main {
     background-color: #FFFFFF;
     width: 95%;
@@ -5,16 +6,34 @@ main {
     padding: 0.5%;
     position: relative;
 }
-
+/*background image for this page*/
 section#faq{
     min-height: 120vh;
     background-image: url("/images/faqbckgrd.jpeg");
+    
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
     padding-bottom: 50px;
+
 }
+
+.title h1{
+    padding-top: 10px;
+    
+    text-align: center;
+    font-size: 3em;
+    color: #FFFFFF;
+}
+.title p{
+    padding: 10px;
+    text-align: center;
+    font-size: 2em;
+    color: #FFFFFF;
+
+}
+
 
 .container{
     height: 100%;
@@ -24,12 +43,7 @@ section#faq{
     overflow: hidden;
    
 }
-.container h1{
-    padding: 20px;
-    text-align: center;
-    font-size: 3em;
-    color: #FFFFFF;
-}
+
 
 .container .tab{
     position: relative;
@@ -41,24 +55,26 @@ section#faq{
     width: 590px;
 }
 
-
+/*hide the checkbox*/
 .container .tab input{
     appearance: none;
 }
+
+
 .container .tab label{
     display: flex;
     align-items: center;
     cursor: pointer;
 }
+/*add '+' to the right*/
 .container .tab label::after{
     content: '+';
     position: absolute;
     right: 20px;
     font-size: 3em;
-    color: rgba(0,0,0,0.1);
-    
-    
+    color: rgba(0,0,0,0.1);   
 }
+/* '+' color when hover */
 .container .tab:hover label::after{
     color:#333;
 }
@@ -83,24 +99,27 @@ section#faq{
     margin-right: 10px;
     padding:10px;
 }
-/*for odd number only, first num start with 2*/
+/*even number*/
 .container .tab.tab:nth-child(2n) label h2{
+    background: linear-gradient(135deg,#f8bb52,#f7e32b);
+    
+}
+/*odd number*/
+.container .tab:nth-child(1) label h2{
     background: linear-gradient(135deg,#ef9e9b,#fbbf57);
+    
 }
 .container .tab:nth-child(3) label h2{
-    background: linear-gradient(135deg,#f8bb52,#f7e32b);
+    background: linear-gradient(135deg,#ef9e9b,#fbbf57);
 }
 .container .tab:nth-child(5) label h2{
-    background: linear-gradient(135deg,#f8bb52,#f7e32b);
+    background: linear-gradient(135deg,#ef9e9b,#fbbf57);
 }
 .container .tab:nth-child(7) label h2{
-    background: linear-gradient(135deg,#f8bb52,#f7e32b);
+    background: linear-gradient(135deg,#ef9e9b,#fbbf57);   
 }
 .container .tab:nth-child(9) label h2{
-    background: linear-gradient(135deg,#f8bb52,#f7e32b);    
-}
-.container .tab:nth-child(11) label h2{
-    background: linear-gradient(135deg,#f8bb52,#f7e32b);
+    background: linear-gradient(135deg,#ef9e9b,#fbbf57);
 }
 
 /*to show the background color & text number moved to right end after click*/
