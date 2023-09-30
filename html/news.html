@@ -181,14 +181,17 @@
             text-align: center;
             padding-left: 10px;
             opacity: 0;
-            transform: translateY(150px); /* Move the paragraph down a bit to hide it initially */
+            transform: translateY(250px); /* Move the paragraph down a bit to hide it initially */
             transition: opacity 3s ease, transform 2s ease; /* Transition opacity and transform properties */
             object-fit: cover;
         }
 
         .Current p{
-            background-color: #F0DE36;
-            color: #0A0F66;
+            background-color: black;
+            color: white;
+            opacity: 0;
+            transform: translateY(300px); /* Move the paragraph down a bit to hide it initially */
+            transition: opacity 3s ease, transform 2s ease; /* Transition opacity and transform properties */
         }
 
         .Past p {
@@ -199,7 +202,8 @@
         .Current:hover p{
             visibility: visible;
             opacity: 1;
-            transform: translateY(300px); 
+            transform: translateY(00px); 
+            
         }
 
         .Past:hover p, .Hot-event:hover p  {
