@@ -1,3 +1,4 @@
+/* No let the screen move when user are doing payment */
 .stop-scrolling {
     height: 100%;
     overflow: hidden;
@@ -13,6 +14,7 @@
     padding: 2%;
 }
 
+/* Left hand side design */
 .backArrow {
     width: 35%;
     height: 600px;
@@ -82,6 +84,7 @@
     border-radius: 20px;
 }
 
+/* Right hand side design */
 .inputForm {
     background-color: #033C59;
     color: #F3EAF4;
@@ -181,10 +184,12 @@ input:focus, label:focus, textarea:focus {
     background-color: #EBE7DB;
 } 
 
+/* Display green if user enter a valid input */
 #nameBox:focus:valid, #phoneBox:focus:valid, #mailBox:focus:valid, #addrBox:focus:valid {
     background-color: #DFFF9E;
 }
 
+/* Display red if user enter invalid input */
 #nameBox:focus:invalid, #phoneBox:focus:invalid, #mailBox:focus:invalid, #addrBox:focus:invalid {
     background-color: #FAB4A4;
 }
@@ -215,6 +220,7 @@ input:focus, label:focus, textarea:focus {
     transition: .5s;
 }
 
+/* The price block design */
 #buyerTotal {
     height: fit-content;
     display: block;
@@ -279,6 +285,7 @@ input:focus, label:focus, textarea:focus {
     border-bottom: 2px dashed #0f485b;
 }
 
+/* Payment Method Selection design */
 #paymentYN {
     display: none;
     position: fixed;
@@ -344,6 +351,7 @@ input:focus, label:focus, textarea:focus {
     font-weight: bold;
 }
 
+/* Confirm Pay by Cash block design */
 #confirmCash {
     display: none;
     position: fixed;
@@ -406,7 +414,7 @@ input:focus, label:focus, textarea:focus {
     margin-right: 3%;
 }
 
-
+/* Payment Detail for Card design */
 #confirmCard {
     display: none;
     position: fixed;
@@ -588,6 +596,7 @@ input[type="radio"]:checked + label img {
     transition: 0.1s;
 }
 
+/* Receipt design */
 #displayR {
     display: none;
     position: fixed;
