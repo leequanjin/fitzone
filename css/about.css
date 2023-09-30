@@ -8,8 +8,8 @@ main {
     margin: 3% 3% 0%;
     padding: 0.5%;
 }
-
-/* intro of Fitzone styling*/
+/*intro*/
+/* background image of intro*/
 #intro{
     padding-top: 50vh;
     min-height: 120vh;
@@ -20,7 +20,7 @@ main {
     background-position:top;
     animation: fade 1s ease-in;
 }
-
+/* semi transparent layer banner*/
 .intro-content{
     padding: 40px 30px;
     width: 100%;
@@ -62,7 +62,7 @@ main {
     }
 }
 
-
+/*slogan*/
 .intro-content h2{
     max-width: 39vw;
     font-size: 3vw;
@@ -70,7 +70,7 @@ main {
     letter-spacing: 2px;
     color:#241D13;
 }
-
+/*introduction of fitzone*/
 .intro-content p{
     max-width: 50rem;
     font-size: 2.4rem;

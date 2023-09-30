@@ -10,7 +10,6 @@ main {
 section#faq{
     min-height: 120vh;
     background-image: url("/images/faqbckgrd.jpeg");
-    
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -18,7 +17,7 @@ section#faq{
     padding-bottom: 50px;
 
 }
-
+/*title*/
 .title h1{
     padding-top: 10px;
     
@@ -26,6 +25,7 @@ section#faq{
     font-size: 3em;
     color: #FFFFFF;
 }
+/*title descriptions*/
 .title p{
     padding: 10px;
     text-align: center;
@@ -34,7 +34,7 @@ section#faq{
 
 }
 
-
+/* the space for all the questions and answers*/
 .container{
     height: 100%;
     max-width: 650px;
@@ -60,7 +60,6 @@ section#faq{
     appearance: none;
 }
 
-
 .container .tab label{
     display: flex;
     align-items: center;
@@ -85,7 +84,7 @@ section#faq{
     transition: 1s;
     color: #FFFFFF;
 }
-
+/*numbering*/
 .container .tab label h2{
     width: 40px;
     height: 40px;
@@ -135,7 +134,7 @@ section#faq{
     padding: 20px;
 
 }
-
+/*question*/
 .container .tab label h3{
     font-size: 2rem;
     position: relative;
@@ -143,7 +142,7 @@ section#faq{
     color:#333;
     z-index: 10; /*bring the h3 element infront background color */
 }
-
+/*question after clicked the checkbox*/
 .container .tab input:checked ~ label h3{
     font-size: 1.7rem;
     background-color: #FFFFFF;
@@ -162,7 +161,7 @@ section#faq{
 .container .tab input:checked ~ .content{
     max-height: 120vh;
 }
-
+/*answer*/
 .container .tab .content p{
     margin: 10px;
     font-size: 1.75rem;
@@ -172,7 +171,7 @@ section#faq{
     z-index: 10;  /*bring the p element infront background color */
     color: #333;
 }
-
+/*answer after clicked the checkbox*/
 .container .tab input:checked ~ .content p{
     color:#333;        
 }
