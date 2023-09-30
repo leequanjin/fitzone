@@ -217,7 +217,7 @@
                         <div id="cardLeft">
                             <div class="cNumber">
                                 <label for="cardNo">CARD NUMBER</label> <br>
-                                <input type="text" id="cardNo" maxlength="16" placeholder="0000 0000 0000 0000" required>
+                                <input type="text" id="cardNo" maxlength="16" placeholder="0000 0000 0000 0000" pattern="[0-9]{16}" required>
                             </div>
         
                             <div class="cName">
@@ -235,7 +235,7 @@
         
                             <div class="cCvv">
                                 <label for="cvv">CVV</label>
-                                <input type="text" name="cvv" id="cvv" maxlength="3" placeholder="000" required>
+                                <input type="text" name="cvv" id="cvv" maxlength="3" placeholder="000" pattern="[0-9]{3}" required>
                             </div>
                         </div>
     
@@ -296,13 +296,16 @@
     
                 <div class="receiptDetail">
                     <table>
-                        <tr>
-                            <th>Item Name</th>
-                            <!-- <th>Size</th> -->
-                            <th>Unit Price</th>
-                            <th>Quantity</th>
-                            <th>Amount</th>
-                        </tr>
+                        <thead>
+                            <tr>
+                                <th>Item Name</th>
+                                <!-- <th>Size</th> -->
+                                <th>Unit Price</th>
+                                <th>Quantity</th>
+                                <th>Amount</th>
+                            </tr>
+                        </thead>
+                        
                         <tbody>
                             <tr>
                                 <td>Navy Power Sleeveless Tee</td>
@@ -320,7 +323,7 @@
                                 <td class="alignright"> <span id="getSst">0.00</span> </td>
                             </tr>
                             <tr>
-                                <td class="alignright" colspan="3">Delivery fee</td>
+                                <td class="alignright" colspan="3">Delivery Fee</td>
                                 <td class="alignright"> <span id="getDelivery">0.00</span> </td>
                             </tr>
                         </tbody>

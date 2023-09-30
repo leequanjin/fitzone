@@ -32,6 +32,19 @@ main {
     margin: -7vw 3vw 0vw 0vw;
 }
 
+/* show animation when user hover on the back button */
+@keyframes changeSize {
+    0% {width: 5vw; height: 5vw;}
+    50% {width: 4vw; height: 4vw;}
+    100% {width: 5.5vw; height: 5.5vw;}
+}
+
+#title img:hover {
+    width: 5.5vw;
+    height: 5.5vw;
+    animation: changeSize 0.5s ease-in-out 1;
+}
+
 /*image slider section*/
 .slide-container {
     width: 80%;
@@ -170,4 +183,10 @@ button:hover {
     font-size: 1.2vw;
     font-style: italic;
     color: #6C757D;
+}
+
+/* background color change when user hover on the item box */
+.item:hover {
+    background-color: #ffe1b6;
+    transition: 0.3s ease-in;
 }
