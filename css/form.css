@@ -5,7 +5,7 @@
 }
 
 .formbg {
-    /* background-image: linear-gradient(to right, #FFD577,  #DC8D7C); */
+    
     background-color: #FFBA41;
     width: 90%;
     height: fit-content;
@@ -96,33 +96,6 @@
     border-radius: 40px;
 }
 
-/* @keyframes orderItemColor {
-    0% {
-        background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44, #f32170, #ff6b08, #cf23cf, #eedd44, #f32170, #ff6b08, #cf23cf, #eedd44, #f32170, #ff6b08, #cf23cf, #eedd44);
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-    }
-    25% {
-        background: linear-gradient(to right, #eedd44, #f32170, #ff6b08, #cf23cf, #eedd44, #f32170, #ff6b08, #cf23cf, #eedd44, #f32170, #ff6b08, #cf23cf, #eedd44, #f32170, #ff6b08, #cf23cf);
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-    }
-    50% {
-        background: linear-gradient(to right, #cf23cf, #eedd44, #f32170, #ff6b08, #cf23cf, #eedd44, #f32170, #ff6b08, #cf23cf, #eedd44, #f32170, #ff6b08, #cf23cf, #eedd44, #f32170, #ff6b08);
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-    }
-    75% {
-        background: linear-gradient(to right, #ff6b08, #cf23cf, #eedd44, #f32170, #ff6b08, #cf23cf, #eedd44, #f32170, #ff6b08, #cf23cf, #eedd44, #f32170, #ff6b08, #cf23cf, #eedd44, #f32170);
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-    }
-    100% {
-        background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44, #f32170, #ff6b08, #cf23cf, #eedd44, #f32170, #ff6b08, #cf23cf, #eedd44, #f32170, #ff6b08, #cf23cf, #eedd44);
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-    }
-} */
 
 .inputForm h2 {
     font-size: 2.3vw;
