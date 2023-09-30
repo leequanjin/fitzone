@@ -224,9 +224,10 @@
         }
 
         .info-container{
-            background-image: linear-gradient(to bottom , rgba(194, 216, 232, 0), rgb(186, 216, 239,.1), rgb(186, 216, 239,1),
-            rgb(186, 216, 239,.3), rgb(186, 216, 239,.0));
-            
+            margin-top: 3%;
+            background-color: #fcd194;
+            padding: 3%;
+            border-radius: 30px;
         }
 
         .info1,
@@ -236,18 +237,18 @@
             width: 100%;
             display: flex;
             padding: 10px;
-            padding-bottom: 40px;
+            margin-bottom: 40px;
         }
 
         
         .info1 img{
             width: 50%;
-            height: 60vh;
+            height: 30vw;
             border-radius: 25px;
         }
 
         .newbranch video{
-            width: 50%;
+            width: 90vw;
             height: 40vh;
             object-fit: cover;
             border-radius: 25px;
@@ -256,25 +257,15 @@
 
         .guide img {
             width: 50%;
-            height: 60vh;
+            height: 26vw;
             border-radius: 25px;
         }
 
         .coach img{
             width: 50%;
-            height: 60vh;
+            height: 30vw;
             border-radius: 25px;
             
-        }
-
-        .info1 p,
-        .coach p,
-        .newbranch p {
-            width: 50%;
-            height: 20vh;
-            text-align: left;
-            font-size: 25px;
-            padding: 0px 1.5vh 1.5vh 1.5vh;
         }
 
         .title {
@@ -296,11 +287,22 @@
             font-weight: 600;
         }
 
-        span{
-            text-decoration: underline;
-            text-align: left !important;
-            font-size: 30px;
+        h3{
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+            font-size: 3vw;
             font-weight: 700;
+            display: block;
+            border-bottom: 3px solid #2D3031;
+        }
+
+        .info-container p {
+            font-size: 2vw;
+            width: 100%;
+            padding: 5% 10%;
+            text-align: justify;
+            text-justify: inter-word;
         }
 
         .events h2{
@@ -330,7 +332,8 @@
             text-align: center;
             font-size: 8vh;
             background-color: white;
-            padding: 2%;
+            margin: 0% 0% 2%;
+            padding: 0.5% 0%;
         }
 
     </style>
@@ -402,32 +405,43 @@
             <h2>Latest News</h2>
             <div class="info1">
                 <img src="/images/fit-boxing.png">
-                <p class="title"  style="text-align: center;"><span>New Gym room</span>
-                <br><br>A new gym area is <strong>BOXING</strong> their way into Fitzone's venue. For all you heavy puncher lovers,
-                we at Fitzone are expanding our venue so that you guys can have more fun and better training.
-                </p>
+                <div class="info-text">
+                    <h3>New Gym Room</h3>
+                    <p> The new gym area is <strong>BOXING</strong> their way into Fitzone's venue. For all you heavy puncher lovers,
+                    we at Fitzone are expanding our venue so that you guys can have more fun and better training.
+                    </p>
+                </div>
             </div>
             <div class="coach">
-                <p class="title"><span>Mystery Instructor Coming Soon</span>
-                <br><br>The <em>LEGEND</em>, The <em>MYTH</em>, HE is coming to Fitzone to bless everyone with the knowledge of keeping fit.
-                Starting this November, HE will make his appearance and will be in charge of multiple training regime. As of now, why not
-                get used to Fitzone.
-                </p>
+                <div class="info-text">
+                    <h3>Mystery Instructor <br> Coming Soon</h3>
+                    <p>
+                        The <em>LEGEND</em>, The <em>MYTH</em>, HE is coming to Fitzone to bless everyone with the knowledge of keeping fit.
+                    Starting this November, HE will make his appearance and will be in charge of multiple training regime. As of now, why not
+                    get used to Fitzone.
+                    </p>
+                </div>
                 <img src="/images/MysteryCoach.png">
             </div>
             <div class="newbranch">
                 <video src="/videos/Pyramid.mp4" loop muted autoplay></video>
-                <p class="title"  style="text-align: center;"><span>New Branch Opening Soon</span>
-                <br><br>A new branch is opening soon!!! Check <output></output> our latest ad and take a <em>very very very</em> easy guess on where it will be.
-                </p>
+                <div class="info-text">
+                    <h3>New Branch <br> Opening Soon</h3>
+                    <p>
+                    A new branch is opening soon!!! Check <output></output> our latest ad and take a <em>very very very</em> easy guess on where it will be.
+                    </p>
+                </div>
             </div>
             <div class="guide">
-                <p class="details"><span>Try Ashtanga with Eddie</span> 
-                    <br><br>Ashtanga is all about the <em>flow</em> To find your strength and melt away stress.
-                    <br><br>Join Eddie in this <em>transformative journey</em> at Fitzone Gym.
-                    <br><br>As he guides you in Ashtanga and unlock your <em>true potential</em>.
-                    
-                </p>
+                <div class="info-text">
+                    <h3>Try Ashtanga with Eddie</h3>
+                    <p>
+                        Ashtanga is all about the <em>flow</em> To find your strength and melt away stress.
+                        <br><br>Join Eddie in this <em>transformative journey</em> at Fitzone Gym.
+                        <br><br>As he guides you in Ashtanga and unlock your <em>true potential</em>.
+                        
+                    </p>
+                </div>
                 <img src="/images/AshtangaTalk.jpg">
             </div>
         </div>
