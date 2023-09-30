@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/modal.css">
     <link rel="stylesheet" href="/css/login-signup.css">
 
-    
+
 
 </head>
 
@@ -23,19 +23,19 @@
                 <h1>Forgot Password</h1>
                 <h2>Enter your email address and we will send you <br> a link to reset your password.</h2>
 
-                <form action="javascript:delay('/html/login-signup/login-signup.html')" method="post">
+                <form action="#" method="get">
                     <div class="field">
-                        <input type="email" placeholder="Email" class="input">
+                        <input id="forgot-email" type="text" placeholder="Email" class="input" required>
                     </div>
 
                     <div class="field">
-                        <input id="open-login-modal" class="login-signup-btn" onclick="window.location.href = delay()" type="submit" value="Continue" />
+                        <input id="open-forgot-modal" class="login-signup-btn" type="submit" value="Continue" />
                     </div>
                 </form>
             </div>
         </div>
 
-        <div class="modal" id="login-modal">
+        <div class="modal" id="forgot-modal">
             <div class="modal-content">
                 <h2>Link Sent</h2>
                 <div class="line"></div>
@@ -46,7 +46,26 @@
     </section>
 
     <!-- JavaScript -->
-    <script src="/js/login-signup.js"></script>
+    <script>
+        // show forgot modal
+        var forgotModal = document.getElementById("forgot-modal");
+        var openForgotModal = document.getElementById("open-forgot-modal");
+        var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+        openForgotModal.onclick = function () {
+            var forgotEmail = document.getElementById("forgot-email").value.trim();
+            if (emailPattern.test(forgotEmail)) {
+                forgotModal.style.display = "block";
+                setTimeout(function () {
+                    window.location.href = '/html/index.html';
+                }, 2000);
+            }
+            else {
+                alert("Please enter a valid email!");
+                return;
+            }
+        }
+    </script>
 </body>
 
 </html>

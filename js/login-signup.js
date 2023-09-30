@@ -7,6 +7,7 @@ var signupModal = document.getElementById("sign-up-modal");
 var openLoginModal = document.getElementById("open-login-modal");
 var openSignupModal = document.getElementById("open-sign-up-modal");
 
+
 console.log(forms, pwShowHide, links)
 
 // switch eye icon,and hide/ show password
@@ -38,7 +39,7 @@ openLoginModal.onclick = function () {
     if (loginEmail === "admin@gmail.com" && loginPassword === "admin123") {
         loginModal.style.display = "block";
         setTimeout(function() {
-            window.location.href = '/html/home.html';
+            window.location.href = '/html/index.html';
         }, 2000);
     }
     else {
@@ -65,7 +66,7 @@ openSignupModal.onclick = function () {
     else if (signupPassword === confirmPassword) {
         signupModal.style.display = "block";
         setTimeout(function() {
-            window.location.href = '/html/home.html';
+            window.location.href = '/html/index.html';
         }, 2000);
     }
     
@@ -73,5 +74,5 @@ openSignupModal.onclick = function () {
         alert("Password and confirm password do not match!");
         return;
     }
-    
 }
+
