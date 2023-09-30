@@ -14,7 +14,7 @@
     <script src="/js/countdown.js"></script>
     <style>
         main {
-            background-color: #FFFFFF;
+            /* background-color: #FFFFFF; */
             display: block;
             height: 100%;
             width: 94%;
@@ -145,14 +145,14 @@
         
         #Countdown {
             text-align: center;
-            width: 90%;
+            width: 100%;
             display: block;
             margin-left: auto;
             margin-right: auto;
-            font-size: 50px;
-            margin-bottom: 2%;
-            background-image: linear-gradient(to bottom right, rgb(87, 86, 83, 0.3), rgb(0, 0, 0, 0.0), rgb(87, 86, 83, 0.2));
-            border-radius: 20px;
+            font-size: 6vh;
+            background-color: #0A0F66;
+            padding: 1% 0%;
+            color: #EEEDED;
         }
 
         .Current,
@@ -215,11 +215,6 @@
             display: flex;
             padding: 10px; 
             margin: 0;
-        }
-
-        .events{
-            background-image: linear-gradient(to bottom, rgb(201, 228, 93,.0), rgb(201, 228, 93,.3), rgb(201, 228, 93,1),
-            rgb(201, 228, 93,.3), rgb(201, 228, 93,.0));
         }
 
         .info-container{
@@ -302,12 +297,34 @@
             font-weight: 700;
         }
 
-        h2{
+        .events h2{
             text-align: center;
-            font-size: 10vh;
+            font-size: 8vh;
+            background-color: #D71313;
+            color: #EEEDED;
+            border-left: 4px solid #0A0F66;
+            border-right: 4px solid #0a0f66;
+            border-bottom: 5px solid #0a0f66;
+            padding: 5%;
+            border-radius: 20px;
+            width: fit-content;
+            display: block;
+            margin: 0% auto;
+        }
+
+        #eventUp  {
+            background-color: #F0DE36;
+            padding: 3% 0%;
+            border-radius: 5px;
+            border: 5px solid #2D3031;
+            margin-bottom: 3%;
+        }
+
+        .info-container h2 {
+            text-align: center;
+            font-size: 8vh;
             background-color: white;
             padding: 2%;
-            
         }
 
     </style>
@@ -349,15 +366,19 @@
     </header>
     <main>
         <div class="events">
-            <h2 style="padding-top: 0%; padding-bottom: 0%;">Latest Events</h2>
-            <div class="mainevent">
-                <div class="Hot-event video-link video-container">
-                    <video src="/videos/HotEvent.mp4#t=0.5" loop></video>
-                    <button class="overlay-button1">Learn More</button>
-                    <!-- <p>This is Hot Event</p> -->
+            <div id="eventUp">
+                <h2 style="padding-top: 0%; padding-bottom: 0%;">Latest Events</h2>
+                <div class="mainevent">
+                    <div class="Hot-event video-link video-container">
+                        <video src="/videos/HotEvent.mp4#t=0.5" loop></video>
+                        <button class="overlay-button1">Learn More</button>
+                        <!-- <p>This is Hot Event</p> -->
+                    </div>
                 </div>
+                <p id="Countdown"></p>
             </div>
-            <p id="Countdown"></p>
+            
+            
             <div class="smallevents">
                 <div class="Current video-link video-container2">
                     <video src="/videos/CurrentOngoingEvent.mp4#t=5" loop style="padding-right: 5px;"></video>
